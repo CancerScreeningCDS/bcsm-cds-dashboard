@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import FHIR from 'fhirclient';
-
 import Dashboard from 'features/Dashboard';
 import { useCds } from 'hooks/useCds';
 import { config } from './smart.config.js';
@@ -10,6 +9,7 @@ export function SmartPatient() {
   const [patientData, setPatientData] = useState([]);
   const [convertedData, setConvertedData] = useState([]);
   const [isLoadingFHIRData, setIsLoadingFHIRData] = useState(false);
+  const [client, setClient] = useState(undefined); // client
   const [toggleStatus, setToggleStatus] = useState({
     isImmunosuppressed: false,
     isPregnant: false,
@@ -20,6 +20,13 @@ export function SmartPatient() {
 
   const { output: dashboardInput, isLoadingCdsData } = useCds(patientData, toggleStatus);
   const isLoading = isLoadingFHIRData || isLoadingCdsData;
+  useEffect(() => {
+    FHIR.oauth2.ready().then((client)=>{
+      console.log(client);
+      setClient(client);
+    });
+
+  }, []);
 
   useEffect(() => {
     async function smartOnFhir() {
@@ -27,7 +34,6 @@ export function SmartPatient() {
       setIsLoadingFHIRData(true);
       let newData = [];
       let newFshData = [];
-      let client = await FHIR.oauth2.ready();
 
       const fhirParser = await boundParser(newData, newFshData);
 
@@ -66,55 +72,12 @@ export function SmartPatient() {
       setConvertedData(newFshData);
       setIsLoadingFHIRData(false);
     }
-    smartOnFhir();
-  },[]);
+    if(client){
+      smartOnFhir();
+    }
+  },[client]);
 
-  if (process.env?.REACT_APP_DEBUG_FHIR==='true') {
-    return (
-      <div className="debug">
-        <div key="recommendations">
-          {
-            <pre>
-              {displayRecommendations(dashboardInput.decisionAids)}
-            </pre>
-          }
-        </div>
-        <hr />
-        <div key="patientData">
-          {
-            convertedData.map((converted, idx) => (
-              <div key={idx}>
-                <pre>{converted}</pre>
-                <hr />
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    )
-  } else {
-    return (
-      <div className="content">
-      <p className="sticky-banner alert alert-danger">The CDC/MITRE Cervical Cancer CDS Dashboard is under pilot evaluation and is <b>not for use in clinical practice.</b></p>
-        <div className="dashboard-container">
-          {isLoading && (
-            <div className="overlay">
-              <div className="spinner"></div>
-            </div>
-          )}
-        <Dashboard
-          input={dashboardInput}
-          config={config}
-          setPatientData={setPatientData}
-          toggleStatus={toggleStatus}
-          onToggleStatusChange={setToggleStatus}
-        />
-        </div>
-      </div>
-    )
-  }
 
-}
 
 function displayRecommendations(decisionAids) {
   if (!decisionAids) {
@@ -147,6 +110,17 @@ function cleanFsh(fsh) {
   const fshString = typeof fsh === "string" ? fsh : fsh.fsh;
   return fshString.replaceAll('undefined', '\n').replaceAll(',', '\n');
 }
+function handlePages(bundle, callback) {
+  if(bundle.link) {
+    bundle.link.forEach((link) => {
+      if(link.relation == 'next') {
+        client.request(link.url).then((resource) => {
+          callback(resource);
+        });
+      }    
+    });
+  }
+}
 
 async function boundParser(data, fshData) {
   const options = { dependencies: [], indent: true };
@@ -162,6 +136,7 @@ async function boundParser(data, fshData) {
     if (!rsrc) return;
 
     if (rsrc.resourceType === 'Bundle' && rsrc.entry) {
+      handlePages(rsrc, parseFhir) // handle pages recursively
       await Promise.all(rsrc.entry.map(async (c) => {
         if (!c.resource) return;
         console.log(c.resource.resourceType);
@@ -198,4 +173,51 @@ async function boundParser(data, fshData) {
       data.push(rsrc);
     }
   };
+}
+
+if (process.env?.REACT_APP_DEBUG_FHIR==='true') {
+  return (
+    <div className="debug">
+      <div key="recommendations">
+        {
+          <pre>
+            {displayRecommendations(dashboardInput.decisionAids)}
+          </pre>
+        }
+      </div>
+      <hr />
+      <div key="patientData">
+        {
+          convertedData.map((converted, idx) => (
+            <div key={idx}>
+              <pre>{converted}</pre>
+              <hr />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  )
+} else {
+  return (
+    <div className="content">
+    <p className="sticky-banner alert alert-danger">The CDC/MITRE Cervical Cancer CDS Dashboard is under pilot evaluation and is <b>not for use in clinical practice.</b></p>
+      <div className="dashboard-container">
+        {isLoading && (
+          <div className="overlay">
+            <div className="spinner"></div>
+          </div>
+        )}
+      <Dashboard
+        input={dashboardInput}
+        config={config}
+        setPatientData={setPatientData}
+        toggleStatus={toggleStatus}
+        onToggleStatusChange={setToggleStatus}
+      />
+      </div>
+    </div>
+  )
+}
+
 }
