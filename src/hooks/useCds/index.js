@@ -5,6 +5,7 @@ import { cdsResources } from 'services/fhir';
 import { valueSetJson } from 'services/valuesets';
 import { translateResponse, translateToggleChange } from './translate';
 import { stridesData } from './strides';
+import { logMsg } from 'util/logger';
 
 /**
  *
@@ -144,6 +145,14 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
       decisionAids = { errors };
     }
 
+    // replace with actual logging data when ready from CQL 
+    // output otherResources as a temporary stand-in
+    logMsg({
+      time: new Date(),
+      patientReference: patientReference,
+      payload: otherResources
+    });
+    
     if (thereAreOutputs) {
       if (patientHistory.observations?.length > 0) {
         patientHistory.observations = patientHistory.observations.filter(obs => !obs.reference.includes('new-observation-for-'))
