@@ -147,8 +147,9 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
 
     // replace with actual logging data when ready from CQL 
     // output otherResources as a temporary stand-in
+    console.timeEnd('Apply CDS');
     logMsg({
-      time: new Date(),
+      timeRequestSent: new Date(),
       patientReference: patientReference,
       payload: otherResources
     });
@@ -175,7 +176,6 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
       patientReference
     }
 
-    console.timeEnd('Apply CDS');
     console.log('CDS output:', output);
     setIsLoadingCdsData(false);
     setOutput(output);
