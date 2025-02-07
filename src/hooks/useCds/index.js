@@ -7,6 +7,8 @@ import { translateResponse, translateToggleChange } from './translate';
 import { stridesData } from './strides';
 import { logMsg } from 'util/logger';
 
+const LOGGER_ENABLED = process.env?.REACT_APP_LOGGER_ENABLED || true;
+
 /**
  *
  * @param {Object[]} patientData
@@ -148,11 +150,14 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
     // replace with actual logging data when ready from CQL 
     // output otherResources as a temporary stand-in
     console.timeEnd('Apply CDS');
-    logMsg({
-      timeRequestSent: new Date(),
-      patientReference: patientReference,
-      payload: otherResources
-    });
+
+    if (LOGGER_ENABLED){
+      logMsg({
+        timeRequestSent: new Date(),
+        patientReference: patientReference,
+        payload: otherResources
+      });
+    }
     
     if (thereAreOutputs) {
       if (patientHistory.observations?.length > 0) {

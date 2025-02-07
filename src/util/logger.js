@@ -2,9 +2,9 @@
 const LOGGER_HOST = process.env?.REACT_APP_LOGGER_HOST || "http://localhost"
 const LOGGER_PORT = process.env?.REACT_APP_LOGGER_PORT || "4040";
 const logger_url = `${LOGGER_HOST}:${LOGGER_PORT}/log`;
-console.log("Logging at", logger_url);
 
 export async function logMsg(msg) {
+  console.log("Logging at", logger_url);
   try {
     const response = await fetch(logger_url, {
       method: 'POST',
