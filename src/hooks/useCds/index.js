@@ -155,7 +155,7 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
       logMsg({
         timeRequestSent: new Date(),
         patientReference: patientReference,
-        payload: otherResources
+        payload: [patientInfo, decisionAids]
       });
     }
     
