@@ -1,0 +1,3799 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.12.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,EnableResultTypes,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "All",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "463",
+            "s" : [ {
+               "value" : [ "","library FollowupScreeningResultEvents version '1.0.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "FollowupScreeningResultEvents",
+         "version" : "1.0.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "207",
+            "locator" : "4:1-4:55",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "207",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ "  version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "208",
+            "locator" : "6:1-6:56",
+            "localIdentifier" : "DataElements",
+            "path" : "DataElements",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "DataElements" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","DataElements" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "209",
+            "locator" : "7:1-7:68",
+            "localIdentifier" : "CSMCommonFunctions",
+            "path" : "CSMCommonFunctions",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "209",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "CSMCommonFunctions" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","CSMCommonFunctions" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "8:1-8:61",
+            "localIdentifier" : "BCSMCommon",
+            "path" : "BCSMCommonFunctions",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "BCSMCommonFunctions" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","BCSMCommon" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "localId" : "211",
+            "locator" : "10:1-10:48",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+            "name" : "SNOMED-CT",
+            "id" : "http://snomed.info/sct",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "211",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"SNOMED-CT\"",": ","'http://snomed.info/sct'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "212",
+            "locator" : "11:1-11:124",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+            "name" : "BiopsyResultCS",
+            "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"BiopsyResultCS\"",": ","'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "localId" : "213",
+            "locator" : "13:1-13:139",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category0",
+            "id" : "397138000",
+            "display" : "Mammography assessment (Category 0) - Need additional imaging evaluation (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "213",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category0\"",": ","'397138000'"," from " ]
+                  }, {
+                     "r" : "214",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 0) - Need additional imaging evaluation (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "214",
+               "locator" : "13:36-13:46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "215",
+            "locator" : "14:1-14:113",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category1",
+            "id" : "397140005",
+            "display" : "Mammography assessment (Category 1) - Negative (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "215",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category1\"",": ","'397140005'"," from " ]
+                  }, {
+                     "r" : "216",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 1) - Negative (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "216",
+               "locator" : "14:36-14:46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "217",
+            "locator" : "15:1-15:119",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category2",
+            "id" : "397141009",
+            "display" : "Mammography assessment (Category 2) - Benign finding (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "217",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category2\"",": ","'397141009'"," from " ]
+                  }, {
+                     "r" : "218",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 2) - Benign finding (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "218",
+               "locator" : "15:36-15:46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "219",
+            "locator" : "16:1-16:154",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category3",
+            "id" : "397143007",
+            "display" : "Mammography assessment (Category 3) - Probably benign finding, short interval follow-up (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "219",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category3\"",": ","'397143007'"," from " ]
+                  }, {
+                     "r" : "220",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 3) - Probably benign finding, short interval follow-up (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "220",
+               "locator" : "16:36-16:46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "221",
+            "locator" : "17:1-17:156",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category4",
+            "id" : "397144001",
+            "display" : "Mammography assessment (Category 4) - Suspicious abnormality, biopsy should be considered (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "221",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category4\"",": ","'397144001'"," from " ]
+                  }, {
+                     "r" : "222",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 4) - Suspicious abnormality, biopsy should be considered (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "222",
+               "locator" : "17:36-17:46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "223",
+            "locator" : "18:1-18:191",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category4A",
+            "id" : "6121000179106",
+            "display" : "Mammography assessment (Category 4A) - Suspicious abnormality, biopsy should be considered, low suspicion of malignancy (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "223",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category4A\"",": ","'6121000179106'"," from " ]
+                  }, {
+                     "r" : "224",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 4A) - Suspicious abnormality, biopsy should be considered, low suspicion of malignancy (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "224",
+               "locator" : "18:41-18:51",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "225",
+            "locator" : "19:1-19:196",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category4B",
+            "id" : "6131000179108",
+            "display" : "Mammography assessment (Category 4B) - Suspicious abnormality, biopsy should be considered, moderate suspicion of malignancy (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "225",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category4B\"",": ","'6131000179108'"," from " ]
+                  }, {
+                     "r" : "226",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 4B) - Suspicious abnormality, biopsy should be considered, moderate suspicion of malignancy (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "226",
+               "locator" : "19:41-19:51",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "227",
+            "locator" : "20:1-20:192",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category4C",
+            "id" : "6141000179100",
+            "display" : "Mammography assessment (Category 4C) - Suspicious abnormality, biopsy should be considered, high suspicion of malignancy (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "227",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category4C\"",": ","'6141000179100'"," from " ]
+                  }, {
+                     "r" : "228",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 4C) - Suspicious abnormality, biopsy should be considered, high suspicion of malignancy (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "228",
+               "locator" : "20:41-20:51",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "229",
+            "locator" : "21:1-21:136",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category5",
+            "id" : "397145000",
+            "display" : "Mammography assessment (Category 5) - Highly suggestive of malignancy (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "229",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category5\"",": ","'397145000'"," from " ]
+                  }, {
+                     "r" : "230",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 5) - Highly suggestive of malignancy (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "230",
+               "locator" : "21:36-21:46",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "231",
+            "locator" : "22:1-22:140",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Category6",
+            "id" : "6111000179101",
+            "display" : "Mammography assessment (Category 6) - known biopsy, proven malignancy (finding)",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "231",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Category6\"",": ","'6111000179101'"," from " ]
+                  }, {
+                     "r" : "232",
+                     "s" : [ {
+                        "value" : [ "\"SNOMED-CT\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Mammography assessment (Category 6) - known biopsy, proven malignancy (finding)'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "232",
+               "locator" : "22:40-22:50",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "SNOMED-CT"
+            }
+         }, {
+            "localId" : "233",
+            "locator" : "23:1-23:78",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Negative",
+            "id" : "Negative",
+            "display" : "Normal breast tissue",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "233",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Negative\"",": ","'Negative'"," from " ]
+                  }, {
+                     "r" : "234",
+                     "s" : [ {
+                        "value" : [ "BiopsyResultCS" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Normal breast tissue'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "234",
+               "locator" : "23:34-23:47",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "BiopsyResultCS"
+            }
+         }, {
+            "localId" : "235",
+            "locator" : "24:1-24:75",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Benign",
+            "id" : "Benign",
+            "display" : "Benign breast finding",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "235",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Benign\"",": ","'Benign'"," from " ]
+                  }, {
+                     "r" : "236",
+                     "s" : [ {
+                        "value" : [ "BiopsyResultCS" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Benign breast finding'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "236",
+               "locator" : "24:30-24:43",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "BiopsyResultCS"
+            }
+         }, {
+            "localId" : "237",
+            "locator" : "25:1-25:81",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Atypical",
+            "id" : "Atypical",
+            "display" : "Atypical breast finding",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "237",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Atypical\"",": ","'Atypical'"," from " ]
+                  }, {
+                     "r" : "238",
+                     "s" : [ {
+                        "value" : [ "BiopsyResultCS" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Atypical breast finding'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "238",
+               "locator" : "25:34-25:47",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "BiopsyResultCS"
+            }
+         }, {
+            "localId" : "239",
+            "locator" : "26:1-26:84",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Malignant",
+            "id" : "Malignant",
+            "display" : "Malignant breast finding",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "239",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Malignant\"",": ","'Malignant'"," from " ]
+                  }, {
+                     "r" : "240",
+                     "s" : [ {
+                        "value" : [ "BiopsyResultCS" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Malignant breast finding'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "240",
+               "locator" : "26:36-26:49",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "BiopsyResultCS"
+            }
+         }, {
+            "localId" : "241",
+            "locator" : "27:1-27:96",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Indeterminate",
+            "id" : "Indeterminate",
+            "display" : "Indeterminate breast finding",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "241",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Indeterminate\"",": ","'Indeterminate'"," from " ]
+                  }, {
+                     "r" : "242",
+                     "s" : [ {
+                        "value" : [ "BiopsyResultCS" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Indeterminate breast finding'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "242",
+               "locator" : "27:44-27:57",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "BiopsyResultCS"
+            }
+         }, {
+            "localId" : "243",
+            "locator" : "28:1-28:87",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Discordant",
+            "id" : "Discordant",
+            "display" : "Discordant breast finding",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "243",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Discordant\"",": ","'Discordant'"," from " ]
+                  }, {
+                     "r" : "244",
+                     "s" : [ {
+                        "value" : [ "BiopsyResultCS" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Discordant breast finding'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "244",
+               "locator" : "28:38-28:51",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "BiopsyResultCS"
+            }
+         }, {
+            "localId" : "245",
+            "locator" : "29:1-29:72",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "Other",
+            "id" : "Other",
+            "display" : "Other breast finding",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "245",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Other\"",": ","'Other'"," from " ]
+                  }, {
+                     "r" : "246",
+                     "s" : [ {
+                        "value" : [ "BiopsyResultCS" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Other breast finding'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "246",
+               "locator" : "29:28-29:41",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "BiopsyResultCS"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "250",
+            "locator" : "31:1-31:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "248",
+            "locator" : "31:1-31:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "249",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "247",
+                  "locator" : "31:1-31:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "259",
+            "locator" : "64:1-65:95",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+            "name" : "MostRecentBreastImagingDate",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "259",
+                  "s" : [ {
+                     "value" : [ "","define ","MostRecentBreastImagingDate",":\n  " ]
+                  }, {
+                     "r" : "263",
+                     "s" : [ {
+                        "r" : "260",
+                        "s" : [ {
+                           "value" : [ "CSMCommonFunctions" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "263",
+                        "s" : [ {
+                           "value" : [ "DiagnosticReportDate","(" ]
+                        }, {
+                           "r" : "262",
+                           "s" : [ {
+                              "r" : "261",
+                              "s" : [ {
+                                 "value" : [ "DataElements" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "262",
+                              "s" : [ {
+                                 "value" : [ "MostRecentBreastImagingDiagnosticReport" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "263",
+               "locator" : "65:3-65:95",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+               "name" : "DiagnosticReportDate",
+               "libraryName" : "CSMCommonFunctions",
+               "type" : "FunctionRef",
+               "signature" : [ {
+                  "localId" : "264",
+                  "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "262",
+                  "locator" : "65:43-65:94",
+                  "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "name" : "MostRecentBreastImagingDiagnosticReport",
+                  "libraryName" : "DataElements",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "269",
+            "locator" : "67:1-68:94",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+            "name" : "MostRecentBreastBiopsyDate",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "269",
+                  "s" : [ {
+                     "value" : [ "","define ","MostRecentBreastBiopsyDate",":\n  " ]
+                  }, {
+                     "r" : "273",
+                     "s" : [ {
+                        "r" : "270",
+                        "s" : [ {
+                           "value" : [ "CSMCommonFunctions" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "273",
+                        "s" : [ {
+                           "value" : [ "DiagnosticReportDate","(" ]
+                        }, {
+                           "r" : "272",
+                           "s" : [ {
+                              "r" : "271",
+                              "s" : [ {
+                                 "value" : [ "DataElements" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "272",
+                              "s" : [ {
+                                 "value" : [ "MostRecentBreastBiopsyDiagnosticReport" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "273",
+               "locator" : "68:3-68:94",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+               "name" : "DiagnosticReportDate",
+               "libraryName" : "CSMCommonFunctions",
+               "type" : "FunctionRef",
+               "signature" : [ {
+                  "localId" : "274",
+                  "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "272",
+                  "locator" : "68:43-68:93",
+                  "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "name" : "MostRecentBreastBiopsyDiagnosticReport",
+                  "libraryName" : "DataElements",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "308",
+            "locator" : "80:1-98:5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "BreastImagingBiradsResult",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "308",
+                  "s" : [ {
+                     "value" : [ "//------------------------------------------------------------------------------\n// Functions\n//------------------------------------------------------------------------------ \n\n","define function BreastImagingBiradsResult(report DiagnosticReport):\n  " ]
+                  }, {
+                     "r" : "806",
+                     "s" : [ {
+                        "r" : "806",
+                        "s" : [ {
+                           "s" : [ {
+                              "r" : "672",
+                              "s" : [ {
+                                 "r" : "673",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "value" : [ "report" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","D" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "let " ]
+                           }, {
+                              "r" : "674",
+                              "s" : [ {
+                                 "value" : [ "cC",": " ]
+                              }, {
+                                 "r" : "683",
+                                 "s" : [ {
+                                    "r" : "675",
+                                    "s" : [ {
+                                       "value" : [ "BCSMCommon" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "683",
+                                    "s" : [ {
+                                       "value" : [ "CollateConclusionCodes","(" ]
+                                    }, {
+                                       "r" : "676",
+                                       "s" : [ {
+                                          "value" : [ "D" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "," ]
+                                    }, {
+                                       "r" : "678",
+                                       "s" : [ {
+                                          "r" : "677",
+                                          "s" : [ {
+                                             "value" : [ "DataElements" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "678",
+                                          "s" : [ {
+                                             "value" : [ "BreastImagingObservations" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ ")" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "r" : "693",
+                           "s" : [ {
+                              "value" : [ "return " ]
+                           }, {
+                              "r" : "803",
+                              "s" : [ {
+                                 "value" : [ "First","(\n      " ]
+                              }, {
+                                 "r" : "796",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "r" : "694",
+                                       "s" : [ {
+                                          "r" : "705",
+                                          "s" : [ {
+                                             "s" : [ {
+                                                "value" : [ "cC",".","coding" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " ","C" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "let " ]
+                                    }, {
+                                       "r" : "710",
+                                       "s" : [ {
+                                          "value" : [ "c",": " ]
+                                       }, {
+                                          "r" : "713",
+                                          "s" : [ {
+                                             "r" : "711",
+                                             "s" : [ {
+                                                "value" : [ "FHIRHelpers" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "713",
+                                             "s" : [ {
+                                                "value" : [ "ToCode","(" ]
+                                             }, {
+                                                "r" : "712",
+                                                "s" : [ {
+                                                   "value" : [ "C" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ ")" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        " ]
+                                 }, {
+                                    "r" : "715",
+                                    "s" : [ {
+                                       "value" : [ "where \n          " ]
+                                    }, {
+                                       "r" : "715",
+                                       "s" : [ {
+                                          "r" : "716",
+                                          "s" : [ {
+                                             "r" : "717",
+                                             "s" : [ {
+                                                "r" : "718",
+                                                "s" : [ {
+                                                   "r" : "719",
+                                                   "s" : [ {
+                                                      "r" : "720",
+                                                      "s" : [ {
+                                                         "r" : "721",
+                                                         "s" : [ {
+                                                            "r" : "722",
+                                                            "s" : [ {
+                                                               "r" : "723",
+                                                               "s" : [ {
+                                                                  "r" : "724",
+                                                                  "s" : [ {
+                                                                     "r" : "725",
+                                                                     "s" : [ {
+                                                                        "value" : [ "c" ]
+                                                                     } ]
+                                                                  }, {
+                                                                     "value" : [ " ","~"," " ]
+                                                                  }, {
+                                                                     "r" : "726",
+                                                                     "s" : [ {
+                                                                        "value" : [ "\"Category0\"" ]
+                                                                     } ]
+                                                                  } ]
+                                                               }, {
+                                                                  "value" : [ "\n          or " ]
+                                                               }, {
+                                                                  "r" : "729",
+                                                                  "s" : [ {
+                                                                     "r" : "730",
+                                                                     "s" : [ {
+                                                                        "value" : [ "c" ]
+                                                                     } ]
+                                                                  }, {
+                                                                     "value" : [ " ","~" ]
+                                                                  }, {
+                                                                     "r" : "731",
+                                                                     "s" : [ {
+                                                                        "value" : [ "\"Category1\"" ]
+                                                                     } ]
+                                                                  } ]
+                                                               } ]
+                                                            }, {
+                                                               "value" : [ "\n          or " ]
+                                                            }, {
+                                                               "r" : "736",
+                                                               "s" : [ {
+                                                                  "r" : "737",
+                                                                  "s" : [ {
+                                                                     "value" : [ "c" ]
+                                                                  } ]
+                                                               }, {
+                                                                  "value" : [ " ","~"," " ]
+                                                               }, {
+                                                                  "r" : "738",
+                                                                  "s" : [ {
+                                                                     "value" : [ "\"Category2\"" ]
+                                                                  } ]
+                                                               } ]
+                                                            } ]
+                                                         }, {
+                                                            "value" : [ "\n          or " ]
+                                                         }, {
+                                                            "r" : "743",
+                                                            "s" : [ {
+                                                               "r" : "744",
+                                                               "s" : [ {
+                                                                  "value" : [ "c" ]
+                                                               } ]
+                                                            }, {
+                                                               "value" : [ " ","~"," " ]
+                                                            }, {
+                                                               "r" : "745",
+                                                               "s" : [ {
+                                                                  "value" : [ "\"Category3\"" ]
+                                                               } ]
+                                                            } ]
+                                                         } ]
+                                                      }, {
+                                                         "value" : [ "\n          or " ]
+                                                      }, {
+                                                         "r" : "750",
+                                                         "s" : [ {
+                                                            "r" : "751",
+                                                            "s" : [ {
+                                                               "value" : [ "c" ]
+                                                            } ]
+                                                         }, {
+                                                            "value" : [ " ","~"," " ]
+                                                         }, {
+                                                            "r" : "752",
+                                                            "s" : [ {
+                                                               "value" : [ "\"Category4\"" ]
+                                                            } ]
+                                                         } ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ "     \n          or " ]
+                                                   }, {
+                                                      "r" : "757",
+                                                      "s" : [ {
+                                                         "r" : "758",
+                                                         "s" : [ {
+                                                            "value" : [ "c" ]
+                                                         } ]
+                                                      }, {
+                                                         "value" : [ " ","~"," " ]
+                                                      }, {
+                                                         "r" : "759",
+                                                         "s" : [ {
+                                                            "value" : [ "\"Category4A\"" ]
+                                                         } ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "\n          or " ]
+                                                }, {
+                                                   "r" : "764",
+                                                   "s" : [ {
+                                                      "r" : "765",
+                                                      "s" : [ {
+                                                         "value" : [ "c" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ " ","~"," " ]
+                                                   }, {
+                                                      "r" : "766",
+                                                      "s" : [ {
+                                                         "value" : [ "\"Category4B\"" ]
+                                                      } ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "\n          or " ]
+                                             }, {
+                                                "r" : "771",
+                                                "s" : [ {
+                                                   "r" : "772",
+                                                   "s" : [ {
+                                                      "value" : [ "c" ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ " ","~"," " ]
+                                                }, {
+                                                   "r" : "773",
+                                                   "s" : [ {
+                                                      "value" : [ "\"Category4C\"" ]
+                                                   } ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "\n          or " ]
+                                          }, {
+                                             "r" : "778",
+                                             "s" : [ {
+                                                "r" : "779",
+                                                "s" : [ {
+                                                   "value" : [ "c" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ " ","~"," " ]
+                                             }, {
+                                                "r" : "780",
+                                                "s" : [ {
+                                                   "value" : [ "\"Category5\"" ]
+                                                } ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "\n          or " ]
+                                       }, {
+                                          "r" : "785",
+                                          "s" : [ {
+                                             "r" : "786",
+                                             "s" : [ {
+                                                "value" : [ "c" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " ","~"," " ]
+                                          }, {
+                                             "r" : "787",
+                                             "s" : [ {
+                                                "value" : [ "\"Category6\"" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        " ]
+                                 }, {
+                                    "r" : "792",
+                                    "s" : [ {
+                                       "value" : [ "return " ]
+                                    }, {
+                                       "r" : "793",
+                                       "s" : [ {
+                                          "value" : [ "c" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "  \n    )" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "806",
+               "locator" : "81:3-98:5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "672",
+                  "locator" : "81:3-81:10",
+                  "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "alias" : "D",
+                  "expression" : {
+                     "localId" : "673",
+                     "locator" : "81:3-81:8",
+                     "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                     "name" : "report",
+                     "type" : "OperandRef"
+                  }
+               } ],
+               "let" : [ {
+                  "localId" : "674",
+                  "locator" : "82:9-82:87",
+                  "identifier" : "cC",
+                  "resultTypeSpecifier" : {
+                     "localId" : "691",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "692",
+                        "name" : "{http://hl7.org/fhir}CodeableConcept",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "expression" : {
+                     "localId" : "683",
+                     "locator" : "82:13-82:87",
+                     "name" : "CollateConclusionCodes",
+                     "libraryName" : "BCSMCommon",
+                     "type" : "FunctionRef",
+                     "resultTypeSpecifier" : {
+                        "localId" : "689",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "690",
+                           "name" : "{http://hl7.org/fhir}CodeableConcept",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
+                     "signature" : [ {
+                        "localId" : "684",
+                        "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "685",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "686",
+                           "name" : "{http://hl7.org/fhir}Observation",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ],
+                     "operand" : [ {
+                        "localId" : "676",
+                        "locator" : "82:47",
+                        "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                        "name" : "D",
+                        "type" : "AliasRef"
+                     }, {
+                        "localId" : "678",
+                        "locator" : "82:49-82:86",
+                        "name" : "BreastImagingObservations",
+                        "libraryName" : "DataElements",
+                        "type" : "ExpressionRef",
+                        "resultTypeSpecifier" : {
+                           "localId" : "681",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "682",
+                              "name" : "{http://hl7.org/fhir}Observation",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
+                     } ]
+                  }
+               } ],
+               "relationship" : [ ],
+               "return" : {
+                  "localId" : "693",
+                  "locator" : "83:5-98:5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                  "expression" : {
+                     "localId" : "803",
+                     "locator" : "83:12-98:5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "First",
+                     "signature" : [ {
+                        "localId" : "804",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "805",
+                           "name" : "{urn:hl7-org:elm-types:r1}Code",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ],
+                     "source" : {
+                        "localId" : "796",
+                        "locator" : "84:7-97:16",
+                        "type" : "Query",
+                        "resultTypeSpecifier" : {
+                           "localId" : "797",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "798",
+                              "name" : "{urn:hl7-org:elm-types:r1}Code",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        },
+                        "source" : [ {
+                           "localId" : "694",
+                           "locator" : "84:7-84:17",
+                           "alias" : "C",
+                           "resultTypeSpecifier" : {
+                              "localId" : "708",
+                              "type" : "ListTypeSpecifier",
+                              "elementType" : {
+                                 "localId" : "709",
+                                 "name" : "{http://hl7.org/fhir}Coding",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           },
+                           "expression" : {
+                              "localId" : "705",
+                              "locator" : "84:7-84:15",
+                              "type" : "Flatten",
+                              "resultTypeSpecifier" : {
+                                 "localId" : "706",
+                                 "type" : "ListTypeSpecifier",
+                                 "elementType" : {
+                                    "localId" : "707",
+                                    "name" : "{http://hl7.org/fhir}Coding",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              },
+                              "signature" : [ ],
+                              "operand" : {
+                                 "localId" : "703",
+                                 "type" : "Query",
+                                 "source" : [ {
+                                    "localId" : "702",
+                                    "alias" : "$this",
+                                    "expression" : {
+                                       "localId" : "695",
+                                       "name" : "cC",
+                                       "type" : "QueryLetRef"
+                                    }
+                                 } ],
+                                 "let" : [ ],
+                                 "relationship" : [ ],
+                                 "where" : {
+                                    "localId" : "699",
+                                    "type" : "Not",
+                                    "signature" : [ ],
+                                    "operand" : {
+                                       "localId" : "698",
+                                       "type" : "IsNull",
+                                       "signature" : [ ],
+                                       "operand" : {
+                                          "localId" : "697",
+                                          "path" : "coding",
+                                          "type" : "Property",
+                                          "source" : {
+                                             "localId" : "696",
+                                             "name" : "$this",
+                                             "type" : "AliasRef"
+                                          }
+                                       }
+                                    }
+                                 },
+                                 "return" : {
+                                    "localId" : "704",
+                                    "distinct" : false,
+                                    "expression" : {
+                                       "localId" : "701",
+                                       "path" : "coding",
+                                       "type" : "Property",
+                                       "source" : {
+                                          "localId" : "700",
+                                          "name" : "$this",
+                                          "type" : "AliasRef"
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+                        } ],
+                        "let" : [ {
+                           "localId" : "710",
+                           "locator" : "85:13-85:36",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                           "identifier" : "c",
+                           "expression" : {
+                              "localId" : "713",
+                              "locator" : "85:16-85:36",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                              "name" : "ToCode",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "714",
+                                 "name" : "{http://hl7.org/fhir}Coding",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "712",
+                                 "locator" : "85:35",
+                                 "resultTypeName" : "{http://hl7.org/fhir}Coding",
+                                 "name" : "C",
+                                 "type" : "AliasRef"
+                              } ]
+                           }
+                        } ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "localId" : "715",
+                           "locator" : "86:9-96:28",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "Or",
+                           "signature" : [ {
+                              "localId" : "790",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "791",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "716",
+                              "locator" : "87:11-95:28",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "Or",
+                              "signature" : [ {
+                                 "localId" : "783",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "NamedTypeSpecifier"
+                              }, {
+                                 "localId" : "784",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "717",
+                                 "locator" : "87:11-94:29",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "Or",
+                                 "signature" : [ {
+                                    "localId" : "776",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                    "type" : "NamedTypeSpecifier"
+                                 }, {
+                                    "localId" : "777",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "718",
+                                    "locator" : "87:11-93:29",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                    "type" : "Or",
+                                    "signature" : [ {
+                                       "localId" : "769",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "770",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "719",
+                                       "locator" : "87:11-92:29",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                       "type" : "Or",
+                                       "signature" : [ {
+                                          "localId" : "762",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "763",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                          "type" : "NamedTypeSpecifier"
+                                       } ],
+                                       "operand" : [ {
+                                          "localId" : "720",
+                                          "locator" : "87:11-91:28",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                          "type" : "Or",
+                                          "signature" : [ {
+                                             "localId" : "755",
+                                             "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "756",
+                                             "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                             "type" : "NamedTypeSpecifier"
+                                          } ],
+                                          "operand" : [ {
+                                             "localId" : "721",
+                                             "locator" : "87:11-90:28",
+                                             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                             "type" : "Or",
+                                             "signature" : [ {
+                                                "localId" : "748",
+                                                "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type" : "NamedTypeSpecifier"
+                                             }, {
+                                                "localId" : "749",
+                                                "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type" : "NamedTypeSpecifier"
+                                             } ],
+                                             "operand" : [ {
+                                                "localId" : "722",
+                                                "locator" : "87:11-89:28",
+                                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type" : "Or",
+                                                "signature" : [ {
+                                                   "localId" : "741",
+                                                   "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                   "type" : "NamedTypeSpecifier"
+                                                }, {
+                                                   "localId" : "742",
+                                                   "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                   "type" : "NamedTypeSpecifier"
+                                                } ],
+                                                "operand" : [ {
+                                                   "localId" : "723",
+                                                   "locator" : "87:11-88:27",
+                                                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                   "type" : "Or",
+                                                   "signature" : [ {
+                                                      "localId" : "734",
+                                                      "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                      "type" : "NamedTypeSpecifier"
+                                                   }, {
+                                                      "localId" : "735",
+                                                      "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                      "type" : "NamedTypeSpecifier"
+                                                   } ],
+                                                   "operand" : [ {
+                                                      "localId" : "724",
+                                                      "locator" : "87:11-87:25",
+                                                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                      "type" : "Equivalent",
+                                                      "signature" : [ {
+                                                         "localId" : "727",
+                                                         "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                         "type" : "NamedTypeSpecifier"
+                                                      }, {
+                                                         "localId" : "728",
+                                                         "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                         "type" : "NamedTypeSpecifier"
+                                                      } ],
+                                                      "operand" : [ {
+                                                         "localId" : "725",
+                                                         "locator" : "87:11",
+                                                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                         "name" : "c",
+                                                         "type" : "QueryLetRef"
+                                                      }, {
+                                                         "localId" : "726",
+                                                         "locator" : "87:15-87:25",
+                                                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                         "name" : "Category0",
+                                                         "type" : "CodeRef"
+                                                      } ]
+                                                   }, {
+                                                      "localId" : "729",
+                                                      "locator" : "88:14-88:27",
+                                                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                      "type" : "Equivalent",
+                                                      "signature" : [ {
+                                                         "localId" : "732",
+                                                         "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                         "type" : "NamedTypeSpecifier"
+                                                      }, {
+                                                         "localId" : "733",
+                                                         "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                         "type" : "NamedTypeSpecifier"
+                                                      } ],
+                                                      "operand" : [ {
+                                                         "localId" : "730",
+                                                         "locator" : "88:14",
+                                                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                         "name" : "c",
+                                                         "type" : "QueryLetRef"
+                                                      }, {
+                                                         "localId" : "731",
+                                                         "locator" : "88:17-88:27",
+                                                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                         "name" : "Category1",
+                                                         "type" : "CodeRef"
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "localId" : "736",
+                                                   "locator" : "89:14-89:28",
+                                                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                   "type" : "Equivalent",
+                                                   "signature" : [ {
+                                                      "localId" : "739",
+                                                      "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                      "type" : "NamedTypeSpecifier"
+                                                   }, {
+                                                      "localId" : "740",
+                                                      "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                      "type" : "NamedTypeSpecifier"
+                                                   } ],
+                                                   "operand" : [ {
+                                                      "localId" : "737",
+                                                      "locator" : "89:14",
+                                                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                      "name" : "c",
+                                                      "type" : "QueryLetRef"
+                                                   }, {
+                                                      "localId" : "738",
+                                                      "locator" : "89:18-89:28",
+                                                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                      "name" : "Category2",
+                                                      "type" : "CodeRef"
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "localId" : "743",
+                                                "locator" : "90:14-90:28",
+                                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                                "type" : "Equivalent",
+                                                "signature" : [ {
+                                                   "localId" : "746",
+                                                   "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                   "type" : "NamedTypeSpecifier"
+                                                }, {
+                                                   "localId" : "747",
+                                                   "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                   "type" : "NamedTypeSpecifier"
+                                                } ],
+                                                "operand" : [ {
+                                                   "localId" : "744",
+                                                   "locator" : "90:14",
+                                                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                   "name" : "c",
+                                                   "type" : "QueryLetRef"
+                                                }, {
+                                                   "localId" : "745",
+                                                   "locator" : "90:18-90:28",
+                                                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                   "name" : "Category3",
+                                                   "type" : "CodeRef"
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "localId" : "750",
+                                             "locator" : "91:14-91:28",
+                                             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                             "type" : "Equivalent",
+                                             "signature" : [ {
+                                                "localId" : "753",
+                                                "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "type" : "NamedTypeSpecifier"
+                                             }, {
+                                                "localId" : "754",
+                                                "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "type" : "NamedTypeSpecifier"
+                                             } ],
+                                             "operand" : [ {
+                                                "localId" : "751",
+                                                "locator" : "91:14",
+                                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "name" : "c",
+                                                "type" : "QueryLetRef"
+                                             }, {
+                                                "localId" : "752",
+                                                "locator" : "91:18-91:28",
+                                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "name" : "Category4",
+                                                "type" : "CodeRef"
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "localId" : "757",
+                                          "locator" : "92:14-92:29",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                          "type" : "Equivalent",
+                                          "signature" : [ {
+                                             "localId" : "760",
+                                             "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "761",
+                                             "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                             "type" : "NamedTypeSpecifier"
+                                          } ],
+                                          "operand" : [ {
+                                             "localId" : "758",
+                                             "locator" : "92:14",
+                                             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                             "name" : "c",
+                                             "type" : "QueryLetRef"
+                                          }, {
+                                             "localId" : "759",
+                                             "locator" : "92:18-92:29",
+                                             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                             "name" : "Category4A",
+                                             "type" : "CodeRef"
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "localId" : "764",
+                                       "locator" : "93:14-93:29",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                       "type" : "Equivalent",
+                                       "signature" : [ {
+                                          "localId" : "767",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "768",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                          "type" : "NamedTypeSpecifier"
+                                       } ],
+                                       "operand" : [ {
+                                          "localId" : "765",
+                                          "locator" : "93:14",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                          "name" : "c",
+                                          "type" : "QueryLetRef"
+                                       }, {
+                                          "localId" : "766",
+                                          "locator" : "93:18-93:29",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                          "name" : "Category4B",
+                                          "type" : "CodeRef"
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "localId" : "771",
+                                    "locator" : "94:14-94:29",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                    "type" : "Equivalent",
+                                    "signature" : [ {
+                                       "localId" : "774",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "775",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "772",
+                                       "locator" : "94:14",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                       "name" : "c",
+                                       "type" : "QueryLetRef"
+                                    }, {
+                                       "localId" : "773",
+                                       "locator" : "94:18-94:29",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                       "name" : "Category4C",
+                                       "type" : "CodeRef"
+                                    } ]
+                                 } ]
+                              }, {
+                                 "localId" : "778",
+                                 "locator" : "95:14-95:28",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "Equivalent",
+                                 "signature" : [ {
+                                    "localId" : "781",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "type" : "NamedTypeSpecifier"
+                                 }, {
+                                    "localId" : "782",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "779",
+                                    "locator" : "95:14",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "name" : "c",
+                                    "type" : "QueryLetRef"
+                                 }, {
+                                    "localId" : "780",
+                                    "locator" : "95:18-95:28",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "name" : "Category5",
+                                    "type" : "CodeRef"
+                                 } ]
+                              } ]
+                           }, {
+                              "localId" : "785",
+                              "locator" : "96:14-96:28",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "Equivalent",
+                              "signature" : [ {
+                                 "localId" : "788",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "type" : "NamedTypeSpecifier"
+                              }, {
+                                 "localId" : "789",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "786",
+                                 "locator" : "96:14",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "name" : "c",
+                                 "type" : "QueryLetRef"
+                              }, {
+                                 "localId" : "787",
+                                 "locator" : "96:18-96:28",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "name" : "Category6",
+                                 "type" : "CodeRef"
+                              } ]
+                           } ]
+                        },
+                        "return" : {
+                           "localId" : "792",
+                           "locator" : "97:9-97:16",
+                           "resultTypeSpecifier" : {
+                              "localId" : "794",
+                              "type" : "ListTypeSpecifier",
+                              "elementType" : {
+                                 "localId" : "795",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           },
+                           "expression" : {
+                              "localId" : "793",
+                              "locator" : "97:16",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                              "name" : "c",
+                              "type" : "QueryLetRef"
+                           }
+                        }
+                     }
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "310",
+               "name" : "report",
+               "operandTypeSpecifier" : {
+                  "localId" : "309",
+                  "locator" : "80:50-80:65",
+                  "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "305",
+            "locator" : "70:1-71:81",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "MostRecentBreastImagingBiradsResult",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "305",
+                  "s" : [ {
+                     "value" : [ "","define ","MostRecentBreastImagingBiradsResult",":\n  " ]
+                  }, {
+                     "r" : "311",
+                     "s" : [ {
+                        "value" : [ "BreastImagingBiradsResult","(" ]
+                     }, {
+                        "r" : "307",
+                        "s" : [ {
+                           "r" : "306",
+                           "s" : [ {
+                              "value" : [ "DataElements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "307",
+                           "s" : [ {
+                              "value" : [ "MostRecentBreastImagingDiagnosticReport" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "311",
+               "locator" : "71:3-71:81",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+               "name" : "BreastImagingBiradsResult",
+               "type" : "FunctionRef",
+               "signature" : [ {
+                  "localId" : "312",
+                  "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "307",
+                  "locator" : "71:29-71:80",
+                  "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "name" : "MostRecentBreastImagingDiagnosticReport",
+                  "libraryName" : "DataElements",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "463",
+            "locator" : "100:1-115:5",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "BreastBiopsyResult",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "type" : "FunctionDef",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "463",
+                  "s" : [ {
+                     "value" : [ "","define function BreastBiopsyResult(report DiagnosticReport):\n  " ]
+                  }, {
+                     "r" : "917",
+                     "s" : [ {
+                        "r" : "917",
+                        "s" : [ {
+                           "s" : [ {
+                              "r" : "807",
+                              "s" : [ {
+                                 "r" : "808",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "value" : [ "report" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " ","D" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "let " ]
+                           }, {
+                              "r" : "809",
+                              "s" : [ {
+                                 "value" : [ "cC",": " ]
+                              }, {
+                                 "r" : "818",
+                                 "s" : [ {
+                                    "r" : "810",
+                                    "s" : [ {
+                                       "value" : [ "BCSMCommon" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "818",
+                                    "s" : [ {
+                                       "value" : [ "CollateConclusionCodes","(" ]
+                                    }, {
+                                       "r" : "811",
+                                       "s" : [ {
+                                          "value" : [ "D" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "," ]
+                                    }, {
+                                       "r" : "813",
+                                       "s" : [ {
+                                          "r" : "812",
+                                          "s" : [ {
+                                             "value" : [ "DataElements" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "813",
+                                          "s" : [ {
+                                             "value" : [ "BiopsyObservations" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ ")" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    " ]
+                        }, {
+                           "r" : "828",
+                           "s" : [ {
+                              "value" : [ "return " ]
+                           }, {
+                              "r" : "914",
+                              "s" : [ {
+                                 "value" : [ "First","(\n      " ]
+                              }, {
+                                 "r" : "907",
+                                 "s" : [ {
+                                    "s" : [ {
+                                       "r" : "829",
+                                       "s" : [ {
+                                          "r" : "840",
+                                          "s" : [ {
+                                             "s" : [ {
+                                                "value" : [ "cC",".","coding" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " ","C" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "let " ]
+                                    }, {
+                                       "r" : "845",
+                                       "s" : [ {
+                                          "value" : [ "c",": " ]
+                                       }, {
+                                          "r" : "848",
+                                          "s" : [ {
+                                             "r" : "846",
+                                             "s" : [ {
+                                                "value" : [ "FHIRHelpers" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "848",
+                                             "s" : [ {
+                                                "value" : [ "ToCode","(" ]
+                                             }, {
+                                                "r" : "847",
+                                                "s" : [ {
+                                                   "value" : [ "C" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ ")" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n        " ]
+                                 }, {
+                                    "r" : "850",
+                                    "s" : [ {
+                                       "value" : [ "where //order by risk\n          " ]
+                                    }, {
+                                       "r" : "850",
+                                       "s" : [ {
+                                          "r" : "851",
+                                          "s" : [ {
+                                             "r" : "852",
+                                             "s" : [ {
+                                                "r" : "853",
+                                                "s" : [ {
+                                                   "r" : "854",
+                                                   "s" : [ {
+                                                      "r" : "855",
+                                                      "s" : [ {
+                                                         "r" : "856",
+                                                         "s" : [ {
+                                                            "r" : "857",
+                                                            "s" : [ {
+                                                               "value" : [ "c" ]
+                                                            } ]
+                                                         }, {
+                                                            "value" : [ " ","~"," " ]
+                                                         }, {
+                                                            "r" : "858",
+                                                            "s" : [ {
+                                                               "value" : [ "\"Malignant\"" ]
+                                                            } ]
+                                                         } ]
+                                                      }, {
+                                                         "value" : [ "     \n          or " ]
+                                                      }, {
+                                                         "r" : "861",
+                                                         "s" : [ {
+                                                            "r" : "862",
+                                                            "s" : [ {
+                                                               "value" : [ "c" ]
+                                                            } ]
+                                                         }, {
+                                                            "value" : [ " ","~"," " ]
+                                                         }, {
+                                                            "r" : "863",
+                                                            "s" : [ {
+                                                               "value" : [ "\"Indeterminate\"" ]
+                                                            } ]
+                                                         } ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ "\n          or " ]
+                                                   }, {
+                                                      "r" : "868",
+                                                      "s" : [ {
+                                                         "r" : "869",
+                                                         "s" : [ {
+                                                            "value" : [ "c" ]
+                                                         } ]
+                                                      }, {
+                                                         "value" : [ " ","~"," " ]
+                                                      }, {
+                                                         "r" : "870",
+                                                         "s" : [ {
+                                                            "value" : [ "\"Discordant\"" ]
+                                                         } ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "                  \n          or " ]
+                                                }, {
+                                                   "r" : "875",
+                                                   "s" : [ {
+                                                      "r" : "876",
+                                                      "s" : [ {
+                                                         "value" : [ "c" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ " ","~"," " ]
+                                                   }, {
+                                                      "r" : "877",
+                                                      "s" : [ {
+                                                         "value" : [ "\"Atypical\"" ]
+                                                      } ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ "        \n          or " ]
+                                             }, {
+                                                "r" : "882",
+                                                "s" : [ {
+                                                   "r" : "883",
+                                                   "s" : [ {
+                                                      "value" : [ "c" ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ " ","~"," " ]
+                                                }, {
+                                                   "r" : "884",
+                                                   "s" : [ {
+                                                      "value" : [ "\"Benign\"" ]
+                                                   } ]
+                                                } ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "\n          or " ]
+                                          }, {
+                                             "r" : "889",
+                                             "s" : [ {
+                                                "r" : "890",
+                                                "s" : [ {
+                                                   "value" : [ "c" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ " ","~"," " ]
+                                             }, {
+                                                "r" : "891",
+                                                "s" : [ {
+                                                   "value" : [ "\"Negative\"" ]
+                                                } ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "\n          or " ]
+                                       }, {
+                                          "r" : "896",
+                                          "s" : [ {
+                                             "r" : "897",
+                                             "s" : [ {
+                                                "value" : [ "c" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ " ","~"," " ]
+                                          }, {
+                                             "r" : "898",
+                                             "s" : [ {
+                                                "value" : [ "\"Other\"" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " \n        " ]
+                                 }, {
+                                    "r" : "903",
+                                    "s" : [ {
+                                       "value" : [ "return " ]
+                                    }, {
+                                       "r" : "904",
+                                       "s" : [ {
+                                          "value" : [ "c" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "  \n    )" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "917",
+               "locator" : "101:3-115:5",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "807",
+                  "locator" : "101:3-101:10",
+                  "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "alias" : "D",
+                  "expression" : {
+                     "localId" : "808",
+                     "locator" : "101:3-101:8",
+                     "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                     "name" : "report",
+                     "type" : "OperandRef"
+                  }
+               } ],
+               "let" : [ {
+                  "localId" : "809",
+                  "locator" : "102:9-102:80",
+                  "identifier" : "cC",
+                  "resultTypeSpecifier" : {
+                     "localId" : "826",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "827",
+                        "name" : "{http://hl7.org/fhir}CodeableConcept",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  },
+                  "expression" : {
+                     "localId" : "818",
+                     "locator" : "102:13-102:80",
+                     "name" : "CollateConclusionCodes",
+                     "libraryName" : "BCSMCommon",
+                     "type" : "FunctionRef",
+                     "resultTypeSpecifier" : {
+                        "localId" : "824",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "825",
+                           "name" : "{http://hl7.org/fhir}CodeableConcept",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
+                     "signature" : [ {
+                        "localId" : "819",
+                        "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "820",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "821",
+                           "name" : "{http://hl7.org/fhir}Observation",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ],
+                     "operand" : [ {
+                        "localId" : "811",
+                        "locator" : "102:47",
+                        "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                        "name" : "D",
+                        "type" : "AliasRef"
+                     }, {
+                        "localId" : "813",
+                        "locator" : "102:49-102:79",
+                        "name" : "BiopsyObservations",
+                        "libraryName" : "DataElements",
+                        "type" : "ExpressionRef",
+                        "resultTypeSpecifier" : {
+                           "localId" : "816",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "817",
+                              "name" : "{http://hl7.org/fhir}Observation",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
+                     } ]
+                  }
+               } ],
+               "relationship" : [ ],
+               "return" : {
+                  "localId" : "828",
+                  "locator" : "103:5-115:5",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                  "expression" : {
+                     "localId" : "914",
+                     "locator" : "103:12-115:5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "First",
+                     "signature" : [ {
+                        "localId" : "915",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "916",
+                           "name" : "{urn:hl7-org:elm-types:r1}Code",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ],
+                     "source" : {
+                        "localId" : "907",
+                        "locator" : "104:7-114:16",
+                        "type" : "Query",
+                        "resultTypeSpecifier" : {
+                           "localId" : "908",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "909",
+                              "name" : "{urn:hl7-org:elm-types:r1}Code",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        },
+                        "source" : [ {
+                           "localId" : "829",
+                           "locator" : "104:7-104:17",
+                           "alias" : "C",
+                           "resultTypeSpecifier" : {
+                              "localId" : "843",
+                              "type" : "ListTypeSpecifier",
+                              "elementType" : {
+                                 "localId" : "844",
+                                 "name" : "{http://hl7.org/fhir}Coding",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           },
+                           "expression" : {
+                              "localId" : "840",
+                              "locator" : "104:7-104:15",
+                              "type" : "Flatten",
+                              "resultTypeSpecifier" : {
+                                 "localId" : "841",
+                                 "type" : "ListTypeSpecifier",
+                                 "elementType" : {
+                                    "localId" : "842",
+                                    "name" : "{http://hl7.org/fhir}Coding",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              },
+                              "signature" : [ ],
+                              "operand" : {
+                                 "localId" : "838",
+                                 "type" : "Query",
+                                 "source" : [ {
+                                    "localId" : "837",
+                                    "alias" : "$this",
+                                    "expression" : {
+                                       "localId" : "830",
+                                       "name" : "cC",
+                                       "type" : "QueryLetRef"
+                                    }
+                                 } ],
+                                 "let" : [ ],
+                                 "relationship" : [ ],
+                                 "where" : {
+                                    "localId" : "834",
+                                    "type" : "Not",
+                                    "signature" : [ ],
+                                    "operand" : {
+                                       "localId" : "833",
+                                       "type" : "IsNull",
+                                       "signature" : [ ],
+                                       "operand" : {
+                                          "localId" : "832",
+                                          "path" : "coding",
+                                          "type" : "Property",
+                                          "source" : {
+                                             "localId" : "831",
+                                             "name" : "$this",
+                                             "type" : "AliasRef"
+                                          }
+                                       }
+                                    }
+                                 },
+                                 "return" : {
+                                    "localId" : "839",
+                                    "distinct" : false,
+                                    "expression" : {
+                                       "localId" : "836",
+                                       "path" : "coding",
+                                       "type" : "Property",
+                                       "source" : {
+                                          "localId" : "835",
+                                          "name" : "$this",
+                                          "type" : "AliasRef"
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+                        } ],
+                        "let" : [ {
+                           "localId" : "845",
+                           "locator" : "105:13-105:36",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                           "identifier" : "c",
+                           "expression" : {
+                              "localId" : "848",
+                              "locator" : "105:16-105:36",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                              "name" : "ToCode",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "849",
+                                 "name" : "{http://hl7.org/fhir}Coding",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "847",
+                                 "locator" : "105:35",
+                                 "resultTypeName" : "{http://hl7.org/fhir}Coding",
+                                 "name" : "C",
+                                 "type" : "AliasRef"
+                              } ]
+                           }
+                        } ],
+                        "relationship" : [ ],
+                        "where" : {
+                           "localId" : "850",
+                           "locator" : "106:9-113:24",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "Or",
+                           "signature" : [ {
+                              "localId" : "901",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "902",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "851",
+                              "locator" : "107:11-112:27",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "Or",
+                              "signature" : [ {
+                                 "localId" : "894",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "NamedTypeSpecifier"
+                              }, {
+                                 "localId" : "895",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "852",
+                                 "locator" : "107:11-111:25",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "Or",
+                                 "signature" : [ {
+                                    "localId" : "887",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                    "type" : "NamedTypeSpecifier"
+                                 }, {
+                                    "localId" : "888",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "853",
+                                    "locator" : "107:11-110:27",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                    "type" : "Or",
+                                    "signature" : [ {
+                                       "localId" : "880",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "881",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "854",
+                                       "locator" : "107:11-109:29",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                       "type" : "Or",
+                                       "signature" : [ {
+                                          "localId" : "873",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "874",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                          "type" : "NamedTypeSpecifier"
+                                       } ],
+                                       "operand" : [ {
+                                          "localId" : "855",
+                                          "locator" : "107:11-108:32",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                          "type" : "Or",
+                                          "signature" : [ {
+                                             "localId" : "866",
+                                             "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "867",
+                                             "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                             "type" : "NamedTypeSpecifier"
+                                          } ],
+                                          "operand" : [ {
+                                             "localId" : "856",
+                                             "locator" : "107:11-107:25",
+                                             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                             "type" : "Equivalent",
+                                             "signature" : [ {
+                                                "localId" : "859",
+                                                "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "type" : "NamedTypeSpecifier"
+                                             }, {
+                                                "localId" : "860",
+                                                "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "type" : "NamedTypeSpecifier"
+                                             } ],
+                                             "operand" : [ {
+                                                "localId" : "857",
+                                                "locator" : "107:11",
+                                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "name" : "c",
+                                                "type" : "QueryLetRef"
+                                             }, {
+                                                "localId" : "858",
+                                                "locator" : "107:15-107:25",
+                                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "name" : "Malignant",
+                                                "type" : "CodeRef"
+                                             } ]
+                                          }, {
+                                             "localId" : "861",
+                                             "locator" : "108:14-108:32",
+                                             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                             "type" : "Equivalent",
+                                             "signature" : [ {
+                                                "localId" : "864",
+                                                "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "type" : "NamedTypeSpecifier"
+                                             }, {
+                                                "localId" : "865",
+                                                "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "type" : "NamedTypeSpecifier"
+                                             } ],
+                                             "operand" : [ {
+                                                "localId" : "862",
+                                                "locator" : "108:14",
+                                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "name" : "c",
+                                                "type" : "QueryLetRef"
+                                             }, {
+                                                "localId" : "863",
+                                                "locator" : "108:18-108:32",
+                                                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                                "name" : "Indeterminate",
+                                                "type" : "CodeRef"
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "localId" : "868",
+                                          "locator" : "109:14-109:29",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                          "type" : "Equivalent",
+                                          "signature" : [ {
+                                             "localId" : "871",
+                                             "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "872",
+                                             "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                             "type" : "NamedTypeSpecifier"
+                                          } ],
+                                          "operand" : [ {
+                                             "localId" : "869",
+                                             "locator" : "109:14",
+                                             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                             "name" : "c",
+                                             "type" : "QueryLetRef"
+                                          }, {
+                                             "localId" : "870",
+                                             "locator" : "109:18-109:29",
+                                             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                             "name" : "Discordant",
+                                             "type" : "CodeRef"
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "localId" : "875",
+                                       "locator" : "110:14-110:27",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                       "type" : "Equivalent",
+                                       "signature" : [ {
+                                          "localId" : "878",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "879",
+                                          "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                          "type" : "NamedTypeSpecifier"
+                                       } ],
+                                       "operand" : [ {
+                                          "localId" : "876",
+                                          "locator" : "110:14",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                          "name" : "c",
+                                          "type" : "QueryLetRef"
+                                       }, {
+                                          "localId" : "877",
+                                          "locator" : "110:18-110:27",
+                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                          "name" : "Atypical",
+                                          "type" : "CodeRef"
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "localId" : "882",
+                                    "locator" : "111:14-111:25",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                    "type" : "Equivalent",
+                                    "signature" : [ {
+                                       "localId" : "885",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "886",
+                                       "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ],
+                                    "operand" : [ {
+                                       "localId" : "883",
+                                       "locator" : "111:14",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                       "name" : "c",
+                                       "type" : "QueryLetRef"
+                                    }, {
+                                       "localId" : "884",
+                                       "locator" : "111:18-111:25",
+                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                       "name" : "Benign",
+                                       "type" : "CodeRef"
+                                    } ]
+                                 } ]
+                              }, {
+                                 "localId" : "889",
+                                 "locator" : "112:14-112:27",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "Equivalent",
+                                 "signature" : [ {
+                                    "localId" : "892",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "type" : "NamedTypeSpecifier"
+                                 }, {
+                                    "localId" : "893",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "890",
+                                    "locator" : "112:14",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "name" : "c",
+                                    "type" : "QueryLetRef"
+                                 }, {
+                                    "localId" : "891",
+                                    "locator" : "112:18-112:27",
+                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "name" : "Negative",
+                                    "type" : "CodeRef"
+                                 } ]
+                              } ]
+                           }, {
+                              "localId" : "896",
+                              "locator" : "113:14-113:24",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "Equivalent",
+                              "signature" : [ {
+                                 "localId" : "899",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "type" : "NamedTypeSpecifier"
+                              }, {
+                                 "localId" : "900",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "897",
+                                 "locator" : "113:14",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "name" : "c",
+                                 "type" : "QueryLetRef"
+                              }, {
+                                 "localId" : "898",
+                                 "locator" : "113:18-113:24",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "name" : "Other",
+                                 "type" : "CodeRef"
+                              } ]
+                           } ]
+                        },
+                        "return" : {
+                           "localId" : "903",
+                           "locator" : "114:9-114:16",
+                           "resultTypeSpecifier" : {
+                              "localId" : "905",
+                              "type" : "ListTypeSpecifier",
+                              "elementType" : {
+                                 "localId" : "906",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           },
+                           "expression" : {
+                              "localId" : "904",
+                              "locator" : "114:16",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                              "name" : "c",
+                              "type" : "QueryLetRef"
+                           }
+                        }
+                     }
+                  }
+               }
+            },
+            "operand" : [ {
+               "localId" : "465",
+               "name" : "report",
+               "operandTypeSpecifier" : {
+                  "localId" : "464",
+                  "locator" : "100:43-100:58",
+                  "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "type" : "NamedTypeSpecifier"
+               }
+            } ]
+         }, {
+            "localId" : "460",
+            "locator" : "73:1-74:73",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "MostRecentBreastBiopsyResult",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "460",
+                  "s" : [ {
+                     "value" : [ "","define ","MostRecentBreastBiopsyResult",":\n  " ]
+                  }, {
+                     "r" : "466",
+                     "s" : [ {
+                        "value" : [ "BreastBiopsyResult","(" ]
+                     }, {
+                        "r" : "462",
+                        "s" : [ {
+                           "r" : "461",
+                           "s" : [ {
+                              "value" : [ "DataElements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "462",
+                           "s" : [ {
+                              "value" : [ "MostRecentBreastBiopsyDiagnosticReport" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "466",
+               "locator" : "74:3-74:73",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+               "name" : "BreastBiopsyResult",
+               "type" : "FunctionRef",
+               "signature" : [ {
+                  "localId" : "467",
+                  "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "462",
+                  "locator" : "74:22-74:72",
+                  "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
+                  "name" : "MostRecentBreastBiopsyDiagnosticReport",
+                  "libraryName" : "DataElements",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "254",
+            "locator" : "46:1-62:5",
+            "name" : "LatestTest",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "254",
+                  "s" : [ {
+                     "value" : [ "","define ","LatestTest",":\n  " ]
+                  }, {
+                     "r" : "255",
+                     "s" : [ {
+                        "value" : [ "case\n    " ]
+                     }, {
+                        "r" : "256",
+                        "s" : [ {
+                           "value" : [ "when " ]
+                        }, {
+                           "r" : "257",
+                           "s" : [ {
+                              "r" : "266",
+                              "s" : [ {
+                                 "r" : "265",
+                                 "s" : [ {
+                                    "value" : [ "MostRecentBreastImagingDate" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is null" ]
+                              } ]
+                           }, {
+                              "value" : [ " and " ]
+                           }, {
+                              "r" : "276",
+                              "s" : [ {
+                                 "r" : "275",
+                                 "s" : [ {
+                                    "value" : [ "MostRecentBreastBiopsyDate" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is null" ]
+                              } ]
+                           } ]
+                        }, {
+                           "r" : "280",
+                           "value" : [ " \n      then ","null" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "281",
+                        "s" : [ {
+                           "value" : [ "when " ]
+                        }, {
+                           "r" : "282",
+                           "s" : [ {
+                              "r" : "284",
+                              "s" : [ {
+                                 "r" : "283",
+                                 "s" : [ {
+                                    "value" : [ "MostRecentBreastBiopsyDate" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is null" ]
+                              } ]
+                           }, {
+                              "value" : [ " \n        or " ]
+                           }, {
+                              "r" : "286",
+                              "s" : [ {
+                                 "value" : [ "(" ]
+                              }, {
+                                 "r" : "286",
+                                 "s" : [ {
+                                    "r" : "290",
+                                    "s" : [ {
+                                       "r" : "287",
+                                       "s" : [ {
+                                          "value" : [ "MostRecentBreastImagingDate" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " is not null" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " and " ]
+                                 }, {
+                                    "r" : "294",
+                                    "s" : [ {
+                                       "r" : "292",
+                                       "s" : [ {
+                                          "value" : [ "MostRecentBreastImagingDate" ]
+                                       } ]
+                                    }, {
+                                       "r" : "294",
+                                       "value" : [ " ","after"," " ]
+                                    }, {
+                                       "r" : "293",
+                                       "s" : [ {
+                                          "value" : [ "MostRecentBreastBiopsyDate" ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " \n      then " ]
+                        }, {
+                           "r" : "301",
+                           "s" : [ {
+                              "value" : [ "{\n        " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "type",": " ]
+                              }, {
+                                 "r" : "302",
+                                 "s" : [ {
+                                    "value" : [ "'imaging'" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ",\n        " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "date",": " ]
+                              }, {
+                                 "r" : "303",
+                                 "s" : [ {
+                                    "value" : [ "MostRecentBreastImagingDate" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ",\n        " ]
+                           }, {
+                              "s" : [ {
+                                 "value" : [ "result",": " ]
+                              }, {
+                                 "r" : "448",
+                                 "s" : [ {
+                                    "value" : [ "MostRecentBreastImagingBiradsResult" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      }" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    else " ]
+                     }, {
+                        "r" : "456",
+                        "s" : [ {
+                           "value" : [ "{\n      " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "type",": " ]
+                           }, {
+                              "r" : "457",
+                              "s" : [ {
+                                 "value" : [ "'biopsy'" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ",\n      " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "date",": " ]
+                           }, {
+                              "r" : "458",
+                              "s" : [ {
+                                 "value" : [ "MostRecentBreastBiopsyDate" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ",\n      " ]
+                        }, {
+                           "s" : [ {
+                              "value" : [ "result",": " ]
+                           }, {
+                              "r" : "579",
+                              "s" : [ {
+                                 "value" : [ "MostRecentBreastBiopsyResult" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    }" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n  end" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "resultTypeSpecifier" : {
+               "localId" : "665",
+               "type" : "TupleTypeSpecifier",
+               "element" : [ {
+                  "localId" : "666",
+                  "name" : "type",
+                  "elementType" : {
+                     "localId" : "667",
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }, {
+                  "localId" : "668",
+                  "name" : "date",
+                  "elementType" : {
+                     "localId" : "669",
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }, {
+                  "localId" : "670",
+                  "name" : "result",
+                  "elementType" : {
+                     "localId" : "671",
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               } ]
+            },
+            "expression" : {
+               "localId" : "255",
+               "locator" : "47:3-62:5",
+               "type" : "Case",
+               "resultTypeSpecifier" : {
+                  "localId" : "595",
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "localId" : "596",
+                     "name" : "type",
+                     "elementType" : {
+                        "localId" : "597",
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "localId" : "598",
+                     "name" : "date",
+                     "elementType" : {
+                        "localId" : "599",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "localId" : "600",
+                     "name" : "result",
+                     "elementType" : {
+                        "localId" : "601",
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               },
+               "caseItem" : [ {
+                  "localId" : "256",
+                  "locator" : "48:5-49:15",
+                  "when" : {
+                     "localId" : "257",
+                     "locator" : "48:10-48:83",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "And",
+                     "signature" : [ {
+                        "localId" : "278",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "279",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "266",
+                        "locator" : "48:10-48:44",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "IsNull",
+                        "signature" : [ {
+                           "localId" : "267",
+                           "name" : "{urn:hl7-org:elm-types:r1}Any",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : {
+                           "localId" : "265",
+                           "locator" : "48:10-48:36",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "name" : "MostRecentBreastImagingDate",
+                           "type" : "ExpressionRef"
+                        }
+                     }, {
+                        "localId" : "276",
+                        "locator" : "48:50-48:83",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "IsNull",
+                        "signature" : [ {
+                           "localId" : "277",
+                           "name" : "{urn:hl7-org:elm-types:r1}Any",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : {
+                           "localId" : "275",
+                           "locator" : "48:50-48:75",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "name" : "MostRecentBreastBiopsyDate",
+                           "type" : "ExpressionRef"
+                        }
+                     } ]
+                  },
+                  "then" : {
+                     "localId" : "587",
+                     "type" : "As",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "280",
+                        "locator" : "49:12-49:15",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
+                        "type" : "Null"
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "588",
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "localId" : "589",
+                           "name" : "type",
+                           "elementType" : {
+                              "localId" : "590",
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "localId" : "591",
+                           "name" : "date",
+                           "elementType" : {
+                              "localId" : "592",
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "localId" : "593",
+                           "name" : "result",
+                           "elementType" : {
+                              "localId" : "594",
+                              "name" : "{urn:hl7-org:elm-types:r1}Code",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     }
+                  }
+               }, {
+                  "localId" : "281",
+                  "locator" : "50:5-56:7",
+                  "when" : {
+                     "localId" : "282",
+                     "locator" : "50:10-51:117",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "Or",
+                     "signature" : [ {
+                        "localId" : "299",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "300",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "284",
+                        "locator" : "50:10-50:43",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "IsNull",
+                        "signature" : [ {
+                           "localId" : "285",
+                           "name" : "{urn:hl7-org:elm-types:r1}Any",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : {
+                           "localId" : "283",
+                           "locator" : "50:10-50:35",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "name" : "MostRecentBreastBiopsyDate",
+                           "type" : "ExpressionRef"
+                        }
+                     }, {
+                        "localId" : "286",
+                        "locator" : "51:12-51:117",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "And",
+                        "signature" : [ {
+                           "localId" : "297",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "298",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "290",
+                           "locator" : "51:13-51:51",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "Not",
+                           "signature" : [ {
+                              "localId" : "291",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "288",
+                              "locator" : "51:13-51:51",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "IsNull",
+                              "signature" : [ {
+                                 "localId" : "289",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Any",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : {
+                                 "localId" : "287",
+                                 "locator" : "51:13-51:39",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                 "name" : "MostRecentBreastImagingDate",
+                                 "type" : "ExpressionRef"
+                              }
+                           }
+                        }, {
+                           "localId" : "294",
+                           "locator" : "51:57-51:116",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "After",
+                           "signature" : [ {
+                              "localId" : "295",
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "296",
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "292",
+                              "locator" : "51:57-51:83",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "name" : "MostRecentBreastImagingDate",
+                              "type" : "ExpressionRef"
+                           }, {
+                              "localId" : "293",
+                              "locator" : "51:91-51:116",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "name" : "MostRecentBreastBiopsyDate",
+                              "type" : "ExpressionRef"
+                           } ]
+                        } ]
+                     } ]
+                  },
+                  "then" : {
+                     "localId" : "301",
+                     "locator" : "52:12-56:7",
+                     "type" : "Tuple",
+                     "resultTypeSpecifier" : {
+                        "localId" : "449",
+                        "type" : "TupleTypeSpecifier",
+                        "element" : [ {
+                           "localId" : "450",
+                           "name" : "type",
+                           "elementType" : {
+                              "localId" : "451",
+                              "name" : "{urn:hl7-org:elm-types:r1}String",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "localId" : "452",
+                           "name" : "date",
+                           "elementType" : {
+                              "localId" : "453",
+                              "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }, {
+                           "localId" : "454",
+                           "name" : "result",
+                           "elementType" : {
+                              "localId" : "455",
+                              "name" : "{urn:hl7-org:elm-types:r1}Code",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ]
+                     },
+                     "element" : [ {
+                        "name" : "type",
+                        "value" : {
+                           "localId" : "302",
+                           "locator" : "53:15-53:23",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
+                           "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                           "value" : "imaging",
+                           "type" : "Literal"
+                        }
+                     }, {
+                        "name" : "date",
+                        "value" : {
+                           "localId" : "303",
+                           "locator" : "54:15-54:41",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "name" : "MostRecentBreastImagingDate",
+                           "type" : "ExpressionRef"
+                        }
+                     }, {
+                        "name" : "result",
+                        "value" : {
+                           "localId" : "448",
+                           "locator" : "55:17-55:51",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                           "name" : "MostRecentBreastImagingBiradsResult",
+                           "type" : "ExpressionRef"
+                        }
+                     } ]
+                  }
+               } ],
+               "else" : {
+                  "localId" : "456",
+                  "locator" : "57:10-61:5",
+                  "type" : "Tuple",
+                  "resultTypeSpecifier" : {
+                     "localId" : "580",
+                     "type" : "TupleTypeSpecifier",
+                     "element" : [ {
+                        "localId" : "581",
+                        "name" : "type",
+                        "elementType" : {
+                           "localId" : "582",
+                           "name" : "{urn:hl7-org:elm-types:r1}String",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "localId" : "583",
+                        "name" : "date",
+                        "elementType" : {
+                           "localId" : "584",
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     }, {
+                        "localId" : "585",
+                        "name" : "result",
+                        "elementType" : {
+                           "localId" : "586",
+                           "name" : "{urn:hl7-org:elm-types:r1}Code",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ]
+                  },
+                  "element" : [ {
+                     "name" : "type",
+                     "value" : {
+                        "localId" : "457",
+                        "locator" : "58:13-58:20",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "biopsy",
+                        "type" : "Literal"
+                     }
+                  }, {
+                     "name" : "date",
+                     "value" : {
+                        "localId" : "458",
+                        "locator" : "59:13-59:38",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "name" : "MostRecentBreastBiopsyDate",
+                        "type" : "ExpressionRef"
+                     }
+                  }, {
+                     "name" : "result",
+                     "value" : {
+                        "localId" : "579",
+                        "locator" : "60:15-60:42",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                        "name" : "MostRecentBreastBiopsyResult",
+                        "type" : "ExpressionRef"
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "252",
+            "locator" : "33:1-34:12",
+            "name" : "eve-latesttest",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "252",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-latesttest\"",":\n  " ]
+                  }, {
+                     "r" : "609",
+                     "s" : [ {
+                        "value" : [ "LatestTest" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "resultTypeSpecifier" : {
+               "localId" : "617",
+               "type" : "TupleTypeSpecifier",
+               "element" : [ {
+                  "localId" : "618",
+                  "name" : "type",
+                  "elementType" : {
+                     "localId" : "619",
+                     "name" : "{urn:hl7-org:elm-types:r1}String",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }, {
+                  "localId" : "620",
+                  "name" : "date",
+                  "elementType" : {
+                     "localId" : "621",
+                     "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               }, {
+                  "localId" : "622",
+                  "name" : "result",
+                  "elementType" : {
+                     "localId" : "623",
+                     "name" : "{urn:hl7-org:elm-types:r1}Code",
+                     "type" : "NamedTypeSpecifier"
+                  }
+               } ]
+            },
+            "expression" : {
+               "localId" : "609",
+               "locator" : "34:3-34:12",
+               "name" : "LatestTest",
+               "type" : "ExpressionRef",
+               "resultTypeSpecifier" : {
+                  "localId" : "610",
+                  "type" : "TupleTypeSpecifier",
+                  "element" : [ {
+                     "localId" : "611",
+                     "name" : "type",
+                     "elementType" : {
+                        "localId" : "612",
+                        "name" : "{urn:hl7-org:elm-types:r1}String",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "localId" : "613",
+                     "name" : "date",
+                     "elementType" : {
+                        "localId" : "614",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "localId" : "615",
+                     "name" : "result",
+                     "elementType" : {
+                        "localId" : "616",
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "625",
+            "locator" : "36:1-38:36",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-actionablebirads",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "625",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-actionablebirads\"",":\n  " ]
+                  }, {
+                     "r" : "626",
+                     "s" : [ {
+                        "r" : "640",
+                        "s" : [ {
+                           "r" : "636",
+                           "s" : [ {
+                              "r" : "628",
+                              "s" : [ {
+                                 "value" : [ "LatestTest" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "636",
+                              "s" : [ {
+                                 "value" : [ "result" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " ","!~"," " ]
+                        }, {
+                           "r" : "637",
+                           "s" : [ {
+                              "value" : [ "\"Category1\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " and \n    " ]
+                     }, {
+                        "r" : "655",
+                        "s" : [ {
+                           "r" : "651",
+                           "s" : [ {
+                              "r" : "643",
+                              "s" : [ {
+                                 "value" : [ "LatestTest" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "651",
+                              "s" : [ {
+                                 "value" : [ "result" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " ","!~"," " ]
+                        }, {
+                           "r" : "652",
+                           "s" : [ {
+                              "value" : [ "\"Category2\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "626",
+               "locator" : "37:3-38:36",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "And",
+               "signature" : [ {
+                  "localId" : "657",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "658",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "640",
+                  "locator" : "37:3-37:34",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "Not",
+                  "signature" : [ {
+                     "localId" : "641",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "627",
+                     "locator" : "37:3-37:34",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "Equivalent",
+                     "signature" : [ {
+                        "localId" : "638",
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "639",
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "636",
+                        "locator" : "37:3-37:19",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                        "path" : "result",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "628",
+                           "locator" : "37:3-37:12",
+                           "name" : "LatestTest",
+                           "type" : "ExpressionRef",
+                           "resultTypeSpecifier" : {
+                              "localId" : "629",
+                              "type" : "TupleTypeSpecifier",
+                              "element" : [ {
+                                 "localId" : "630",
+                                 "name" : "type",
+                                 "elementType" : {
+                                    "localId" : "631",
+                                    "name" : "{urn:hl7-org:elm-types:r1}String",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              }, {
+                                 "localId" : "632",
+                                 "name" : "date",
+                                 "elementType" : {
+                                    "localId" : "633",
+                                    "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              }, {
+                                 "localId" : "634",
+                                 "name" : "result",
+                                 "elementType" : {
+                                    "localId" : "635",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              } ]
+                           }
+                        }
+                     }, {
+                        "localId" : "637",
+                        "locator" : "37:24-37:34",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                        "name" : "Category1",
+                        "type" : "CodeRef"
+                     } ]
+                  }
+               }, {
+                  "localId" : "655",
+                  "locator" : "38:5-38:36",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "Not",
+                  "signature" : [ {
+                     "localId" : "656",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "642",
+                     "locator" : "38:5-38:36",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "Equivalent",
+                     "signature" : [ {
+                        "localId" : "653",
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "654",
+                        "name" : "{urn:hl7-org:elm-types:r1}Code",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "651",
+                        "locator" : "38:5-38:21",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                        "path" : "result",
+                        "type" : "Property",
+                        "source" : {
+                           "localId" : "643",
+                           "locator" : "38:5-38:14",
+                           "name" : "LatestTest",
+                           "type" : "ExpressionRef",
+                           "resultTypeSpecifier" : {
+                              "localId" : "644",
+                              "type" : "TupleTypeSpecifier",
+                              "element" : [ {
+                                 "localId" : "645",
+                                 "name" : "type",
+                                 "elementType" : {
+                                    "localId" : "646",
+                                    "name" : "{urn:hl7-org:elm-types:r1}String",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              }, {
+                                 "localId" : "647",
+                                 "name" : "date",
+                                 "elementType" : {
+                                    "localId" : "648",
+                                    "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              }, {
+                                 "localId" : "649",
+                                 "name" : "result",
+                                 "elementType" : {
+                                    "localId" : "650",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Code",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              } ]
+                           }
+                        }
+                     }, {
+                        "localId" : "652",
+                        "locator" : "38:26-38:36",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                        "name" : "Category2",
+                        "type" : "CodeRef"
+                     } ]
+                  }
+               } ]
+            }
+         }, {
+            "localId" : "660",
+            "locator" : "40:1-41:37",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "eve-biradsscore",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "660",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-biradsscore\"",":\n  " ]
+                  }, {
+                     "r" : "661",
+                     "s" : [ {
+                        "value" : [ "MostRecentBreastImagingBiradsResult" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "661",
+               "locator" : "41:3-41:37",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+               "name" : "MostRecentBreastImagingBiradsResult",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "663",
+            "locator" : "43:1-44:30",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "eve-biopsyresult",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "663",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-biopsyresult\"",":\n  " ]
+                  }, {
+                     "r" : "664",
+                     "s" : [ {
+                        "value" : [ "MostRecentBreastBiopsyResult" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "664",
+               "locator" : "44:3-44:30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+               "name" : "MostRecentBreastBiopsyResult",
+               "type" : "ExpressionRef"
+            }
+         } ]
+      }
+   }
+}
+
