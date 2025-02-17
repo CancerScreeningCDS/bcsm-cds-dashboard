@@ -9,8 +9,6 @@ import {
   Route
 } from 'react-router-dom';
 
-import TestPatientSelector from 'test/basic/TestPatientSelector';
-import TestPatient from 'test/basic/TestPatient';
 import { TestPatientSelector as FhirTestPatientSelector } from 'test/fhir/TestPatientSelector';
 import { TestPatient as FhirTestPatient } from 'test/fhir/TestPatient';
 import { LaunchSmart } from 'smart/LaunchSmart';
@@ -23,10 +21,6 @@ function App() {
     <Container fluid>
       <Router>
         <Routes>
-          <Route path="/tests-basic" >
-            <Route path=":testName" element={<TestPatient />} />
-            <Route index element={<TestPatientSelector/>} />
-          </Route>
           <Route path="/tests-fhir" >
             <Route path=":testName" element={<FhirTestPatient />} />
             <Route index element={<FhirTestPatientSelector/>} />

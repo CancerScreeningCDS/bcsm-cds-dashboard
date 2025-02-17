@@ -1,0 +1,125 @@
+{
+  "resourceType": "Bundle",
+  "id": "NadiaWills_palpable_breast_mass",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "NadiaWills",
+        "identifier": [
+          {
+            "value": "123-345-567",
+            "type": {
+              "coding": [
+                {
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ]
+            }
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Nadia93"
+            ],
+            "family": "Wills47"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1969-03-09",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "71955999-28a3-4995-ad56-0da019eff4cc",
+        "subject": {
+          "reference": "Patient/NadiaWills"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "200430001",
+              "display": "Palpable breast mass"
+            }
+          ]
+        },
+        "encounter": {
+          "reference": "Encounter/1"
+        },
+        "recordedDate": "2023-12-02"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "mammogram-2023-birads-1",
+        "subject": {
+          "reference": "Patient/NadiaWills"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6",
+              "display": "Screening mammogram"
+            }
+          ]
+        },
+        "effectiveDateTime": "2022-12-02T10:00:00.000Z",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "397140005",
+                "display": "Mammography assessment (Category 1) - Negative (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

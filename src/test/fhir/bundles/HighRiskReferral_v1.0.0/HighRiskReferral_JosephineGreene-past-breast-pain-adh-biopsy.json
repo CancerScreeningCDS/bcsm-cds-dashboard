@@ -1,0 +1,104 @@
+{
+  "resourceType": "Bundle",
+  "id": "HighRiskReferral_JosephineGreene-past-breast-pain-adh-biopsy",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/CarePlan/240",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "240",
+        "subject": {
+          "reference": "Patient/JosephineGreene",
+          "display": "Josephine Greene"
+        },
+        "instantiatesCanonical": [
+          "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/flow-HighRiskReferral"
+        ],
+        "intent": "proposal",
+        "status": "draft",
+        "created": "2024-12-10T00:00:00.0Z",
+        "activity": [
+          {
+            "reference": {
+              "reference": "RequestGroup/241"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/RequestGroup/241",
+      "resource": {
+        "resourceType": "RequestGroup",
+        "id": "241",
+        "subject": {
+          "reference": "Patient/JosephineGreene",
+          "display": "Josephine Greene"
+        },
+        "instantiatesCanonical": [
+          "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/flow-HighRiskReferral"
+        ],
+        "intent": "proposal",
+        "status": "draft",
+        "action": [
+          {
+            "id": "HighRiskReferralAtypicalBiopsy",
+            "title": "Referral for high risk breast specialty evaluation",
+            "description": "Consider referral to breast specialist to discuss primary risk reduction interventions such as chemoprevention.\n\nWomen at greater risk, such as those with a history of past atypical biopsy results, may derive more benefit than harm from risk-reducing medications.",
+            "documentation": [
+              {
+                "type": "citation",
+                "label": "USPSTF",
+                "display": "Breast Cancer: Medication Use to Reduce Risk",
+                "citation": "US Preventive Services Task Force. Medication Use to Reduce Risk of Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(9):857–867.",
+                "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-medications-for-risk-reduction"
+              }
+            ],
+            "resource": {
+              "reference": "ServiceRequest/242"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/ServiceRequest/242",
+      "resource": {
+        "id": "242",
+        "resourceType": "ServiceRequest",
+        "status": "option",
+        "basedOn": [
+          {
+            "reference": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/HighRiskSpecialtyReferralRequest"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/JosephineGreene",
+          "display": "Josephine Greene"
+        },
+        "intent": "proposal",
+        "code": {
+          "coding": [
+            {
+              "code": "highriskreferral",
+              "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
+              "display": "High risk referral"
+            }
+          ]
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "Atypical",
+                "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system",
+                "display": "Atypical breast finding"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

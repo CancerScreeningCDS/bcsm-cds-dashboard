@@ -1,0 +1,56 @@
+{
+  "resourceType": "Bundle",
+  "id": "MarionHenderson_avg_45_to_54",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "MarionHenderson",
+        "identifier": [
+          {
+            "value": "123-345-567",
+            "type": {
+              "coding": [
+                {
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ]
+            }
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Marion77"
+            ],
+            "family": "Henderson15"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1979-01-10",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Black or African American"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

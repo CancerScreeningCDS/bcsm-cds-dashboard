@@ -1,0 +1,310 @@
+{
+  "resourceType": "Bundle",
+  "id": "PatriciaLambert_remission_lt_5_years",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "PatriciaLambert",
+        "identifier": [
+          {
+            "value": "123-345-567",
+            "type": {
+              "coding": [
+                {
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ]
+            }
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Patricia49"
+            ],
+            "family": "Lambert23"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1959-02-20",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Asian"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "d298906d-0f31-4087-b15f-06487cc4dd1a",
+        "subject": {
+          "reference": "Patient/PatriciaLambert"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "inactive",
+              "display": "Inactive"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "code": "problem-list-item",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "254837009",
+              "display": "Invasive breast cancer"
+            }
+          ]
+        },
+        "onsetDateTime": "2018-05-16T00:00:00.000Z",
+        "abatementDateTime": "2021-08-21T00:00:00.000Z"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "bfa15b30-aad1-42ce-aee3-168a449052a0",
+        "subject": {
+          "reference": "Patient/PatriciaLambert"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6",
+              "display": "Screening mammogram"
+            }
+          ]
+        },
+        "effectiveDateTime": "2021-08-21T10:00:00.000Z",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "397140005",
+                "display": "Mammography assessment (Category 1) - Negative (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "da60e2e5-a82d-440b-bc8a-ba06262ea94c",
+        "subject": {
+          "reference": "Patient/PatriciaLambert"
+        },
+        "status": "final",
+        "effectiveDateTime": "2018-05-16T00:00:00.0Z",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66110-8",
+              "display": "Biopsy Report"
+            }
+          ]
+        },
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system",
+                "code": "Malignant"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "43351654-4ce3-4622-96d3-00f5e96810d7",
+        "subject": {
+          "reference": "Patient/PatriciaLambert"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6",
+              "display": "Screening mammogram"
+            }
+          ]
+        },
+        "effectiveDateTime": "2018-04-02T10:00:00.000Z",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "397144001",
+                "display": "Mammography assessment (Category 4) - Suspicious abnormality, biopsy should be considered (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "8cfd529a-b88b-450b-9096-42b53dd4ea0f",
+        "subject": {
+          "reference": "Patient/PatriciaLambert"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6",
+              "display": "Screening mammogram"
+            }
+          ]
+        },
+        "effectiveDateTime": "2016-03-05T10:00:00.000Z",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "397140005",
+                "display": "Mammography assessment (Category 1) - Negative (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "f134e4ff-9f8d-4300-8cc9-99f4c9e6ea5d",
+        "subject": {
+          "reference": "Patient/PatriciaLambert"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6",
+              "display": "Screening mammogram"
+            }
+          ]
+        },
+        "effectiveDateTime": "2014-03-01T10:00:00.000Z",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "397140005",
+                "display": "Mammography assessment (Category 1) - Negative (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "67a6029f-f263-40a6-90f6-3f71b5162970",
+        "subject": {
+          "reference": "Patient/PatriciaLambert"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6",
+              "display": "Screening mammogram"
+            }
+          ]
+        },
+        "effectiveDateTime": "2012-02-25T10:00:00.000Z",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "397140005",
+                "display": "Mammography assessment (Category 1) - Negative (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "d25258f4-1fb4-41e4-a8aa-ee32dca63daf",
+        "subject": {
+          "reference": "Patient/PatriciaLambert"
+        },
+        "status": "completed",
+        "code": {
+          "coding": [
+            {
+              "system": "http://www.ama-assn.org/go/cpt",
+              "code": "19301",
+              "display": "Mastectomy, partial (eg, lumpectomy, tylectomy, quadrantectomy, segmentectomy)"
+            }
+          ]
+        },
+        "performedDateTime": "2018-07-28"
+      }
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "resourceType": "Bundle",
+  "id": "JosephineGreene-past-breast-pain-adh-biopsy",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "JosephineGreene",
+        "identifier": [
+          {
+            "value": "123-345-567",
+            "type": {
+              "coding": [
+                {
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ]
+            }
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Josephine38"
+            ],
+            "family": "Greene57"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1978-10-10",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Black or African American"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "04b54cf6-c267-425a-a8f1-b2b71b582bc4",
+        "subject": {
+          "reference": "Patient/JosephineGreene"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "200430001",
+              "display": "Breast pain"
+            }
+          ]
+        },
+        "encounter": {
+          "reference": "Encounter/2"
+        },
+        "recordedDate": "2023-07-28"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "biopsy-report-1",
+        "subject": {
+          "reference": "Patient/JosephineGreene"
+        },
+        "status": "final",
+        "effectiveDateTime": "2024-11-20",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "66110-8",
+              "display": "Core needle biopsy"
+            }
+          ]
+        },
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system",
+                "code": "Atypical",
+                "display": "Atypical ductal hyperplasia"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "mammogram-2024-birads-4",
+        "subject": {
+          "reference": "Patient/JosephineGreene"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6",
+              "display": "Screening mammogram"
+            }
+          ]
+        },
+        "effectiveDateTime": "2024-11-15T10:00:00.000Z",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "397144001",
+                "display": "Mammography assessment (Category 4) - Suspicious abnormality, biopsy should be considered (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "mammogram-2022-birads-2",
+        "subject": {
+          "reference": "Patient/JosephineGreene"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6",
+              "display": "Screening mammogram"
+            }
+          ]
+        },
+        "effectiveDateTime": "2022-12-02T10:00:00.000Z",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "397140005",
+                "display": "Mammography assessment (Category 1) - Negative (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

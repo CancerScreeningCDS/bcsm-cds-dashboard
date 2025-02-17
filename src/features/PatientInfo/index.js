@@ -17,9 +17,10 @@ function PatientInfo(props) {
       <h1 className="patient-name">{input.name}</h1>
       <div className="patient-detail">
         <div className="id">
-          <div><b>Date of Birth:</b> <span><time dateTime={dob}>{dob}</time></span>{age}</div>
-          <div><b>MRN:</b> <span>{mrn}</span></div>
-          <div><b>Pregnant:</b> <span>{input.isPregnant === false ? 'No' : input.isPregnant === true ? 'Yes' : null}</span></div>
+          <div><b>Date of Birth</b><br /><span><time dateTime={dob}>{dob}</time></span>{age}</div>
+          <div><b>MRN</b><br /><span>{mrn}</span></div>
+          <div><b>Sex</b><br /><span>{input.gender}</span>
+        </div>
         </div>
       </div>
     </section>
@@ -32,7 +33,7 @@ function getMrn(ids) {
   if (ids.length > 0) {
     const mrnTextValues = ["MRN", "MR", "Medical Record Number"]
     const mrn = ids.find(id =>
-      mrnTextValues.includes(id.type?.text.value)||
+      mrnTextValues.includes(id.type?.text?.value)||
       (id.type?.coding && mrnTextValues.includes(id.type?.coding[0].code.value))
     );
     return mrn ? mrn.value.value : 'Unknown';

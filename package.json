@@ -1,5 +1,5 @@
 {
-  "name": "ccsm-cds-dashboard",
+  "name": "bcsm-cds-dashboard",
   "version": "0.3.5",
   "license": "Apache-2.0",
   "homepage": "/",
@@ -34,6 +34,7 @@
     "crypto-browserify": "^3.12.0",
     "css-loader": "^6.5.1",
     "css-minimizer-webpack-plugin": "^3.2.0",
+    "dayjs": "^1.11.13",
     "dotenv": "^10.0.0",
     "dotenv-expand": "^5.1.0",
     "encender": "github:ccsm-cds-tools/encender#cql-execution",
@@ -175,9 +176,7 @@
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|cjs|ts|tsx)$",
       "^.+\\.module\\.(css|sass|scss)$"
     ],
-    "modulePaths": [
-      "/Users/dwinters/Documents/ccsm/code/ccsm-cds-dashboard/src"
-    ],
+    "modulePaths": [],
     "moduleNameMapper": {
       "^react-native$": "react-native-web",
       "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"

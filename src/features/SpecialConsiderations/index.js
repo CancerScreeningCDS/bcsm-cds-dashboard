@@ -18,27 +18,34 @@ function SpecialConsiderations(props) {
     setShow(!show);
   }
 
-  const handleImmunosuppressedChange = (event) => {
-    onToggleStatusChange({ ...toggleStatus, isImmunosuppressed: event.target.checked, isToggleChanged: true });
+  const handleGeneticMarkersChange = (event) => {
+    onToggleStatusChange({ ...toggleStatus, hasGeneticMarkers: event.target.checked, isToggleChanged: true });
   };
 
-  const handlePregnantChange = (event) => {
-    onToggleStatusChange({ ...toggleStatus, isPregnant: event.target.checked, isToggleChanged: true });
+  const handleCurrentBreastCancerChange = (event) => {
+    onToggleStatusChange({ ...toggleStatus, hasCurrentBreastCancer: event.target.checked, isToggleChanged: true });
   };
 
-  const handlePregnantConcernedChange = (event) => {
-    onToggleStatusChange({ ...toggleStatus, isPregnantConcerned: event.target.checked, isToggleChanged: true });
+  const handleBreastDiseaseSymptomsChange = (event) => {
+    onToggleStatusChange({ ...toggleStatus, hasBreastDiseaseSymptoms: event.target.checked, isToggleChanged: true });
   };
 
-  const handleSymptomaticChange = (event) => {
-    onToggleStatusChange({ ...toggleStatus, isSymptomatic: event.target.checked, isToggleChanged: true });
+  const handleBreastExamFindingsChange = (event) => {
+    onToggleStatusChange({ ...toggleStatus, hasBreastExamFindings: event.target.checked, isToggleChanged: true });
+  };
+  
+  const handleFdrGeneticChange = (event) => {
+    onToggleStatusChange({ ...toggleStatus, hasFdrGenetic: event.target.checked, isToggleChanged: true });
   };
 
+  const handleFdrCancerChange = (event) => {
+    onToggleStatusChange({ ...toggleStatus, hasFdrCancer: event.target.checked, isToggleChanged: true });
+  };
 
 
   return (
     <section id="special_considerations">
-      <h2>Patient Clinical Considerations (<Button variant="link" className="btn-toggle-link" data-bs-toggle="collapse" role="button" aria-expanded="false" onClick={toggleNote} aria-controls="specialConsiderationsNote">note</Button>)</h2>
+      <h2>Personal History Considerations (<Button variant="link" className="btn-toggle-link" data-bs-toggle="collapse" role="button" aria-expanded="false" onClick={toggleNote} aria-controls="specialConsiderationsNote">note</Button>)</h2>
       <Alert
         show={show}
         variant={'info'}
@@ -49,24 +56,36 @@ function SpecialConsiderations(props) {
       </Alert>
 
       <div className="form-check form-switch">
-        <input className="form-check-input" type="checkbox" role="switch" id="force_isImmunosuppressed" checked={toggleStatus.isImmunosuppressed} onChange={handleImmunosuppressedChange} />
-        <label className="form-check-label" htmlFor="force_isImmunosuppressed">Immunosuppressed</label>
-        <IconTooltip text="Is the patient immunocompromised? (i.e., Patient has HIV; Solid organ transplant or allogeneic hematopoietec stem cell transplant; systemic lupus erythematous; IBD or RA with immunosuppressive treatment)"></IconTooltip>
+        <input className="form-check-input" type="checkbox" role="switch" id="force_hasGeneticMarkers" checked={toggleStatus.hasGeneticMarkers} onChange={handleGeneticMarkersChange} />
+        <label className="form-check-label" htmlFor="force_hasGeneticMarkers">Heriditary genetic markers of unknown variant</label>
+        <IconTooltip text="Does the patient have relevant genetic markers?"></IconTooltip>
       </div>
       <div className="form-check form-switch">
-        <input className="form-check-input" type="checkbox" role="switch" id="force_isPregnant" checked={toggleStatus.isPregnant} onChange={handlePregnantChange} disabled={toggleStatus.isPregnantConcerned}/>
-        <label className="form-check-label" htmlFor="force_isPregnant">Pregnant</label>
-        <IconTooltip text="Is the patient currently pregnant?"></IconTooltip>
+        <input className="form-check-input" type="checkbox" role="switch" id="force_hasCurrentBreastCancer" checked={toggleStatus.hasCurrentBreastCancer} onChange={handleCurrentBreastCancerChange} />
+        <label className="form-check-label" htmlFor="force_hasCurrentBreastCancer">Current breast cancer</label>
+        <IconTooltip text="Does the patient have current breast cancer?"></IconTooltip>
       </div>
       <div className="form-check form-switch">
-        <input className="form-check-input" type="checkbox" role="switch" id="force_isPregnantConcerned" checked={toggleStatus.isPregnantConcerned} onChange={handlePregnantConcernedChange} disabled={toggleStatus.isPregnant} />
-        <label className="form-check-label" htmlFor="force_isPregnantConcerned">Future pregnancy concerns</label>
-        <IconTooltip text="Does the patient have future pregnancy concerns?"></IconTooltip>
+        <input className="form-check-input" type="checkbox" role="switch" id="force_hasBreastDiseaseSymptoms" checked={toggleStatus.hasBreastDiseaseSymptoms} onChange={handleBreastDiseaseSymptomsChange}/>
+        <label className="form-check-label" htmlFor="force_hasBreastDiseaseSymptoms">New or worsening breast disease symptoms</label>
+        <IconTooltip text="Does the patient have symptoms of breast disease?"></IconTooltip>
       </div>
       <div className="form-check form-switch">
-        <input className="form-check-input" type="checkbox" role="switch" id="force_isSymptomatic" checked={toggleStatus.isSymptomatic} onChange={handleSymptomaticChange} />
-        <label className="form-check-label" htmlFor="force_isSymptomatic">Symptomatic (abnormal bleeding)</label>
-        <IconTooltip text="Is the patient experiencing abnormal uterine or vaginal bleeding today?"></IconTooltip>
+        <input className="form-check-input" type="checkbox" role="switch" id="force_hasBreastExamFindings" checked={toggleStatus.hasBreastExamFindings} onChange={handleBreastExamFindingsChange} />
+        <label className="form-check-label" htmlFor="force_hasBreastExamFindings">New or worsening breast exam findings?</label>
+        <IconTooltip text="Does the patient have findings after a breast exam?"></IconTooltip>
+      </div>
+      <hr />
+      <h2>Family History Considerations</h2>
+      <div className="form-check form-switch">
+        <input className="form-check-input" type="checkbox" role="switch" id="force_hasFdrGenetic" checked={toggleStatus.hasFdrGenetic} onChange={handleFdrGeneticChange} />
+        <label className="form-check-label" htmlFor="force_hasFdrGenetic">First degree relative with genetic marker or syndrome</label>
+        <IconTooltip text="Does the patient have first degree relative with relevant genetic markers?"></IconTooltip>
+      </div>
+      <div className="form-check form-switch">
+        <input className="form-check-input" type="checkbox" role="switch" id="force_hasFdrCancer" checked={toggleStatus.hasFdrCancer} onChange={handleFdrCancerChange} />
+        <label className="form-check-label" htmlFor="force_hasFdrCancer">First degree relative with breast cancer diagnosis</label>
+        <IconTooltip text="Does the patient have any first degree relatives who received a breast cancer diagnosis?"></IconTooltip>
       </div>
       <hr />
     </section>

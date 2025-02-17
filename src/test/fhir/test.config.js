@@ -141,39 +141,6 @@ export const config = {
           form: null
         }
       ]
-    },
-    {
-      title: 'Vaccination History',
-      heading: {
-        filled: '',
-        empty: 'No vaccinations found'
-      },
-      disclaimer: null,
-      tables: [
-        {
-          name: 'immunizations',
-          header: [
-            {
-              key: 'name',
-              display: 'Vaccine'
-            },
-            {
-              key: 'date',
-              display: 'Date'
-            },
-            {
-              key: 'status',
-              display: 'Action'
-            }
-          ],
-          addButtonText: 'Add HPV vaccination',
-          form: {
-            canonicalUri: 'http://OUR-PLACEHOLDER-URL.com/Questionnaire/PertinentVaccinationQuestionnaire',
-            title: 'Add Vaccination',
-            preamble: null
-          }
-        }
-      ]
     }
   ]
 }

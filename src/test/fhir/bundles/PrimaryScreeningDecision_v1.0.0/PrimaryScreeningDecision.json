@@ -1,0 +1,44 @@
+[
+  {
+    "key": "JaniceMedford_fdr_breastca_age_45",
+    "name": "Janice32 Medford87",
+    "age": "35",
+    "scenario": "Family history of breast cancer",
+    "updated": "02/11/2025"
+  },
+  {
+    "key": "JosephineGreene-past-breast-pain-adh-biopsy",
+    "name": "Josephine38 Greene57",
+    "age": "46",
+    "scenario": "Past breast pain, ADH biopsy",
+    "updated": "02/11/2025"
+  },
+  {
+    "key": "JustineWallace_brca1",
+    "name": "Justine39 Wallace91",
+    "age": "47",
+    "scenario": "BRCA1 gene detected",
+    "updated": "02/11/2025"
+  },
+  {
+    "key": "LindaNadler-dcis",
+    "name": "Linda48 Nadler92",
+    "age": "54",
+    "scenario": "DCIS biopsy result",
+    "updated": "02/11/2025"
+  },
+  {
+    "key": "MarionHenderson_avg_45_to_54",
+    "name": "Marion77 Henderson15",
+    "age": "46",
+    "scenario": "No prior history",
+    "updated": "02/05/2025"
+  },
+  {
+    "key": "NadiaWills_palpable_breast_mass",
+    "name": "Nadia93 Wills47",
+    "age": "55",
+    "scenario": "Palpable breast mass",
+    "updated": "02/13/2025"
+  }
+]

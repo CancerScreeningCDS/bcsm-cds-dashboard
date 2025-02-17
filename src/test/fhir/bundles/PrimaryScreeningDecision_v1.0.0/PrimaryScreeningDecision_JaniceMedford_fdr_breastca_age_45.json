@@ -1,0 +1,192 @@
+{
+  "resourceType": "Bundle",
+  "id": "PrimaryScreeningDecision_JaniceMedford_fdr_breastca_age_45",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/CarePlan/10",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "10",
+        "subject": {
+          "reference": "Patient/JaniceMedford",
+          "display": "Janice Medford"
+        },
+        "instantiatesCanonical": [
+          "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/PrimaryScreeningDecision"
+        ],
+        "intent": "proposal",
+        "status": "draft",
+        "created": "2024-12-10T00:00:00.0Z",
+        "activity": [
+          {
+            "reference": {
+              "reference": "RequestGroup/11"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/RequestGroup/11",
+      "resource": {
+        "resourceType": "RequestGroup",
+        "id": "11",
+        "subject": {
+          "reference": "Patient/JaniceMedford",
+          "display": "Janice Medford"
+        },
+        "instantiatesCanonical": [
+          "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/PrimaryScreeningDecision"
+        ],
+        "intent": "proposal",
+        "status": "draft",
+        "action": [
+          {
+            "id": "CompellingFamilyHistory",
+            "title": "Perform lifetime risk assessment",
+            "description": "Consider performing assessment of lifetime risk, as defined by models largely dependent on family history.\n\nIf estimated lifetime risk is >20%, based on informal assessment or assessment using validated risk model, then patient is eligible for annual screening mammogram starting at age 30 and supplemental screening with annual screening MRI. Otherwise, patient can be offered annual screening mammogram starting at age 40.\n\nValidated tools include BRCAPRO, Claus, BOADICEA [Breast and Ovarian Analysis of Disease Incidence and Carrier Estimation Algorithm], and Tyrer-Cuzick.",
+            "documentation": [
+              {
+                "type": "citation",
+                "label": "ACS",
+                "display": "American Cancer Society Recommendations for the Early Detection of Breast Cancer",
+                "url": "https://www.cancer.org/cancer/types/breast-cancer/screening-tests-and-early-detection/american-cancer-society-recommendations-for-the-early-detection-of-breast-cancer.html"
+              }
+            ],
+            "resource": {
+              "reference": "CommunicationRequest/12"
+            }
+          },
+          {
+            "id": "USPSTFRecommendation",
+            "title": "Biennial screeening mammo starting age 40",
+            "description": "Biennial screeening mammogram starting at age 40",
+            "documentation": [
+              {
+                "type": "citation",
+                "label": "USPSTF",
+                "display": "Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement",
+                "citation": "US Preventive Services Task Force. Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. Published online April 30, 2024.",
+                "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening"
+              }
+            ],
+            "resource": {
+              "reference": "ServiceRequest/13"
+            },
+            "code": [
+              {
+                "coding": [
+                  {
+                    "code": "24606-6",
+                    "system": "http://loinc.org",
+                    "display": "MG Breast Screening"
+                  }
+                ]
+              }
+            ],
+            "timingTiming": {
+              "event": [
+                "2029-03-09"
+              ],
+              "repeat": {
+                "boundsPeriod": {
+                  "start": "2029-03-09"
+                },
+                "frequency": 1,
+                "period": 2,
+                "periodUnit": "a"
+              }
+            },
+            "extension": [
+              {
+                "url": "http://cancerscreeningcds.github.io/bcsm-cds/StructureDefinition/csm-recommendation-flag",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "not-due",
+                      "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/recommendation-flag-code-system",
+                      "display": "Not due"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/CommunicationRequest/12",
+      "resource": {
+        "id": "12",
+        "resourceType": "CommunicationRequest",
+        "status": "option",
+        "basedOn": [
+          {
+            "reference": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/CommunicateRiskAssessment"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/JaniceMedford",
+          "display": "Janice Medford"
+        },
+        "payload": [
+          {
+            "contentString": "Perform lifetime risk assessment"
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "fhxbreastcarisk",
+                "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+                "display": "Compelling family history of breast cancer"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/ServiceRequest/13",
+      "resource": {
+        "id": "13",
+        "resourceType": "ServiceRequest",
+        "status": "option",
+        "basedOn": [
+          {
+            "reference": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastScreeningServiceRequest"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/JaniceMedford",
+          "display": "Janice Medford"
+        },
+        "intent": "proposal",
+        "code": {
+          "coding": [
+            {
+              "code": "24606-6",
+              "system": "http://loinc.org",
+              "display": "MG Breast Screening"
+            }
+          ]
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "USPSTFaveragerisk",
+                "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+                "display": "USPSTF average risk"
+              }
+            ]
+          }
+        ],
+        "occurrenceDateTime": "2029-03-09"
+      }
+    }
+  ]
+}

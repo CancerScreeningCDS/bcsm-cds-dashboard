@@ -378,10 +378,10 @@ export function translateToggleChange(patientData, toggleStatus) {
   }
 
   const patient = patientData.find(pd => pd.resourceType == 'Patient');
-  handleToggles(patient, patientData, toggleStatus.isImmunosuppressed, immunosuppressedObservation);
-  handleToggles(patient, patientData, toggleStatus.isPregnant, pregnantObservation);
-  handleToggles(patient, patientData, toggleStatus.isPregnantConcerned, pregnantConcernedObservation);
-  handleToggles(patient, patientData, toggleStatus.isSymptomatic, symptomaticObservation);
+  handleToggles(patient, patientData, toggleStatus.hasGeneticMarkers, immunosuppressedObservation);
+  handleToggles(patient, patientData, toggleStatus.hasCurrentBreastCancer, pregnantObservation);
+  handleToggles(patient, patientData, toggleStatus.hasBreastDiseaseSymptoms, pregnantConcernedObservation);
+  handleToggles(patient, patientData, toggleStatus.hasBreastExamFindings, symptomaticObservation);
 }
 
 function handleToggles(patient, patientData, isChecked, obs) {

@@ -1,60 +1,31 @@
-import logo from 'assets/ccsm-tulip.svg';
-import '../basic/TestPatientSelector.scss';
+import logo from 'assets/bcsm-tulip.svg';
+import './TestPatientSelector.scss';
 import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const screeningData = [
-  {
-    key: 'susan',
-    name: 'Susan21 Holden65',
-    age: '44',
-    scenario: 'Average risk screening; patient has history.',
-    updated: '11/21/2024'
-  }
-];
+import screeningData from './bundles/PrimaryScreeningDecision_v1.0.0/PrimaryScreeningDecision.json';
+import geneticRiskData from './bundles/GeneticRiskReferral_v1.0.0/GeneticRiskReferral.json'
+import highRiskData from './bundles/HighRiskReferral_v1.0.0/HighRiskReferral.json'
+
 const screeningPad = 1;
 
-const managementData = [
-  {
-    key: 'joanne',
-    name: 'Joanne42 Smith657',
-    age: '33',
-    scenario: 'Management Table 4.',
-    updated: '11/18/2024'
-  }
-];
-const managementPad = screeningPad + screeningData.length;
+const geneticRiskPad = screeningPad + screeningData.length;
 
-const incompleteData = [
-  {
-    key: 'paulina',
-    name: 'Paulina58 Vale56',
-    age: '28',
-    scenario: 'Average risk screening; patient has no history.',
-    updated: '11/21/2024'
-  },
-  {
-    key: 'lily',
-    name: 'Lily23 Flowers68',
-    age: '38',
-    scenario: 'Post-biopsy; unstructured data in record.',
-    updated: '11/21/2024'
-  }
-];
-const incompletePad = managementPad + managementData.length;
+const highRiskPad = geneticRiskPad + geneticRiskData.length;
 
 export function TestPatientSelector() {
   return (
     <div>
       <div className="hero">
-        <img src={logo} alt="Cervical Cancer CDS Tulip logo"/>
-        <h1>CCSM-CDS</h1>
-        <h2 className="subtitle">Cervical Cancer Screening and Management<br/>Clinical Decision Support</h2>
+        <img src={logo} alt="Breast Cancer CDS Tulip logo"/>
+        <h1 className="public-sans-900">BCSM-CDS</h1>
+        <h2 className="subtitle">Breast Cancer Screening and Management<br/>Clinical Decision Support</h2>
       </div>
 
       <h3>FHIR Test Patients</h3>
-      <b>Author:</b> Michael O'Hanlon (<a href="mailto:mohanlon@mitre.org">mohanlon@mitre.org</a>)<br/>
-      <b>Last Updated:</b> Nov 18, 2024<br/>
+      <b>Authors:</b> Neelima Karipineni (<a href="mailto:nkaripineni@mitre.org">nkaripineni@mitre.org</a>), 
+      Rute Martins (<a href="mailto:anarute@mitre.org">anarute@mitre.org</a>)<br/>
+      <b>Last Updated:</b> Feb 17, 2025<br/>
 
       <div className="sitemap">
 
@@ -72,19 +43,19 @@ export function TestPatientSelector() {
 
           <tbody>
             <tr className="group">
-              <td colSpan="6">Screening Scenarios</td>
+              <td colSpan="6">Primary Decision to Screen</td>
             </tr>
-            { screeningData.map((rd,idx) => <IndexRow key={idx} index={screeningPad+idx} rowData={rd} />) }
+            { screeningData.map((rd,idx) => <IndexRow key={idx} index={screeningPad+idx} rowData={rd} library="PrimaryScreeningDecision" />) }
             
             <tr className="group">
-              <td colSpan="6">Management Scenarios</td>
+              <td colSpan="6">Genetic Risk Referral</td>
             </tr>
-            { managementData.map((rd,idx) => <IndexRow key={idx} index={managementPad+idx} rowData={rd} />) }
+            { geneticRiskData.map((rd,idx) => <IndexRow key={idx} index={geneticRiskPad+idx} rowData={rd} library="GeneticRiskReferral" />) }
 
             <tr className="group">
-              <td colSpan="6">Missing/Incomplete Data Scenarios</td>
+              <td colSpan="6">High Risk Referral</td>
             </tr>
-            { incompleteData.map((rd,idx) => <IndexRow key={idx} index={incompletePad+idx} rowData={rd} />) }
+            { highRiskData.map((rd,idx) => <IndexRow key={idx} index={highRiskPad+idx} rowData={rd} library="HighRiskReferral" />) }
 
           </tbody>
         </Table>
@@ -95,7 +66,7 @@ export function TestPatientSelector() {
       <ul className="notelist">
         <li>Patient names follow the convention used by the synthetic-patient generator <a href="https://github.com/synthetichealth/synthea">Synthea&trade;</a>. Random digits are appended to the patient's name to indicate they are artificially generated, and <b>never</b> based on any real person who may have the same name.</li>
         <li>Real-world patients may have incomplete or irregular patient histories which <b>do not</b> follow best clinical practices. Some of the demonstration patients shown here have care histories designed to reflect these real-world problems.</li>
-        <li>These are wireframe mockups and do not represent final versions of style, formatting or layout.</li>
+        <li>This is a work in progress and does not represent final versions of style, formatting or layout.</li>
       </ul>
 
     </div>
@@ -103,11 +74,11 @@ export function TestPatientSelector() {
 }
 
 function IndexRow(props) {
-  const {index, rowData} = props;
+  const {index, rowData, library} = props;
   return (
     <tr>
       <td>{index}</td>
-      <td><Link to={'/tests-fhir/'+rowData['key']}>{rowData['name']}</Link></td>
+      <td><Link to={'/tests-fhir/'+rowData['key']+'?library='+library}>{rowData['name']}</Link></td>
       <td>{rowData['age']}</td>
       <td>{rowData['scenario']}</td>
       <td className="text-nowrap">{rowData['updated']}</td>

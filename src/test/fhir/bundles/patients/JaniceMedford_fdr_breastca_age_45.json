@@ -1,0 +1,95 @@
+{
+  "resourceType": "Bundle",
+  "id": "JaniceMedford_fdr_breastca_age_45",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "JaniceMedford",
+        "identifier": [
+          {
+            "value": "123-345-567",
+            "type": {
+              "coding": [
+                {
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ]
+            }
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Janice32"
+            ],
+            "family": "Medford87"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1989-03-09",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "FamilyMemberHistory",
+        "id": "4ff69d55-ae7e-4a8a-ab13-b819f536f2ac",
+        "patient": {
+          "reference": "Patient/JaniceMedford"
+        },
+        "status": "completed",
+        "name": "Unknown",
+        "relationship": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/v3/RoleCode",
+              "code": "MTH",
+              "display": "mother"
+            }
+          ]
+        },
+        "condition": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "254837009",
+                  "display": "Invasive breast cancer"
+                }
+              ]
+            },
+            "onsetAge": {
+              "value": 45,
+              "unit": "years",
+              "system": "http://unitsofmeasure.org",
+              "code": "a"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "resourceType": "Bundle",
+  "id": "PrimaryScreeningDecision_PatriciaLambert_remission_lt_5_years",
+  "type": "collection",
+  "entry": [
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/CarePlan/33",
+      "resource": {
+        "resourceType": "CarePlan",
+        "id": "33",
+        "subject": {
+          "reference": "Patient/PatriciaLambert",
+          "display": "Patricia Lambert"
+        },
+        "instantiatesCanonical": [
+          "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/PrimaryScreeningDecision"
+        ],
+        "intent": "proposal",
+        "status": "draft",
+        "created": "2024-12-10T00:00:00.0Z",
+        "activity": [
+          {
+            "reference": {
+              "reference": "RequestGroup/34"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/RequestGroup/34",
+      "resource": {
+        "resourceType": "RequestGroup",
+        "id": "34",
+        "subject": {
+          "reference": "Patient/PatriciaLambert",
+          "display": "Patricia Lambert"
+        },
+        "instantiatesCanonical": [
+          "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/PrimaryScreeningDecision"
+        ],
+        "intent": "proposal",
+        "status": "draft",
+        "action": [
+          {
+            "id": "SpecialtyReferralBreastCaWithin5y",
+            "title": "Refer to Oncologic care plan",
+            "description": "Previous breast cancer within 5 years may require enhanced surveillance including diagnostic mammogram. \n\nRefer to patient's Oncologic treatment team or Survivorship Care Plan for patient specific guidance.",
+            "resource": {
+              "reference": "CommunicationRequest/35"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "http://cancerscreeningcds.github.io/bcsm-cds/CommunicationRequest/35",
+      "resource": {
+        "id": "35",
+        "resourceType": "CommunicationRequest",
+        "status": "option",
+        "basedOn": [
+          {
+            "reference": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/CommunicateSpecialtyReferral"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/PatriciaLambert",
+          "display": "Patricia Lambert"
+        },
+        "payload": [
+          {
+            "contentString": "Refer to specialist recommendations"
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "hxbreastcawithin5y",
+                "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+                "display": "Breast cancer in remission < 5 years"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

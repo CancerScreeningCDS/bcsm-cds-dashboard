@@ -1,0 +1,122 @@
+{
+  "resourceType": "Bundle",
+  "id": "JustineWallace_brca1",
+  "type": "collection",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "JustineWallace",
+        "identifier": [
+          {
+            "value": "123-345-567",
+            "type": {
+              "coding": [
+                {
+                  "code": "MR",
+                  "display": "Medical Record Number"
+                }
+              ]
+            }
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Justine39"
+            ],
+            "family": "Wallace91"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1979-01-24",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "White"
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+            "extension": [
+              {
+                "url": "text",
+                "valueString": "Not Hispanic or Latino"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "7d41631a-97cd-4796-b6fd-d7187c1417f3",
+        "subject": {
+          "reference": "Patient/JustineWallace"
+        },
+        "clinicalStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "code": "active"
+            }
+          ]
+        },
+        "verificationStatus": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "code": "confirmed"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "21636-6",
+              "display": "BRCA1 gene mutation detected"
+            }
+          ]
+        },
+        "onsetDateTime": "2023-05-04"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DiagnosticReport",
+        "id": "mammogram-2024-birads-2",
+        "subject": {
+          "reference": "Patient/JustineWallace"
+        },
+        "status": "final",
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "24606-6",
+              "display": "Screening mammogram"
+            }
+          ]
+        },
+        "effectiveDateTime": "2023-05-04T10:00:00.000Z",
+        "conclusionCode": [
+          {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "397141009",
+                "display": "Mammography assessment (Category 2) - Benign finding (finding)"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
