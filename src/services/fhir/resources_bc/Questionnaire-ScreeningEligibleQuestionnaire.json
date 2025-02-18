@@ -1,0 +1,61 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "ScreeningEligibleQuestionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+    ]
+  },
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/Questionnaire/ScreeningEligibleQuestionnaire",
+  "title": "Screening Eligible",
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "code": [
+        {
+          "code": "30525-0",
+          "system": "http://loinc.org"
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
+          "valueCoding": {
+            "code": "[a]",
+            "system": "http://unitsofmeasure.org"
+          }
+        }
+      ],
+      "linkId": "age-in-years",
+      "text": "Age in years",
+      "type": "integer"
+    },
+    {
+      "code": [
+        {
+          "code": "BreastSymptoms",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "BreastSymptoms",
+      "text": "New or worsening breast symptoms",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "BreastFindings",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "BreastFindings",
+      "text": "New or worsening breast exam findings",
+      "type": "boolean"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "ScreeningEligible",
+  "status": "draft"
+}

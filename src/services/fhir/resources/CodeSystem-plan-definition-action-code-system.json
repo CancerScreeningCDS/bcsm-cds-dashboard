@@ -1,0 +1,98 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "PlanDefinitionActionCodeSystem",
+  "id": "plan-definition-action-code-system",
+  "title": "Plan Definition Action Code System",
+  "description": "Code representing plan definition action codes",
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
+  "concept": [
+    {
+      "code": "eligible",
+      "display": "Eligible for screening"
+    },
+    {
+      "code": "noteligible",
+      "display": "Not eligible for screening"
+    },
+    {
+      "code": "diagtesting",
+      "display": "Diagnostic testing"
+    },
+    {
+      "code": "error",
+      "display": "An error occurred"
+    },
+    {
+      "code": "missingresultcode",
+      "display": "A laboratory test was found without a result"
+    },
+    {
+      "code": "unknownresultcode",
+      "display": "A laboratory test was found with an unexpected result code"
+    },
+    {
+      "code": "sdmcontinue",
+      "display": "Shared decision making to continue screening"
+    },
+    {
+      "code": "sdmdelay",
+      "display": "Shared decision making to delay screening"
+    },
+    {
+      "code": "specialtyreferral",
+      "display": "Refer to specialist recommendations"
+    },
+    {
+      "code": "determinenextdue",
+      "display": "Determine next due date"
+    },
+    {
+      "code": "lifetimeriskassessment",
+      "display": "Lifetime risk assessment"
+    },
+    {
+      "code": "familialriskassessment",
+      "display": "Familial risk assessment"
+    },
+    {
+      "code": "fhxrisktool",
+      "display": "Brief familial risk assessment tool"
+    },
+    {
+      "code": "fhxriskassess",
+      "display": "Informal familial risk assessment"
+    },
+    {
+      "code": "estlifexpectancy",
+      "display": "Consider life expectancy"
+    },
+    {
+      "code": "geneticriskreferral",
+      "display": "Genetic risk referral"
+    },
+    {
+      "code": "5yriskassessment",
+      "display": "5 year risk assessment"
+    },
+    {
+      "code": "highriskreferral",
+      "display": "High risk referral"
+    },
+    {
+      "code": "breastbiopsy",
+      "display": "Breast biopsy"
+    },
+    {
+      "code": "surgicalreferral",
+      "display": "Breast surgeon referral"
+    },
+    {
+      "code": "oncreferral",
+      "display": "Oncologic referral"
+    }
+  ],
+  "experimental": true,
+  "count": 21
+}

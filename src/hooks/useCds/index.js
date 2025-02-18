@@ -58,9 +58,8 @@ export const useCds = (patientData, toggleStatus) => {
 const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isToggleChanged, isPregnant, setIsPreganant) {
   console.log('Starting applyCds()');
   console.time('Apply CDS');
-
   let resolver = simpleResolver([...cdsResources, ...patientData], false);
-  const planDefinition = resolver('PlanDefinition/CervicalCancerScreeningAndManagementClinicalDecisionSupport')[0];
+  const planDefinition = resolver('PlanDefinition/PrimaryScreeningDecision')[0];
   // TODO: Throw error if there is anything other than 1 patient resource
   const patientReference = 'Patient/' + patientData.filter(pd => pd.resourceType === 'Patient').map(pd => pd.id)[0];
   if (patientReference !== 'Patient/undefined') {
@@ -86,7 +85,7 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
     const lib = new cql.Library(measure, repository);
     const executor = new cql.Executor(lib, codeService, cqlParameters);
     const psource = cqlfhir.PatientSource.FHIRv401();
-    psource.loadBundles(patientDataJ);
+    psource.loadBundles(packageResources(patientData));
     const result = await executor.exec(psource);
     const cqlResults = result?.patientResults?.[Object.keys(result.patientResults)?.[0]];
     let patientInfo={};
@@ -99,8 +98,8 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
       return e.resource
     });
     console.log(resources);
-    // const [CarePlan, RequestGroup, ...otherResources] = await applyPlan(planDefinition, patientReference, resolver, aux);
-    const [CarePlan, RequestGroup, ...otherResources] = resources;
+    const [CarePlan, RequestGroup, ...otherResources] = await applyPlan(planDefinition, patientReference, resolver, aux);
+    // const [CarePlan, RequestGroup, ...otherResources] = resources;
 
 
     let ServiceRequests = otherResources.filter(otr => otr.resourceType === 'ServiceRequest');
@@ -227,4 +226,17 @@ function getTimingDateFromAction(action) {
   }
 
   return timingDate;
+}
+
+function packageResources(resourceList) {
+  const bundleStructure = {
+    "resourceType": "Bundle",
+    "id": "example-resources",
+    "type": "collection",
+    "entry": []
+  }
+  resourceList.map((r) => {
+    bundleStructure.entry.push({resource: r});
+  })
+  return bundleStructure;
 }

@@ -1,0 +1,55 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "csm-recommendation-flag",
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/StructureDefinition/csm-recommendation-flag",
+  "name": "RecommendationFlag",
+  "title": "Recommendation Flag Extension",
+  "status": "draft",
+  "description": "An extension that holds a Due/Overdue flag CodeableConcept value.",
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "Element"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Recommendation Flag Extension",
+        "definition": "An extension that holds a Due/Overdue flag CodeableConcept value."
+      },
+      {
+        "id": "Extension.extension",
+        "path": "Extension.extension",
+        "max": "0"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://cancerscreeningcds.github.io/bcsm-cds/StructureDefinition/csm-recommendation-flag"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://cancerscreeningcds.github.io/bcsm-cds/ValueSet/recommendation-flag-codes"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "BreastCancerGeneticRiskReferralQuestionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+    ]
+  },
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/Questionnaire/BreastCancerGeneticRiskReferralQuestionnaire",
+  "title": "Breast Cancer Genetic Risk Referral Questionnaire",
+  "description": "A questionnaire to assess familial risk factors related to breast cancer.",
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "code": [
+        {
+          "code": "fhxgenetic",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "fhxgenetic",
+      "text": "Family history of inherited cancer susceptibility",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "KnownVariantStatus",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "fhxgenetic",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ],
+      "linkId": "KnownVariantStatus",
+      "text": "Known breast cancer variant status",
+      "type": "boolean",
+      "enableBehavior": "all"
+    },
+    {
+      "code": [
+        {
+          "code": "brcageneancestry",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "brcageneancestry",
+      "text": "Ancestry associated with BRCA1/2 gene mutations",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "fhxbrcaovcatubalperit",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "fhxbrcaovcatubalperit",
+      "text": "Family history of breast, ovarian, tubal, or peritoneal cancer",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "familialriskassessment",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system"
+        }
+      ],
+      "linkId": "familialriskassessment",
+      "text": "Familial risk assessment",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "fhxrisktool",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system"
+        }
+      ],
+      "linkId": "fhxrisktool",
+      "text": "Brief familial risk assessment tool",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "highfamilialrisk",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "highfamilialrisk",
+      "text": "High familial risk",
+      "type": "boolean"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "BreastCancerGeneticRiskReferralQuestionnaire",
+  "status": "draft"
+}

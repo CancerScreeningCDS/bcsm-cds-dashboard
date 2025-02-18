@@ -1,0 +1,67 @@
+{
+  "resourceType": "ActivityDefinition",
+  "id": "ScreeningEligibleQuestionnaireTask",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableactivity"
+    ]
+  },
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/ScreeningEligibleQuestionnaireTask",
+  "title": "Screening Eligible Questionnaire Task",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-collectWith",
+      "valueCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/Questionnaire/ScreeningEligibleQuestionnaire|1.0.0"
+    }
+  ],
+  "author": [
+    {
+      "name": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention."
+    }
+  ],
+  "editor": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "reviewer": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "endorser": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-10-22",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention.",
+  "copyright": "(C) 2024 The MITRE Corporation. All Rights Reserved. Approved for Public Release: 24-2711. Distribution Unlimited. Unless otherwise noted, this work is available under an Apache 2.0 license. It was produced by the MITRE Corporation for the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention in accordance with the Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.",
+  "approvalDate": "2024-10-22",
+  "lastReviewDate": "2024-10-22",
+  "name": "ScreeningEligibleQuestionnaireTask",
+  "description": "This ActivityDefinition generates a Questionnaire Task containing a request to complete a questionnaire.",
+  "kind": "Task",
+  "intent": "proposal",
+  "priority": "routine",
+  "code": {
+    "coding": [
+      {
+        "code": "collect-information",
+        "system": "http://hl7.org/fhir/uv/cpg/CodeSystem/cpg-activity-type",
+        "display": "Collect information"
+      }
+    ]
+  }
+}

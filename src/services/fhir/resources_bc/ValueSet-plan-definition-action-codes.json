@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "draft",
+  "name": "PlanDefinitionActionCodes",
+  "id": "plan-definition-action-codes",
+  "title": "Plan Definition Action Codes",
+  "description": "This value set includes action codes for Plan Definitions within this implementation guide.",
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/ValueSet/plan-definition-action-codes",
+  "experimental": true,
+  "compose": {
+    "include": [
+      {
+        "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system"
+      }
+    ]
+  }
+}

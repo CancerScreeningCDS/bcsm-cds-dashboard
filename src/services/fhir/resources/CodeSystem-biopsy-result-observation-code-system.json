@@ -1,0 +1,41 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "BiopsyResultObservationCodeSystem",
+  "id": "biopsy-result-observation-code-system",
+  "title": "Biopsy Result Observation Code System",
+  "description": "Code representing breast cancer biopsy result observations",
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system",
+  "concept": [
+    {
+      "code": "Negative",
+      "display": "Normal breast tissue"
+    },
+    {
+      "code": "Benign",
+      "display": "Benign breast finding",
+      "definition": "Benign findings, excluding ADH, LCIS or ALH"
+    },
+    {
+      "code": "Atypical",
+      "display": "Atypical breast finding",
+      "definition": "Includes atypical ductal hyperplasia (ADH) and lobular neoplasia (lobular carcinoma in situ [LCIS]/atypical lobular hyperplasia [ALH]"
+    },
+    {
+      "code": "Malignant",
+      "display": "Malignant breast finding",
+      "definition": "Invasive or non-invasive breast malignancy"
+    },
+    {
+      "code": "Indeterminate",
+      "display": "Indeterminate breast finding"
+    },
+    {
+      "code": "Discordant",
+      "display": "Discordant breast finding"
+    }
+  ],
+  "experimental": true,
+  "count": 6
+}
