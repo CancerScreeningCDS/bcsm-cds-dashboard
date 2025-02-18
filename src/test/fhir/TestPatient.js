@@ -15,6 +15,7 @@ import { testData } from './patientData.js';
 export function TestPatient() {
   let params = useParams();
   const [patientData, setPatientData] = useState([]);
+  
   let [searchParams, setSearchParams] = useSearchParams();
   const library = searchParams.get("library")
 
@@ -25,7 +26,7 @@ export function TestPatient() {
     isSymptomatic: false,
     isToggleChanged: false
   });
-  const {output: dashboardInput, isLoadingCdsData } = useCds(patientData, toggleStatus);
+  const {output: dashboardInput, isLoadingCdsData } = useCds(patientData, toggleStatus, library);
   const isLoading = isLoadingCdsData;
   // Extract the data for the requested test patient
   if (params.testName in testData) {
@@ -36,7 +37,6 @@ export function TestPatient() {
       })
       setPatientData(newData);
     }
-
 
     // Return the Dashboard with a testing disclaimer at the top
     return (

@@ -238,7 +238,7 @@ const LOINC_URL = 'http://loinc.org';
 const LOCAL_URL = 'http://OUR-PLACEHOLDER-URL.com';
 const STRIDES_DIAG_URI = 'urn:uuid:90915bcf-353c-49e1-b65e-0464798baa77';
 const STRIDES_PROC_URI = 'urn:uuid:273494e4-40f0-4a53-b1a3-2d30c32d76d1';
-
+const BCS_OBSV = 'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system'
 
 // EPIC Code System for EpisodeOfCare Type
 const episodeOfCareTypeCodeSystem = [
@@ -348,7 +348,58 @@ const symptomaticObservation = {
   }
 }
 
-
+const geneticRiskObservation = { 
+  label: 'Genetic marker or syndrome associated with breast cancer',
+  code: {
+    coding: [
+      {
+        system: LOCAL_URL,
+        code: 'GeneticMarkerOrSyndrome',
+        display: 'Genetic marker or syndrome associated with breast cancer'
+      }
+    ]
+  },
+  valueCodeableConcept: {
+    coding: [
+      {
+        system: SCT_URL,
+        code: '373066001',
+        display: 'Yes'
+      }
+    ]
+  }
+}
+const breastCancerObservation = {
+  label: "Current Invasive Breast Cancer",
+  code: {
+    coding: [
+      {
+        system: "http://snomed.info/sct",
+        code: "254837009",
+        display: "Invasive breast cancer"
+      }
+    ],
+    text: "Invasive Breast Cancer"
+  },
+  valueCodeableConcept: {
+    coding: [
+      {
+          system: 'http://terminology.hl7.org/CodeSystem/condition-ver-status',
+          code: 'confirmed',
+          display: "Confirmed"
+      }
+    ]
+  },
+  clinicalStatus: {
+    coding: [
+      {
+        system: 'http://terminology.hl7.org/CodeSystem/condition-clinical',
+        code: 'active',
+        display: 'Active'
+      }
+    ]
+  }
+}
 /**
  * Translate terminology codings used in Observation
  * To be considered in future use: Translate terminology codings used DiagnosticReport
@@ -378,7 +429,7 @@ export function translateToggleChange(patientData, toggleStatus) {
   }
 
   const patient = patientData.find(pd => pd.resourceType == 'Patient');
-  handleToggles(patient, patientData, toggleStatus.hasGeneticMarkers, immunosuppressedObservation);
+  handleToggles(patient, patientData, toggleStatus.hasGeneticMarkers, geneticRiskObservation);
   handleToggles(patient, patientData, toggleStatus.hasCurrentBreastCancer, pregnantObservation);
   handleToggles(patient, patientData, toggleStatus.hasBreastDiseaseSymptoms, pregnantConcernedObservation);
   handleToggles(patient, patientData, toggleStatus.hasBreastExamFindings, symptomaticObservation);

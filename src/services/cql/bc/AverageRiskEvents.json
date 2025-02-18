@@ -1,0 +1,517 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.12.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,EnableResultTypes,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "All",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "217",
+            "s" : [ {
+               "value" : [ "","library AverageRiskEvents version '1.0.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "AverageRiskEvents",
+         "version" : "1.0.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "207",
+            "locator" : "5:1-5:55",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "207",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ "  version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "208",
+            "locator" : "6:1-6:56",
+            "localIdentifier" : "DataElements",
+            "path" : "DataElements",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "DataElements" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","DataElements" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "212",
+            "locator" : "8:1-8:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "210",
+            "locator" : "8:1-8:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "211",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "209",
+                  "locator" : "8:1-8:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "217",
+            "locator" : "22:1-23:14",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+            "name" : "AgeInYears",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "217",
+                  "s" : [ {
+                     "value" : [ "","define ","AgeInYears",":\n  " ]
+                  }, {
+                     "r" : "222",
+                     "s" : [ {
+                        "value" : [ "AgeInYears","()" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "222",
+               "locator" : "23:3-23:14",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+               "precision" : "Year",
+               "type" : "CalculateAge",
+               "signature" : [ {
+                  "localId" : "223",
+                  "name" : "{urn:hl7-org:elm-types:r1}Date",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : {
+                  "localId" : "221",
+                  "path" : "birthDate.value",
+                  "type" : "Property",
+                  "source" : {
+                     "localId" : "220",
+                     "name" : "Patient",
+                     "type" : "ExpressionRef"
+                  }
+               }
+            }
+         }, {
+            "localId" : "214",
+            "locator" : "10:1-11:17",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-ageUnder40",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "214",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-ageUnder40\"",":\n  " ]
+                  }, {
+                     "r" : "215",
+                     "s" : [ {
+                        "r" : "224",
+                        "s" : [ {
+                           "value" : [ "AgeInYears" ]
+                        } ]
+                     }, {
+                        "r" : "225",
+                        "value" : [ " ","<"," ","40" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "215",
+               "locator" : "11:3-11:17",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "Less",
+               "signature" : [ {
+                  "localId" : "226",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "227",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "224",
+                  "locator" : "11:3-11:12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "name" : "AgeInYears",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "225",
+                  "locator" : "11:16-11:17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "40",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "229",
+            "locator" : "13:1-14:39",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-age40to44",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "229",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-age40to44\"",":\n  " ]
+                  }, {
+                     "r" : "230",
+                     "s" : [ {
+                        "r" : "231",
+                        "s" : [ {
+                           "r" : "232",
+                           "s" : [ {
+                              "value" : [ "AgeInYears" ]
+                           } ]
+                        }, {
+                           "r" : "233",
+                           "value" : [ " ",">="," ","40" ]
+                        } ]
+                     }, {
+                        "value" : [ " and " ]
+                     }, {
+                        "r" : "236",
+                        "s" : [ {
+                           "r" : "237",
+                           "s" : [ {
+                              "value" : [ "AgeInYears" ]
+                           } ]
+                        }, {
+                           "r" : "238",
+                           "value" : [ " ","<="," ","44" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "230",
+               "locator" : "14:3-14:39",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "And",
+               "signature" : [ {
+                  "localId" : "241",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "242",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "231",
+                  "locator" : "14:3-14:18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "GreaterOrEqual",
+                  "signature" : [ {
+                     "localId" : "234",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "235",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "232",
+                     "locator" : "14:3-14:12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "name" : "AgeInYears",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "233",
+                     "locator" : "14:17-14:18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "40",
+                     "type" : "Literal"
+                  } ]
+               }, {
+                  "localId" : "236",
+                  "locator" : "14:24-14:39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "LessOrEqual",
+                  "signature" : [ {
+                     "localId" : "239",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "240",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "237",
+                     "locator" : "14:24-14:33",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "name" : "AgeInYears",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "238",
+                     "locator" : "14:38-14:39",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "44",
+                     "type" : "Literal"
+                  } ]
+               } ]
+            }
+         }, {
+            "localId" : "244",
+            "locator" : "16:1-17:39",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-Age45to54",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "244",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-Age45to54\"",":\n  " ]
+                  }, {
+                     "r" : "245",
+                     "s" : [ {
+                        "r" : "246",
+                        "s" : [ {
+                           "r" : "247",
+                           "s" : [ {
+                              "value" : [ "AgeInYears" ]
+                           } ]
+                        }, {
+                           "r" : "248",
+                           "value" : [ " ",">="," ","45" ]
+                        } ]
+                     }, {
+                        "value" : [ " and " ]
+                     }, {
+                        "r" : "251",
+                        "s" : [ {
+                           "r" : "252",
+                           "s" : [ {
+                              "value" : [ "AgeInYears" ]
+                           } ]
+                        }, {
+                           "r" : "253",
+                           "value" : [ " ","<="," ","54" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "245",
+               "locator" : "17:3-17:39",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "And",
+               "signature" : [ {
+                  "localId" : "256",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "257",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "246",
+                  "locator" : "17:3-17:18",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "GreaterOrEqual",
+                  "signature" : [ {
+                     "localId" : "249",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "250",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "247",
+                     "locator" : "17:3-17:12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "name" : "AgeInYears",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "248",
+                     "locator" : "17:17-17:18",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "45",
+                     "type" : "Literal"
+                  } ]
+               }, {
+                  "localId" : "251",
+                  "locator" : "17:24-17:39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "LessOrEqual",
+                  "signature" : [ {
+                     "localId" : "254",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "255",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "252",
+                     "locator" : "17:24-17:33",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "name" : "AgeInYears",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "253",
+                     "locator" : "17:38-17:39",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "54",
+                     "type" : "Literal"
+                  } ]
+               } ]
+            }
+         }, {
+            "localId" : "259",
+            "locator" : "19:1-20:17",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-AgeOver54",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "259",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-AgeOver54\"",":\n  " ]
+                  }, {
+                     "r" : "260",
+                     "s" : [ {
+                        "r" : "261",
+                        "s" : [ {
+                           "value" : [ "AgeInYears" ]
+                        } ]
+                     }, {
+                        "r" : "262",
+                        "value" : [ " ",">"," ","54" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "260",
+               "locator" : "20:3-20:17",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "Greater",
+               "signature" : [ {
+                  "localId" : "263",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "264",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "261",
+                  "locator" : "20:3-20:12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "name" : "AgeInYears",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "262",
+                  "locator" : "20:16-20:17",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "54",
+                  "type" : "Literal"
+               } ]
+            }
+         } ]
+      }
+   }
+}
+

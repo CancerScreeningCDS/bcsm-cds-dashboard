@@ -1,0 +1,603 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.12.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,EnableResultTypes,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "All",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "238",
+            "s" : [ {
+               "value" : [ "","library DecisionToScreenEvents version '1.0.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "DecisionToScreenEvents",
+         "version" : "1.0.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "207",
+            "locator" : "5:1-5:55",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "207",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ "  version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "208",
+            "locator" : "6:1-6:63",
+            "localIdentifier" : "C3F",
+            "path" : "CDSConnectCommonsforFHIRv401",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "CDSConnectCommonsforFHIRv401" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","C3F" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "209",
+            "locator" : "7:1-7:56",
+            "localIdentifier" : "DataElements",
+            "path" : "DataElements",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "209",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "DataElements" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","DataElements" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "parameters" : {
+         "def" : [ {
+            "localId" : "211",
+            "locator" : "19:1-19:51",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
+            "name" : "ObservationLookbackPeriod",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "211",
+                  "s" : [ {
+                     "value" : [ "//------------------------------------------------------------------------------\n// PARAMETERS\n//------------------------------------------------------------------------------\n\n","parameter ","ObservationLookbackPeriod"," default " ]
+                  }, {
+                     "r" : "212",
+                     "s" : [ {
+                        "value" : [ "14 ","days" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "212",
+               "locator" : "19:45-19:51",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
+               "value" : 14,
+               "unit" : "days",
+               "type" : "Quantity"
+            }
+         }, {
+            "localId" : "213",
+            "locator" : "20:1-20:45",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
+            "name" : "SymptomaticLookBack",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "213",
+                  "s" : [ {
+                     "value" : [ "","parameter ","SymptomaticLookBack"," default " ]
+                  }, {
+                     "r" : "214",
+                     "s" : [ {
+                        "value" : [ "14 ","days" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "default" : {
+               "localId" : "214",
+               "locator" : "20:39-20:45",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
+               "value" : 14,
+               "unit" : "days",
+               "type" : "Quantity"
+            }
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "localId" : "210",
+            "locator" : "13:1-13:111",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+            "name" : "LOCAL",
+            "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "//------------------------------------------------------------------------------\n// CODE SYSTEMS, VALUE SETS, AND CODES\n//------------------------------------------------------------------------------\n\n","codesystem ","\"LOCAL\"",": ","'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "218",
+            "locator" : "22:1-22:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "216",
+            "locator" : "22:1-22:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "217",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "215",
+                  "locator" : "22:1-22:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "220",
+            "locator" : "24:1-25:19",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-AgeOver74",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "220",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-AgeOver74\"",":\n  " ]
+                  }, {
+                     "r" : "221",
+                     "s" : [ {
+                        "r" : "226",
+                        "s" : [ {
+                           "value" : [ "AgeInYears","()" ]
+                        } ]
+                     }, {
+                        "r" : "228",
+                        "value" : [ " ",">"," ","74" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "221",
+               "locator" : "25:3-25:19",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "Greater",
+               "signature" : [ {
+                  "localId" : "229",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "230",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "226",
+                  "locator" : "25:3-25:14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "precision" : "Year",
+                  "type" : "CalculateAge",
+                  "signature" : [ {
+                     "localId" : "227",
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "225",
+                     "path" : "birthDate.value",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "224",
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               }, {
+                  "localId" : "228",
+                  "locator" : "25:18-25:19",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "74",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "232",
+            "locator" : "27:1-28:27",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-LifeExp",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "232",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-LifeExp\"",":\n  " ]
+                  }, {
+                     "r" : "234",
+                     "s" : [ {
+                        "r" : "233",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "234",
+                        "s" : [ {
+                           "value" : [ "\"de-lifeexp\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "234",
+               "locator" : "28:3-28:27",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-lifeexp",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "238",
+            "locator" : "33:1-36:12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "Lactating",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "238",
+                  "s" : [ {
+                     "value" : [ "","define ","Lactating",":\n  " ]
+                  }, {
+                     "r" : "239",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "244",
+                        "s" : [ {
+                           "r" : "241",
+                           "s" : [ {
+                              "r" : "240",
+                              "s" : [ {
+                                 "value" : [ "DataElements" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "241",
+                              "s" : [ {
+                                 "value" : [ "MostRecentLactatingObservation" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " is not null" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    then " ]
+                     }, {
+                        "r" : "276",
+                        "s" : [ {
+                           "r" : "246",
+                           "s" : [ {
+                              "value" : [ "FHIRHelpers" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "276",
+                           "s" : [ {
+                              "value" : [ "ToBoolean","(" ]
+                           }, {
+                              "r" : "247",
+                              "s" : [ {
+                                 "r" : "250",
+                                 "s" : [ {
+                                    "r" : "249",
+                                    "s" : [ {
+                                       "r" : "248",
+                                       "s" : [ {
+                                          "value" : [ "DataElements" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "249",
+                                       "s" : [ {
+                                          "value" : [ "MostRecentLactatingObservation" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "250",
+                                    "s" : [ {
+                                       "value" : [ "value" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " as " ]
+                              }, {
+                                 "r" : "275",
+                                 "s" : [ {
+                                    "value" : [ "boolean" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "278",
+                        "value" : [ " \n  else ","false" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "239",
+               "locator" : "34:3-36:12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "244",
+                  "locator" : "34:6-34:60",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "Not",
+                  "signature" : [ {
+                     "localId" : "245",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "242",
+                     "locator" : "34:6-34:60",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "IsNull",
+                     "signature" : [ {
+                        "localId" : "243",
+                        "name" : "{urn:hl7-org:elm-types:r1}Any",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : {
+                        "localId" : "241",
+                        "locator" : "34:6-34:48",
+                        "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                        "name" : "MostRecentLactatingObservation",
+                        "libraryName" : "DataElements",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               },
+               "then" : {
+                  "localId" : "276",
+                  "locator" : "35:10-35:92",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "name" : "ToBoolean",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "signature" : [ {
+                     "localId" : "277",
+                     "name" : "{http://hl7.org/fhir}boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "247",
+                     "locator" : "35:32-35:91",
+                     "resultTypeName" : "{http://hl7.org/fhir}boolean",
+                     "strict" : false,
+                     "type" : "As",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "250",
+                        "locator" : "35:32-35:80",
+                        "path" : "value",
+                        "type" : "Property",
+                        "resultTypeSpecifier" : {
+                           "localId" : "263",
+                           "type" : "ChoiceTypeSpecifier",
+                           "type" : [ ],
+                           "choice" : [ {
+                              "localId" : "264",
+                              "name" : "{http://hl7.org/fhir}Quantity",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "265",
+                              "name" : "{http://hl7.org/fhir}CodeableConcept",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "266",
+                              "name" : "{http://hl7.org/fhir}string",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "267",
+                              "name" : "{http://hl7.org/fhir}boolean",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "268",
+                              "name" : "{http://hl7.org/fhir}integer",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "269",
+                              "name" : "{http://hl7.org/fhir}Range",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "270",
+                              "name" : "{http://hl7.org/fhir}Ratio",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "271",
+                              "name" : "{http://hl7.org/fhir}SampledData",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "272",
+                              "name" : "{http://hl7.org/fhir}time",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "273",
+                              "name" : "{http://hl7.org/fhir}dateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "274",
+                              "name" : "{http://hl7.org/fhir}Period",
+                              "type" : "NamedTypeSpecifier"
+                           } ]
+                        },
+                        "source" : {
+                           "localId" : "249",
+                           "locator" : "35:32-35:74",
+                           "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                           "name" : "MostRecentLactatingObservation",
+                           "libraryName" : "DataElements",
+                           "type" : "ExpressionRef"
+                        }
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "275",
+                        "locator" : "35:85-35:91",
+                        "resultTypeName" : "{http://hl7.org/fhir}boolean",
+                        "name" : "{http://hl7.org/fhir}boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               },
+               "else" : {
+                  "localId" : "278",
+                  "locator" : "36:8-36:12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "false",
+                  "type" : "Literal"
+               }
+            }
+         }, {
+            "localId" : "236",
+            "locator" : "30:1-31:12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-lactating",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "236",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-lactating\"",":\n   " ]
+                  }, {
+                     "r" : "279",
+                     "s" : [ {
+                        "value" : [ "Lactating" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "279",
+               "locator" : "31:4-31:12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "Lactating",
+               "type" : "ExpressionRef"
+            }
+         } ]
+      }
+   }
+}
+

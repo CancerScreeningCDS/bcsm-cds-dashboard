@@ -78,7 +78,7 @@ function IndexRow(props) {
   return (
     <tr>
       <td>{index}</td>
-      <td><Link to={'/tests-fhir/'+rowData['key']+'?library='+library}>{rowData['name']}</Link></td>
+      <td><Link to={'/tests-fhir/'+rowData['id']+'?library='+library}>{rowData['name']}</Link></td>
       <td>{rowData['age']}</td>
       <td>{rowData['scenario']}</td>
       <td className="text-nowrap">{rowData['updated']}</td>

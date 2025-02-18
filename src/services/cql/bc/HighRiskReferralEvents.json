@@ -1,0 +1,3730 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.12.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,EnableResultTypes,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "All",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "697",
+            "s" : [ {
+               "value" : [ "","library HighRiskReferralEvents version '1.0.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "HighRiskReferralEvents",
+         "version" : "1.0.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "207",
+            "locator" : "5:1-5:55",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "207",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ "  version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "208",
+            "locator" : "6:1-6:56",
+            "localIdentifier" : "DataElements",
+            "path" : "DataElements",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "DataElements" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","DataElements" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "209",
+            "locator" : "7:1-7:63",
+            "localIdentifier" : "C3F",
+            "path" : "CDSConnectCommonsforFHIRv401",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "209",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "CDSConnectCommonsforFHIRv401" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","C3F" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "210",
+            "locator" : "8:1-8:61",
+            "localIdentifier" : "BCSMCommon",
+            "path" : "BCSMCommonFunctions",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "BCSMCommonFunctions" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","BCSMCommon" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "211",
+            "locator" : "9:1-9:56",
+            "localIdentifier" : "Common",
+            "path" : "CSMCommonFunctions",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "211",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "CSMCommonFunctions" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","Common" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "localId" : "212",
+            "locator" : "11:1-11:111",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+            "name" : "LOCAL",
+            "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"LOCAL\"",": ","'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system'" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "213",
+            "locator" : "12:1-12:114",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+            "name" : "ActCode",
+            "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "213",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"ActCode\"",": ","'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "localId" : "214",
+            "locator" : "14:1-14:77",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "High 5 year risk",
+            "id" : "high5yrisk",
+            "display" : "High 5 year risk",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "214",
+                  "s" : [ {
+                     "value" : [ "","code ","\"High 5 year risk\"",": ","'high5yrisk'"," from " ]
+                  }, {
+                     "r" : "215",
+                     "s" : [ {
+                        "value" : [ "\"LOCAL\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'High 5 year risk'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "215",
+               "locator" : "14:44-14:50",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOCAL"
+            }
+         }, {
+            "localId" : "216",
+            "locator" : "15:1-15:110",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+            "name" : "5 year risk at least 1.67%",
+            "id" : "higherthanaverage5yrisk",
+            "display" : "5 year risk at least 1.67%",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "216",
+                  "s" : [ {
+                     "value" : [ "","code ","\"5 year risk at least 1.67%\"",": ","'higherthanaverage5yrisk'"," from " ]
+                  }, {
+                     "r" : "217",
+                     "s" : [ {
+                        "value" : [ "\"LOCAL\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'5 year risk at least 1.67%'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "217",
+               "locator" : "15:67-15:73",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
+               "name" : "LOCAL"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "221",
+            "locator" : "17:1-17:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "219",
+            "locator" : "17:1-17:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "220",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "218",
+                  "locator" : "17:1-17:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "223",
+            "locator" : "19:1-20:6",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-ageAny",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "223",
+                  "s" : [ {
+                     "r" : "224",
+                     "value" : [ "","define ","\"eve-ageAny\"",":\n  ","true" ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "224",
+               "locator" : "20:3-20:6",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "value" : "true",
+               "type" : "Literal"
+            }
+         }, {
+            "localId" : "226",
+            "locator" : "22:1-23:20",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-ageAtLeast35",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "226",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-ageAtLeast35\"",":\n  " ]
+                  }, {
+                     "r" : "227",
+                     "s" : [ {
+                        "r" : "232",
+                        "s" : [ {
+                           "value" : [ "AgeInYears","()" ]
+                        } ]
+                     }, {
+                        "r" : "234",
+                        "value" : [ " ",">="," ","35" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "227",
+               "locator" : "23:3-23:20",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "GreaterOrEqual",
+               "signature" : [ {
+                  "localId" : "235",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "236",
+                  "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "232",
+                  "locator" : "23:3-23:14",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "precision" : "Year",
+                  "type" : "CalculateAge",
+                  "signature" : [ {
+                     "localId" : "233",
+                     "name" : "{urn:hl7-org:elm-types:r1}Date",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "231",
+                     "path" : "birthDate.value",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "230",
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               }, {
+                  "localId" : "234",
+                  "locator" : "23:19-23:20",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "35",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "238",
+            "locator" : "25:1-26:31",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-geneticriskpop",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "238",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-geneticriskpop\"",":\n  " ]
+                  }, {
+                     "r" : "240",
+                     "s" : [ {
+                        "r" : "239",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "240",
+                        "s" : [ {
+                           "value" : [ "\"de-geneticrisk\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "240",
+               "locator" : "26:3-26:31",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-geneticrisk",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "242",
+            "locator" : "28:1-29:37",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-chestxrtpop",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "242",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-chestxrtpop\"",":\n  " ]
+                  }, {
+                     "r" : "244",
+                     "s" : [ {
+                        "r" : "243",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "244",
+                        "s" : [ {
+                           "value" : [ "\"de-chestxrtage10to30\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "244",
+               "locator" : "29:3-29:37",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-chestxrtage10to30",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "246",
+            "locator" : "31:1-32:30",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-atypicalbxpop",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "246",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-atypicalbxpop\"",":\n  " ]
+                  }, {
+                     "r" : "248",
+                     "s" : [ {
+                        "r" : "247",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "248",
+                        "s" : [ {
+                           "value" : [ "\"de-atypicalbx\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "248",
+               "locator" : "32:3-32:30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-atypicalbx",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "250",
+            "locator" : "34:1-35:27",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-LifeExp",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "250",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-LifeExp\"",":\n  " ]
+                  }, {
+                     "r" : "252",
+                     "s" : [ {
+                        "r" : "251",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "252",
+                        "s" : [ {
+                           "value" : [ "\"de-lifeexp\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "252",
+               "locator" : "35:3-35:27",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-lifeexp",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "256",
+            "locator" : "52:1-55:92",
+            "resultTypeName" : "{http://hl7.org/fhir}Observation",
+            "name" : "MostRecent5YrRiskAssessmentResultHigh",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "256",
+                  "s" : [ {
+                     "value" : [ "","define ","MostRecent5YrRiskAssessmentResultHigh",":\n  " ]
+                  }, {
+                     "r" : "356",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "257",
+                           "s" : [ {
+                              "r" : "259",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "DataElements",".","MostRecent5YrRiskAssessment" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","R" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " " ]
+                     }, {
+                        "r" : "260",
+                        "s" : [ {
+                           "value" : [ "where \n    " ]
+                        }, {
+                           "r" : "260",
+                           "s" : [ {
+                              "r" : "261",
+                              "s" : [ {
+                                 "r" : "292",
+                                 "s" : [ {
+                                    "r" : "262",
+                                    "s" : [ {
+                                       "r" : "264",
+                                       "s" : [ {
+                                          "r" : "263",
+                                          "s" : [ {
+                                             "value" : [ "R" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "264",
+                                          "s" : [ {
+                                             "value" : [ "value" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "289",
+                                       "s" : [ {
+                                          "value" : [ "FHIR",".","Quantity" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " and " ]
+                              }, {
+                                 "r" : "294",
+                                 "s" : [ {
+                                    "r" : "299",
+                                    "s" : [ {
+                                       "r" : "297",
+                                       "s" : [ {
+                                          "r" : "295",
+                                          "s" : [ {
+                                             "value" : [ "C3F" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "297",
+                                          "s" : [ {
+                                             "value" : [ "QuantityValue","(" ]
+                                          }, {
+                                             "r" : "296",
+                                             "s" : [ {
+                                                "value" : [ "R" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ ")" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "299",
+                                       "s" : [ {
+                                          "value" : [ "value" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "r" : "300",
+                                    "value" : [ " ",">=","3" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " or\n    " ]
+                           }, {
+                              "r" : "308",
+                              "s" : [ {
+                                 "r" : "339",
+                                 "s" : [ {
+                                    "r" : "309",
+                                    "s" : [ {
+                                       "r" : "311",
+                                       "s" : [ {
+                                          "r" : "310",
+                                          "s" : [ {
+                                             "value" : [ "R" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "311",
+                                          "s" : [ {
+                                             "value" : [ "value" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "336",
+                                       "s" : [ {
+                                          "value" : [ "FHIR",".","CodeableConcept" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " and " ]
+                              }, {
+                                 "r" : "341",
+                                 "s" : [ {
+                                    "r" : "344",
+                                    "s" : [ {
+                                       "r" : "342",
+                                       "s" : [ {
+                                          "value" : [ "C3F" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "344",
+                                       "s" : [ {
+                                          "value" : [ "ConceptValue","(" ]
+                                       }, {
+                                          "r" : "343",
+                                          "s" : [ {
+                                             "value" : [ "R" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ ")" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ","~"," " ]
+                                 }, {
+                                    "r" : "346",
+                                    "s" : [ {
+                                       "value" : [ "\"High 5 year risk\"" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "356",
+               "locator" : "53:3-55:92",
+               "resultTypeName" : "{http://hl7.org/fhir}Observation",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "257",
+                  "locator" : "53:3-53:44",
+                  "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                  "alias" : "R",
+                  "expression" : {
+                     "localId" : "259",
+                     "locator" : "53:3-53:42",
+                     "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                     "name" : "MostRecent5YrRiskAssessment",
+                     "libraryName" : "DataElements",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "260",
+                  "locator" : "53:46-55:92",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "Or",
+                  "signature" : [ {
+                     "localId" : "354",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "355",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "261",
+                     "locator" : "54:5-54:75",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "And",
+                     "signature" : [ {
+                        "localId" : "306",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "307",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "292",
+                        "locator" : "54:5-54:40",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "Not",
+                        "signature" : [ {
+                           "localId" : "293",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : {
+                           "localId" : "290",
+                           "locator" : "54:5-54:40",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "IsNull",
+                           "signature" : [ {
+                              "localId" : "291",
+                              "name" : "{urn:hl7-org:elm-types:r1}Any",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "262",
+                              "locator" : "54:5-54:28",
+                              "resultTypeName" : "{http://hl7.org/fhir}Quantity",
+                              "strict" : false,
+                              "type" : "As",
+                              "signature" : [ ],
+                              "operand" : {
+                                 "localId" : "264",
+                                 "locator" : "54:5-54:11",
+                                 "path" : "value",
+                                 "scope" : "R",
+                                 "type" : "Property",
+                                 "resultTypeSpecifier" : {
+                                    "localId" : "277",
+                                    "type" : "ChoiceTypeSpecifier",
+                                    "type" : [ ],
+                                    "choice" : [ {
+                                       "localId" : "278",
+                                       "name" : "{http://hl7.org/fhir}Quantity",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "279",
+                                       "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "280",
+                                       "name" : "{http://hl7.org/fhir}string",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "281",
+                                       "name" : "{http://hl7.org/fhir}boolean",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "282",
+                                       "name" : "{http://hl7.org/fhir}integer",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "283",
+                                       "name" : "{http://hl7.org/fhir}Range",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "284",
+                                       "name" : "{http://hl7.org/fhir}Ratio",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "285",
+                                       "name" : "{http://hl7.org/fhir}SampledData",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "286",
+                                       "name" : "{http://hl7.org/fhir}time",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "287",
+                                       "name" : "{http://hl7.org/fhir}dateTime",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "288",
+                                       "name" : "{http://hl7.org/fhir}Period",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ]
+                                 }
+                              },
+                              "asTypeSpecifier" : {
+                                 "localId" : "289",
+                                 "locator" : "54:16-54:28",
+                                 "resultTypeName" : "{http://hl7.org/fhir}Quantity",
+                                 "name" : "{http://hl7.org/fhir}Quantity",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
+                        }
+                     }, {
+                        "localId" : "294",
+                        "locator" : "54:46-54:75",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "GreaterOrEqual",
+                        "signature" : [ {
+                           "localId" : "304",
+                           "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "305",
+                           "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "299",
+                           "locator" : "54:46-54:71",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
+                           "path" : "value",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "297",
+                              "locator" : "54:46-54:65",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
+                              "name" : "QuantityValue",
+                              "libraryName" : "C3F",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "298",
+                                 "name" : "{http://hl7.org/fhir}Observation",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "296",
+                                 "locator" : "54:64",
+                                 "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                                 "name" : "R",
+                                 "type" : "AliasRef"
+                              } ]
+                           }
+                        }, {
+                           "localId" : "302",
+                           "type" : "ToDecimal",
+                           "signature" : [ {
+                              "localId" : "303",
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "300",
+                              "locator" : "54:75",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "value" : "3",
+                              "type" : "Literal"
+                           }
+                        } ]
+                     } ]
+                  }, {
+                     "localId" : "308",
+                     "locator" : "55:5-55:92",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "And",
+                     "signature" : [ {
+                        "localId" : "352",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "353",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "339",
+                        "locator" : "55:5-55:47",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "Not",
+                        "signature" : [ {
+                           "localId" : "340",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : {
+                           "localId" : "337",
+                           "locator" : "55:5-55:47",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "IsNull",
+                           "signature" : [ {
+                              "localId" : "338",
+                              "name" : "{urn:hl7-org:elm-types:r1}Any",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "309",
+                              "locator" : "55:5-55:35",
+                              "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
+                              "strict" : false,
+                              "type" : "As",
+                              "signature" : [ ],
+                              "operand" : {
+                                 "localId" : "311",
+                                 "locator" : "55:5-55:11",
+                                 "path" : "value",
+                                 "scope" : "R",
+                                 "type" : "Property",
+                                 "resultTypeSpecifier" : {
+                                    "localId" : "324",
+                                    "type" : "ChoiceTypeSpecifier",
+                                    "type" : [ ],
+                                    "choice" : [ {
+                                       "localId" : "325",
+                                       "name" : "{http://hl7.org/fhir}Quantity",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "326",
+                                       "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "327",
+                                       "name" : "{http://hl7.org/fhir}string",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "328",
+                                       "name" : "{http://hl7.org/fhir}boolean",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "329",
+                                       "name" : "{http://hl7.org/fhir}integer",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "330",
+                                       "name" : "{http://hl7.org/fhir}Range",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "331",
+                                       "name" : "{http://hl7.org/fhir}Ratio",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "332",
+                                       "name" : "{http://hl7.org/fhir}SampledData",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "333",
+                                       "name" : "{http://hl7.org/fhir}time",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "334",
+                                       "name" : "{http://hl7.org/fhir}dateTime",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "335",
+                                       "name" : "{http://hl7.org/fhir}Period",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ]
+                                 }
+                              },
+                              "asTypeSpecifier" : {
+                                 "localId" : "336",
+                                 "locator" : "55:16-55:35",
+                                 "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
+                                 "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
+                        }
+                     }, {
+                        "localId" : "341",
+                        "locator" : "55:53-55:92",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "Equivalent",
+                        "signature" : [ {
+                           "localId" : "350",
+                           "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "351",
+                           "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "344",
+                           "locator" : "55:53-55:71",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
+                           "name" : "ConceptValue",
+                           "libraryName" : "C3F",
+                           "type" : "FunctionRef",
+                           "signature" : [ {
+                              "localId" : "345",
+                              "name" : "{http://hl7.org/fhir}Observation",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "343",
+                              "locator" : "55:70",
+                              "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                              "name" : "R",
+                              "type" : "AliasRef"
+                           } ]
+                        }, {
+                           "localId" : "348",
+                           "type" : "ToConcept",
+                           "signature" : [ {
+                              "localId" : "349",
+                              "name" : "{urn:hl7-org:elm-types:r1}Code",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "346",
+                              "locator" : "55:75-55:92",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                              "name" : "High 5 year risk",
+                              "type" : "CodeRef"
+                           }
+                        } ]
+                     } ]
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "254",
+            "locator" : "37:1-38:51",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-fiveyrriskpop",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "254",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-fiveyrriskpop\"",":\n  " ]
+                  }, {
+                     "r" : "360",
+                     "s" : [ {
+                        "r" : "357",
+                        "s" : [ {
+                           "value" : [ "MostRecent5YrRiskAssessmentResultHigh" ]
+                        } ]
+                     }, {
+                        "value" : [ " is not null" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "360",
+               "locator" : "38:3-38:51",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "Not",
+               "signature" : [ {
+                  "localId" : "361",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : {
+                  "localId" : "358",
+                  "locator" : "38:3-38:51",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "IsNull",
+                  "signature" : [ {
+                     "localId" : "359",
+                     "name" : "{urn:hl7-org:elm-types:r1}Any",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "357",
+                     "locator" : "38:3-38:39",
+                     "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                     "name" : "MostRecent5YrRiskAssessmentResultHigh",
+                     "type" : "ExpressionRef"
+                  }
+               }
+            }
+         }, {
+            "localId" : "365",
+            "locator" : "57:1-60:105",
+            "resultTypeName" : "{http://hl7.org/fhir}Observation",
+            "name" : "MostRecent5YrRiskAssessmentResultHigherThanAverage",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "365",
+                  "s" : [ {
+                     "value" : [ "","define ","MostRecent5YrRiskAssessmentResultHigherThanAverage",":\n  " ]
+                  }, {
+                     "r" : "477",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "366",
+                           "s" : [ {
+                              "r" : "368",
+                              "s" : [ {
+                                 "s" : [ {
+                                    "value" : [ "DataElements",".","MostRecent5YrRiskAssessment" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","R" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " " ]
+                     }, {
+                        "r" : "369",
+                        "s" : [ {
+                           "value" : [ "where \n    " ]
+                        }, {
+                           "r" : "369",
+                           "s" : [ {
+                              "r" : "370",
+                              "s" : [ {
+                                 "r" : "371",
+                                 "s" : [ {
+                                    "r" : "402",
+                                    "s" : [ {
+                                       "r" : "372",
+                                       "s" : [ {
+                                          "r" : "374",
+                                          "s" : [ {
+                                             "r" : "373",
+                                             "s" : [ {
+                                                "value" : [ "R" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "374",
+                                             "s" : [ {
+                                                "value" : [ "value" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " as " ]
+                                       }, {
+                                          "r" : "399",
+                                          "s" : [ {
+                                             "value" : [ "FHIR",".","Quantity" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " is not null" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " and " ]
+                                 }, {
+                                    "r" : "404",
+                                    "s" : [ {
+                                       "r" : "409",
+                                       "s" : [ {
+                                          "r" : "407",
+                                          "s" : [ {
+                                             "r" : "405",
+                                             "s" : [ {
+                                                "value" : [ "C3F" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "407",
+                                             "s" : [ {
+                                                "value" : [ "QuantityValue","(" ]
+                                             }, {
+                                                "r" : "406",
+                                                "s" : [ {
+                                                   "value" : [ "R" ]
+                                                } ]
+                                             }, {
+                                                "value" : [ ")" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "409",
+                                          "s" : [ {
+                                             "value" : [ "value" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "r" : "410",
+                                       "value" : [ " ",">=","1.67" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " and " ]
+                              }, {
+                                 "r" : "415",
+                                 "s" : [ {
+                                    "r" : "420",
+                                    "s" : [ {
+                                       "r" : "418",
+                                       "s" : [ {
+                                          "r" : "416",
+                                          "s" : [ {
+                                             "value" : [ "C3F" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "418",
+                                          "s" : [ {
+                                             "value" : [ "QuantityValue","(" ]
+                                          }, {
+                                             "r" : "417",
+                                             "s" : [ {
+                                                "value" : [ "R" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ ")" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "420",
+                                       "s" : [ {
+                                          "value" : [ "value" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "r" : "421",
+                                    "value" : [ " ","<","3" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " \n    or " ]
+                           }, {
+                              "r" : "429",
+                              "s" : [ {
+                                 "r" : "460",
+                                 "s" : [ {
+                                    "r" : "430",
+                                    "s" : [ {
+                                       "r" : "432",
+                                       "s" : [ {
+                                          "r" : "431",
+                                          "s" : [ {
+                                             "value" : [ "R" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "432",
+                                          "s" : [ {
+                                             "value" : [ "value" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " as " ]
+                                    }, {
+                                       "r" : "457",
+                                       "s" : [ {
+                                          "value" : [ "FHIR",".","CodeableConcept" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " and " ]
+                              }, {
+                                 "r" : "462",
+                                 "s" : [ {
+                                    "r" : "465",
+                                    "s" : [ {
+                                       "r" : "463",
+                                       "s" : [ {
+                                          "value" : [ "C3F" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "465",
+                                       "s" : [ {
+                                          "value" : [ "ConceptValue","(" ]
+                                       }, {
+                                          "r" : "464",
+                                          "s" : [ {
+                                             "value" : [ "R" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ ")" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ","~"," " ]
+                                 }, {
+                                    "r" : "467",
+                                    "s" : [ {
+                                       "value" : [ "\"5 year risk at least 1.67%\"" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "477",
+               "locator" : "58:3-60:105",
+               "resultTypeName" : "{http://hl7.org/fhir}Observation",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "366",
+                  "locator" : "58:3-58:44",
+                  "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                  "alias" : "R",
+                  "expression" : {
+                     "localId" : "368",
+                     "locator" : "58:3-58:42",
+                     "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                     "name" : "MostRecent5YrRiskAssessment",
+                     "libraryName" : "DataElements",
+                     "type" : "ExpressionRef"
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "369",
+                  "locator" : "58:46-60:105",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "Or",
+                  "signature" : [ {
+                     "localId" : "475",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "476",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "370",
+                     "locator" : "59:5-59:112",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "And",
+                     "signature" : [ {
+                        "localId" : "427",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "428",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "371",
+                        "locator" : "59:5-59:78",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "And",
+                        "signature" : [ {
+                           "localId" : "413",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "414",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "402",
+                           "locator" : "59:5-59:40",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "Not",
+                           "signature" : [ {
+                              "localId" : "403",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "400",
+                              "locator" : "59:5-59:40",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "IsNull",
+                              "signature" : [ {
+                                 "localId" : "401",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Any",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : {
+                                 "localId" : "372",
+                                 "locator" : "59:5-59:28",
+                                 "resultTypeName" : "{http://hl7.org/fhir}Quantity",
+                                 "strict" : false,
+                                 "type" : "As",
+                                 "signature" : [ ],
+                                 "operand" : {
+                                    "localId" : "374",
+                                    "locator" : "59:5-59:11",
+                                    "path" : "value",
+                                    "scope" : "R",
+                                    "type" : "Property",
+                                    "resultTypeSpecifier" : {
+                                       "localId" : "387",
+                                       "type" : "ChoiceTypeSpecifier",
+                                       "type" : [ ],
+                                       "choice" : [ {
+                                          "localId" : "388",
+                                          "name" : "{http://hl7.org/fhir}Quantity",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "389",
+                                          "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "390",
+                                          "name" : "{http://hl7.org/fhir}string",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "391",
+                                          "name" : "{http://hl7.org/fhir}boolean",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "392",
+                                          "name" : "{http://hl7.org/fhir}integer",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "393",
+                                          "name" : "{http://hl7.org/fhir}Range",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "394",
+                                          "name" : "{http://hl7.org/fhir}Ratio",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "395",
+                                          "name" : "{http://hl7.org/fhir}SampledData",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "396",
+                                          "name" : "{http://hl7.org/fhir}time",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "397",
+                                          "name" : "{http://hl7.org/fhir}dateTime",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "398",
+                                          "name" : "{http://hl7.org/fhir}Period",
+                                          "type" : "NamedTypeSpecifier"
+                                       } ]
+                                    }
+                                 },
+                                 "asTypeSpecifier" : {
+                                    "localId" : "399",
+                                    "locator" : "59:16-59:28",
+                                    "resultTypeName" : "{http://hl7.org/fhir}Quantity",
+                                    "name" : "{http://hl7.org/fhir}Quantity",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              }
+                           }
+                        }, {
+                           "localId" : "404",
+                           "locator" : "59:46-59:78",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "GreaterOrEqual",
+                           "signature" : [ {
+                              "localId" : "411",
+                              "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "412",
+                              "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "409",
+                              "locator" : "59:46-59:71",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
+                              "path" : "value",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "407",
+                                 "locator" : "59:46-59:65",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
+                                 "name" : "QuantityValue",
+                                 "libraryName" : "C3F",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ {
+                                    "localId" : "408",
+                                    "name" : "{http://hl7.org/fhir}Observation",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "406",
+                                    "locator" : "59:64",
+                                    "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                                    "name" : "R",
+                                    "type" : "AliasRef"
+                                 } ]
+                              }
+                           }, {
+                              "localId" : "410",
+                              "locator" : "59:75-59:78",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
+                              "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
+                              "value" : "1.67",
+                              "type" : "Literal"
+                           } ]
+                        } ]
+                     }, {
+                        "localId" : "415",
+                        "locator" : "59:84-59:112",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "Less",
+                        "signature" : [ {
+                           "localId" : "425",
+                           "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "426",
+                           "name" : "{urn:hl7-org:elm-types:r1}Decimal",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "420",
+                           "locator" : "59:84-59:109",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
+                           "path" : "value",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "418",
+                              "locator" : "59:84-59:103",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
+                              "name" : "QuantityValue",
+                              "libraryName" : "C3F",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "419",
+                                 "name" : "{http://hl7.org/fhir}Observation",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "417",
+                                 "locator" : "59:102",
+                                 "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                                 "name" : "R",
+                                 "type" : "AliasRef"
+                              } ]
+                           }
+                        }, {
+                           "localId" : "423",
+                           "type" : "ToDecimal",
+                           "signature" : [ {
+                              "localId" : "424",
+                              "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "421",
+                              "locator" : "59:112",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                              "value" : "3",
+                              "type" : "Literal"
+                           }
+                        } ]
+                     } ]
+                  }, {
+                     "localId" : "429",
+                     "locator" : "60:8-60:105",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "And",
+                     "signature" : [ {
+                        "localId" : "473",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "474",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "460",
+                        "locator" : "60:8-60:50",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "Not",
+                        "signature" : [ {
+                           "localId" : "461",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : {
+                           "localId" : "458",
+                           "locator" : "60:8-60:50",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "IsNull",
+                           "signature" : [ {
+                              "localId" : "459",
+                              "name" : "{urn:hl7-org:elm-types:r1}Any",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "430",
+                              "locator" : "60:8-60:38",
+                              "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
+                              "strict" : false,
+                              "type" : "As",
+                              "signature" : [ ],
+                              "operand" : {
+                                 "localId" : "432",
+                                 "locator" : "60:8-60:14",
+                                 "path" : "value",
+                                 "scope" : "R",
+                                 "type" : "Property",
+                                 "resultTypeSpecifier" : {
+                                    "localId" : "445",
+                                    "type" : "ChoiceTypeSpecifier",
+                                    "type" : [ ],
+                                    "choice" : [ {
+                                       "localId" : "446",
+                                       "name" : "{http://hl7.org/fhir}Quantity",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "447",
+                                       "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "448",
+                                       "name" : "{http://hl7.org/fhir}string",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "449",
+                                       "name" : "{http://hl7.org/fhir}boolean",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "450",
+                                       "name" : "{http://hl7.org/fhir}integer",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "451",
+                                       "name" : "{http://hl7.org/fhir}Range",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "452",
+                                       "name" : "{http://hl7.org/fhir}Ratio",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "453",
+                                       "name" : "{http://hl7.org/fhir}SampledData",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "454",
+                                       "name" : "{http://hl7.org/fhir}time",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "455",
+                                       "name" : "{http://hl7.org/fhir}dateTime",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "456",
+                                       "name" : "{http://hl7.org/fhir}Period",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ]
+                                 }
+                              },
+                              "asTypeSpecifier" : {
+                                 "localId" : "457",
+                                 "locator" : "60:19-60:38",
+                                 "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
+                                 "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
+                        }
+                     }, {
+                        "localId" : "462",
+                        "locator" : "60:56-60:105",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "Equivalent",
+                        "signature" : [ {
+                           "localId" : "471",
+                           "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "472",
+                           "name" : "{urn:hl7-org:elm-types:r1}Concept",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "465",
+                           "locator" : "60:56-60:74",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Concept",
+                           "name" : "ConceptValue",
+                           "libraryName" : "C3F",
+                           "type" : "FunctionRef",
+                           "signature" : [ {
+                              "localId" : "466",
+                              "name" : "{http://hl7.org/fhir}Observation",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "464",
+                              "locator" : "60:73",
+                              "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                              "name" : "R",
+                              "type" : "AliasRef"
+                           } ]
+                        }, {
+                           "localId" : "469",
+                           "type" : "ToConcept",
+                           "signature" : [ {
+                              "localId" : "470",
+                              "name" : "{urn:hl7-org:elm-types:r1}Code",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "467",
+                              "locator" : "60:78-60:105",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
+                              "name" : "5 year risk at least 1.67%",
+                              "type" : "CodeRef"
+                           }
+                        } ]
+                     } ]
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "363",
+            "locator" : "40:1-41:64",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-fiveyrrisklowpop",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "363",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-fiveyrrisklowpop\"",":\n  " ]
+                  }, {
+                     "r" : "481",
+                     "s" : [ {
+                        "r" : "478",
+                        "s" : [ {
+                           "value" : [ "MostRecent5YrRiskAssessmentResultHigherThanAverage" ]
+                        } ]
+                     }, {
+                        "value" : [ " is not null" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "481",
+               "locator" : "41:3-41:64",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "Not",
+               "signature" : [ {
+                  "localId" : "482",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : {
+                  "localId" : "479",
+                  "locator" : "41:3-41:64",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "IsNull",
+                  "signature" : [ {
+                     "localId" : "480",
+                     "name" : "{urn:hl7-org:elm-types:r1}Any",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "478",
+                     "locator" : "41:3-41:52",
+                     "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                     "name" : "MostRecent5YrRiskAssessmentResultHigherThanAverage",
+                     "type" : "ExpressionRef"
+                  }
+               }
+            }
+         }, {
+            "localId" : "484",
+            "locator" : "43:1-44:64",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-fhxbrca",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "484",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-fhxbrca\"",":  \n  " ]
+                  }, {
+                     "r" : "485",
+                     "s" : [ {
+                        "r" : "487",
+                        "s" : [ {
+                           "r" : "486",
+                           "s" : [ {
+                              "value" : [ "DataElements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "487",
+                           "s" : [ {
+                              "value" : [ "\"de-fhxbreastcarisk\"" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " or " ]
+                     }, {
+                        "r" : "489",
+                        "s" : [ {
+                           "r" : "488",
+                           "s" : [ {
+                              "value" : [ "DataElements" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "489",
+                           "s" : [ {
+                              "value" : [ "\"de-fhxrisk\"" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "485",
+               "locator" : "44:3-44:64",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "Or",
+               "signature" : [ {
+                  "localId" : "490",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "491",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "487",
+                  "locator" : "44:3-44:35",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "name" : "de-fhxbreastcarisk",
+                  "libraryName" : "DataElements",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "489",
+                  "locator" : "44:40-44:64",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "name" : "de-fhxrisk",
+                  "libraryName" : "DataElements",
+                  "type" : "ExpressionRef"
+               } ]
+            }
+         }, {
+            "localId" : "493",
+            "locator" : "46:1-50:39",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-personalriskfactors",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "493",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-personalriskfactors\"",":\n  " ]
+                  }, {
+                     "r" : "494",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "499",
+                        "s" : [ {
+                           "r" : "496",
+                           "s" : [ {
+                              "r" : "495",
+                              "s" : [ {
+                                 "value" : [ "DataElements" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "496",
+                              "s" : [ {
+                                 "value" : [ "MostRecentPersonalRiskFactorAssessment" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " is not null" ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    then " ]
+                     }, {
+                        "r" : "531",
+                        "s" : [ {
+                           "r" : "501",
+                           "s" : [ {
+                              "value" : [ "FHIRHelpers" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "531",
+                           "s" : [ {
+                              "value" : [ "ToBoolean","(" ]
+                           }, {
+                              "r" : "502",
+                              "s" : [ {
+                                 "r" : "505",
+                                 "s" : [ {
+                                    "r" : "504",
+                                    "s" : [ {
+                                       "r" : "503",
+                                       "s" : [ {
+                                          "value" : [ "DataElements" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "504",
+                                       "s" : [ {
+                                          "value" : [ "MostRecentPersonalRiskFactorAssessment" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "505",
+                                    "s" : [ {
+                                       "value" : [ "value" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " as " ]
+                              }, {
+                                 "r" : "530",
+                                 "s" : [ {
+                                    "value" : [ "boolean" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " \n  else " ]
+                     }, {
+                        "r" : "533",
+                        "s" : [ {
+                           "r" : "534",
+                           "s" : [ {
+                              "r" : "545",
+                              "s" : [ {
+                                 "value" : [ "Count","(" ]
+                              }, {
+                                 "r" : "536",
+                                 "s" : [ {
+                                    "r" : "535",
+                                    "s" : [ {
+                                       "value" : [ "DataElements" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "536",
+                                    "s" : [ {
+                                       "value" : [ "\"BiopsyDiagnosticReports\"" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           }, {
+                              "r" : "548",
+                              "value" : [ " ",">"," ","1" ]
+                           } ]
+                        }, {
+                           "value" : [ " or\n    " ]
+                        }, {
+                           "r" : "552",
+                           "s" : [ {
+                              "r" : "551",
+                              "s" : [ {
+                                 "value" : [ "DataElements" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "552",
+                              "s" : [ {
+                                 "value" : [ "\"de-breastdensitycord\"" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "494",
+               "locator" : "47:3-50:39",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "499",
+                  "locator" : "47:6-47:68",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "Not",
+                  "signature" : [ {
+                     "localId" : "500",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "497",
+                     "locator" : "47:6-47:68",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "IsNull",
+                     "signature" : [ {
+                        "localId" : "498",
+                        "name" : "{urn:hl7-org:elm-types:r1}Any",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : {
+                        "localId" : "496",
+                        "locator" : "47:6-47:56",
+                        "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                        "name" : "MostRecentPersonalRiskFactorAssessment",
+                        "libraryName" : "DataElements",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               },
+               "then" : {
+                  "localId" : "531",
+                  "locator" : "48:10-48:100",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "name" : "ToBoolean",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "signature" : [ {
+                     "localId" : "532",
+                     "name" : "{http://hl7.org/fhir}boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "502",
+                     "locator" : "48:32-48:99",
+                     "resultTypeName" : "{http://hl7.org/fhir}boolean",
+                     "strict" : false,
+                     "type" : "As",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "505",
+                        "locator" : "48:32-48:88",
+                        "path" : "value",
+                        "type" : "Property",
+                        "resultTypeSpecifier" : {
+                           "localId" : "518",
+                           "type" : "ChoiceTypeSpecifier",
+                           "type" : [ ],
+                           "choice" : [ {
+                              "localId" : "519",
+                              "name" : "{http://hl7.org/fhir}Quantity",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "520",
+                              "name" : "{http://hl7.org/fhir}CodeableConcept",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "521",
+                              "name" : "{http://hl7.org/fhir}string",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "522",
+                              "name" : "{http://hl7.org/fhir}boolean",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "523",
+                              "name" : "{http://hl7.org/fhir}integer",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "524",
+                              "name" : "{http://hl7.org/fhir}Range",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "525",
+                              "name" : "{http://hl7.org/fhir}Ratio",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "526",
+                              "name" : "{http://hl7.org/fhir}SampledData",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "527",
+                              "name" : "{http://hl7.org/fhir}time",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "528",
+                              "name" : "{http://hl7.org/fhir}dateTime",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "529",
+                              "name" : "{http://hl7.org/fhir}Period",
+                              "type" : "NamedTypeSpecifier"
+                           } ]
+                        },
+                        "source" : {
+                           "localId" : "504",
+                           "locator" : "48:32-48:82",
+                           "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                           "name" : "MostRecentPersonalRiskFactorAssessment",
+                           "libraryName" : "DataElements",
+                           "type" : "ExpressionRef"
+                        }
+                     },
+                     "asTypeSpecifier" : {
+                        "localId" : "530",
+                        "locator" : "48:93-48:99",
+                        "resultTypeName" : "{http://hl7.org/fhir}boolean",
+                        "name" : "{http://hl7.org/fhir}boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ]
+               },
+               "else" : {
+                  "localId" : "533",
+                  "locator" : "49:8-50:39",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "Or",
+                  "signature" : [ {
+                     "localId" : "553",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "554",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "534",
+                     "locator" : "49:8-49:56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "Greater",
+                     "signature" : [ {
+                        "localId" : "549",
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "550",
+                        "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "545",
+                        "locator" : "49:8-49:52",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "type" : "Count",
+                        "signature" : [ {
+                           "localId" : "546",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "547",
+                              "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        } ],
+                        "source" : {
+                           "localId" : "536",
+                           "locator" : "49:14-49:51",
+                           "name" : "BiopsyDiagnosticReports",
+                           "libraryName" : "DataElements",
+                           "type" : "ExpressionRef",
+                           "resultTypeSpecifier" : {
+                              "localId" : "539",
+                              "type" : "ListTypeSpecifier",
+                              "elementType" : {
+                                 "localId" : "540",
+                                 "name" : "{http://hl7.org/fhir}DiagnosticReport",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
+                        }
+                     }, {
+                        "localId" : "548",
+                        "locator" : "49:56",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                        "value" : "1",
+                        "type" : "Literal"
+                     } ]
+                  }, {
+                     "localId" : "552",
+                     "locator" : "50:5-50:39",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "name" : "de-breastdensitycord",
+                     "libraryName" : "DataElements",
+                     "type" : "ExpressionRef"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "590",
+            "locator" : "82:1-85:12",
+            "name" : "LastFamilialRiskAssessmentObservationResult",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "590",
+                  "s" : [ {
+                     "value" : [ "","define ","LastFamilialRiskAssessmentObservationResult",":\n  " ]
+                  }, {
+                     "r" : "610",
+                     "s" : [ {
+                        "r" : "591",
+                        "s" : [ {
+                           "r" : "599",
+                           "s" : [ {
+                              "r" : "592",
+                              "s" : [ {
+                                 "value" : [ "BCSMCommon" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "599",
+                              "s" : [ {
+                                 "value" : [ "SortedObservations","(\n    " ]
+                              }, {
+                                 "r" : "594",
+                                 "s" : [ {
+                                    "r" : "593",
+                                    "s" : [ {
+                                       "value" : [ "DataElements" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "594",
+                                    "s" : [ {
+                                       "value" : [ "FamilialRiskAssessmentObservations" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n  )" ]
+                              } ]
+                           } ]
+                        }, {
+                           "r" : "606",
+                           "value" : [ "[","1","]" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "610",
+                        "s" : [ {
+                           "value" : [ "value" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "resultTypeSpecifier" : {
+               "localId" : "804",
+               "type" : "ChoiceTypeSpecifier",
+               "type" : [ ],
+               "choice" : [ {
+                  "localId" : "805",
+                  "name" : "{http://hl7.org/fhir}Quantity",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "806",
+                  "name" : "{http://hl7.org/fhir}CodeableConcept",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "807",
+                  "name" : "{http://hl7.org/fhir}string",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "808",
+                  "name" : "{http://hl7.org/fhir}boolean",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "809",
+                  "name" : "{http://hl7.org/fhir}integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "810",
+                  "name" : "{http://hl7.org/fhir}Range",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "811",
+                  "name" : "{http://hl7.org/fhir}Ratio",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "812",
+                  "name" : "{http://hl7.org/fhir}SampledData",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "813",
+                  "name" : "{http://hl7.org/fhir}time",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "814",
+                  "name" : "{http://hl7.org/fhir}dateTime",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "815",
+                  "name" : "{http://hl7.org/fhir}Period",
+                  "type" : "NamedTypeSpecifier"
+               } ]
+            },
+            "expression" : {
+               "localId" : "610",
+               "locator" : "83:3-85:12",
+               "path" : "value",
+               "type" : "Property",
+               "resultTypeSpecifier" : {
+                  "localId" : "623",
+                  "type" : "ChoiceTypeSpecifier",
+                  "type" : [ ],
+                  "choice" : [ {
+                     "localId" : "624",
+                     "name" : "{http://hl7.org/fhir}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "625",
+                     "name" : "{http://hl7.org/fhir}CodeableConcept",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "626",
+                     "name" : "{http://hl7.org/fhir}string",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "627",
+                     "name" : "{http://hl7.org/fhir}boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "628",
+                     "name" : "{http://hl7.org/fhir}integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "629",
+                     "name" : "{http://hl7.org/fhir}Range",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "630",
+                     "name" : "{http://hl7.org/fhir}Ratio",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "631",
+                     "name" : "{http://hl7.org/fhir}SampledData",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "632",
+                     "name" : "{http://hl7.org/fhir}time",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "633",
+                     "name" : "{http://hl7.org/fhir}dateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "634",
+                     "name" : "{http://hl7.org/fhir}Period",
+                     "type" : "NamedTypeSpecifier"
+                  } ]
+               },
+               "source" : {
+                  "localId" : "591",
+                  "locator" : "83:3-85:6",
+                  "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                  "type" : "Indexer",
+                  "signature" : [ {
+                     "localId" : "607",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "608",
+                        "name" : "{http://hl7.org/fhir}Observation",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "localId" : "609",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "599",
+                     "locator" : "83:3-85:3",
+                     "name" : "SortedObservations",
+                     "libraryName" : "BCSMCommon",
+                     "type" : "FunctionRef",
+                     "resultTypeSpecifier" : {
+                        "localId" : "604",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "605",
+                           "name" : "{http://hl7.org/fhir}Observation",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
+                     "signature" : [ {
+                        "localId" : "600",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "601",
+                           "name" : "{http://hl7.org/fhir}Observation",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ],
+                     "operand" : [ {
+                        "localId" : "594",
+                        "locator" : "84:5-84:51",
+                        "name" : "FamilialRiskAssessmentObservations",
+                        "libraryName" : "DataElements",
+                        "type" : "ExpressionRef",
+                        "resultTypeSpecifier" : {
+                           "localId" : "597",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "598",
+                              "name" : "{http://hl7.org/fhir}Observation",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
+                     } ]
+                  }, {
+                     "localId" : "606",
+                     "locator" : "85:5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "697",
+            "locator" : "87:1-90:12",
+            "name" : "LastPersonalRiskFactorObservationResult",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "697",
+                  "s" : [ {
+                     "value" : [ "","define ","LastPersonalRiskFactorObservationResult",":\n  " ]
+                  }, {
+                     "r" : "717",
+                     "s" : [ {
+                        "r" : "698",
+                        "s" : [ {
+                           "r" : "706",
+                           "s" : [ {
+                              "r" : "699",
+                              "s" : [ {
+                                 "value" : [ "BCSMCommon" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "706",
+                              "s" : [ {
+                                 "value" : [ "SortedObservations","(\n    " ]
+                              }, {
+                                 "r" : "701",
+                                 "s" : [ {
+                                    "r" : "700",
+                                    "s" : [ {
+                                       "value" : [ "DataElements" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "701",
+                                    "s" : [ {
+                                       "value" : [ "PersonalRiskFactorAssessments" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n  )" ]
+                              } ]
+                           } ]
+                        }, {
+                           "r" : "713",
+                           "value" : [ "[","1","]" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "717",
+                        "s" : [ {
+                           "value" : [ "value" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "resultTypeSpecifier" : {
+               "localId" : "816",
+               "type" : "ChoiceTypeSpecifier",
+               "type" : [ ],
+               "choice" : [ {
+                  "localId" : "817",
+                  "name" : "{http://hl7.org/fhir}Quantity",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "818",
+                  "name" : "{http://hl7.org/fhir}CodeableConcept",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "819",
+                  "name" : "{http://hl7.org/fhir}string",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "820",
+                  "name" : "{http://hl7.org/fhir}boolean",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "821",
+                  "name" : "{http://hl7.org/fhir}integer",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "822",
+                  "name" : "{http://hl7.org/fhir}Range",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "823",
+                  "name" : "{http://hl7.org/fhir}Ratio",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "824",
+                  "name" : "{http://hl7.org/fhir}SampledData",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "825",
+                  "name" : "{http://hl7.org/fhir}time",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "826",
+                  "name" : "{http://hl7.org/fhir}dateTime",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "827",
+                  "name" : "{http://hl7.org/fhir}Period",
+                  "type" : "NamedTypeSpecifier"
+               } ]
+            },
+            "expression" : {
+               "localId" : "717",
+               "locator" : "88:3-90:12",
+               "path" : "value",
+               "type" : "Property",
+               "resultTypeSpecifier" : {
+                  "localId" : "730",
+                  "type" : "ChoiceTypeSpecifier",
+                  "type" : [ ],
+                  "choice" : [ {
+                     "localId" : "731",
+                     "name" : "{http://hl7.org/fhir}Quantity",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "732",
+                     "name" : "{http://hl7.org/fhir}CodeableConcept",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "733",
+                     "name" : "{http://hl7.org/fhir}string",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "734",
+                     "name" : "{http://hl7.org/fhir}boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "735",
+                     "name" : "{http://hl7.org/fhir}integer",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "736",
+                     "name" : "{http://hl7.org/fhir}Range",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "737",
+                     "name" : "{http://hl7.org/fhir}Ratio",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "738",
+                     "name" : "{http://hl7.org/fhir}SampledData",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "739",
+                     "name" : "{http://hl7.org/fhir}time",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "740",
+                     "name" : "{http://hl7.org/fhir}dateTime",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "741",
+                     "name" : "{http://hl7.org/fhir}Period",
+                     "type" : "NamedTypeSpecifier"
+                  } ]
+               },
+               "source" : {
+                  "localId" : "698",
+                  "locator" : "88:3-90:6",
+                  "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                  "type" : "Indexer",
+                  "signature" : [ {
+                     "localId" : "714",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "715",
+                        "name" : "{http://hl7.org/fhir}Observation",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  }, {
+                     "localId" : "716",
+                     "name" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "706",
+                     "locator" : "88:3-90:3",
+                     "name" : "SortedObservations",
+                     "libraryName" : "BCSMCommon",
+                     "type" : "FunctionRef",
+                     "resultTypeSpecifier" : {
+                        "localId" : "711",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "712",
+                           "name" : "{http://hl7.org/fhir}Observation",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
+                     "signature" : [ {
+                        "localId" : "707",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "708",
+                           "name" : "{http://hl7.org/fhir}Observation",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     } ],
+                     "operand" : [ {
+                        "localId" : "701",
+                        "locator" : "89:5-89:46",
+                        "name" : "PersonalRiskFactorAssessments",
+                        "libraryName" : "DataElements",
+                        "type" : "ExpressionRef",
+                        "resultTypeSpecifier" : {
+                           "localId" : "704",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "705",
+                              "name" : "{http://hl7.org/fhir}Observation",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        }
+                     } ]
+                  }, {
+                     "localId" : "713",
+                     "locator" : "90:5",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                     "value" : "1",
+                     "type" : "Literal"
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "583",
+            "locator" : "69:1-80:12",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "RiskFactorModifiedAfterRiskAssessment",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "583",
+                  "s" : [ {
+                     "value" : [ "","define ","RiskFactorModifiedAfterRiskAssessment",":\n  " ]
+                  }, {
+                     "r" : "584",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "585",
+                        "s" : [ {
+                           "r" : "586",
+                           "s" : [ {
+                              "r" : "587",
+                              "s" : [ {
+                                 "r" : "588",
+                                 "s" : [ {
+                                    "value" : [ "\"eve-fhxbrca\"" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " and " ]
+                              }, {
+                                 "r" : "660",
+                                 "s" : [ {
+                                    "r" : "647",
+                                    "s" : [ {
+                                       "value" : [ "LastFamilialRiskAssessmentObservationResult" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is false" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      and " ]
+                           }, {
+                              "r" : "674",
+                              "s" : [ {
+                                 "r" : "670",
+                                 "s" : [ {
+                                    "r" : "667",
+                                    "s" : [ {
+                                       "value" : [ "Common" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "670",
+                                    "s" : [ {
+                                       "value" : [ "ObservationDate","(" ]
+                                    }, {
+                                       "r" : "669",
+                                       "s" : [ {
+                                          "r" : "668",
+                                          "s" : [ {
+                                             "value" : [ "DataElements" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "669",
+                                          "s" : [ {
+                                             "value" : [ "MostRecentFamilialRiskAssessmentObservation" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ ")" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " is not null" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ "\n      and " ]
+                        }, {
+                           "r" : "678",
+                           "s" : [ {
+                              "r" : "682",
+                              "s" : [ {
+                                 "r" : "679",
+                                 "s" : [ {
+                                    "value" : [ "Common" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "682",
+                                 "s" : [ {
+                                    "value" : [ "ObservationDate","(" ]
+                                 }, {
+                                    "r" : "681",
+                                    "s" : [ {
+                                       "r" : "680",
+                                       "s" : [ {
+                                          "value" : [ "DataElements" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "681",
+                                       "s" : [ {
+                                          "value" : [ "MostRecentFamilialRiskAssessmentObservation" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " \n        ",">"," " ]
+                           }, {
+                              "r" : "685",
+                              "s" : [ {
+                                 "r" : "684",
+                                 "s" : [ {
+                                    "value" : [ "DataElements" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "685",
+                                 "s" : [ {
+                                    "value" : [ "\"MostRecent5YrRiskAssessmentDate\"" ]
+                                 } ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "r" : "690",
+                        "value" : [ "\n    then ","true","\n  else " ]
+                     }, {
+                        "r" : "691",
+                        "s" : [ {
+                           "value" : [ "if " ]
+                        }, {
+                           "r" : "692",
+                           "s" : [ {
+                              "r" : "693",
+                              "s" : [ {
+                                 "r" : "694",
+                                 "s" : [ {
+                                    "r" : "695",
+                                    "s" : [ {
+                                       "value" : [ "\"eve-personalriskfactors\"" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " and " ]
+                                 }, {
+                                    "r" : "767",
+                                    "s" : [ {
+                                       "r" : "754",
+                                       "s" : [ {
+                                          "value" : [ "LastPersonalRiskFactorObservationResult" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " is false" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ "\n      and " ]
+                              }, {
+                                 "r" : "781",
+                                 "s" : [ {
+                                    "r" : "777",
+                                    "s" : [ {
+                                       "r" : "774",
+                                       "s" : [ {
+                                          "value" : [ "Common" ]
+                                       } ]
+                                    }, {
+                                       "value" : [ "." ]
+                                    }, {
+                                       "r" : "777",
+                                       "s" : [ {
+                                          "value" : [ "ObservationDate","(" ]
+                                       }, {
+                                          "r" : "776",
+                                          "s" : [ {
+                                             "r" : "775",
+                                             "s" : [ {
+                                                "value" : [ "DataElements" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "776",
+                                             "s" : [ {
+                                                "value" : [ "MostRecentPersonalRiskFactorAssessment" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ ")" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " is not null" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ "\n      and " ]
+                           }, {
+                              "r" : "785",
+                              "s" : [ {
+                                 "r" : "789",
+                                 "s" : [ {
+                                    "r" : "786",
+                                    "s" : [ {
+                                       "value" : [ "Common" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "789",
+                                    "s" : [ {
+                                       "value" : [ "ObservationDate","(" ]
+                                    }, {
+                                       "r" : "788",
+                                       "s" : [ {
+                                          "r" : "787",
+                                          "s" : [ {
+                                             "value" : [ "DataElements" ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "788",
+                                          "s" : [ {
+                                             "value" : [ "MostRecentPersonalRiskFactorAssessment" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ ")" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ " \n        ",">"," " ]
+                              }, {
+                                 "r" : "792",
+                                 "s" : [ {
+                                    "r" : "791",
+                                    "s" : [ {
+                                       "value" : [ "DataElements" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "." ]
+                                 }, {
+                                    "r" : "792",
+                                    "s" : [ {
+                                       "value" : [ "\"MostRecent5YrRiskAssessmentDate\"" ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "r" : "797",
+                           "value" : [ "  \n    then ","true","\n  else ","false" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "584",
+               "locator" : "70:3-80:12",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "585",
+                  "locator" : "70:6-73:56",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "And",
+                  "signature" : [ {
+                     "localId" : "688",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "689",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "586",
+                     "locator" : "70:6-71:102",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "And",
+                     "signature" : [ {
+                        "localId" : "676",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "677",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "587",
+                        "locator" : "70:6-70:75",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "And",
+                        "signature" : [ {
+                           "localId" : "665",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "666",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "588",
+                           "locator" : "70:6-70:18",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "name" : "eve-fhxbrca",
+                           "type" : "ExpressionRef"
+                        }, {
+                           "localId" : "660",
+                           "locator" : "70:24-70:75",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "IsFalse",
+                           "signature" : [ {
+                              "localId" : "664",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "662",
+                              "name" : "ToBoolean",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "663",
+                                 "name" : "{http://hl7.org/fhir}boolean",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "661",
+                                 "asType" : "{http://hl7.org/fhir}boolean",
+                                 "type" : "As",
+                                 "signature" : [ ],
+                                 "operand" : {
+                                    "localId" : "647",
+                                    "locator" : "70:24-70:66",
+                                    "name" : "LastFamilialRiskAssessmentObservationResult",
+                                    "type" : "ExpressionRef",
+                                    "resultTypeSpecifier" : {
+                                       "localId" : "648",
+                                       "type" : "ChoiceTypeSpecifier",
+                                       "type" : [ ],
+                                       "choice" : [ {
+                                          "localId" : "649",
+                                          "name" : "{http://hl7.org/fhir}Quantity",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "650",
+                                          "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "651",
+                                          "name" : "{http://hl7.org/fhir}string",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "652",
+                                          "name" : "{http://hl7.org/fhir}boolean",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "653",
+                                          "name" : "{http://hl7.org/fhir}integer",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "654",
+                                          "name" : "{http://hl7.org/fhir}Range",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "655",
+                                          "name" : "{http://hl7.org/fhir}Ratio",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "656",
+                                          "name" : "{http://hl7.org/fhir}SampledData",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "657",
+                                          "name" : "{http://hl7.org/fhir}time",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "658",
+                                          "name" : "{http://hl7.org/fhir}dateTime",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "659",
+                                          "name" : "{http://hl7.org/fhir}Period",
+                                          "type" : "NamedTypeSpecifier"
+                                       } ]
+                                    }
+                                 }
+                              } ]
+                           }
+                        } ]
+                     }, {
+                        "localId" : "674",
+                        "locator" : "71:11-71:102",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "Not",
+                        "signature" : [ {
+                           "localId" : "675",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : {
+                           "localId" : "672",
+                           "locator" : "71:11-71:102",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "IsNull",
+                           "signature" : [ {
+                              "localId" : "673",
+                              "name" : "{urn:hl7-org:elm-types:r1}Any",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "670",
+                              "locator" : "71:11-71:90",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                              "name" : "ObservationDate",
+                              "libraryName" : "Common",
+                              "type" : "FunctionRef",
+                              "signature" : [ {
+                                 "localId" : "671",
+                                 "name" : "{http://hl7.org/fhir}Observation",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : [ {
+                                 "localId" : "669",
+                                 "locator" : "71:34-71:89",
+                                 "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                                 "name" : "MostRecentFamilialRiskAssessmentObservation",
+                                 "libraryName" : "DataElements",
+                                 "type" : "ExpressionRef"
+                              } ]
+                           }
+                        }
+                     } ]
+                  }, {
+                     "localId" : "678",
+                     "locator" : "72:11-73:56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "Greater",
+                     "signature" : [ {
+                        "localId" : "686",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "687",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "682",
+                        "locator" : "72:11-72:90",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "name" : "ObservationDate",
+                        "libraryName" : "Common",
+                        "type" : "FunctionRef",
+                        "signature" : [ {
+                           "localId" : "683",
+                           "name" : "{http://hl7.org/fhir}Observation",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "681",
+                           "locator" : "72:34-72:89",
+                           "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                           "name" : "MostRecentFamilialRiskAssessmentObservation",
+                           "libraryName" : "DataElements",
+                           "type" : "ExpressionRef"
+                        } ]
+                     }, {
+                        "localId" : "685",
+                        "locator" : "73:11-73:56",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "name" : "MostRecent5YrRiskAssessmentDate",
+                        "libraryName" : "DataElements",
+                        "type" : "ExpressionRef"
+                     } ]
+                  } ]
+               },
+               "then" : {
+                  "localId" : "690",
+                  "locator" : "74:10-74:13",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "value" : "true",
+                  "type" : "Literal"
+               },
+               "else" : {
+                  "localId" : "691",
+                  "locator" : "75:8-80:12",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "If",
+                  "condition" : {
+                     "localId" : "692",
+                     "locator" : "75:11-78:56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "And",
+                     "signature" : [ {
+                        "localId" : "795",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "796",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "693",
+                        "locator" : "75:11-76:97",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "And",
+                        "signature" : [ {
+                           "localId" : "783",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "784",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "694",
+                           "locator" : "75:11-75:88",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "And",
+                           "signature" : [ {
+                              "localId" : "772",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "773",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "695",
+                              "locator" : "75:11-75:35",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "name" : "eve-personalriskfactors",
+                              "type" : "ExpressionRef"
+                           }, {
+                              "localId" : "767",
+                              "locator" : "75:41-75:88",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "IsFalse",
+                              "signature" : [ {
+                                 "localId" : "771",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : {
+                                 "localId" : "769",
+                                 "name" : "ToBoolean",
+                                 "libraryName" : "FHIRHelpers",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ {
+                                    "localId" : "770",
+                                    "name" : "{http://hl7.org/fhir}boolean",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "768",
+                                    "asType" : "{http://hl7.org/fhir}boolean",
+                                    "type" : "As",
+                                    "signature" : [ ],
+                                    "operand" : {
+                                       "localId" : "754",
+                                       "locator" : "75:41-75:79",
+                                       "name" : "LastPersonalRiskFactorObservationResult",
+                                       "type" : "ExpressionRef",
+                                       "resultTypeSpecifier" : {
+                                          "localId" : "755",
+                                          "type" : "ChoiceTypeSpecifier",
+                                          "type" : [ ],
+                                          "choice" : [ {
+                                             "localId" : "756",
+                                             "name" : "{http://hl7.org/fhir}Quantity",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "757",
+                                             "name" : "{http://hl7.org/fhir}CodeableConcept",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "758",
+                                             "name" : "{http://hl7.org/fhir}string",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "759",
+                                             "name" : "{http://hl7.org/fhir}boolean",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "760",
+                                             "name" : "{http://hl7.org/fhir}integer",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "761",
+                                             "name" : "{http://hl7.org/fhir}Range",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "762",
+                                             "name" : "{http://hl7.org/fhir}Ratio",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "763",
+                                             "name" : "{http://hl7.org/fhir}SampledData",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "764",
+                                             "name" : "{http://hl7.org/fhir}time",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "765",
+                                             "name" : "{http://hl7.org/fhir}dateTime",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "766",
+                                             "name" : "{http://hl7.org/fhir}Period",
+                                             "type" : "NamedTypeSpecifier"
+                                          } ]
+                                       }
+                                    }
+                                 } ]
+                              }
+                           } ]
+                        }, {
+                           "localId" : "781",
+                           "locator" : "76:11-76:97",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "Not",
+                           "signature" : [ {
+                              "localId" : "782",
+                              "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "779",
+                              "locator" : "76:11-76:97",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                              "type" : "IsNull",
+                              "signature" : [ {
+                                 "localId" : "780",
+                                 "name" : "{urn:hl7-org:elm-types:r1}Any",
+                                 "type" : "NamedTypeSpecifier"
+                              } ],
+                              "operand" : {
+                                 "localId" : "777",
+                                 "locator" : "76:11-76:85",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                 "name" : "ObservationDate",
+                                 "libraryName" : "Common",
+                                 "type" : "FunctionRef",
+                                 "signature" : [ {
+                                    "localId" : "778",
+                                    "name" : "{http://hl7.org/fhir}Observation",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : [ {
+                                    "localId" : "776",
+                                    "locator" : "76:34-76:84",
+                                    "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                                    "name" : "MostRecentPersonalRiskFactorAssessment",
+                                    "libraryName" : "DataElements",
+                                    "type" : "ExpressionRef"
+                                 } ]
+                              }
+                           }
+                        } ]
+                     }, {
+                        "localId" : "785",
+                        "locator" : "77:11-78:56",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "Greater",
+                        "signature" : [ {
+                           "localId" : "793",
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "794",
+                           "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "789",
+                           "locator" : "77:11-77:85",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "name" : "ObservationDate",
+                           "libraryName" : "Common",
+                           "type" : "FunctionRef",
+                           "signature" : [ {
+                              "localId" : "790",
+                              "name" : "{http://hl7.org/fhir}Observation",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "788",
+                              "locator" : "77:34-77:84",
+                              "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                              "name" : "MostRecentPersonalRiskFactorAssessment",
+                              "libraryName" : "DataElements",
+                              "type" : "ExpressionRef"
+                           } ]
+                        }, {
+                           "localId" : "792",
+                           "locator" : "78:11-78:56",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                           "name" : "MostRecent5YrRiskAssessmentDate",
+                           "libraryName" : "DataElements",
+                           "type" : "ExpressionRef"
+                        } ]
+                     } ]
+                  },
+                  "then" : {
+                     "localId" : "797",
+                     "locator" : "79:10-79:13",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "value" : "true",
+                     "type" : "Literal"
+                  },
+                  "else" : {
+                     "localId" : "798",
+                     "locator" : "80:8-80:12",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "value" : "false",
+                     "type" : "Literal"
+                  }
+               }
+            }
+         }, {
+            "localId" : "556",
+            "locator" : "64:1-67:54",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "ValidMostRecent5YrRiskAssessment",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "556",
+                  "s" : [ {
+                     "value" : [ "// 5 year assessment is valid if done within past 5 years\n// and risk factor observation not changed from false to true after risk assessment\n","define ","ValidMostRecent5YrRiskAssessment",":\n  " ]
+                  }, {
+                     "r" : "557",
+                     "s" : [ {
+                        "r" : "558",
+                        "s" : [ {
+                           "r" : "563",
+                           "s" : [ {
+                              "r" : "560",
+                              "s" : [ {
+                                 "r" : "559",
+                                 "s" : [ {
+                                    "value" : [ "DataElements" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "560",
+                                 "s" : [ {
+                                    "value" : [ "\"MostRecent5YrRiskAssessment\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " is not null" ]
+                           } ]
+                        }, {
+                           "value" : [ "\n    and " ]
+                        }, {
+                           "r" : "565",
+                           "s" : [ {
+                              "r" : "567",
+                              "s" : [ {
+                                 "r" : "566",
+                                 "s" : [ {
+                                    "value" : [ "DataElements" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "567",
+                                 "s" : [ {
+                                    "value" : [ "\"MostRecent5YrRiskAssessmentDate\"" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ",">="," " ]
+                           }, {
+                              "r" : "568",
+                              "s" : [ {
+                                 "value" : [ "(" ]
+                              }, {
+                                 "r" : "568",
+                                 "s" : [ {
+                                    "r" : "571",
+                                    "s" : [ {
+                                       "value" : [ "Today","()" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " - " ]
+                                 }, {
+                                    "r" : "572",
+                                    "s" : [ {
+                                       "value" : [ "5 ","years" ]
+                                    } ]
+                                 } ]
+                              }, {
+                                 "value" : [ ")" ]
+                              } ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    and " ]
+                     }, {
+                        "r" : "800",
+                        "s" : [ {
+                           "r" : "799",
+                           "s" : [ {
+                              "value" : [ "RiskFactorModifiedAfterRiskAssessment" ]
+                           } ]
+                        }, {
+                           "value" : [ " is false" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "557",
+               "locator" : "65:3-67:54",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "type" : "And",
+               "signature" : [ {
+                  "localId" : "802",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "803",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "558",
+                  "locator" : "65:3-66:77",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "And",
+                  "signature" : [ {
+                     "localId" : "580",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  }, {
+                     "localId" : "581",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : [ {
+                     "localId" : "563",
+                     "locator" : "65:3-65:56",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "Not",
+                     "signature" : [ {
+                        "localId" : "564",
+                        "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : {
+                        "localId" : "561",
+                        "locator" : "65:3-65:56",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "IsNull",
+                        "signature" : [ {
+                           "localId" : "562",
+                           "name" : "{urn:hl7-org:elm-types:r1}Any",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : {
+                           "localId" : "560",
+                           "locator" : "65:3-65:44",
+                           "resultTypeName" : "{http://hl7.org/fhir}Observation",
+                           "name" : "MostRecent5YrRiskAssessment",
+                           "libraryName" : "DataElements",
+                           "type" : "ExpressionRef"
+                        }
+                     }
+                  }, {
+                     "localId" : "565",
+                     "locator" : "66:9-66:77",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "GreaterOrEqual",
+                     "signature" : [ {
+                        "localId" : "578",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     }, {
+                        "localId" : "579",
+                        "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "type" : "NamedTypeSpecifier"
+                     } ],
+                     "operand" : [ {
+                        "localId" : "567",
+                        "locator" : "66:9-66:54",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
+                        "name" : "MostRecent5YrRiskAssessmentDate",
+                        "libraryName" : "DataElements",
+                        "type" : "ExpressionRef"
+                     }, {
+                        "localId" : "576",
+                        "type" : "ToDateTime",
+                        "signature" : [ {
+                           "localId" : "577",
+                           "name" : "{urn:hl7-org:elm-types:r1}Date",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : {
+                           "localId" : "568",
+                           "locator" : "66:59-66:77",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
+                           "type" : "Subtract",
+                           "signature" : [ {
+                              "localId" : "573",
+                              "name" : "{urn:hl7-org:elm-types:r1}Date",
+                              "type" : "NamedTypeSpecifier"
+                           }, {
+                              "localId" : "574",
+                              "name" : "{urn:hl7-org:elm-types:r1}Quantity",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : [ {
+                              "localId" : "571",
+                              "locator" : "66:60-66:66",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Date",
+                              "type" : "Today",
+                              "signature" : [ ]
+                           }, {
+                              "localId" : "572",
+                              "locator" : "66:70-66:76",
+                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
+                              "value" : 5,
+                              "unit" : "years",
+                              "type" : "Quantity"
+                           } ]
+                        }
+                     } ]
+                  } ]
+               }, {
+                  "localId" : "800",
+                  "locator" : "67:9-67:54",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "IsFalse",
+                  "signature" : [ {
+                     "localId" : "801",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "799",
+                     "locator" : "67:9-67:45",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "name" : "RiskFactorModifiedAfterRiskAssessment",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         } ]
+      }
+   }
+}
+

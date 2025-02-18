@@ -6,20 +6,26 @@ import { valueSetJson } from 'services/valuesets';
 import { translateResponse, translateToggleChange } from './translate';
 import { stridesData } from './strides';
 import { logMsg } from 'util/logger';
+import { testData } from 'test/fhir/patientData';
+import { testOutput } from 'test/fhir/patientOutput';
+
+import hardCodeData from '../../test/fhir/bundles/PrimaryScreeningDecision_v1.0.0/PrimaryScreeningDecision_JaniceMedford_fdr_breastca_age_45.json'
+import patientDataJ from '../../test/fhir/bundles/patients/JaniceMedford_fdr_breastca_age_45.json'
+import cql, { Results } from 'cql-execution';
+import cqlfhir, { PatientSource } from 'cql-exec-fhir';
+import { initialzieCqlWorker } from 'cql-worker';
 
 const LOGGER_ENABLED = process.env?.REACT_APP_LOGGER_ENABLED || false;
-
 /**
  *
  * @param {Object[]} patientData
  * @returns {Object}
  */
-export const useCds = (patientData, toggleStatus) => {
+export const useCds = (patientData, toggleStatus, pathway) => {
 
   const [output, setOutput] = useState({});
   const [isLoadingCdsData, setIsLoadingCdsData] = useState(false);
   const [isPregnant, setIsPreganant] = useState(false);
-
   useEffect(() => {
     if (patientData.length === 0) {
       return;
@@ -40,7 +46,7 @@ export const useCds = (patientData, toggleStatus) => {
     console.timeEnd('Translate FHIR Data');
     console.log('patientData after translation: ', patientData);
 
-    applyCds(patientData, setOutput, setIsLoadingCdsData, toggleStatus.isToggleChanged, isPregnant, setIsPreganant);
+    applyCds(patientData, setOutput, setIsLoadingCdsData, toggleStatus.isToggleChanged, isPregnant, setIsPreganant, pathway);
   }, [patientData, toggleStatus, isPregnant]);
 
   return {output, isLoadingCdsData};
@@ -51,15 +57,16 @@ export const useCds = (patientData, toggleStatus) => {
  * @param {Object[]} patientData
  * @param {function} setOutput
  */
-const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isToggleChanged, isPregnant, setIsPreganant) {
+const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isToggleChanged, isPregnant, setIsPreganant, pathway) {
   console.log('Starting applyCds()');
   console.time('Apply CDS');
 
   let resolver = simpleResolver([...cdsResources, ...patientData], false);
   const planDefinition = resolver('PlanDefinition/CervicalCancerScreeningAndManagementClinicalDecisionSupport')[0];
   // TODO: Throw error if there is anything other than 1 patient resource
-  const patientReference = 'Patient/' + patientData.filter(pd => pd.resourceType === 'Patient').map(pd => pd.id)[0];
-
+  const patientId = patientData.filter(pd => pd.resourceType === 'Patient').map(pd => pd.id)[0]
+  const patientReference = 'Patient/' + patientId;
+  
   if (patientReference !== 'Patient/undefined') {
     // NOTE: CQL Worker is not used with cql-execution branch of encender
     const WorkerFactory = () => {
@@ -77,19 +84,27 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
       WorkerFactory,
       cqlParameters
     };
+    const measure = elmJsonDependencies.PertinentHistory;
+    let repository = new cql.Repository(elmJsonDependencies);
+    const codeService = new cql.CodeService(valueSetJson);
+    const lib = new cql.Library(measure, repository);
+    const executor = new cql.Executor(lib, codeService, cqlParameters);
+    const psource = cqlfhir.PatientSource.FHIRv401();
+    psource.loadBundles(testData[patientId]);
+    const result = await executor.exec(psource);
+    const cqlResults = result?.patientResults?.[Object.keys(result.patientResults)?.[0]];
+    let patientInfo={};
+    let patientHistory={};
+    if(cqlResults) {
+      patientInfo = cqlResults.PertinentHistory.patientInfo;
+      patientHistory = cqlResults.PertinentHistory.patientHistory;
+    }
+    const resources = testOutput[pathway][patientId].entry.map((e) => {
+      return e.resource
+    });
+    // const [CarePlan, RequestGroup, ...otherResources] = await applyPlan(planDefinition, patientReference, resolver, aux);
+    const [CarePlan, RequestGroup, ...otherResources] = resources;
 
-    const [CarePlan, RequestGroup, ...otherResources] = await applyPlan(planDefinition, patientReference, resolver, aux);
-
-    let CommunicationRequests = otherResources.filter(otr => otr.resourceType === 'CommunicationRequest');
-    let DisplayCervicalCancerMedicalHistory = CommunicationRequests.filter(cr => {
-      return cr?.basedOn[0]?.reference === 'http://OUR-PLACEHOLDER-URL.com/ActivityDefinition/DisplayCervicalCancerMedicalHistory';
-    })[0];
-    let CervicalCancerDecisionAids = CommunicationRequests.filter(cr => {
-      return cr?.basedOn[0]?.reference === 'http://OUR-PLACEHOLDER-URL.com/ActivityDefinition/CervicalCancerDecisionAids';
-    })[0];
-    let Errors = CommunicationRequests.filter(cr => {
-      return cr?.basedOn[0]?.reference === 'http://OUR-PLACEHOLDER-URL.com/ActivityDefinition/CommunicateErrors';
-    })[0];
 
     let ServiceRequests = otherResources.filter(otr => otr.resourceType === 'ServiceRequest');
     let PrimaryHpvRequest = ServiceRequests.filter(sr => sr.code.text === 'Primary HPV')[0];
@@ -103,7 +118,6 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
       [
         ...cdsResources,
         ...patientData,
-        ...CommunicationRequests,
         ...ServiceRequests
       ],
       false
@@ -113,39 +127,11 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
     console.log('RequestGroup: ', RequestGroup);
     console.log('otherResources: ', otherResources);
 
-    let patientInfo={};
-    let patientHistory={};
-    let decisionAids={};
+
+    let decisionAids=[];
+    decisionAids = recursiveActionParse(RequestGroup.action, decisionAids, resolver);
+
     let thereAreOutputs = false;
-
-    if (DisplayCervicalCancerMedicalHistory?.payload?.length > 0) {
-      let historyString = DisplayCervicalCancerMedicalHistory.payload[0].contentString;
-      let history = JSON.parse(historyString);
-      patientInfo = history.patientInfo;
-      patientHistory = history.patientHistory;
-      thereAreOutputs = true;
-    }
-
-    if (CervicalCancerDecisionAids?.payload?.length > 0) {
-      let decisionsString = CervicalCancerDecisionAids.payload[0].contentString;
-      let decisions = JSON.parse(decisionsString);
-      decisionAids = decisions;
-      decisionAids.suggestedOrders = decisionAids.suggestedOrders.map(so => {
-        switch (so) {
-          case 'Primary HPV': return {'Primary HPV': 'ServiceRequest/' + PrimaryHpvRequest.id};
-          case 'Cytology': return {'Cytology': 'ServiceRequest/' + CytologyRequest.id};
-          case 'Cotest': return {'Cotest': 'ServiceRequest/' + CotestRequest.id};
-          case 'Colposcopy': return {'Colposcopy': 'ServiceRequest/' + ColposcopyRequest.id};
-          case 'Surveillance': return {'Surveillance': 'ServiceRequest/' + SurveillanceRequest.id};
-          case 'Treatment': return {'Treatment': 'ServiceRequest/' + TreatmentRequest.id};
-          default: return null;
-        }
-      });
-    } else if (Errors?.payload?.length > 0) {
-      let errorString = Errors.payload[0].contentString;
-      let errors = JSON.parse(errorString);
-      decisionAids = { errors };
-    }
 
     // replace with actual logging data when ready from CQL 
     // output otherResources as a temporary stand-in
@@ -186,4 +172,77 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
     setOutput(output);
   }
 
+}
+
+function recursiveActionParse(actions, decisionAids, resolver) {
+    actions.forEach((act)=> {
+      const entry = {
+        recommendation:'',
+        recommendationGroup:'',
+        recommendationDetails:[],
+        recommendationDate:'',
+        documentation: [],
+        errors:[],
+        disclaimer:'', // not neccessary?
+        suggestedOrders:'',// not used
+        riskTable:{},
+      }
+      entry.recommendation = act.title;
+      if (act.resource) {
+        
+        const serviceReq = resolver(act.resource.reference)?.[0];
+        entry.recommendationGroup = getReasonCodeDisplay(serviceReq);
+      }
+
+      entry.recommendationDetails.push(act.description);
+      entry.recommendationDate = getTimingDateFromAction(act);
+      if(act.documentation){
+        entry.documentation = act.documentation;
+      }
+      decisionAids.push(entry);
+    })
+  return decisionAids;
+  
+}
+// util
+function getReasonCodeDisplay(serviceRequest) {
+    if (!serviceRequest || !serviceRequest.reasonCode || !Array.isArray(serviceRequest.reasonCode)) {
+        return null;
+    }
+
+    let display = null;
+
+    serviceRequest.reasonCode.forEach(reason => {
+        if (reason && reason.coding && Array.isArray(reason.coding)) {
+            reason.coding.forEach(coding => {
+                if (coding && coding.display && display === null) {
+                    display = coding.display;
+                }
+            });
+        }
+    });
+    return display;
+}
+
+function getTimingDateFromAction(action) {
+  if (!action) {
+      return null;
+  }
+
+  let timingDate = null;
+  if (action.timingDateTime) {
+      timingDate = action.timingDateTime;
+  } else if (action.timingPeriod && action.timingPeriod.start) {
+      timingDate = action.timingPeriod.start;
+  } else if (action.timingPeriod && action.timingPeriod.end) {
+      timingDate = action.timingPeriod.end;
+  } else if (action.timingRange && action.timingRange.low && action.timingRange.low.value) {
+      timingDate = action.timingRange.low.value;
+  } else if (action.timingRange && action.timingRange.high && action.timingRange.high.value) {
+      timingDate = action.timingRange.high.value;
+  } else if (action.timingTiming && action.timingTiming.event && action.timingTiming.event.length > 0) {
+      timingDate = action.timingTiming.event[0];
+  }
+
+  return timingDate;
 }

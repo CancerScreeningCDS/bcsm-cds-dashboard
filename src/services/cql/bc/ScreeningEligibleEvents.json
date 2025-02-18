@@ -1,0 +1,327 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.12.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,EnableResultTypes,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "All",
+         "type" : "CqlToElmInfo"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "230",
+            "s" : [ {
+               "value" : [ "","library ScreeningEligibleEvents version '1.0.0'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "ScreeningEligibleEvents",
+         "version" : "1.0.0"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "207",
+            "locator" : "4:1-4:55",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "207",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ "  version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         }, {
+            "localId" : "208",
+            "locator" : "6:1-6:56",
+            "localIdentifier" : "DataElements",
+            "path" : "DataElements",
+            "version" : "1.0.0",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "DataElements" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'1.0.0'"," called ","DataElements" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "212",
+            "locator" : "8:1-8:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "210",
+            "locator" : "8:1-8:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "211",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "209",
+                  "locator" : "8:1-8:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "214",
+            "locator" : "10:1-11:26",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-female",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "214",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-female\"",":\n  " ]
+                  }, {
+                     "r" : "216",
+                     "s" : [ {
+                        "r" : "215",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "216",
+                        "s" : [ {
+                           "value" : [ "\"de-female\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "216",
+               "locator" : "11:3-11:26",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-female",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "218",
+            "locator" : "13:1-14:28",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-breastca",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "218",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-breastca\"",":\n  " ]
+                  }, {
+                     "r" : "220",
+                     "s" : [ {
+                        "r" : "219",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "220",
+                        "s" : [ {
+                           "value" : [ "\"de-breastca\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "220",
+               "locator" : "14:3-14:28",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-breastca",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "222",
+            "locator" : "16:1-17:30",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-mastectomy",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "222",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-mastectomy\"",":\n  " ]
+                  }, {
+                     "r" : "224",
+                     "s" : [ {
+                        "r" : "223",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "224",
+                        "s" : [ {
+                           "value" : [ "\"de-mastectomy\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "224",
+               "locator" : "17:3-17:30",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-mastectomy",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "226",
+            "locator" : "19:1-20:34",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-breastsymptoms",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "226",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-breastsymptoms\"",":\n  " ]
+                  }, {
+                     "r" : "228",
+                     "s" : [ {
+                        "r" : "227",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "228",
+                        "s" : [ {
+                           "value" : [ "\"de-breastsymptoms\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "228",
+               "locator" : "20:3-20:34",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-breastsymptoms",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         }, {
+            "localId" : "230",
+            "locator" : "22:1-23:34",
+            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+            "name" : "eve-breastfindings",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "230",
+                  "s" : [ {
+                     "value" : [ "","define ","\"eve-breastfindings\"",":\n  " ]
+                  }, {
+                     "r" : "232",
+                     "s" : [ {
+                        "r" : "231",
+                        "s" : [ {
+                           "value" : [ "DataElements" ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "232",
+                        "s" : [ {
+                           "value" : [ "\"de-breastfindings\"" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "232",
+               "locator" : "23:3-23:34",
+               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+               "name" : "de-breastfindings",
+               "libraryName" : "DataElements",
+               "type" : "ExpressionRef"
+            }
+         } ]
+      }
+   }
+}
+

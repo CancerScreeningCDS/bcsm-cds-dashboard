@@ -1,6 +1,7 @@
 [
   {
     "key": "JosephineGreene-past-breast-pain-adh-biopsy",
+    "id" : "JosephineGreene",
     "name": "Josephine38 Greene57",
     "age": "46",
     "scenario": "Past breast pain, ADH biopsy",
@@ -8,6 +9,7 @@
   },
   {
     "key": "JustineWallace_brca1",
+    "id" : "JustineWallace",
     "name": "Justine39 Wallace91",
     "age": "47",
     "scenario": "BRCA1 gene detected",
