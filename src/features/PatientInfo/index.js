@@ -3,7 +3,6 @@ import { formatDate } from 'util/formatDate';
 function PatientInfo(props) {
 
   const {input} = props;
-  console.log("Dashboard input: ", input)
 
   const dob = formatDate(input?.dateOfBirth?.value);
   const age = input?.age ? ' (' + input.age + ' y.o.)' : '';

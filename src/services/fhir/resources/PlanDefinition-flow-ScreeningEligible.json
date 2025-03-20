@@ -1,0 +1,363 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "flow-ScreeningEligible",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition"
+    ]
+  },
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/flow-ScreeningEligible",
+  "title": "Screening Eligible",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    }
+  ],
+  "author": [
+    {
+      "name": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention."
+    }
+  ],
+  "editor": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "reviewer": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "endorser": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "library": [
+    "Library/ScreeningEligible|1.0.0"
+  ],
+  "action": [
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement",
+          "citation": "US Preventive Services Task Force. Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. Published online April 30, 2024.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening"
+        },
+        {
+          "type": "derived-from",
+          "label": "Screening Eligible",
+          "display": "Individuals who have certain signs or symptoms concerning for breast cancer or other breast diseases are excluded from routine screening pathways and should have diagnostic testing performed."
+        }
+      ],
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "eligible",
+              "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
+              "display": "Eligible for screening"
+            }
+          ]
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "IsScreeningEligible"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "id": "IsScreeningEligible",
+      "title": "Screening eligible",
+      "description": "Patient is eligible for screening",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/CommunicateEligible|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement",
+          "citation": "US Preventive Services Task Force. Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. Published online April 30, 2024.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening"
+        },
+        {
+          "type": "derived-from",
+          "label": "Screening Eligible",
+          "display": "Individuals who have certain signs or symptoms concerning for breast cancer or other breast diseases are excluded from routine screening pathways and should have diagnostic testing performed."
+        },
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR Appropriateness Criteria® Transgender Breast Cancer Screening",
+          "citation": "Brown, Ann, et al. \"ACR appropriateness criteria® transgender breast cancer screening.\" Journal of the American College of Radiology 18.11 (2021): S502-S515.",
+          "url": "https://www.jacr.org/article/S1546-1440(21)00730-4/fulltext"
+        },
+        {
+          "type": "documentation",
+          "label": "UCSF",
+          "display": "UCSF Transgender Care & Treatment Guidelines: Screening for breast cancer in transgender women",
+          "url": "https://transcare.ucsf.edu/guidelines/breast-cancer-women"
+        }
+      ],
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "noteligible",
+              "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
+              "display": "Not eligible for screening"
+            }
+          ]
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsNotEligibleNotAssignedFemaleAtBirth"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ScreeningEligibleReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "NotEligibleCurrentBreastCancer",
+      "title": "Not eligible for screening",
+      "description": "This patient is not eligible for screening.\n\nReferenced guidelines apply to individuals assigned female at birth. Routine screening of cis-gender individuals assigned male at birth is not recommended. For transgender women, consider specialist referral.\n\nAdditional resources: ACR Appropriateness Criteria® Transgender Breast Cancer Screening; UCSF guidelines 'Screening for breast cancer in transgender women'",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/CommunicateNotEligible|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement",
+          "citation": "US Preventive Services Task Force. Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. Published online April 30, 2024.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening"
+        },
+        {
+          "type": "derived-from",
+          "label": "Screening Eligible",
+          "display": "Individuals who have certain signs or symptoms concerning for breast cancer or other breast diseases are excluded from routine screening pathways and should have diagnostic testing performed."
+        }
+      ],
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "noteligible",
+              "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
+              "display": "Not eligible for screening"
+            }
+          ]
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsNotEligibleCurrentBreastCancer"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ScreeningEligibleReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "NotEligibleCurrentBreastCancer",
+      "title": "Not eligible for screening",
+      "description": "This patient is not eligible for screening and should be referred to a specialist for management.\n\nThis patient has an active condition of breast cancer and does not meet the eligibility requirements for routine breast cancer screening.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/CommunicateNotEligible|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement",
+          "citation": "US Preventive Services Task Force. Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. Published online April 30, 2024.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening"
+        },
+        {
+          "type": "derived-from",
+          "label": "Screening Eligible",
+          "display": "Individuals who have certain signs or symptoms concerning for breast cancer or other breast diseases are excluded from routine screening pathways and should have diagnostic testing performed."
+        }
+      ],
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "noteligible",
+              "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
+              "display": "Not eligible for screening"
+            }
+          ]
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsNotEligibleBreastSymptomsOrFindings"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ScreeningEligibleReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "NotEligibleBreastSymptomsOrFindings",
+      "title": "Not eligible for screening",
+      "description": "This patient is not eligible for screening.\n\nNew breast symptoms or exam findings, or chronic symptoms or findings which have progressively worsened, should undergo diagnostic testing rather than routine screening.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/CommunicateNotEligible|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement",
+          "citation": "US Preventive Services Task Force. Screening for Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. Published online April 30, 2024.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-screening"
+        },
+        {
+          "type": "derived-from",
+          "label": "Screening Eligible",
+          "display": "Individuals who have certain signs or symptoms concerning for breast cancer or other breast diseases are excluded from routine screening pathways and should have diagnostic testing performed."
+        }
+      ],
+      "code": [
+        {
+          "coding": [
+            {
+              "code": "noteligible",
+              "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
+              "display": "Not eligible for screening"
+            }
+          ]
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsNotEligibleBilateralMastectomy"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ScreeningEligibleReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "NotEligibleBilateralMastectomy",
+      "title": "Not eligible for screening",
+      "description": "This patient is not eligible for screening.\n\nThis patient has had bilateral mastectomy and does not meet the eligibility requirements for routine breast cancer screening.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/CommunicateNotEligible|1.0.0"
+    },
+    {
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "MissingAgeOrBirthdate",
+            "reference": "Library/ScreeningEligible|1.0.0"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "title": "Screening Eligible Missing Data",
+      "description": "Error due to missing required data for inclusion and exclusion evaluation.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/Questionnaire/ScreeningEligibleQuestionnaire|1.0.0"
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-10-22",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention.",
+  "copyright": "(C) 2024 The MITRE Corporation. All Rights Reserved. Approved for Public Release: 24-2711. Distribution Unlimited. Unless otherwise noted, this work is available under an Apache 2.0 license. It was produced by the MITRE Corporation for the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention in accordance with the Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.",
+  "approvalDate": "2024-10-22",
+  "lastReviewDate": "2024-10-22",
+  "name": "flow-ScreeningEligible",
+  "description": "Determines whether a patient is eligible for routine breast cancer screening. This includes absolute exclusion criteria for which routine screening is not indicated in all guidelines and pathways.\n\nInidividuals who have certain signs or symptoms concerning for breast cancer or other breast diseases are excluded from routine screening pathways and should have diagnostic testing performed.",
+  "type": {
+    "coding": [
+      {
+        "code": "eca-rule",
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type"
+      }
+    ]
+  }
+}

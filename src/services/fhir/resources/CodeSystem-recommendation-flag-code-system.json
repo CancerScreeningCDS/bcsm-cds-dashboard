@@ -1,0 +1,26 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "RecommendationFlagCodeSystem",
+  "id": "recommendation-flag-code-system",
+  "title": "Recommendation Flag Code System",
+  "description": "Code representing due/overdue flags",
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/recommendation-flag-code-system",
+  "concept": [
+    {
+      "code": "overdue",
+      "display": "Overdue"
+    },
+    {
+      "code": "due",
+      "display": "Due"
+    },
+    {
+      "code": "not-due",
+      "display": "Not due"
+    }
+  ],
+  "experimental": true,
+  "count": 3
+}

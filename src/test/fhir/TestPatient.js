@@ -21,6 +21,10 @@ export function TestPatient() {
 
   const [toggleStatus, setToggleStatus] = useState({
     isImmunosuppressed: false,
+    hasCurrentBreastCancer: false,
+    hasGeneticMarkers: false,
+    hasBreastDiseaseSymptoms: false,
+    hasBreastExamFindings: false,
     isPregnant: false,
     isPregnantConcerned: false,
     isSymptomatic: false,

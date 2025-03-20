@@ -1,0 +1,154 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "draft",
+  "content": "complete",
+  "name": "ScreeningObservationCodeSystem",
+  "id": "screening-observation-code-system",
+  "title": "Screening Observation Code System",
+  "description": "Code representing breast cancer screening related observations",
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+  "concept": [
+    {
+      "code": "eligibleforscreening",
+      "display": "Eligible for screening"
+    },
+    {
+      "code": "missingageorbirthdate",
+      "display": "Missing patient age in years or birth date"
+    },
+    {
+      "code": "notassignedfemaleatbirth",
+      "display": "Not assigned female at birth"
+    },
+    {
+      "code": "screeningcomplete",
+      "display": "Screening complete"
+    },
+    {
+      "code": "USPSTFaveragerisk",
+      "display": "USPSTF average risk"
+    },
+    {
+      "code": "ACSaveragerisk",
+      "display": "ACS average risk"
+    },
+    {
+      "code": "currentbreastcancer",
+      "display": "Current breast cancer"
+    },
+    {
+      "code": "bilatmastectomy",
+      "display": "Bilateral mastectomy"
+    },
+    {
+      "code": "breastsymptomsorfindings",
+      "display": "New or worsening breast symptoms or findings"
+    },
+    {
+      "code": "ageover74",
+      "display": "Age over 74 years"
+    },
+    {
+      "code": "lifeexp",
+      "display": "Reduced life expectancy indicator"
+    },
+    {
+      "code": "currentlylactating",
+      "display": "Currently lactating"
+    },
+    {
+      "code": "othergeneticrisk",
+      "display": "Other genetic marker or syndrome associated with breast cancer"
+    },
+    {
+      "code": "hxbreastca",
+      "display": "Previous breast cancer"
+    },
+    {
+      "code": "hxbreastcawithin5y",
+      "display": "Breast cancer in remission < 5 years"
+    },
+    {
+      "code": "geneticriskexclusion",
+      "display": "Genetic risk exclusion"
+    },
+    {
+      "code": "chestxrt",
+      "display": "History of chest radiation ages 10-30 y"
+    },
+    {
+      "code": "atypicalbx",
+      "display": "Atypical biopsy"
+    },
+    {
+      "code": "atypicalbxhighlifetimerisk",
+      "display": "Atypical biopsy high lifetime risk"
+    },
+    {
+      "code": "highlifetimerisk",
+      "display": "High lifetime risk"
+    },
+    {
+      "code": "firstdeggenetic",
+      "display": "First degree relative with genetic marker or syndrome"
+    },
+    {
+      "code": "breastdensitycord",
+      "display": "BI-RADS breast density category C or D"
+    },
+    {
+      "code": "fhxbreastcarisk",
+      "display": "Compelling family history of breast cancer"
+    },
+    {
+      "code": "fhxgenetic",
+      "display": "Family history of inherited cancer susceptibility"
+    },
+    {
+      "code": "brcageneancestry",
+      "display": "Ancestry associated with BRCA1/2 gene mutations"
+    },
+    {
+      "code": "fhxbrcaovcatubalperit",
+      "display": "Family history of breast, ovarian, tubal, or peritoneal cancer"
+    },
+    {
+      "code": "highfamilialrisk",
+      "display": "High familial risk"
+    },
+    {
+      "code": "high5yrisk",
+      "display": "High 5 year risk"
+    },
+    {
+      "code": "higherthanaverage5yrisk",
+      "display": "5 year risk at least 1.67%"
+    },
+    {
+      "code": "riskfactors",
+      "display": "Personal or family history risk factors"
+    },
+    {
+      "code": "BreastSymptoms",
+      "display": "New or worsening breast symptoms"
+    },
+    {
+      "code": "BreastFindings",
+      "display": "New or worsening breast exam findings"
+    },
+    {
+      "code": "GeneticMarkerOrSyndrome",
+      "display": "Genetic marker or syndrome associated with breast cancer"
+    },
+    {
+      "code": "KnownVariantStatus",
+      "display": "Known breast cancer variant status"
+    },
+    {
+      "code": "PersonalRiskFactors",
+      "display": "Personal risk factors conferring increased risk of breast cancer"
+    }
+  ],
+  "experimental": true,
+  "count": 35
+}

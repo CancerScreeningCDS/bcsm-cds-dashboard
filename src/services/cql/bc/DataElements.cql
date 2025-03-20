@@ -1,3 +1,16 @@
+/*  
+  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.
+
+  (C) 2024 The MITRE Corporation. All Rights Reserved. 
+  Approved for Public Release: 24-2711. 
+  Distribution Unlimited.
+
+  Unless otherwise noted, this work is available under an Apache 2.0 license. 
+  It was produced by the MITRE Corporation for the Division of Cancer Prevention 
+  and Control, Centers for Disease Control and Prevention in accordance with the 
+  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.
+*/
+
 library DataElements version '1.0.0'
 
 using FHIR version '4.0.1'
@@ -24,56 +37,36 @@ codesystem "LOCAL": 'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/scr
 codesystem "ActCode": 'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system'
 codesystem "BiopsyResultCS": 'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system'
 
-code "Condition inactive code": 'inactive' from "CONDCLINSTATUS" display 'Inactive'
-code "Condition remission code": 'remission' from "CONDCLINSTATUS" display 'Remission'
-code "Condition resolved code": 'resolved' from "CONDCLINSTATUS" display 'Resolved'
-
-concept "Condition inactive": { "Condition inactive code" } display 'Inactive'
-concept "Condition remission": { "Condition remission code" } display 'Remission'
-concept "Condition resolved": { "Condition resolved code" } display 'Resolved'
+code "Condition inactive": 'inactive' from "CONDCLINSTATUS" display 'inactive'
+code "Condition remission": 'remission' from "CONDCLINSTATUS" display 'remission'
+code "Condition resolved": 'resolved' from "CONDCLINSTATUS" display 'resolved'
+code "Condition active": 'active' from "CONDCLINSTATUS" display 'active'
 
 // Pregnancy
 valueset "Pregnancy": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.526.3.378'
 valueset "Pregnancy (New ICD10 codes published in 2018 and 2020)": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.80'
 // Breast diagnoses, procedures, and observations
-valueset "INVASIVE BREAST CANCER": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.185'
-// TODO: replace placeholder value set OID
-valueset "NON-INVASIVE BREAST CANCER": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1240.2017.3.2.1022'
-valueset "BILATERAL MASTECTOMY": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1068'
-valueset "LEFT UNILATERAL MASTECTOMY": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1069'
-valueset "RIGHT UNILATERAL MASTECTOMY": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1070'
-valueset "UNILATERAL MASTECTOMY": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1071'
-valueset "BILATERAL MASTECTOMY PROCEDURE": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1005'
-valueset "LEFT UNILATERAL MASTECTOMY PROCEDURE": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1133'
-valueset "RIGHT UNILATERAL MASTECTOMY PROCEDURE": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1134'
-// TODO: replace placeholder value set OID
-valueset "BRCA1 Gene Mutation": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1444.3.203'
-// TODO: replace placeholder value set OID
-valueset "BRCA2 Gene Mutation": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1444.3.204'
-// TODO: replace placeholder value set OID
-valueset "Li-Fraumeni Syndrome": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1240.2017.3.2.1022'
-// TODO: replace placeholder value set OID
-valueset "Cowden Syndrome": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1240.2017.3.2.1022'
-// TODO: replace placeholder value set OID
-valueset "Bannayan-Riley-Ruvalcaba Syndrome": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1240.2017.3.2.1022'
-// TODO: replace placeholder value set OID
-valueset "Biopsy Atypical Results": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.235' 
-valueset "OVARIAN CANCER": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1444.5.232'
-// TODO: replace placeholder value set OID
-valueset "TUBAL CANCER": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.235'
-// TODO: replace placeholder value set OID
-valueset "PERITONEAL CANCER": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.235'
-// TODO: replace placeholder value set OID
-valueset "BREAST SYMPTOMS": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1047.73'
-valueset "FIRST DEGREE FAMILY MEMBER": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.92'
-// TODO: replace placeholder value set OID
-valueset "SECOND DEGREE FAMILY MEMBER": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.92'
-valueset "MAMMOGRAPHY": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.108.12.1018'
-// TODO: replace placeholder with OID
-// TODO: should include biopsy (FNA, core needle, incisional, excisional), this VS is sugical only
-valueset "BREAST CANCER BIOPSY ORDERS": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1206.66'
-// TODO: should include screening and diagnostic imaging, this value set is mammography only
-valueset "BREAST CANCER IMAGING ORDERS": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.108.12.1018'
+valueset "Breast Cancer": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.367' // TODO clinical validation: Keep secondary cancers?
+valueset "Bilateral Mastectomy": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1068'
+valueset "Left Unilateral Mastectomy": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1069'
+valueset "Right Unilateral Mastectomy": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1070'
+valueset "Unilateral Mastectomy": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1071'
+valueset "Bilateral Mastectomy Procedure": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1005'
+valueset "Left Unilateral Mastectomy Procedure": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1133'
+valueset "Right Unilateral Mastectomy Procedure": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.464.1003.198.12.1134'
+valueset "Genetic Marker of Susceptibility to Breast Cancer": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.378'
+valueset "BRCA1 Gene Mutation": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.379' // TODO clinical validation: keep weird codes referencing specific BRCA mutations?
+valueset "BRCA2 Gene Mutation": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.380' // TODO clinical validation: keep weird codes referencing specific BRCA mutations?
+valueset "History of Breast Cancer or Breast Cancer in Remission": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.383' // TODO clinical validation: include codes for partial remission?
+valueset "Biopsy Atypical Results": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.392' // TODO clinical validation: Keep "generic" ICD-10-CM codes under which atypical hyperplasia is classified (but which are not specific to atypical hyperplasia)? Decided against it for similar situations in CRC.
+valueset "Ovarian Cancer": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1444.5.232'
+valueset "Tubal Cancer": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1116.539'
+valueset "Peritoneal Cancer": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.3.1444.5.233'
+valueset "Breast Cancer Signs and Symptoms": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.374' // TODO clinical validation: check for overall accuracy.
+valueset "First Degree Family Member": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.92'
+valueset "Second Degree Family Member": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.401' // TODO clinical validation: keep cousins (could be second cousins according to definition)?
+valueset "Breast Cancer Biopsy Orders": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.387' //TODO: add CPT, HCPCS, ICD-10-PCS. TODO clinical validation: check for overall accuracy.
+valueset "Breast Cancer Imaging Orders": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.394' //TODO: add CPT, HCPCS, ICD-10-PCS. TODO clinical validation: Keep SNOMED codes for core compression, magnification and localization mammography? Keep mammary ductograms? Keep doppler US?
 // TODO: replace placeholder value set OID
 valueset "GENETIC COUNSELING": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.235' 
 
@@ -88,7 +81,7 @@ code "Left (qualifier value)": '7771000' from "SNOMED-CT" display 'Left (qualifi
 code "Right (qualifier value)": '24028007' from "SNOMED-CT" display 'Right (qualifier value)'
 code "History of radiation therapy to chest": '77941000119104' from "SNOMED-CT" display 'History of radiation therapy to chest'
 code "Breast Pathology biopsy report": '66110-8' from "LOINC" display 'Breast Pathology biopsy report'
-code "Breast Imaging Report": '10193-1' from "LOINC" display 'Physical findings of Breasts Narrative'
+code "Breast Imaging Report": '10193-1' from "LOINC" display 'Physical findings of Breasts Narrative' // Consider replacing with "Breast Screening Cancer Imaging Orders" value set when using to identify DiagnosticReport resources. All but a couple of the LOINC codes included can be used for both orders and observations/results.
 code "Heterogeneously dense": '129718006' from "SNOMED-CT" display 'Heterogeneously dense breast composition'
 code "Extremely dense": '129719003' from "SNOMED-CT" display 'Extremely dense breast composition'
 code "Pregnancy Status": '82810-3' from "LOINC" display 'Pregnancy status'
@@ -96,11 +89,15 @@ code "Patient currently pregnant": '77386006' from "SNOMED-CT" display 'Patient 
 code "Pregnancy Episode Of Care": '424525001' from "SNOMED-CT" display 'Antenatal care (regime/therapy)'
 
 // Non-standard codes
+code "Breast cancer within 5 years": 'hxbreastcawithin5y' from "LOCAL" display 'Breast cancer within 5 years'
 code "New or worsening breast symptoms": 'BreastSymptoms' from "LOCAL" display 'New or worsening breast symptoms'
 code "New or worsening breast exam findings": 'BreastFindings' from "LOCAL" display 'New or worsening breast exam findings'
 code "Reduced life expectancy indicator": 'lifeexp' from "LOCAL" display 'Reduced life expectancy indicator'
 code "Currently lactating": 'currentlylactating' from "LOCAL" display 'Currently lactating'
 code "Genetic marker or syndrome associated with breast cancer": 'GeneticMarkerOrSyndrome' from "LOCAL" display 'Genetic marker or syndrome associated with breast cancer'
+code "Li-Fraumeni Syndrome": '428850001' from "SNOMED-CT" display 'Li-Fraumeni syndrome (disorder)'
+code "Cowden Syndrome": '58037000' from "SNOMED-CT" display 'Cowden syndrome (disorder)'
+code "Bannayan-Riley-Ruvalcaba Syndrome": '234138005' from "SNOMED-CT" display 'Bannayan syndrome (disorder)'
 code "History of chest radiation ages 10-30 y": 'chestxrt' from "LOCAL" display 'History of chest radiation ages 10-30 y'
 code "Lifetime risk assessment": 'lifetimeriskassessment' from "ActCode" display 'Lifetime risk assessment'
 code "High lifetime risk": 'highlifetimerisk' from "LOCAL" display 'High lifetime risk'
@@ -219,14 +216,13 @@ define FemaleorTransgenderMale:
 //------------------------------------------------------------------------------
 
 define "de-breastca":
-  exists BreastCancerDiagnoses C
+  BreastCancerDiagnoses C
     where C.clinicalStatus !~ "Condition inactive"
       and C.clinicalStatus !~ "Condition remission"
       and C.clinicalStatus !~ "Condition resolved"
 
 define BreastCancerDiagnoses:
-  (Common.ValidCondition([Condition: "INVASIVE BREAST CANCER"]) union
-  Common.ValidCondition([Condition: "NON-INVASIVE BREAST CANCER"]))
+  Common.ValidCondition([Condition: "Breast Cancer"])
 
 //------------------------------------------------------------------------------
 // History of bilateral mastectomy
@@ -260,25 +256,25 @@ define RightUnilateralMastectomy:
           and E.value as CodeableConcept ~ "Right (qualifier value)")
 
 define BilateralMastectomyConditions:
-  Common.ValidCondition([Condition: "BILATERAL MASTECTOMY"])     
+  Common.ValidCondition([Condition: "Bilateral Mastectomy"])     
 
 define LeftUnilateralMastectomyConditions:
-  Common.ValidCondition([Condition: "LEFT UNILATERAL MASTECTOMY"])
+  Common.ValidCondition([Condition: "Left Unilateral Mastectomy"])
 
 define RightUnilateralMastectomyConditions:
-  Common.ValidCondition([Condition: "RIGHT UNILATERAL MASTECTOMY"])  
+  Common.ValidCondition([Condition: "Right Unilateral Mastectomy"])  
 
 define UnilateralMastectomyConditions:
-  Common.ValidCondition([Condition: "UNILATERAL MASTECTOMY"])      
+  Common.ValidCondition([Condition: "Unilateral Mastectomy"])      
 
 define BilateralMastectomyProcedures:
-  C3F.Completed([Procedure: "BILATERAL MASTECTOMY PROCEDURE"])
+  C3F.Completed([Procedure: "Bilateral Mastectomy Procedure"])
 
 define LeftUnilateralMastectomyProcedures:
-  C3F.Completed([Procedure: "LEFT UNILATERAL MASTECTOMY PROCEDURE"])
+  C3F.Completed([Procedure: "Left Unilateral Mastectomy Procedure"])
 
 define RightUnilateralMastectomyProcedures:
-  C3F.Completed([Procedure: "RIGHT UNILATERAL MASTECTOMY PROCEDURE"])
+  C3F.Completed([Procedure: "Right Unilateral Mastectomy Procedure"])
 
 //------------------------------------------------------------------------------
 // Breast symptoms
@@ -298,7 +294,7 @@ define AllBreastSymptomEncounters:
   Common.RelevantEncounterStatus(
     [Encounter] E
       where
-        E.reasonCode in "BREAST SYMPTOMS"      
+        E.reasonCode in "Breast Cancer Signs and Symptoms"      
   )
 
 define EncounterBreastSymptomConditions:
@@ -306,7 +302,7 @@ define EncounterBreastSymptomConditions:
     where C.encounter.reference = encounter
 
 define BreastSymptomConditions:
-  Common.ValidCondition([Condition: "BREAST SYMPTOMS"])
+  Common.ValidCondition([Condition: "Breast Cancer Signs and Symptoms"])
 
 define MostRecentBreastSymptomObservation:
   BCSMCommon.MostRecentLocalObservation(NewOrWorseningBreastSymptomsObservations,
@@ -423,34 +419,40 @@ define HasFinishedPregnancyEpisodesOfCare:
 define "de-geneticrisk":
   if MostRecentGeneticMarkerOrSyndromeObservation is not null
     then FHIRHelpers.ToBoolean(MostRecentGeneticMarkerOrSyndromeObservation.value as boolean) 
-  else "de-acsgeneticrisk"
+  else GeneticMarkerOrSyndrome is true or "de-acsgeneticrisk"
 
 define GeneticMarkerOrSyndrome:
   MostRecentGeneticMarkerOrSyndromeObservation.value is true
+    or exists GeneticMarkerOrSyndromeCondition
 
 define MostRecentGeneticMarkerOrSyndromeObservation:
   C3F.MostRecent(
     [Observation: "Genetic marker or syndrome associated with breast cancer"]
   )
 
-define "de-acsgeneticrisk":
-  exists "BRCA-1 Mutation Conditions" or exists "BRCA-2 Mutation Conditions" or
-    exists "Li-Fraumeni Syndrome Conditions" or exists "Cowden Syndrome Conditions" or
-    exists "Bannayan-Riley-Ruvalcaba Syndrome Conditions"
+define GeneticMarkerOrSyndromeCondition:
+  C3F.ActiveCondition(
+    [Condition: "Genetic Marker of Susceptibility to Breast Cancer"]
+  )  
 
-define "BRCA-1 Mutation Conditions":
+define "de-acsgeneticrisk":
+  exists "BRCA-1MutationConditions" or exists "BRCA-2MutationConditions" or
+    exists "Li-FraumeniSyndromeConditions" or exists CowdenSyndromeConditions or
+    exists "Bannayan-Riley-RuvalcabaSyndromeConditions"
+
+define "BRCA-1MutationConditions":
   Common.ValidCondition([Condition: "BRCA1 Gene Mutation"])
 
-define "BRCA-2 Mutation Conditions":
+define "BRCA-2MutationConditions":
   Common.ValidCondition([Condition: "BRCA2 Gene Mutation"])
 
-define "Li-Fraumeni Syndrome Conditions":
+define "Li-FraumeniSyndromeConditions":
   Common.ValidCondition([Condition: "Li-Fraumeni Syndrome"])
 
-define "Cowden Syndrome Conditions":
+define CowdenSyndromeConditions:
   Common.ValidCondition([Condition: "Cowden Syndrome"])
 
-define "Bannayan-Riley-Ruvalcaba Syndrome Conditions":
+define "Bannayan-Riley-RuvalcabaSyndromeConditions":
   Common.ValidCondition([Condition: "Bannayan-Riley-Ruvalcaba Syndrome"])
 
 //------------------------------------------------------------------------------
@@ -478,10 +480,44 @@ define HistoryOfChestRadiationAges10To30Observation:
 //------------------------------------------------------------------------------
 
 define "de-hxbreastca":
-  BreastCancerDiagnoses C
+  (BreastCancerDiagnoses C
     where C.clinicalStatus ~ "Condition inactive"
       or C.clinicalStatus ~ "Condition remission"
-      or C.clinicalStatus ~ "Condition resolved"  
+      or C.clinicalStatus ~ "Condition resolved"
+  )
+  union
+  (HistoryBreastCancerDiagnoses C
+    where C.clinicalStatus ~ "Condition active"
+  )
+  
+define HistoryBreastCancerDiagnoses:
+  Common.ValidCondition([Condition: "History of Breast Cancer or Breast Cancer in Remission"])
+
+//------------------------------------------------------------------------------
+// Breast cancer onset within 5 years
+//------------------------------------------------------------------------------
+
+define "de-hxbreastcawithin5y":
+  Coalesce(
+    BreastCancerWithin5YEncounter.value as boolean,
+    BreastCancerWithin5YLookback.value as boolean,
+    (exists "de-breastca" C where Today() before (C.onset as FHIR.dateTime) + 5 years) or
+    (exists "de-hxbreastca" P where Today() before (P.onset as FHIR.dateTime) + 5 years)
+  ) 
+
+define BreastCancerWithin5YEncounter:
+  C3F.MostRecent(BreastCancerWithin5YObservations O where O.encounter.reference = encounter)
+
+define BreastCancerWithin5YLookback:
+  C3F.MostRecent(
+    C3F.ObservationLookBack(
+      BreastCancerWithin5YObservations,
+      ObservationLookbackPeriod
+    ) 
+  )
+
+define BreastCancerWithin5YObservations:
+  [Observation: "Breast cancer within 5 years"]    
 
 //------------------------------------------------------------------------------
 // Atypical biopsy
@@ -592,15 +628,15 @@ define "de-fhxrisk":
 
 define "FirstOrSecondDegreeRelativesWithBreastCancer":
   FirstOrSecondDegreeRelatives F
-    where exists (F.condition C where C.code in "INVASIVE BREAST CANCER" or C.code in "NON-INVASIVE BREAST CANCER")
+    where exists F.condition C where C.code in "Breast Cancer"
 
 define "FirstOrSecondDegreeRelativesWithOvarianCancer":
   FirstOrSecondDegreeRelatives F
-    where exists (F.condition C where C.code in "OVARIAN CANCER")
+    where exists F.condition C where C.code in "Ovarian Cancer"
 
 define "BreastCancerDiagnosedBefore50":
   FirstOrSecondDegreeRelatives F
-    where exists (F.condition C where (C.code in "INVASIVE BREAST CANCER" or C.code in "NON-INVASIVE BREAST CANCER")
+    where exists (F.condition C where C.code in "Breast Cancer"
       and C.onset as Age <= 50 years)
 
 define "BreastAndOvarianCancerInFamily":
@@ -609,23 +645,24 @@ define "BreastAndOvarianCancerInFamily":
 
 define "BreastAndOvarianCancerInSameRelative":
   FirstOrSecondDegreeRelatives F
-    where exists (F.condition C1 where C1.code in "INVASIVE BREAST CANCER" or C1.code in "NON-INVASIVE BREAST CANCER")
-      and exists (F.condition C2 where C2.code in "OVARIAN CANCER")
+    where exists F.condition C1 where C1.code in "Breast Cancer"
+      and exists F.condition C2 where C2.code in "Ovarian Cancer"
 
+// TODO: do we need to consider two independent conditions with the same code but different onsets?
 define "TwoIndependentBreastCancers":
   FirstOrSecondDegreeRelatives F
-    where exists F.condition C1 where C1.code in "INVASIVE BREAST CANCER" or C1.code in "NON-INVASIVE BREAST CANCER"
-      and exists F.condition C2 where (C2.code in "INVASIVE BREAST CANCER" or C2.code in "NON-INVASIVE BREAST CANCER")
+    where exists F.condition C1 where C1.code in "Breast Cancer"
+      and exists F.condition C2 where C2.code in "Breast Cancer"
         and C1 != C2
 
 define "MaleRelativeWithBreastCancer":
   FirstOrSecondDegreeRelatives F
-    where exists (F.condition C where C.code in "INVASIVE BREAST CANCER" or C.code in "NON-INVASIVE BREAST CANCER")
+    where exists F.condition C where C.code in "Breast Cancer"
       and F.sex ~ "Male"
 
 define "FirstOrSecondDegreeRelatives":
   [FamilyMemberHistory] F
-    where F.relationship in "FIRST DEGREE FAMILY MEMBER" or F.relationship in "SECOND DEGREE FAMILY MEMBER"
+    where F.relationship in "First Degree Family Member" or F.relationship in "Second Degree Family Member"
 
 //------------------------------------------------------------------------------
 // Family history of inherited cancer susceptibility
@@ -644,7 +681,7 @@ define FamilyGeneticHistoryAssessmentObservation:
 define "FirstDegRelativeGeneticMarkerOrSyndrome":
   FamilyMemberGeneticMarkerOrSyndrome F
     where 
-      F.relationship in "FIRST DEGREE FAMILY MEMBER"
+      F.relationship in "First Degree Family Member"
 
 define "FamilyMemberGeneticMarkerOrSyndrome":
   FamilyMemberGeneticMarkerOrSyndromeConditions F
@@ -654,12 +691,13 @@ define "FamilyMemberGeneticMarkerOrSyndromeConditions":
   [FamilyMemberHistory] F
     let
       GeneticConditions: F.condition C
-        where         
+        where
+          C.code in "Genetic Marker of Susceptibility to Breast Cancer" or         
           C.code in "BRCA1 Gene Mutation" or 
           C.code in "BRCA2 Gene Mutation" or
-          C.code in "Li-Fraumeni Syndrome" or 
-          C.code in "Cowden Syndrome" or
-          C.code in "Bannayan-Riley-Ruvalcaba Syndrome"
+          C.code ~ "Li-Fraumeni Syndrome" or 
+          C.code ~ "Cowden Syndrome" or
+          C.code ~ "Bannayan-Riley-Ruvalcaba Syndrome"
     where exists GeneticConditions
     return {
       familyMemberHistory: F,
@@ -679,6 +717,8 @@ define KnownGeneticMarkerOrSyndromeStatusObservation:
   C3F.MostRecent(
       [Observation: "Known breast cancer variant status"] R
   ) 
+
+// TODO: check for BRCA1 and BRCA2 DiagnosticReports with conclusion code and/or associated observations?
 
 //------------------------------------------------------------------------------
 // BRCA ancestry
@@ -707,11 +747,10 @@ define "FamilyMemberBreastOvarianTubalPeritonealCancerCondition":
   [FamilyMemberHistory] F
     let
       CancerConditions: F.condition C
-        where C.code in "INVASIVE BREAST CANCER" or
-              C.code in "NON-INVASIVE BREAST CANCER" or
-              C.code in "OVARIAN CANCER" or
-              C.code in "TUBAL CANCER" or
-              C.code in "PERITONEAL CANCER"
+        where C.code in "Breast Cancer" or
+              C.code in "Ovarian Cancer" or
+              C.code in "Tubal Cancer" or
+              C.code in "Peritoneal Cancer"
     where exists CancerConditions
     return {
       familyMemberHistory: F,
@@ -785,7 +824,7 @@ define ImagingDiagnosticReportsWithNoConclusionCodes:
   )
 
 define CompletedBreastImagingDiagnosticReports:
-  Common.CompletedDiagnosticReport([DiagnosticReport: "BREAST CANCER IMAGING ORDERS"]) 
+  Common.CompletedDiagnosticReport([DiagnosticReport: "Breast Cancer Imaging Orders"]) 
 
 define BreastImagingObservations:
   [Observation: "Breast Imaging Report"]   

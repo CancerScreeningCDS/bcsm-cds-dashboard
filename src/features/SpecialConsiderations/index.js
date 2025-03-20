@@ -57,13 +57,13 @@ function SpecialConsiderations(props) {
 
       <div className="form-check form-switch">
         <input className="form-check-input" type="checkbox" role="switch" id="force_hasGeneticMarkers" checked={toggleStatus.hasGeneticMarkers} onChange={handleGeneticMarkersChange} />
-        <label className="form-check-label" htmlFor="force_hasGeneticMarkers">Heriditary genetic markers of unknown variant</label>
+        <label className="form-check-label" htmlFor="force_hasGeneticMarkers">Hereditary genetic markers of unknown variant</label>
         <IconTooltip text="Does the patient have relevant genetic markers?"></IconTooltip>
       </div>
       <div className="form-check form-switch">
         <input className="form-check-input" type="checkbox" role="switch" id="force_hasCurrentBreastCancer" checked={toggleStatus.hasCurrentBreastCancer} onChange={handleCurrentBreastCancerChange} />
         <label className="form-check-label" htmlFor="force_hasCurrentBreastCancer">Current breast cancer</label>
-        <IconTooltip text="Does the patient have current breast cancer?"></IconTooltip>
+        <IconTooltip text="Does the patient have current breast cancer within the past 5 years?"></IconTooltip>
       </div>
       <div className="form-check form-switch">
         <input className="form-check-input" type="checkbox" role="switch" id="force_hasBreastDiseaseSymptoms" checked={toggleStatus.hasBreastDiseaseSymptoms} onChange={handleBreastDiseaseSymptomsChange}/>
@@ -72,7 +72,7 @@ function SpecialConsiderations(props) {
       </div>
       <div className="form-check form-switch">
         <input className="form-check-input" type="checkbox" role="switch" id="force_hasBreastExamFindings" checked={toggleStatus.hasBreastExamFindings} onChange={handleBreastExamFindingsChange} />
-        <label className="form-check-label" htmlFor="force_hasBreastExamFindings">New or worsening breast exam findings?</label>
+        <label className="form-check-label" htmlFor="force_hasBreastExamFindings">New or worsening breast exam findings</label>
         <IconTooltip text="Does the patient have findings after a breast exam?"></IconTooltip>
       </div>
       <hr />
@@ -80,12 +80,12 @@ function SpecialConsiderations(props) {
       <div className="form-check form-switch">
         <input className="form-check-input" type="checkbox" role="switch" id="force_hasFdrGenetic" checked={toggleStatus.hasFdrGenetic} onChange={handleFdrGeneticChange} />
         <label className="form-check-label" htmlFor="force_hasFdrGenetic">First degree relative with genetic marker or syndrome</label>
-        <IconTooltip text="Does the patient have first degree relative with relevant genetic markers?"></IconTooltip>
+        <IconTooltip text="NOT IMPLEMENTED - Does the patient have first degree relative with relevant genetic markers?"></IconTooltip>
       </div>
       <div className="form-check form-switch">
         <input className="form-check-input" type="checkbox" role="switch" id="force_hasFdrCancer" checked={toggleStatus.hasFdrCancer} onChange={handleFdrCancerChange} />
         <label className="form-check-label" htmlFor="force_hasFdrCancer">First degree relative with breast cancer diagnosis</label>
-        <IconTooltip text="Does the patient have any first degree relatives who received a breast cancer diagnosis?"></IconTooltip>
+        <IconTooltip text="NOT IMPLEMENTED - Does the patient have any first degree relatives who received a breast cancer diagnosis?"></IconTooltip>
       </div>
       <hr />
     </section>

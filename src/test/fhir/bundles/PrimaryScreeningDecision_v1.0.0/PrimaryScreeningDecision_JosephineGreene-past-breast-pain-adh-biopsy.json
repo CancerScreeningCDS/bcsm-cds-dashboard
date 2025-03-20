@@ -44,7 +44,7 @@
         "action": [
           {
             "id": "ACSMammoAtypicalBiopsy",
-            "title": "Annual screeening mammogram starting age 30",
+            "title": "Annual screening mammogram starting age 30",
             "description": "An annual screening mammogram starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on past atypical biopsy should get a mammogram every year, typically starting at age 30.\n",
             "documentation": [
               {

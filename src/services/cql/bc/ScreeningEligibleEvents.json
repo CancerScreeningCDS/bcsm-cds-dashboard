@@ -9,9 +9,9 @@
       }, {
          "type" : "Annotation",
          "s" : {
-            "r" : "230",
+            "r" : "314",
             "s" : [ {
-               "value" : [ "","library ScreeningEligibleEvents version '1.0.0'" ]
+               "value" : [ "/*  \n  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.\n\n  (C) 2024 The MITRE Corporation. All Rights Reserved. \n  Approved for Public Release: 24-2711. \n  Distribution Unlimited.\n\n  Unless otherwise noted, this work is available under an Apache 2.0 license. \n  It was produced by the MITRE Corporation for the Division of Cancer Prevention \n  and Control, Centers for Disease Control and Prevention in accordance with the \n  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.\n*/\n\n","library ScreeningEligibleEvents version '1.0.0'" ]
             } ]
          }
       } ],
@@ -30,7 +30,7 @@
             "uri" : "urn:hl7-org:elm-types:r1"
          }, {
             "localId" : "206",
-            "locator" : "3:1-3:26",
+            "locator" : "16:1-16:26",
             "localIdentifier" : "FHIR",
             "uri" : "http://hl7.org/fhir",
             "version" : "4.0.1",
@@ -54,7 +54,7 @@
       "includes" : {
          "def" : [ {
             "localId" : "207",
-            "locator" : "4:1-4:55",
+            "locator" : "17:1-17:55",
             "localIdentifier" : "FHIRHelpers",
             "path" : "FHIRHelpers",
             "version" : "4.0.1",
@@ -75,7 +75,7 @@
             } ]
          }, {
             "localId" : "208",
-            "locator" : "6:1-6:56",
+            "locator" : "19:1-19:56",
             "localIdentifier" : "DataElements",
             "path" : "DataElements",
             "version" : "1.0.0",
@@ -99,14 +99,14 @@
       "contexts" : {
          "def" : [ {
             "localId" : "212",
-            "locator" : "8:1-8:15",
+            "locator" : "21:1-21:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
             "localId" : "210",
-            "locator" : "8:1-8:15",
+            "locator" : "21:1-21:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
@@ -115,7 +115,7 @@
                "signature" : [ ],
                "operand" : {
                   "localId" : "209",
-                  "locator" : "8:1-8:15",
+                  "locator" : "21:1-21:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -127,7 +127,7 @@
             }
          }, {
             "localId" : "214",
-            "locator" : "10:1-11:26",
+            "locator" : "23:1-24:26",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "eve-female",
             "context" : "Patient",
@@ -158,7 +158,7 @@
             } ],
             "expression" : {
                "localId" : "216",
-               "locator" : "11:3-11:26",
+               "locator" : "24:3-24:26",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "de-female",
                "libraryName" : "DataElements",
@@ -166,7 +166,7 @@
             }
          }, {
             "localId" : "218",
-            "locator" : "13:1-14:28",
+            "locator" : "26:1-29:72",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "eve-breastca",
             "context" : "Patient",
@@ -178,34 +178,464 @@
                   "s" : [ {
                      "value" : [ "","define ","\"eve-breastca\"",":\n  " ]
                   }, {
-                     "r" : "220",
+                     "r" : "219",
                      "s" : [ {
-                        "r" : "219",
+                        "r" : "222",
                         "s" : [ {
-                           "value" : [ "DataElements" ]
+                           "r" : "221",
+                           "s" : [ {
+                              "r" : "220",
+                              "s" : [ {
+                                 "value" : [ "DataElements" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "221",
+                              "s" : [ {
+                                 "value" : [ "\"de-hxbreastcawithin5y\"" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ " is true" ]
                         } ]
                      }, {
-                        "value" : [ "." ]
+                        "value" : [ "\n    or " ]
                      }, {
-                        "r" : "220",
+                        "r" : "224",
                         "s" : [ {
-                           "value" : [ "\"de-breastca\"" ]
+                           "value" : [ "exists " ]
+                        }, {
+                           "r" : "298",
+                           "s" : [ {
+                              "s" : [ {
+                                 "r" : "225",
+                                 "s" : [ {
+                                    "r" : "227",
+                                    "s" : [ {
+                                       "s" : [ {
+                                          "value" : [ "DataElements",".","\"de-breastca\"" ]
+                                       } ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ","C" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " " ]
+                           }, {
+                              "r" : "232",
+                              "s" : [ {
+                                 "value" : [ "where " ]
+                              }, {
+                                 "r" : "232",
+                                 "s" : [ {
+                                    "r" : "256",
+                                    "s" : [ {
+                                       "r" : "247",
+                                       "s" : [ {
+                                          "r" : "234",
+                                          "s" : [ {
+                                             "r" : "233",
+                                             "s" : [ {
+                                                "value" : [ "C" ]
+                                             } ]
+                                          }, {
+                                             "value" : [ "." ]
+                                          }, {
+                                             "r" : "234",
+                                             "s" : [ {
+                                                "value" : [ "onset" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ "." ]
+                                       }, {
+                                          "r" : "247",
+                                          "s" : [ {
+                                             "value" : [ "value" ]
+                                          } ]
+                                       } ]
+                                    }, {
+                                       "value" : [ " is null" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "\n    or " ]
+                                 }, {
+                                    "r" : "258",
+                                    "s" : [ {
+                                       "value" : [ "exists " ]
+                                    }, {
+                                       "r" : "291",
+                                       "s" : [ {
+                                          "s" : [ {
+                                             "r" : "259",
+                                             "s" : [ {
+                                                "r" : "261",
+                                                "s" : [ {
+                                                   "s" : [ {
+                                                      "value" : [ "DataElements",".","\"de-hxbreastca\"" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ " ","P" ]
+                                             } ]
+                                          } ]
+                                       }, {
+                                          "value" : [ " " ]
+                                       }, {
+                                          "r" : "289",
+                                          "s" : [ {
+                                             "value" : [ "where " ]
+                                          }, {
+                                             "r" : "289",
+                                             "s" : [ {
+                                                "r" : "280",
+                                                "s" : [ {
+                                                   "r" : "267",
+                                                   "s" : [ {
+                                                      "r" : "266",
+                                                      "s" : [ {
+                                                         "value" : [ "P" ]
+                                                      } ]
+                                                   }, {
+                                                      "value" : [ "." ]
+                                                   }, {
+                                                      "r" : "267",
+                                                      "s" : [ {
+                                                         "value" : [ "onset" ]
+                                                      } ]
+                                                   } ]
+                                                }, {
+                                                   "value" : [ "." ]
+                                                }, {
+                                                   "r" : "280",
+                                                   "s" : [ {
+                                                      "value" : [ "value" ]
+                                                   } ]
+                                                } ]
+                                             }, {
+                                                "value" : [ " is null" ]
+                                             } ]
+                                          } ]
+                                       } ]
+                                    } ]
+                                 } ]
+                              } ]
+                           } ]
                         } ]
                      } ]
                   } ]
                }
             } ],
             "expression" : {
-               "localId" : "220",
-               "locator" : "14:3-14:28",
+               "localId" : "219",
+               "locator" : "27:3-29:72",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
-               "name" : "de-breastca",
-               "libraryName" : "DataElements",
-               "type" : "ExpressionRef"
+               "type" : "Or",
+               "signature" : [ {
+                  "localId" : "303",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               }, {
+                  "localId" : "304",
+                  "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "NamedTypeSpecifier"
+               } ],
+               "operand" : [ {
+                  "localId" : "222",
+                  "locator" : "27:3-27:46",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "IsTrue",
+                  "signature" : [ {
+                     "localId" : "223",
+                     "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "type" : "NamedTypeSpecifier"
+                  } ],
+                  "operand" : {
+                     "localId" : "221",
+                     "locator" : "27:3-27:38",
+                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                     "name" : "de-hxbreastcawithin5y",
+                     "libraryName" : "DataElements",
+                     "type" : "ExpressionRef"
+                  }
+               }, {
+                  "localId" : "224",
+                  "locator" : "28:8-29:72",
+                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                  "type" : "Exists",
+                  "signature" : [ {
+                     "localId" : "301",
+                     "type" : "ListTypeSpecifier",
+                     "elementType" : {
+                        "localId" : "302",
+                        "name" : "{http://hl7.org/fhir}Condition",
+                        "type" : "NamedTypeSpecifier"
+                     }
+                  } ],
+                  "operand" : {
+                     "localId" : "298",
+                     "locator" : "28:15-29:72",
+                     "type" : "Query",
+                     "resultTypeSpecifier" : {
+                        "localId" : "299",
+                        "type" : "ListTypeSpecifier",
+                        "elementType" : {
+                           "localId" : "300",
+                           "name" : "{http://hl7.org/fhir}Condition",
+                           "type" : "NamedTypeSpecifier"
+                        }
+                     },
+                     "source" : [ {
+                        "localId" : "225",
+                        "locator" : "28:15-28:42",
+                        "alias" : "C",
+                        "resultTypeSpecifier" : {
+                           "localId" : "230",
+                           "type" : "ListTypeSpecifier",
+                           "elementType" : {
+                              "localId" : "231",
+                              "name" : "{http://hl7.org/fhir}Condition",
+                              "type" : "NamedTypeSpecifier"
+                           }
+                        },
+                        "expression" : {
+                           "localId" : "227",
+                           "locator" : "28:15-28:40",
+                           "name" : "de-breastca",
+                           "libraryName" : "DataElements",
+                           "type" : "ExpressionRef",
+                           "resultTypeSpecifier" : {
+                              "localId" : "228",
+                              "type" : "ListTypeSpecifier",
+                              "elementType" : {
+                                 "localId" : "229",
+                                 "name" : "{http://hl7.org/fhir}Condition",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           }
+                        }
+                     } ],
+                     "let" : [ ],
+                     "relationship" : [ ],
+                     "where" : {
+                        "localId" : "232",
+                        "locator" : "28:44-29:72",
+                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                        "type" : "Or",
+                        "signature" : [ {
+                           "localId" : "296",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        }, {
+                           "localId" : "297",
+                           "name" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "NamedTypeSpecifier"
+                        } ],
+                        "operand" : [ {
+                           "localId" : "256",
+                           "locator" : "28:50-28:70",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "IsNull",
+                           "signature" : [ {
+                              "localId" : "257",
+                              "name" : "{urn:hl7-org:elm-types:r1}Any",
+                              "type" : "NamedTypeSpecifier"
+                           } ],
+                           "operand" : {
+                              "localId" : "247",
+                              "locator" : "28:50-28:62",
+                              "path" : "value",
+                              "type" : "Property",
+                              "resultTypeSpecifier" : {
+                                 "localId" : "252",
+                                 "type" : "ChoiceTypeSpecifier",
+                                 "type" : [ ],
+                                 "choice" : [ {
+                                    "localId" : "253",
+                                    "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                    "type" : "NamedTypeSpecifier"
+                                 }, {
+                                    "localId" : "254",
+                                    "name" : "{http://hl7.org/fhir}decimal",
+                                    "type" : "NamedTypeSpecifier"
+                                 }, {
+                                    "localId" : "255",
+                                    "name" : "{urn:hl7-org:elm-types:r1}String",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ]
+                              },
+                              "source" : {
+                                 "localId" : "234",
+                                 "locator" : "28:50-28:56",
+                                 "path" : "onset",
+                                 "scope" : "C",
+                                 "type" : "Property",
+                                 "resultTypeSpecifier" : {
+                                    "localId" : "241",
+                                    "type" : "ChoiceTypeSpecifier",
+                                    "type" : [ ],
+                                    "choice" : [ {
+                                       "localId" : "242",
+                                       "name" : "{http://hl7.org/fhir}dateTime",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "243",
+                                       "name" : "{http://hl7.org/fhir}Age",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "244",
+                                       "name" : "{http://hl7.org/fhir}Period",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "245",
+                                       "name" : "{http://hl7.org/fhir}Range",
+                                       "type" : "NamedTypeSpecifier"
+                                    }, {
+                                       "localId" : "246",
+                                       "name" : "{http://hl7.org/fhir}string",
+                                       "type" : "NamedTypeSpecifier"
+                                    } ]
+                                 }
+                              }
+                           }
+                        }, {
+                           "localId" : "258",
+                           "locator" : "29:8-29:72",
+                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                           "type" : "Exists",
+                           "signature" : [ {
+                              "localId" : "294",
+                              "type" : "ListTypeSpecifier",
+                              "elementType" : {
+                                 "localId" : "295",
+                                 "name" : "{http://hl7.org/fhir}Condition",
+                                 "type" : "NamedTypeSpecifier"
+                              }
+                           } ],
+                           "operand" : {
+                              "localId" : "291",
+                              "locator" : "29:15-29:72",
+                              "type" : "Query",
+                              "resultTypeSpecifier" : {
+                                 "localId" : "292",
+                                 "type" : "ListTypeSpecifier",
+                                 "elementType" : {
+                                    "localId" : "293",
+                                    "name" : "{http://hl7.org/fhir}Condition",
+                                    "type" : "NamedTypeSpecifier"
+                                 }
+                              },
+                              "source" : [ {
+                                 "localId" : "259",
+                                 "locator" : "29:15-29:44",
+                                 "alias" : "P",
+                                 "resultTypeSpecifier" : {
+                                    "localId" : "264",
+                                    "type" : "ListTypeSpecifier",
+                                    "elementType" : {
+                                       "localId" : "265",
+                                       "name" : "{http://hl7.org/fhir}Condition",
+                                       "type" : "NamedTypeSpecifier"
+                                    }
+                                 },
+                                 "expression" : {
+                                    "localId" : "261",
+                                    "locator" : "29:15-29:42",
+                                    "name" : "de-hxbreastca",
+                                    "libraryName" : "DataElements",
+                                    "type" : "ExpressionRef",
+                                    "resultTypeSpecifier" : {
+                                       "localId" : "262",
+                                       "type" : "ListTypeSpecifier",
+                                       "elementType" : {
+                                          "localId" : "263",
+                                          "name" : "{http://hl7.org/fhir}Condition",
+                                          "type" : "NamedTypeSpecifier"
+                                       }
+                                    }
+                                 }
+                              } ],
+                              "let" : [ ],
+                              "relationship" : [ ],
+                              "where" : {
+                                 "localId" : "289",
+                                 "locator" : "29:46-29:72",
+                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
+                                 "type" : "IsNull",
+                                 "signature" : [ {
+                                    "localId" : "290",
+                                    "name" : "{urn:hl7-org:elm-types:r1}Any",
+                                    "type" : "NamedTypeSpecifier"
+                                 } ],
+                                 "operand" : {
+                                    "localId" : "280",
+                                    "locator" : "29:52-29:64",
+                                    "path" : "value",
+                                    "type" : "Property",
+                                    "resultTypeSpecifier" : {
+                                       "localId" : "285",
+                                       "type" : "ChoiceTypeSpecifier",
+                                       "type" : [ ],
+                                       "choice" : [ {
+                                          "localId" : "286",
+                                          "name" : "{urn:hl7-org:elm-types:r1}DateTime",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "287",
+                                          "name" : "{http://hl7.org/fhir}decimal",
+                                          "type" : "NamedTypeSpecifier"
+                                       }, {
+                                          "localId" : "288",
+                                          "name" : "{urn:hl7-org:elm-types:r1}String",
+                                          "type" : "NamedTypeSpecifier"
+                                       } ]
+                                    },
+                                    "source" : {
+                                       "localId" : "267",
+                                       "locator" : "29:52-29:58",
+                                       "path" : "onset",
+                                       "scope" : "P",
+                                       "type" : "Property",
+                                       "resultTypeSpecifier" : {
+                                          "localId" : "274",
+                                          "type" : "ChoiceTypeSpecifier",
+                                          "type" : [ ],
+                                          "choice" : [ {
+                                             "localId" : "275",
+                                             "name" : "{http://hl7.org/fhir}dateTime",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "276",
+                                             "name" : "{http://hl7.org/fhir}Age",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "277",
+                                             "name" : "{http://hl7.org/fhir}Period",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "278",
+                                             "name" : "{http://hl7.org/fhir}Range",
+                                             "type" : "NamedTypeSpecifier"
+                                          }, {
+                                             "localId" : "279",
+                                             "name" : "{http://hl7.org/fhir}string",
+                                             "type" : "NamedTypeSpecifier"
+                                          } ]
+                                       }
+                                    }
+                                 }
+                              }
+                           }
+                        } ]
+                     }
+                  }
+               } ]
             }
          }, {
-            "localId" : "222",
-            "locator" : "16:1-17:30",
+            "localId" : "306",
+            "locator" : "31:1-32:30",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "eve-mastectomy",
             "context" : "Patient",
@@ -213,20 +643,20 @@
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "222",
+                  "r" : "306",
                   "s" : [ {
                      "value" : [ "","define ","\"eve-mastectomy\"",":\n  " ]
                   }, {
-                     "r" : "224",
+                     "r" : "308",
                      "s" : [ {
-                        "r" : "223",
+                        "r" : "307",
                         "s" : [ {
                            "value" : [ "DataElements" ]
                         } ]
                      }, {
                         "value" : [ "." ]
                      }, {
-                        "r" : "224",
+                        "r" : "308",
                         "s" : [ {
                            "value" : [ "\"de-mastectomy\"" ]
                         } ]
@@ -235,16 +665,16 @@
                }
             } ],
             "expression" : {
-               "localId" : "224",
-               "locator" : "17:3-17:30",
+               "localId" : "308",
+               "locator" : "32:3-32:30",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "de-mastectomy",
                "libraryName" : "DataElements",
                "type" : "ExpressionRef"
             }
          }, {
-            "localId" : "226",
-            "locator" : "19:1-20:34",
+            "localId" : "310",
+            "locator" : "34:1-35:34",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "eve-breastsymptoms",
             "context" : "Patient",
@@ -252,20 +682,20 @@
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "226",
+                  "r" : "310",
                   "s" : [ {
                      "value" : [ "","define ","\"eve-breastsymptoms\"",":\n  " ]
                   }, {
-                     "r" : "228",
+                     "r" : "312",
                      "s" : [ {
-                        "r" : "227",
+                        "r" : "311",
                         "s" : [ {
                            "value" : [ "DataElements" ]
                         } ]
                      }, {
                         "value" : [ "." ]
                      }, {
-                        "r" : "228",
+                        "r" : "312",
                         "s" : [ {
                            "value" : [ "\"de-breastsymptoms\"" ]
                         } ]
@@ -274,16 +704,16 @@
                }
             } ],
             "expression" : {
-               "localId" : "228",
-               "locator" : "20:3-20:34",
+               "localId" : "312",
+               "locator" : "35:3-35:34",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "de-breastsymptoms",
                "libraryName" : "DataElements",
                "type" : "ExpressionRef"
             }
          }, {
-            "localId" : "230",
-            "locator" : "22:1-23:34",
+            "localId" : "314",
+            "locator" : "37:1-38:34",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "eve-breastfindings",
             "context" : "Patient",
@@ -291,20 +721,20 @@
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
-                  "r" : "230",
+                  "r" : "314",
                   "s" : [ {
                      "value" : [ "","define ","\"eve-breastfindings\"",":\n  " ]
                   }, {
-                     "r" : "232",
+                     "r" : "316",
                      "s" : [ {
-                        "r" : "231",
+                        "r" : "315",
                         "s" : [ {
                            "value" : [ "DataElements" ]
                         } ]
                      }, {
                         "value" : [ "." ]
                      }, {
-                        "r" : "232",
+                        "r" : "316",
                         "s" : [ {
                            "value" : [ "\"de-breastfindings\"" ]
                         } ]
@@ -313,8 +743,8 @@
                }
             } ],
             "expression" : {
-               "localId" : "232",
-               "locator" : "23:3-23:34",
+               "localId" : "316",
+               "locator" : "38:3-38:34",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "de-breastfindings",
                "libraryName" : "DataElements",

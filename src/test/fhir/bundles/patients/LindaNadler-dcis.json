@@ -97,7 +97,7 @@
             }
           ]
         },
-        "onsetDateTime": "2023-10-10"
+        "onsetDateTime": "2023-11-20"
       }
     },
     {
@@ -108,7 +108,7 @@
           "reference": "Patient/LindaNadler"
         },
         "status": "final",
-        "effectiveDateTime": "2023-11-20",
+        "effectiveDateTime": "2023-10-10",
         "code": {
           "coding": [
             {

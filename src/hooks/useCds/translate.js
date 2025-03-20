@@ -240,6 +240,7 @@ const STRIDES_DIAG_URI = 'urn:uuid:90915bcf-353c-49e1-b65e-0464798baa77';
 const STRIDES_PROC_URI = 'urn:uuid:273494e4-40f0-4a53-b1a3-2d30c32d76d1';
 const BCS_OBSV = 'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system'
 
+
 // EPIC Code System for EpisodeOfCare Type
 const episodeOfCareTypeCodeSystem = [
   'urn:oid:1.2.840.114350.1.13.284.2.7.2.726668', //PRD
@@ -349,56 +350,62 @@ const symptomaticObservation = {
 }
 
 const geneticRiskObservation = { 
-  label: 'Genetic marker or syndrome associated with breast cancer',
+  label: 'GeneticMarkerAssociatedBreastCancer',
   code: {
     coding: [
       {
-        system: LOCAL_URL,
+        system: BCS_OBSV,
         code: 'GeneticMarkerOrSyndrome',
         display: 'Genetic marker or syndrome associated with breast cancer'
       }
     ]
   },
-  valueCodeableConcept: {
-    coding: [
-      {
-        system: SCT_URL,
-        code: '373066001',
-        display: 'Yes'
-      }
-    ]
-  }
+  valueBoolean: true,
+  value: true
 }
+
 const breastCancerObservation = {
-  label: "Current Invasive Breast Cancer",
+  label: "currentInvasiveBreastCancer",
   code: {
     coding: [
       {
-        system: "http://snomed.info/sct",
-        code: "254837009",
-        display: "Invasive breast cancer"
+        system: BCS_OBSV,
+        code: "hxbreastcawithin5y",
+        display: "Breast cancer within 5 years"
       }
     ],
     text: "Invasive Breast Cancer"
   },
-  valueCodeableConcept: {
+  valueBoolean: true,
+  value: true
+}
+
+const breastDiseaseObservation = { 
+  label: 'new_breast_disease_symptoms',
+  code: {
     coding: [
       {
-          system: 'http://terminology.hl7.org/CodeSystem/condition-ver-status',
-          code: 'confirmed',
-          display: "Confirmed"
+        system: BCS_OBSV,
+        code: 'BreastSymptoms',
+        display: 'New or worsening breast disease symptoms'
       }
     ]
   },
-  clinicalStatus: {
+  valueBoolean: true,
+}
+const breastFindingsObservation = { 
+  label: 'new_breast_disease_findings',
+  code: {
     coding: [
       {
-        system: 'http://terminology.hl7.org/CodeSystem/condition-clinical',
-        code: 'active',
-        display: 'Active'
+        system: BCS_OBSV,
+        code: 'BreastFindings',
+        display: 'New or worsening breast exam findings'
       }
     ]
-  }
+  },
+  valueBoolean: true,
+  value: "Yes"
 }
 /**
  * Translate terminology codings used in Observation
@@ -420,7 +427,6 @@ export function translateResponse(patientData, stridesData) {
     mapStrideResult(patientData, patientDataMap, stridesData);
   }
 
-  console.log("translate completed.")
 }
 
 export function translateToggleChange(patientData, toggleStatus) {
@@ -430,9 +436,11 @@ export function translateToggleChange(patientData, toggleStatus) {
 
   const patient = patientData.find(pd => pd.resourceType == 'Patient');
   handleToggles(patient, patientData, toggleStatus.hasGeneticMarkers, geneticRiskObservation);
-  handleToggles(patient, patientData, toggleStatus.hasCurrentBreastCancer, pregnantObservation);
-  handleToggles(patient, patientData, toggleStatus.hasBreastDiseaseSymptoms, pregnantConcernedObservation);
-  handleToggles(patient, patientData, toggleStatus.hasBreastExamFindings, symptomaticObservation);
+  handleToggles(patient, patientData, toggleStatus.hasCurrentBreastCancer, breastCancerObservation);
+  handleToggles(patient, patientData, toggleStatus.hasBreastDiseaseSymptoms, breastDiseaseObservation);
+  handleToggles(patient, patientData, toggleStatus.hasBreastExamFindings, breastFindingsObservation);
+
+  console.log("new Patient Data = ", patientData)
 }
 
 function handleToggles(patient, patientData, isChecked, obs) {
@@ -448,15 +456,22 @@ function handleToggles(patient, patientData, isChecked, obs) {
         },
         status: 'final',
         code: obs.code,
+        valueBoolean: true,
         effectiveDateTime: (new Date()).toISOString()
       }
 
       if (obs.valueCodeableConcept) {
         newObs.valueCodeableConcept = obs.valueCodeableConcept
       }
-
+      if (obs.valueBoolean) {
+        newObs.valueBoolean = obs.valueBoolean
+      }
+      if (obs.value) {
+        newObs.value = obs.value
+      }
       patientData.push(newObs)
       console.log(`Add new observation for ${obs.label}.`)
+      console.log("patientData + obs = ", patientData)
     }
   } else {
     const index = patientData.findIndex(pd => pd.id === newObsId);

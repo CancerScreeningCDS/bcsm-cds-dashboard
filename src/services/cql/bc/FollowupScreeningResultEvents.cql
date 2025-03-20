@@ -1,3 +1,16 @@
+/*  
+  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.
+
+  (C) 2024 The MITRE Corporation. All Rights Reserved. 
+  Approved for Public Release: 24-2711. 
+  Distribution Unlimited.
+
+  Unless otherwise noted, this work is available under an Apache 2.0 license. 
+  It was produced by the MITRE Corporation for the Division of Cancer Prevention 
+  and Control, Centers for Disease Control and Prevention in accordance with the 
+  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.
+*/
+
 library FollowupScreeningResultEvents version '1.0.0'
 
 using FHIR version '4.0.1'
@@ -10,6 +23,7 @@ include BCSMCommonFunctions version '1.0.0' called BCSMCommon
 codesystem "SNOMED-CT": 'http://snomed.info/sct'
 codesystem "BiopsyResultCS": 'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system'
 
+// TODO: replace with valueset: "BIRADS Assessment Category": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.402'. Will require some refactoring of FollowUpScreeningResult.cql
 code "Category0": '397138000' from "SNOMED-CT" display 'Mammography assessment (Category 0) - Need additional imaging evaluation (finding)'
 code "Category1": '397140005' from "SNOMED-CT" display 'Mammography assessment (Category 1) - Negative (finding)'
 code "Category2": '397141009' from "SNOMED-CT" display 'Mammography assessment (Category 2) - Benign finding (finding)'
@@ -20,13 +34,14 @@ code "Category4B": '6131000179108' from "SNOMED-CT" display 'Mammography assessm
 code "Category4C": '6141000179100' from "SNOMED-CT" display 'Mammography assessment (Category 4C) - Suspicious abnormality, biopsy should be considered, high suspicion of malignancy (finding)'
 code "Category5": '397145000' from "SNOMED-CT" display 'Mammography assessment (Category 5) - Highly suggestive of malignancy (finding)'
 code "Category6": '6111000179101' from "SNOMED-CT" display 'Mammography assessment (Category 6) - known biopsy, proven malignancy (finding)'
-code "Negative": 'Negative' from BiopsyResultCS display 'Normal breast tissue'
-code "Benign": 'Benign' from BiopsyResultCS display 'Benign breast finding'
-code "Atypical": 'Atypical' from BiopsyResultCS display 'Atypical breast finding'
-code "Malignant": 'Malignant' from BiopsyResultCS display 'Malignant breast finding'
-code "Indeterminate": 'Indeterminate' from BiopsyResultCS display 'Indeterminate breast finding'
-code "Discordant": 'Discordant' from BiopsyResultCS display 'Discordant breast finding'
-code "Other": 'Other' from BiopsyResultCS display 'Other breast finding'
+
+code "Negative": 'Negative' from BiopsyResultCS display 'Normal breast tissue' // '260385009' from "SNOMED-CT" display "Negative (qualifier value)"
+code "Benign": 'Benign' from BiopsyResultCS display 'Benign breast finding' // '30807003' from "SNOMED-CT" display 'Benign (qualifier value)'
+code "Atypical": 'Atypical' from BiopsyResultCS display 'Atypical breast finding' // '112231000' from "SNOMED-CT" display 'Atypical (qualifier value)'
+code "Malignant": 'Malignant' from BiopsyResultCS display 'Malignant breast finding' // '21594007' from "SNOMED-CT" display 'Malignant (qualifier value)'
+code "Indeterminate": 'Indeterminate' from BiopsyResultCS display 'Indeterminate breast finding' // '82334004' from "SNOMED-CT" display ' Indeterminate (qualifier value)'
+code "Discordant": 'Discordant' from BiopsyResultCS display 'Discordant breast finding' // closest match is '40885006' from "SNOMED-CT" display 'Variant (qualifier value)'
+code "Other": 'Other' from BiopsyResultCS display 'Other breast finding' // Do we actually need this one?
 
 context Patient
 

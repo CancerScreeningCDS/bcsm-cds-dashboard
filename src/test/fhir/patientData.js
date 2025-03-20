@@ -6,12 +6,15 @@ import MarionHenderson from './bundles/patients/MarionHenderson_avg_45_to_54.jso
 import NadiaWills from './bundles/patients/NadiaWills_palpable_breast_mass.json';
 import PatriciaLambert from './bundles/patients/PatriciaLambert_remission_lt_5_years.json'
 
+
+
 export const testData = {
-  JaniceMedford : JaniceMedford,
-  JosephineGreene : JosephineGreene,
-  JustineWallace : JustineWallace,
-  LindaNadler : LindaNadler,
-  MarionHenderson : MarionHenderson,
-  NadiaWills : NadiaWills,
-  PatriciaLambert : PatriciaLambert
+  "JaniceMedford_fdr_breastca_age_45" : JaniceMedford,
+  "JosephineGreene-past-breast-pain-adh-biopsy" : JosephineGreene,
+  "JustineWallace_brca1" : JustineWallace,
+  "LindaNadler-dcis" : LindaNadler,
+  "MarionHenderson_avg_45_to_54" : MarionHenderson,
+  "NadiaWills_palpable_breast_mass" : NadiaWills,
+  "PatriciaLambert_remission_lt_5_years" : PatriciaLambert
+
   }

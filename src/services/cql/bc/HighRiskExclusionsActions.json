@@ -11,7 +11,7 @@
          "s" : {
             "r" : "871",
             "s" : [ {
-               "value" : [ "","library HighRiskExclusionsActions version '1.0.0'" ]
+               "value" : [ "/*  \n  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.\n\n  (C) 2024 The MITRE Corporation. All Rights Reserved. \n  Approved for Public Release: 24-2711. \n  Distribution Unlimited.\n\n  Unless otherwise noted, this work is available under an Apache 2.0 license. \n  It was produced by the MITRE Corporation for the Division of Cancer Prevention \n  and Control, Centers for Disease Control and Prevention in accordance with the \n  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.\n*/\n\n","library HighRiskExclusionsActions version '1.0.0'" ]
             } ]
          }
       } ],
@@ -30,7 +30,7 @@
             "uri" : "urn:hl7-org:elm-types:r1"
          }, {
             "localId" : "206",
-            "locator" : "3:1-3:26",
+            "locator" : "16:1-16:26",
             "localIdentifier" : "FHIR",
             "uri" : "http://hl7.org/fhir",
             "version" : "4.0.1",
@@ -54,7 +54,7 @@
       "includes" : {
          "def" : [ {
             "localId" : "207",
-            "locator" : "5:1-5:55",
+            "locator" : "18:1-18:55",
             "localIdentifier" : "FHIRHelpers",
             "path" : "FHIRHelpers",
             "version" : "4.0.1",
@@ -75,7 +75,7 @@
             } ]
          }, {
             "localId" : "208",
-            "locator" : "6:1-6:56",
+            "locator" : "19:1-19:56",
             "localIdentifier" : "DataElements",
             "path" : "DataElements",
             "version" : "1.0.0",
@@ -96,7 +96,7 @@
             } ]
          }, {
             "localId" : "209",
-            "locator" : "7:1-7:61",
+            "locator" : "20:1-20:61",
             "localIdentifier" : "BCSMCommon",
             "path" : "BCSMCommonFunctions",
             "version" : "1.0.0",
@@ -120,7 +120,7 @@
       "codeSystems" : {
          "def" : [ {
             "localId" : "210",
-            "locator" : "9:1-9:114",
+            "locator" : "22:1-22:114",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "ActCode",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
@@ -136,7 +136,7 @@
             } ]
          }, {
             "localId" : "211",
-            "locator" : "10:1-10:111",
+            "locator" : "23:1-23:111",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "LOCAL",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
@@ -152,7 +152,7 @@
             } ]
          }, {
             "localId" : "212",
-            "locator" : "11:1-11:38",
+            "locator" : "24:1-24:38",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "LOINC",
             "id" : "http://loinc.org",
@@ -171,7 +171,7 @@
       "codes" : {
          "def" : [ {
             "localId" : "213",
-            "locator" : "14:1-14:124",
+            "locator" : "27:1-27:124",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Refer to specialist recommendations",
             "id" : "specialtyreferral",
@@ -195,13 +195,13 @@
             } ],
             "codeSystem" : {
                "localId" : "214",
-               "locator" : "14:70-14:78",
+               "locator" : "27:70-27:78",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "215",
-            "locator" : "15:1-15:123",
+            "locator" : "28:1-28:123",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Perform lifetime risk assessment",
             "id" : "lifetimeriskassessment",
@@ -225,13 +225,13 @@
             } ],
             "codeSystem" : {
                "localId" : "216",
-               "locator" : "15:72-15:80",
+               "locator" : "28:72-28:80",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "217",
-            "locator" : "17:1-17:175",
+            "locator" : "30:1-30:175",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Other genetic marker or syndrome associated with breast cancer",
             "id" : "othergeneticrisk",
@@ -255,13 +255,13 @@
             } ],
             "codeSystem" : {
                "localId" : "218",
-               "locator" : "17:96-17:102",
+               "locator" : "30:96-30:102",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "219",
-            "locator" : "18:1-18:99",
+            "locator" : "31:1-31:99",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Genetic risk exclusion",
             "id" : "geneticriskexclusion",
@@ -285,13 +285,13 @@
             } ],
             "codeSystem" : {
                "localId" : "220",
-               "locator" : "18:60-18:66",
+               "locator" : "31:60-31:66",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "221",
-            "locator" : "19:1-19:121",
+            "locator" : "32:1-32:121",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "History of chest radiation ages 10-30 y",
             "id" : "chestxrt",
@@ -315,13 +315,13 @@
             } ],
             "codeSystem" : {
                "localId" : "222",
-               "locator" : "19:65-19:71",
+               "locator" : "32:65-32:71",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "223",
-            "locator" : "20:1-20:89",
+            "locator" : "33:1-33:89",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Previous breast cancer",
             "id" : "hxbreastca",
@@ -345,43 +345,43 @@
             } ],
             "codeSystem" : {
                "localId" : "224",
-               "locator" : "20:50-20:56",
+               "locator" : "33:50-33:56",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "225",
-            "locator" : "21:1-21:125",
+            "locator" : "34:1-34:109",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
-            "name" : "Breast cancer in remission < 5 years",
+            "name" : "Breast cancer within 5 years",
             "id" : "hxbreastcawithin5y",
-            "display" : "Breast cancer in remission < 5 years",
+            "display" : "Breast cancer within 5 years",
             "accessLevel" : "Public",
             "annotation" : [ {
                "type" : "Annotation",
                "s" : {
                   "r" : "225",
                   "s" : [ {
-                     "value" : [ "","code ","\"Breast cancer in remission < 5 years\"",": ","'hxbreastcawithin5y'"," from " ]
+                     "value" : [ "","code ","\"Breast cancer within 5 years\"",": ","'hxbreastcawithin5y'"," from " ]
                   }, {
                      "r" : "226",
                      "s" : [ {
                         "value" : [ "\"LOCAL\"" ]
                      } ]
                   }, {
-                     "value" : [ " display ","'Breast cancer in remission < 5 years'" ]
+                     "value" : [ " display ","'Breast cancer within 5 years'" ]
                   } ]
                }
             } ],
             "codeSystem" : {
                "localId" : "226",
-               "locator" : "21:72-21:78",
+               "locator" : "34:64-34:70",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "227",
-            "locator" : "22:1-22:75",
+            "locator" : "35:1-35:75",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Atypical biopsy",
             "id" : "atypicalbx",
@@ -405,13 +405,13 @@
             } ],
             "codeSystem" : {
                "localId" : "228",
-               "locator" : "22:43-22:49",
+               "locator" : "35:43-35:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "229",
-            "locator" : "23:1-23:129",
+            "locator" : "36:1-36:129",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Atypical biopsy high lifetime risk",
             "id" : "atypicalbxhighlifetimerisk",
@@ -435,13 +435,13 @@
             } ],
             "codeSystem" : {
                "localId" : "230",
-               "locator" : "23:78-23:84",
+               "locator" : "36:78-36:84",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "231",
-            "locator" : "26:1-26:80",
+            "locator" : "39:1-39:80",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "MG Breast Screening",
             "id" : "24606-6",
@@ -465,13 +465,13 @@
             } ],
             "codeSystem" : {
                "localId" : "232",
-               "locator" : "26:44-26:50",
+               "locator" : "39:44-39:50",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOINC"
             }
          }, {
             "localId" : "233",
-            "locator" : "27:1-27:60",
+            "locator" : "40:1-40:60",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "MR Breast",
             "id" : "30794-2",
@@ -495,7 +495,7 @@
             } ],
             "codeSystem" : {
                "localId" : "234",
-               "locator" : "27:34-27:40",
+               "locator" : "40:34-40:40",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOINC"
             }
@@ -504,14 +504,14 @@
       "contexts" : {
          "def" : [ {
             "localId" : "238",
-            "locator" : "29:1-29:15",
+            "locator" : "42:1-42:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
             "localId" : "236",
-            "locator" : "29:1-29:15",
+            "locator" : "42:1-42:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
@@ -520,7 +520,7 @@
                "signature" : [ ],
                "operand" : {
                   "localId" : "235",
-                  "locator" : "29:1-29:15",
+                  "locator" : "42:1-42:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -532,7 +532,7 @@
             }
          }, {
             "localId" : "240",
-            "locator" : "31:1-36:2",
+            "locator" : "44:1-49:2",
             "name" : "act-othergeneticrisk",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -632,7 +632,7 @@
             },
             "expression" : {
                "localId" : "241",
-               "locator" : "32:3-36:2",
+               "locator" : "45:3-49:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "252",
@@ -675,7 +675,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "242",
-                     "locator" : "33:9-33:45",
+                     "locator" : "46:9-46:45",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Refer to specialist recommendations",
                      "type" : "CodeRef"
@@ -684,7 +684,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "243",
-                     "locator" : "34:13-34:76",
+                     "locator" : "47:13-47:76",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Other genetic marker or syndrome associated with breast cancer",
                      "type" : "CodeRef"
@@ -693,7 +693,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "245",
-                     "locator" : "35:20-35:52",
+                     "locator" : "48:20-48:52",
                      "name" : "SourceDocumentationACS",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -715,7 +715,7 @@
             }
          }, {
             "localId" : "271",
-            "locator" : "38:1-49:2",
+            "locator" : "51:1-62:2",
             "name" : "act-acshighriskmammo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -865,7 +865,7 @@
             },
             "expression" : {
                "localId" : "272",
-               "locator" : "39:3-49:2",
+               "locator" : "52:3-62:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "301",
@@ -936,7 +936,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "273",
-                     "locator" : "40:9-40:29",
+                     "locator" : "53:9-53:29",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "MG Breast Screening",
                      "type" : "CodeRef"
@@ -945,7 +945,7 @@
                   "name" : "timingTiming",
                   "value" : {
                      "localId" : "274",
-                     "locator" : "41:19-48:5",
+                     "locator" : "54:19-61:5",
                      "type" : "Tuple",
                      "resultTypeSpecifier" : {
                         "localId" : "289",
@@ -1000,7 +1000,7 @@
                         "name" : "event",
                         "value" : {
                            "localId" : "275",
-                           "locator" : "42:14-42:15",
+                           "locator" : "55:14-55:15",
                            "type" : "List",
                            "resultTypeSpecifier" : {
                               "localId" : "276",
@@ -1017,7 +1017,7 @@
                         "name" : "repeat",
                         "value" : {
                            "localId" : "278",
-                           "locator" : "43:15-47:7",
+                           "locator" : "56:15-60:7",
                            "type" : "Tuple",
                            "resultTypeSpecifier" : {
                               "localId" : "282",
@@ -1052,7 +1052,7 @@
                               "name" : "frequency",
                               "value" : {
                                  "localId" : "279",
-                                 "locator" : "44:20",
+                                 "locator" : "57:20",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                                  "value" : "1",
@@ -1062,7 +1062,7 @@
                               "name" : "period",
                               "value" : {
                                  "localId" : "280",
-                                 "locator" : "45:17-45:19",
+                                 "locator" : "58:17-58:19",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                                  "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                                  "value" : "1.0",
@@ -1072,7 +1072,7 @@
                               "name" : "periodUnit",
                               "value" : {
                                  "localId" : "281",
-                                 "locator" : "46:21-46:23",
+                                 "locator" : "59:21-59:23",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
                                  "value" : "a",
@@ -1086,7 +1086,7 @@
             }
          }, {
             "localId" : "334",
-            "locator" : "51:1-62:2",
+            "locator" : "64:1-75:2",
             "name" : "act-acshighriskmri",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1236,7 +1236,7 @@
             },
             "expression" : {
                "localId" : "335",
-               "locator" : "52:3-62:2",
+               "locator" : "65:3-75:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "364",
@@ -1307,7 +1307,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "336",
-                     "locator" : "53:9-53:19",
+                     "locator" : "66:9-66:19",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "MR Breast",
                      "type" : "CodeRef"
@@ -1316,7 +1316,7 @@
                   "name" : "timingTiming",
                   "value" : {
                      "localId" : "337",
-                     "locator" : "54:19-61:5",
+                     "locator" : "67:19-74:5",
                      "type" : "Tuple",
                      "resultTypeSpecifier" : {
                         "localId" : "352",
@@ -1371,7 +1371,7 @@
                         "name" : "event",
                         "value" : {
                            "localId" : "338",
-                           "locator" : "55:14-55:15",
+                           "locator" : "68:14-68:15",
                            "type" : "List",
                            "resultTypeSpecifier" : {
                               "localId" : "339",
@@ -1388,7 +1388,7 @@
                         "name" : "repeat",
                         "value" : {
                            "localId" : "341",
-                           "locator" : "56:15-60:7",
+                           "locator" : "69:15-73:7",
                            "type" : "Tuple",
                            "resultTypeSpecifier" : {
                               "localId" : "345",
@@ -1423,7 +1423,7 @@
                               "name" : "frequency",
                               "value" : {
                                  "localId" : "342",
-                                 "locator" : "57:20",
+                                 "locator" : "70:20",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                                  "value" : "1",
@@ -1433,7 +1433,7 @@
                               "name" : "period",
                               "value" : {
                                  "localId" : "343",
-                                 "locator" : "58:17-58:19",
+                                 "locator" : "71:17-71:19",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                                  "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                                  "value" : "1.0",
@@ -1443,7 +1443,7 @@
                               "name" : "periodUnit",
                               "value" : {
                                  "localId" : "344",
-                                 "locator" : "59:21-59:23",
+                                 "locator" : "72:21-72:23",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
                                  "value" : "a",
@@ -1457,7 +1457,7 @@
             }
          }, {
             "localId" : "397",
-            "locator" : "64:1-67:79",
+            "locator" : "77:1-80:79",
             "name" : "act-acsgeneticriskmammo",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1718,7 +1718,7 @@
             },
             "expression" : {
                "localId" : "492",
-               "locator" : "65:3-67:79",
+               "locator" : "78:3-80:79",
                "name" : "SetRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -1934,13 +1934,13 @@
                } ],
                "operand" : [ {
                   "localId" : "416",
-                  "locator" : "65:32-65:58",
+                  "locator" : "78:32-78:58",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "path" : "code",
                   "type" : "Property",
                   "source" : {
                      "localId" : "399",
-                     "locator" : "65:32-65:53",
+                     "locator" : "78:32-78:53",
                      "name" : "act-acshighriskmammo",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -2011,13 +2011,13 @@
                   }
                }, {
                   "localId" : "417",
-                  "locator" : "65:61-65:84",
+                  "locator" : "78:61-78:84",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Genetic risk exclusion",
                   "type" : "CodeRef"
                }, {
                   "localId" : "419",
-                  "locator" : "66:5-66:37",
+                  "locator" : "79:5-79:37",
                   "name" : "SourceDocumentationACS",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -2036,7 +2036,7 @@
                   }
                }, {
                   "localId" : "426",
-                  "locator" : "67:5-67:28",
+                  "locator" : "80:5-80:28",
                   "type" : "Tuple",
                   "resultTypeSpecifier" : {
                      "localId" : "429",
@@ -2063,7 +2063,7 @@
                      "name" : "value",
                      "value" : {
                         "localId" : "427",
-                        "locator" : "67:13-67:16",
+                        "locator" : "80:13-80:16",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                         "value" : "30.0",
@@ -2073,7 +2073,7 @@
                      "name" : "code",
                      "value" : {
                         "localId" : "428",
-                        "locator" : "67:25-67:27",
+                        "locator" : "80:25-80:27",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "a",
@@ -2087,13 +2087,13 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "434",
-                     "locator" : "67:31-67:34",
+                     "locator" : "80:31-80:34",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "477",
-                  "locator" : "67:37-67:78",
+                  "locator" : "80:37-80:78",
                   "path" : "repeat",
                   "type" : "Property",
                   "resultTypeSpecifier" : {
@@ -2127,7 +2127,7 @@
                   },
                   "source" : {
                      "localId" : "452",
-                     "locator" : "67:37-67:71",
+                     "locator" : "80:37-80:71",
                      "path" : "timingTiming",
                      "type" : "Property",
                      "resultTypeSpecifier" : {
@@ -2181,7 +2181,7 @@
                      },
                      "source" : {
                         "localId" : "435",
-                        "locator" : "67:37-67:58",
+                        "locator" : "80:37-80:58",
                         "name" : "act-acshighriskmammo",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -2255,7 +2255,7 @@
             }
          }, {
             "localId" : "615",
-            "locator" : "69:1-72:77",
+            "locator" : "82:1-85:77",
             "name" : "act-acsgeneticriskmri",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2516,7 +2516,7 @@
             },
             "expression" : {
                "localId" : "710",
-               "locator" : "70:3-72:77",
+               "locator" : "83:3-85:77",
                "name" : "SetRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -2732,13 +2732,13 @@
                } ],
                "operand" : [ {
                   "localId" : "634",
-                  "locator" : "70:32-70:56",
+                  "locator" : "83:32-83:56",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "path" : "code",
                   "type" : "Property",
                   "source" : {
                      "localId" : "617",
-                     "locator" : "70:32-70:51",
+                     "locator" : "83:32-83:51",
                      "name" : "act-acshighriskmri",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -2809,13 +2809,13 @@
                   }
                }, {
                   "localId" : "635",
-                  "locator" : "70:59-70:82",
+                  "locator" : "83:59-83:82",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Genetic risk exclusion",
                   "type" : "CodeRef"
                }, {
                   "localId" : "637",
-                  "locator" : "71:5-71:37",
+                  "locator" : "84:5-84:37",
                   "name" : "SourceDocumentationACS",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -2834,7 +2834,7 @@
                   }
                }, {
                   "localId" : "644",
-                  "locator" : "72:5-72:28",
+                  "locator" : "85:5-85:28",
                   "type" : "Tuple",
                   "resultTypeSpecifier" : {
                      "localId" : "647",
@@ -2861,7 +2861,7 @@
                      "name" : "value",
                      "value" : {
                         "localId" : "645",
-                        "locator" : "72:13-72:16",
+                        "locator" : "85:13-85:16",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                         "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                         "value" : "30.0",
@@ -2871,7 +2871,7 @@
                      "name" : "code",
                      "value" : {
                         "localId" : "646",
-                        "locator" : "72:25-72:27",
+                        "locator" : "85:25-85:27",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "a",
@@ -2885,13 +2885,13 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "652",
-                     "locator" : "72:31-72:34",
+                     "locator" : "85:31-85:34",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "695",
-                  "locator" : "72:37-72:76",
+                  "locator" : "85:37-85:76",
                   "path" : "repeat",
                   "type" : "Property",
                   "resultTypeSpecifier" : {
@@ -2925,7 +2925,7 @@
                   },
                   "source" : {
                      "localId" : "670",
-                     "locator" : "72:37-72:69",
+                     "locator" : "85:37-85:69",
                      "path" : "timingTiming",
                      "type" : "Property",
                      "resultTypeSpecifier" : {
@@ -2979,7 +2979,7 @@
                      },
                      "source" : {
                         "localId" : "653",
-                        "locator" : "72:37-72:56",
+                        "locator" : "85:37-85:56",
                         "name" : "act-acshighriskmri",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -3053,7 +3053,7 @@
             }
          }, {
             "localId" : "871",
-            "locator" : "122:1-123:83",
+            "locator" : "135:1-136:83",
             "resultTypeName" : "{http://hl7.org/fhir}Age",
             "name" : "RadiationTherapyCompletionAge",
             "context" : "Patient",
@@ -3113,14 +3113,14 @@
             } ],
             "expression" : {
                "localId" : "872",
-               "locator" : "123:3-123:83",
+               "locator" : "136:3-136:83",
                "resultTypeName" : "{http://hl7.org/fhir}Age",
                "strict" : false,
                "type" : "As",
                "signature" : [ ],
                "operand" : {
                   "localId" : "890",
-                  "locator" : "123:3-123:76",
+                  "locator" : "136:3-136:76",
                   "path" : "abatement",
                   "type" : "Property",
                   "resultTypeSpecifier" : {
@@ -3151,7 +3151,7 @@
                   },
                   "source" : {
                      "localId" : "887",
-                     "locator" : "123:3-123:66",
+                     "locator" : "136:3-136:66",
                      "resultTypeName" : "{http://hl7.org/fhir}Condition",
                      "type" : "First",
                      "signature" : [ {
@@ -3165,7 +3165,7 @@
                      } ],
                      "source" : {
                         "localId" : "880",
-                        "locator" : "123:9-123:65",
+                        "locator" : "136:9-136:65",
                         "type" : "Query",
                         "resultTypeSpecifier" : {
                            "localId" : "881",
@@ -3178,7 +3178,7 @@
                         },
                         "source" : [ {
                            "localId" : "873",
-                           "locator" : "123:9-123:65",
+                           "locator" : "136:9-136:65",
                            "alias" : "C",
                            "resultTypeSpecifier" : {
                               "localId" : "878",
@@ -3191,7 +3191,7 @@
                            },
                            "expression" : {
                               "localId" : "875",
-                              "locator" : "123:9-123:63",
+                              "locator" : "136:9-136:63",
                               "name" : "HistoryOfChestRadiationAges10To30Condition",
                               "libraryName" : "DataElements",
                               "type" : "ExpressionRef",
@@ -3213,7 +3213,7 @@
                },
                "asTypeSpecifier" : {
                   "localId" : "903",
-                  "locator" : "123:81-123:83",
+                  "locator" : "136:81-136:83",
                   "resultTypeName" : "{http://hl7.org/fhir}Age",
                   "name" : "{http://hl7.org/fhir}Age",
                   "type" : "NamedTypeSpecifier"
@@ -3221,7 +3221,7 @@
             }
          }, {
             "localId" : "868",
-            "locator" : "119:1-120:43",
+            "locator" : "132:1-133:43",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "Age8yafterRT",
             "context" : "Patient",
@@ -3252,7 +3252,7 @@
             } ],
             "expression" : {
                "localId" : "869",
-               "locator" : "120:3-120:43",
+               "locator" : "133:3-133:43",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "type" : "Add",
                "signature" : [ {
@@ -3276,14 +3276,14 @@
                   } ],
                   "operand" : [ {
                      "localId" : "904",
-                     "locator" : "120:3-120:33",
+                     "locator" : "133:3-133:33",
                      "resultTypeName" : "{http://hl7.org/fhir}Age",
                      "name" : "RadiationTherapyCompletionAge",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "905",
-                  "locator" : "120:37-120:43",
+                  "locator" : "133:37-133:43",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                   "value" : 8,
                   "unit" : "years",
@@ -3292,7 +3292,7 @@
             }
          }, {
             "localId" : "863",
-            "locator" : "113:1-117:26",
+            "locator" : "126:1-130:26",
             "name" : "Ageatleast25and8yafterRT",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3437,7 +3437,7 @@
             },
             "expression" : {
                "localId" : "864",
-               "locator" : "114:3-117:26",
+               "locator" : "127:3-130:26",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "954",
@@ -3487,7 +3487,7 @@
                },
                "condition" : {
                   "localId" : "865",
-                  "locator" : "114:6-114:28",
+                  "locator" : "127:6-127:28",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Less",
                   "signature" : [ {
@@ -3501,14 +3501,14 @@
                   } ],
                   "operand" : [ {
                      "localId" : "866",
-                     "locator" : "114:6-114:13",
+                     "locator" : "127:6-127:13",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "value" : 25,
                      "unit" : "years",
                      "type" : "Quantity"
                   }, {
                      "localId" : "910",
-                     "locator" : "114:17-114:28",
+                     "locator" : "127:17-127:28",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                      "name" : "Age8yafterRT",
                      "type" : "ExpressionRef"
@@ -3520,7 +3520,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "913",
-                     "locator" : "115:10-115:47",
+                     "locator" : "128:10-128:47",
                      "type" : "Tuple",
                      "resultTypeSpecifier" : {
                         "localId" : "917",
@@ -3547,13 +3547,13 @@
                         "name" : "value",
                         "value" : {
                            "localId" : "915",
-                           "locator" : "115:18-115:35",
+                           "locator" : "128:18-128:35",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                            "path" : "value",
                            "type" : "Property",
                            "source" : {
                               "localId" : "914",
-                              "locator" : "115:18-115:29",
+                              "locator" : "128:18-128:29",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                               "name" : "Age8yafterRT",
                               "type" : "ExpressionRef"
@@ -3563,7 +3563,7 @@
                         "name" : "code",
                         "value" : {
                            "localId" : "916",
-                           "locator" : "115:44-115:46",
+                           "locator" : "128:44-128:46",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "a",
@@ -3624,7 +3624,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "922",
-                     "locator" : "117:5-117:26",
+                     "locator" : "130:5-130:26",
                      "type" : "Tuple",
                      "resultTypeSpecifier" : {
                         "localId" : "925",
@@ -3651,7 +3651,7 @@
                         "name" : "value",
                         "value" : {
                            "localId" : "923",
-                           "locator" : "117:13-117:14",
+                           "locator" : "130:13-130:14",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                            "value" : "25",
@@ -3661,7 +3661,7 @@
                         "name" : "code",
                         "value" : {
                            "localId" : "924",
-                           "locator" : "117:23-117:25",
+                           "locator" : "130:23-130:25",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "a",
@@ -3719,7 +3719,7 @@
             }
          }, {
             "localId" : "833",
-            "locator" : "74:1-77:79",
+            "locator" : "87:1-90:79",
             "name" : "act-acsmammoafterRT",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3962,7 +3962,7 @@
             },
             "expression" : {
                "localId" : "1046",
-               "locator" : "75:3-77:79",
+               "locator" : "88:3-90:79",
                "name" : "SetRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -4178,13 +4178,13 @@
                } ],
                "operand" : [ {
                   "localId" : "852",
-                  "locator" : "75:32-75:58",
+                  "locator" : "88:32-88:58",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "path" : "code",
                   "type" : "Property",
                   "source" : {
                      "localId" : "835",
-                     "locator" : "75:32-75:53",
+                     "locator" : "88:32-88:53",
                      "name" : "act-acshighriskmammo",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -4255,13 +4255,13 @@
                   }
                }, {
                   "localId" : "853",
-                  "locator" : "75:61-75:101",
+                  "locator" : "88:61-88:101",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "History of chest radiation ages 10-30 y",
                   "type" : "CodeRef"
                }, {
                   "localId" : "855",
-                  "locator" : "76:5-76:37",
+                  "locator" : "89:5-89:37",
                   "name" : "SourceDocumentationACS",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -4284,7 +4284,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "976",
-                     "locator" : "77:5-77:28",
+                     "locator" : "90:5-90:28",
                      "name" : "Ageatleast25and8yafterRT",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -4362,13 +4362,13 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "988",
-                     "locator" : "77:31-77:34",
+                     "locator" : "90:31-90:34",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "1031",
-                  "locator" : "77:37-77:78",
+                  "locator" : "90:37-90:78",
                   "path" : "repeat",
                   "type" : "Property",
                   "resultTypeSpecifier" : {
@@ -4402,7 +4402,7 @@
                   },
                   "source" : {
                      "localId" : "1006",
-                     "locator" : "77:37-77:71",
+                     "locator" : "90:37-90:71",
                      "path" : "timingTiming",
                      "type" : "Property",
                      "resultTypeSpecifier" : {
@@ -4456,7 +4456,7 @@
                      },
                      "source" : {
                         "localId" : "989",
-                        "locator" : "77:37-77:58",
+                        "locator" : "90:37-90:58",
                         "name" : "act-acshighriskmammo",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -4530,7 +4530,7 @@
             }
          }, {
             "localId" : "1175",
-            "locator" : "79:1-82:77",
+            "locator" : "92:1-95:77",
             "name" : "act-acsmriafterRT",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4773,7 +4773,7 @@
             },
             "expression" : {
                "localId" : "1274",
-               "locator" : "80:3-82:77",
+               "locator" : "93:3-95:77",
                "name" : "SetRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -4989,13 +4989,13 @@
                } ],
                "operand" : [ {
                   "localId" : "1194",
-                  "locator" : "80:32-80:56",
+                  "locator" : "93:32-93:56",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "path" : "code",
                   "type" : "Property",
                   "source" : {
                      "localId" : "1177",
-                     "locator" : "80:32-80:51",
+                     "locator" : "93:32-93:51",
                      "name" : "act-acshighriskmri",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -5066,13 +5066,13 @@
                   }
                }, {
                   "localId" : "1195",
-                  "locator" : "80:59-80:99",
+                  "locator" : "93:59-93:99",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "History of chest radiation ages 10-30 y",
                   "type" : "CodeRef"
                }, {
                   "localId" : "1197",
-                  "locator" : "81:5-81:37",
+                  "locator" : "94:5-94:37",
                   "name" : "SourceDocumentationACS",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -5095,7 +5095,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "1204",
-                     "locator" : "82:5-82:28",
+                     "locator" : "95:5-95:28",
                      "name" : "Ageatleast25and8yafterRT",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -5173,13 +5173,13 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "1216",
-                     "locator" : "82:31-82:34",
+                     "locator" : "95:31-95:34",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "1259",
-                  "locator" : "82:37-82:76",
+                  "locator" : "95:37-95:76",
                   "path" : "repeat",
                   "type" : "Property",
                   "resultTypeSpecifier" : {
@@ -5213,7 +5213,7 @@
                   },
                   "source" : {
                      "localId" : "1234",
-                     "locator" : "82:37-82:69",
+                     "locator" : "95:37-95:69",
                      "path" : "timingTiming",
                      "type" : "Property",
                      "resultTypeSpecifier" : {
@@ -5267,7 +5267,7 @@
                      },
                      "source" : {
                         "localId" : "1217",
-                        "locator" : "82:37-82:56",
+                        "locator" : "95:37-95:56",
                         "name" : "act-acshighriskmri",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -5341,7 +5341,7 @@
             }
          }, {
             "localId" : "1403",
-            "locator" : "84:1-87:93",
+            "locator" : "97:1-100:93",
             "name" : "act-acsmammoafterbrca",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5612,7 +5612,7 @@
             },
             "expression" : {
                "localId" : "1510",
-               "locator" : "85:3-87:93",
+               "locator" : "98:3-100:93",
                "name" : "SetRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -5828,13 +5828,13 @@
                } ],
                "operand" : [ {
                   "localId" : "1422",
-                  "locator" : "85:32-85:58",
+                  "locator" : "98:32-98:58",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "path" : "code",
                   "type" : "Property",
                   "source" : {
                      "localId" : "1405",
-                     "locator" : "85:32-85:53",
+                     "locator" : "98:32-98:53",
                      "name" : "act-acshighriskmammo",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -5905,13 +5905,13 @@
                   }
                }, {
                   "localId" : "1423",
-                  "locator" : "85:61-85:84",
+                  "locator" : "98:61-98:84",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Previous breast cancer",
                   "type" : "CodeRef"
                }, {
                   "localId" : "1425",
-                  "locator" : "86:5-86:37",
+                  "locator" : "99:5-99:37",
                   "name" : "SourceDocumentationACS",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -5930,7 +5930,7 @@
                   }
                }, {
                   "localId" : "1432",
-                  "locator" : "87:5-87:42",
+                  "locator" : "100:5-100:42",
                   "type" : "Tuple",
                   "resultTypeSpecifier" : {
                      "localId" : "1447",
@@ -5957,7 +5957,7 @@
                      "name" : "value",
                      "value" : {
                         "localId" : "1433",
-                        "locator" : "87:13-87:30",
+                        "locator" : "100:13-100:30",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                         "type" : "Multiply",
                         "signature" : [ {
@@ -5979,7 +5979,7 @@
                            } ],
                            "operand" : {
                               "localId" : "1438",
-                              "locator" : "87:13-87:24",
+                              "locator" : "100:13-100:24",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "precision" : "Year",
                               "type" : "CalculateAge",
@@ -6001,7 +6001,7 @@
                            }
                         }, {
                            "localId" : "1440",
-                           "locator" : "87:28-87:30",
+                           "locator" : "100:28-100:30",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                            "value" : "1.0",
@@ -6012,7 +6012,7 @@
                      "name" : "code",
                      "value" : {
                         "localId" : "1446",
-                        "locator" : "87:39-87:41",
+                        "locator" : "100:39-100:41",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "a",
@@ -6026,13 +6026,13 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "1452",
-                     "locator" : "87:45-87:48",
+                     "locator" : "100:45-100:48",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "1495",
-                  "locator" : "87:51-87:92",
+                  "locator" : "100:51-100:92",
                   "path" : "repeat",
                   "type" : "Property",
                   "resultTypeSpecifier" : {
@@ -6066,7 +6066,7 @@
                   },
                   "source" : {
                      "localId" : "1470",
-                     "locator" : "87:51-87:85",
+                     "locator" : "100:51-100:85",
                      "path" : "timingTiming",
                      "type" : "Property",
                      "resultTypeSpecifier" : {
@@ -6120,7 +6120,7 @@
                      },
                      "source" : {
                         "localId" : "1453",
-                        "locator" : "87:51-87:72",
+                        "locator" : "100:51-100:72",
                         "name" : "act-acshighriskmammo",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -6194,7 +6194,7 @@
             }
          }, {
             "localId" : "1633",
-            "locator" : "89:1-94:2",
+            "locator" : "102:1-107:2",
             "name" : "act-hxbreastcawithin5y",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6225,7 +6225,7 @@
                         }, {
                            "r" : "1636",
                            "s" : [ {
-                              "value" : [ "\"Breast cancer in remission < 5 years\"" ]
+                              "value" : [ "\"Breast cancer within 5 years\"" ]
                            } ]
                         } ]
                      }, {
@@ -6294,7 +6294,7 @@
             },
             "expression" : {
                "localId" : "1634",
-               "locator" : "90:3-94:2",
+               "locator" : "103:3-107:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "1645",
@@ -6337,7 +6337,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "1635",
-                     "locator" : "91:9-91:45",
+                     "locator" : "104:9-104:45",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Refer to specialist recommendations",
                      "type" : "CodeRef"
@@ -6346,16 +6346,16 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "1636",
-                     "locator" : "92:13-92:50",
+                     "locator" : "105:13-105:42",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
-                     "name" : "Breast cancer in remission < 5 years",
+                     "name" : "Breast cancer within 5 years",
                      "type" : "CodeRef"
                   }
                }, {
                   "name" : "documentation",
                   "value" : {
                      "localId" : "1638",
-                     "locator" : "93:20-93:54",
+                     "locator" : "106:20-106:54",
                      "name" : "SourceDocumentationOther",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -6377,7 +6377,7 @@
             }
          }, {
             "localId" : "1664",
-            "locator" : "96:1-99:93",
+            "locator" : "109:1-112:93",
             "name" : "act-acsmammoatypicalbx",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6648,7 +6648,7 @@
             },
             "expression" : {
                "localId" : "1771",
-               "locator" : "97:3-99:93",
+               "locator" : "110:3-112:93",
                "name" : "SetRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -6864,13 +6864,13 @@
                } ],
                "operand" : [ {
                   "localId" : "1683",
-                  "locator" : "97:32-97:58",
+                  "locator" : "110:32-110:58",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "path" : "code",
                   "type" : "Property",
                   "source" : {
                      "localId" : "1666",
-                     "locator" : "97:32-97:53",
+                     "locator" : "110:32-110:53",
                      "name" : "act-acshighriskmammo",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -6941,13 +6941,13 @@
                   }
                }, {
                   "localId" : "1684",
-                  "locator" : "97:61-97:77",
+                  "locator" : "110:61-110:77",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Atypical biopsy",
                   "type" : "CodeRef"
                }, {
                   "localId" : "1686",
-                  "locator" : "98:5-98:37",
+                  "locator" : "111:5-111:37",
                   "name" : "SourceDocumentationACS",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -6966,7 +6966,7 @@
                   }
                }, {
                   "localId" : "1693",
-                  "locator" : "99:5-99:42",
+                  "locator" : "112:5-112:42",
                   "type" : "Tuple",
                   "resultTypeSpecifier" : {
                      "localId" : "1708",
@@ -6993,7 +6993,7 @@
                      "name" : "value",
                      "value" : {
                         "localId" : "1694",
-                        "locator" : "99:13-99:30",
+                        "locator" : "112:13-112:30",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                         "type" : "Multiply",
                         "signature" : [ {
@@ -7015,7 +7015,7 @@
                            } ],
                            "operand" : {
                               "localId" : "1699",
-                              "locator" : "99:13-99:24",
+                              "locator" : "112:13-112:24",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "precision" : "Year",
                               "type" : "CalculateAge",
@@ -7037,7 +7037,7 @@
                            }
                         }, {
                            "localId" : "1701",
-                           "locator" : "99:28-99:30",
+                           "locator" : "112:28-112:30",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                            "value" : "1.0",
@@ -7048,7 +7048,7 @@
                      "name" : "code",
                      "value" : {
                         "localId" : "1707",
-                        "locator" : "99:39-99:41",
+                        "locator" : "112:39-112:41",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "a",
@@ -7062,13 +7062,13 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "1713",
-                     "locator" : "99:45-99:48",
+                     "locator" : "112:45-112:48",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "1756",
-                  "locator" : "99:51-99:92",
+                  "locator" : "112:51-112:92",
                   "path" : "repeat",
                   "type" : "Property",
                   "resultTypeSpecifier" : {
@@ -7102,7 +7102,7 @@
                   },
                   "source" : {
                      "localId" : "1731",
-                     "locator" : "99:51-99:85",
+                     "locator" : "112:51-112:85",
                      "path" : "timingTiming",
                      "type" : "Property",
                      "resultTypeSpecifier" : {
@@ -7156,7 +7156,7 @@
                      },
                      "source" : {
                         "localId" : "1714",
-                        "locator" : "99:51-99:72",
+                        "locator" : "112:51-112:72",
                         "name" : "act-acshighriskmammo",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -7230,7 +7230,7 @@
             }
          }, {
             "localId" : "1894",
-            "locator" : "101:1-106:2",
+            "locator" : "114:1-119:2",
             "name" : "act-acsatypicalbx",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7330,7 +7330,7 @@
             },
             "expression" : {
                "localId" : "1895",
-               "locator" : "102:3-106:2",
+               "locator" : "115:3-119:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "1906",
@@ -7373,7 +7373,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "1896",
-                     "locator" : "103:9-103:42",
+                     "locator" : "116:9-116:42",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Perform lifetime risk assessment",
                      "type" : "CodeRef"
@@ -7382,7 +7382,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "1897",
-                     "locator" : "104:13-104:29",
+                     "locator" : "117:13-117:29",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Atypical biopsy",
                      "type" : "CodeRef"
@@ -7391,7 +7391,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "1899",
-                     "locator" : "105:20-105:52",
+                     "locator" : "118:20-118:52",
                      "name" : "SourceDocumentationACS",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -7413,7 +7413,7 @@
             }
          }, {
             "localId" : "1925",
-            "locator" : "108:1-111:91",
+            "locator" : "121:1-124:91",
             "name" : "act-acsmriatypicalbx",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7684,7 +7684,7 @@
             },
             "expression" : {
                "localId" : "2032",
-               "locator" : "109:3-111:91",
+               "locator" : "122:3-124:91",
                "name" : "SetRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -7900,13 +7900,13 @@
                } ],
                "operand" : [ {
                   "localId" : "1944",
-                  "locator" : "109:32-109:56",
+                  "locator" : "122:32-122:56",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "path" : "code",
                   "type" : "Property",
                   "source" : {
                      "localId" : "1927",
-                     "locator" : "109:32-109:51",
+                     "locator" : "122:32-122:51",
                      "name" : "act-acshighriskmri",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -7977,13 +7977,13 @@
                   }
                }, {
                   "localId" : "1945",
-                  "locator" : "109:59-109:94",
+                  "locator" : "122:59-122:94",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Atypical biopsy high lifetime risk",
                   "type" : "CodeRef"
                }, {
                   "localId" : "1947",
-                  "locator" : "110:5-110:37",
+                  "locator" : "123:5-123:37",
                   "name" : "SourceDocumentationACS",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -8002,7 +8002,7 @@
                   }
                }, {
                   "localId" : "1954",
-                  "locator" : "111:5-111:42",
+                  "locator" : "124:5-124:42",
                   "type" : "Tuple",
                   "resultTypeSpecifier" : {
                      "localId" : "1969",
@@ -8029,7 +8029,7 @@
                      "name" : "value",
                      "value" : {
                         "localId" : "1955",
-                        "locator" : "111:13-111:30",
+                        "locator" : "124:13-124:30",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                         "type" : "Multiply",
                         "signature" : [ {
@@ -8051,7 +8051,7 @@
                            } ],
                            "operand" : {
                               "localId" : "1960",
-                              "locator" : "111:13-111:24",
+                              "locator" : "124:13-124:24",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                               "precision" : "Year",
                               "type" : "CalculateAge",
@@ -8073,7 +8073,7 @@
                            }
                         }, {
                            "localId" : "1962",
-                           "locator" : "111:28-111:30",
+                           "locator" : "124:28-124:30",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Decimal",
                            "valueType" : "{urn:hl7-org:elm-types:r1}Decimal",
                            "value" : "1.0",
@@ -8084,7 +8084,7 @@
                      "name" : "code",
                      "value" : {
                         "localId" : "1968",
-                        "locator" : "111:39-111:41",
+                        "locator" : "124:39-124:41",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "a",
@@ -8098,13 +8098,13 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "1974",
-                     "locator" : "111:45-111:48",
+                     "locator" : "124:45-124:48",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
                }, {
                   "localId" : "2017",
-                  "locator" : "111:51-111:90",
+                  "locator" : "124:51-124:90",
                   "path" : "repeat",
                   "type" : "Property",
                   "resultTypeSpecifier" : {
@@ -8138,7 +8138,7 @@
                   },
                   "source" : {
                      "localId" : "1992",
-                     "locator" : "111:51-111:83",
+                     "locator" : "124:51-124:83",
                      "path" : "timingTiming",
                      "type" : "Property",
                      "resultTypeSpecifier" : {
@@ -8192,7 +8192,7 @@
                      },
                      "source" : {
                         "localId" : "1975",
-                        "locator" : "111:51-111:70",
+                        "locator" : "124:51-124:70",
                         "name" : "act-acshighriskmri",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {

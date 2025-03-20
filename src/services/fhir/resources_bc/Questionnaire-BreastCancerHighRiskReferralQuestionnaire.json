@@ -1,0 +1,91 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "BreastCancerHighRiskReferralQuestionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+    ]
+  },
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/Questionnaire/BreastCancerHighRiskReferralQuestionnaire",
+  "title": "Breast Cancer High Risk Referral Questionnaire",
+  "description": "A questionnaire to assess risk factors related to breast cancer.",
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "code": [
+        {
+          "code": "GeneticMarkerOrSyndrome",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "GeneticMarkerOrSyndrome",
+      "text": "Genetic marker or syndrome associated with breast cancer",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "chestxrt",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "chestxrt",
+      "text": "History of chest radiation ages 10-30 y",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "fhxbreastcarisk",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "fhxbreastcarisk",
+      "text": "Compelling family history of breast cancer",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "PersonalRiskFactors",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "PersonalRiskFactors",
+      "text": "Personal risk factors conferring increased risk of breast cancer",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "5yriskassessment",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system"
+        }
+      ],
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "high5yrisk",
+            "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+            "display": "High 5 year risk"
+          }
+        },
+        {
+          "valueCoding": {
+            "code": "higherthanaverage5yrisk",
+            "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+            "display": "5 year risk at least 1.67%"
+          }
+        }
+      ],
+      "linkId": "5yriskassessment",
+      "text": "5 year risk assessment",
+      "type": "choice"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "BreastCancerHighRiskReferralQuestionnaire",
+  "status": "draft"
+}

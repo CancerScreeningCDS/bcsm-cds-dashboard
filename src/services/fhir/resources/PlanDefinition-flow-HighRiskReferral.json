@@ -1,0 +1,437 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "flow-HighRiskReferral",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition"
+    ]
+  },
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/flow-HighRiskReferral",
+  "title": "High Risk Referral",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    }
+  ],
+  "author": [
+    {
+      "name": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention."
+    }
+  ],
+  "editor": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "reviewer": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "endorser": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "library": [
+    "Library/HighRiskReferral|1.0.0"
+  ],
+  "action": [
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Breast Cancer: Medication Use to Reduce Risk",
+          "citation": "US Preventive Services Task Force. Medication Use to Reduce Risk of Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(9):857–867.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-medications-for-risk-reduction"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsHighRiskReferralGenetic"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "HighRiskReferralGenetic",
+      "title": "Referral for high risk breast specialty evaluation",
+      "description": "Consider referral to breast specialist to discuss primary risk reduction interventions such as chemoprevention.\n\nWomen at greater risk, such as those with a genetic marker or syndrome associated with increased risk of breast cancer, may derive more benefit than harm from risk-reducing medications.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/HighRiskSpecialtyReferralRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Breast Cancer: Medication Use to Reduce Risk",
+          "citation": "US Preventive Services Task Force. Medication Use to Reduce Risk of Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(9):857–867.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-medications-for-risk-reduction"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsHighRiskReferralChestXRT"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "HighRiskReferralChestXRT",
+      "title": "Referral for high risk breast specialty evaluation",
+      "description": "Consider referral to breast specialist to discuss primary risk reduction interventions such as chemoprevention.\n\nWomen at greater risk, such as those with a history of chest radiotherapy, may derive more benefit than harm from risk-reducing medications.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/HighRiskSpecialtyReferralRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Breast Cancer: Medication Use to Reduce Risk",
+          "citation": "US Preventive Services Task Force. Medication Use to Reduce Risk of Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(9):857–867.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-medications-for-risk-reduction"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsHighRiskReferralAtypicalBiopsy"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "HighRiskReferralAtypicalBiopsy",
+      "title": "Referral for high risk breast specialty evaluation",
+      "description": "Consider referral to breast specialist to discuss primary risk reduction interventions such as chemoprevention.\n\nWomen at greater risk, such as those with a history of past atypical biopsy results, may derive more benefit than harm from risk-reducing medications.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/HighRiskSpecialtyReferralRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Breast Cancer: Medication Use to Reduce Risk",
+          "citation": "US Preventive Services Task Force. Medication Use to Reduce Risk of Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(9):857–867.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-medications-for-risk-reduction"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsHighRiskReferral5YRiskHigh"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "HighRiskReferral5YRiskHigh",
+      "title": "Referral for high risk breast specialty evaluation",
+      "description": "Refer to high risk breast specialist to discuss primary risk reduction interventions such as chemoprevention.\n\nWomen at greater risk, such as those with at least a 3% risk for breast cancer in the next 5 years, are likely to derive more benefit than harm from risk-reducing medications.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/HighRiskSpecialtyReferralRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Breast Cancer: Medication Use to Reduce Risk",
+          "citation": "US Preventive Services Task Force. Medication Use to Reduce Risk of Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(9):857–867.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-medications-for-risk-reduction"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsHighRiskReferral5YRiskHigherThanAverage"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "HighRiskReferralReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "HighRiskReferral5YRiskHigherThanAverage",
+      "title": "Consider referral for high risk breast specialty evaluation",
+      "description": "Consider referral to breast specialist to discuss primary risk reduction interventions such as chemoprevention.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/HighRiskSpecialtyReferralRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Breast Cancer: Medication Use to Reduce Risk",
+          "citation": "US Preventive Services Task Force. Medication Use to Reduce Risk of Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(9):857–867.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-medications-for-risk-reduction"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsConsiderLifeExpectancy"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ConsiderLifeExpectancyCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ConsiderLifeExpectancyReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "ConsiderLifeExpectancy",
+      "title": "Shared decision making for high risk specialty referral based on life expectancy",
+      "description": "Patient may not be a candidate for chemoprevention if estimated life expectancy is < 10 years.\n\nFactors that may impact this estimation should be considered prior to referral. A validated tool such as www.eprognosis.com can help guide decision making.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/CommunicateSDMConsiderLifeExpectancy|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "Breast Cancer: Medication Use to Reduce Risk",
+          "citation": "US Preventive Services Task Force. Medication Use to Reduce Risk of Breast Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(9):857–867.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/breast-cancer-medications-for-risk-reduction"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsHighRiskAssessment"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "action": [
+        {
+          "dynamicValue": [
+            {
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "HighRiskAssessmentCode"
+              },
+              "path": "code.coding[0]"
+            },
+            {
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "HighRiskAssessmentReason"
+              },
+              "path": "reasonCode[0].coding[0]"
+            }
+          ],
+          "id": "5YRiskAssessment",
+          "title": "Informal 5 year risk assessment",
+          "description": "Perform assessment based on personal risk factors conferring increased risk of breast cancer.\n\nThese may include: increasing age, younger age at menarche, older age at first live birth, nulliparity/lower parity, number of prior breast biopsies, heterogeneously and/or extremely dense breasts.",
+          "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/5YearRiskAssessmentRequest|1.0.0"
+        },
+        {
+          "documentation": [
+            {
+              "type": "documentation",
+              "label": "NCI Breast Cancer Risk Assessment Tool",
+              "display": "National Cancer Institute (NCI) Breast Cancer Risk Assessment Tool",
+              "url": "https://bcrisktool.cancer.gov/"
+            },
+            {
+              "type": "documentation",
+              "label": "BCSC Risk Calculator",
+              "display": "Breast Cancer Surveillance Consortium (BCSC) Risk Calculator",
+              "url": "https://tools.bcsc-scc.ucdavis.edu/BC5yearRisk"
+            }
+          ],
+          "dynamicValue": [
+            {
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "HighRiskAssessmentToolCode"
+              },
+              "path": "code.coding[0]"
+            },
+            {
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "HighRiskAssessmentToolReason"
+              },
+              "path": "reasonCode[0].coding[0]"
+            }
+          ],
+          "id": "5YRiskAssessmentTool",
+          "title": "5 year risk assessment instrument",
+          "description": "The NCI Breast Cancer Risk Assessment Tool and the Breast Cancer Surveillance Consortium Risk Calculator are based on models tested in US populations and are publicly available for clinicians and patients to use.",
+          "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/5YearRiskAssessmentRequest|1.0.0"
+        }
+      ],
+      "id": "HighRiskAssessment",
+      "title": "Perform 5 year risk assessment",
+      "description": "A 5 year risk assessment, either informal or formal using a validated instrument, will help determine if the patient may benefit from referral for high risk breast specialty evaluation.\n\nWomen at higher than average 5 year risk may be candidates for referral to breast specialist to discuss primary risk reduction interventions such as chemoprevention.",
+      "selectionBehavior": "any"
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-10-22",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention.",
+  "copyright": "(C) 2024 The MITRE Corporation. All Rights Reserved. Approved for Public Release: 24-2711. Distribution Unlimited. Unless otherwise noted, this work is available under an Apache 2.0 license. It was produced by the MITRE Corporation for the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention in accordance with the Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.",
+  "approvalDate": "2024-10-22",
+  "lastReviewDate": "2024-10-22",
+  "name": "flow-HighRiskReferral",
+  "description": "Women who are at increased risk for breast cancer without current or previous diagnosis of breast cancer or ductal carcinoma in situ (DCIS) can be referred to a breast specialty clinic to consider risk reduction interventions.",
+  "type": {
+    "coding": [
+      {
+        "code": "eca-rule",
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type"
+      }
+    ]
+  }
+}

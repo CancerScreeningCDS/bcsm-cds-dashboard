@@ -1,0 +1,163 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "BreastCancerDecisionToScreenQuestionnaire",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
+    ]
+  },
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/Questionnaire/BreastCancerDecisionToScreenQuestionnaire",
+  "title": "Breast Cancer Decision to Screen Questionnaire",
+  "description": "A questionnaire to assess factors related to breast cancer routine screening.",
+  "subjectType": [
+    "Patient"
+  ],
+  "item": [
+    {
+      "code": [
+        {
+          "code": "lifeexp",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "lifeexp",
+      "text": "Reduced life expectancy indicator",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "currentlylactating",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "currentlylactating",
+      "text": "Currently lactating",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "GeneticMarkerOrSyndrome",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "GeneticMarkerOrSyndrome",
+      "text": "Genetic marker or syndrome associated with breast cancer",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "geneticriskexclusion",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "GeneticMarkerOrSyndrome",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ],
+      "linkId": "geneticriskexclusion",
+      "text": "Genetic risk exclusion",
+      "type": "boolean",
+      "enableBehavior": "all"
+    },
+    {
+      "code": [
+        {
+          "code": "othergeneticrisk",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "GeneticMarkerOrSyndrome",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ],
+      "linkId": "othergeneticrisk",
+      "text": "Other genetic marker or syndrome associated with breast cancer",
+      "type": "boolean",
+      "enableBehavior": "all"
+    },
+    {
+      "code": [
+        {
+          "code": "chestxrt",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "chestxrt",
+      "text": "History of chest radiation ages 10-30 y",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "hxbreastcawithin5y",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "hxbreastca",
+          "operator": "=",
+          "answerBoolean": true
+        }
+      ],
+      "linkId": "hxbreastcawithin5y",
+      "text": "Breast cancer in remission < 5 years",
+      "type": "boolean",
+      "enableBehavior": "all"
+    },
+    {
+      "code": [
+        {
+          "code": "firstdeggenetic",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "firstdeggenetic",
+      "text": "First degree relative with genetic marker or syndrome",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "fhxbreastcarisk",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+        }
+      ],
+      "linkId": "fhxbreastcarisk",
+      "text": "Compelling family history of breast cancer",
+      "type": "boolean"
+    },
+    {
+      "code": [
+        {
+          "code": "lifetimeriskassessment",
+          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system"
+        }
+      ],
+      "answerOption": [
+        {
+          "valueCoding": {
+            "code": "highlifetimerisk",
+            "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+            "display": "High lifetime risk"
+          }
+        }
+      ],
+      "linkId": "lifetimeriskassessment",
+      "text": "Lifetime risk assessment",
+      "type": "choice"
+    }
+  ],
+  "version": "1.0.0",
+  "name": "BreastCancerDecisionToScreenQuestionnaire",
+  "status": "draft"
+}

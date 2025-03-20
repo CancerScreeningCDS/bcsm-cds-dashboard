@@ -1,0 +1,659 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "flow-HighRiskExclusions",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition"
+    ]
+  },
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/flow-HighRiskExclusions",
+  "title": "High Risk Exclusions",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    }
+  ],
+  "author": [
+    {
+      "name": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention."
+    }
+  ],
+  "editor": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "reviewer": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "endorser": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "library": [
+    "Library/HighRiskExclusions|1.0.0"
+  ],
+  "action": [
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "ACS",
+          "display": "American Cancer Society Recommendations for the Early Detection of Breast Cancer",
+          "url": "https://www.cancer.org/cancer/types/breast-cancer/screening-tests-and-early-detection/american-cancer-society-recommendations-for-the-early-detection-of-breast-cancer.html"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsACSGeneticRiskMammo"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMammoCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMammoTiming"
+          },
+          "path": "%action.timingTiming"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMammoFlag"
+          },
+          "path": "%action.extension"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMammoCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMammoReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMammoTimingEvent"
+          },
+          "path": "occurrenceDateTime"
+        }
+      ],
+      "id": "ACSGeneticRiskMammo",
+      "title": "Annual screening mammogram starting age 30",
+      "description": "An annual screening mammogram starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on known genetic markers or syndromes should get a mammogram every year, typically starting at age 30.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "ACS",
+          "display": "American Cancer Society Guidelines for Breast Screening with MRI as an Adjunct to Mammography",
+          "citation": "Oeffinger KC, Fontham ETH, Etzioni R, et al. Breast Cancer Screening for Women at Average Risk: 2015 Guideline Update From the American Cancer Society. JAMA. 2015;314(15):1599–1614.",
+          "url": "https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/canjclin.57.2.75"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsACSGeneticRiskMri"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMriCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMriTiming"
+          },
+          "path": "%action.timingTiming"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMriFlag"
+          },
+          "path": "%action.extension"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMriCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMriReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSGeneticRiskMriTimingEvent"
+          },
+          "path": "occurrenceDateTime"
+        }
+      ],
+      "id": "ACSGeneticRiskMri",
+      "title": "Annual screening MRI starting age 30",
+      "description": "An annual screening MRI starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on known genetic markers or syndromes should get a breast MRI every year, typically starting at age 30.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    },
+    {
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsSpecialtyReferralGeneticRisk"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "SpecialtyReferralGeneticRiskCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "SpecialtyReferralGeneticRiskCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "SpecialtyReferralGeneticRiskReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "SpecialtyReferralGeneticRisk",
+      "title": "Refer to specialist recommendations",
+      "description": "A number of other genetic variants are known to be associated with an increased risk of developing of breast cancer. For known personal history of these variants, refer to the consulting geneticist or to high risk breast specialist for guidance on routine screening. \n\nVariants may include ATM, BARD1, CDH1, CHEK2, NF1, PALB2, RAD51C, RAD51D, STK11.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "ACS",
+          "display": "American Cancer Society Recommendations for the Early Detection of Breast Cancer",
+          "url": "https://www.cancer.org/cancer/types/breast-cancer/screening-tests-and-early-detection/american-cancer-society-recommendations-for-the-early-detection-of-breast-cancer.html"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsACSMammoAfterRT"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterRTCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterRTTiming"
+          },
+          "path": "%action.timingTiming"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterRTFlag"
+          },
+          "path": "%action.extension"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterRTCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterRTReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterRTTimingEvent"
+          },
+          "path": "occurrenceDateTime"
+        }
+      ],
+      "id": "ACSMammoAfterRT",
+      "title": "Annual screening mammogram",
+      "description": "An annual screening mammogram starting 8 years after radiotherapy and no earlier than age 25 is recommended.\n\nRefer to patient's Oncologic treatment team or Survivorship Care Plan for patient specific guidance.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "ACS",
+          "display": "American Cancer Society Guidelines for Breast Screening with MRI as an Adjunct to Mammography",
+          "citation": "Oeffinger KC, Fontham ETH, Etzioni R, et al. Breast Cancer Screening for Women at Average Risk: 2015 Guideline Update From the American Cancer Society. JAMA. 2015;314(15):1599–1614.",
+          "url": "https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/canjclin.57.2.75"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsACSMriAfterRT"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAfterRTCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAfterRTTiming"
+          },
+          "path": "%action.timingTiming"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAfterRTFlag"
+          },
+          "path": "%action.extension"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAfterRTCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAfterRTReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAfterRTTimingEvent"
+          },
+          "path": "occurrenceDateTime"
+        }
+      ],
+      "id": "ACSMriAfterRT",
+      "title": "Annual screening MRI",
+      "description": "An annual screening MRI starting 8 years after radiotherapy and no earlier than age 25 is recommended.\n\nRefer to patient's Oncologic treatment team or Survivorship Care Plan for patient specific guidance.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "ACS",
+          "display": "American Cancer Society Recommendations for the Early Detection of Breast Cancer",
+          "url": "https://www.cancer.org/cancer/types/breast-cancer/screening-tests-and-early-detection/american-cancer-society-recommendations-for-the-early-detection-of-breast-cancer.html"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsACSMammoAfterBrca"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterBrcaCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterBrcaTiming"
+          },
+          "path": "%action.timingTiming"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterBrcaFlag"
+          },
+          "path": "%action.extension"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterBrcaCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterBrcaReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAfterBrcaTimingEvent"
+          },
+          "path": "occurrenceDateTime"
+        }
+      ],
+      "id": "ACSMammoAfterBrca",
+      "title": "Annual screening mammogram",
+      "description": "Annual screening mammogram after 5 years in remission from breast cancer is recomended.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    },
+    {
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsSpecialtyReferralBreastCaWithin5y"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "SpecialtyReferralBreastCaWithin5yCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "SpecialtyReferralBreastCaWithin5yCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "SpecialtyReferralBreastCaWithin5yReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "SpecialtyReferralBreastCaWithin5y",
+      "title": "Refer to Oncologic care plan",
+      "description": "Previous breast cancer within 5 years may require enhanced surveillance including diagnostic mammogram. \n\nRefer to patient's Oncologic treatment team or Survivorship Care Plan for patient specific guidance.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "ACS",
+          "display": "American Cancer Society Recommendations for the Early Detection of Breast Cancer",
+          "url": "https://www.cancer.org/cancer/types/breast-cancer/screening-tests-and-early-detection/american-cancer-society-recommendations-for-the-early-detection-of-breast-cancer.html"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsACSMammoAtypicalBiopsy"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAtypicalBiopsyCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAtypicalBiopsyTiming"
+          },
+          "path": "%action.timingTiming"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAtypicalBiopsyFlag"
+          },
+          "path": "%action.extension"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAtypicalBiopsyCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAtypicalBiopsyReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMammoAtypicalBiopsyTimingEvent"
+          },
+          "path": "occurrenceDateTime"
+        }
+      ],
+      "id": "ACSMammoAtypicalBiopsy",
+      "title": "Annual screening mammogram starting age 30",
+      "description": "An annual screening mammogram starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on past atypical biopsy should get a mammogram every year, typically starting at age 30.\n",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "ACS",
+          "display": "American Cancer Society Guidelines for Breast Screening with MRI as an Adjunct to Mammography",
+          "citation": "Oeffinger KC, Fontham ETH, Etzioni R, et al. Breast Cancer Screening for Women at Average Risk: 2015 Guideline Update From the American Cancer Society. JAMA. 2015;314(15):1599–1614.",
+          "url": "https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/canjclin.57.2.75"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsACSAtypicalBiopsy"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSAtypicalBiopsyCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSAtypicalBiopsyCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSAtypicalBiopsyReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "ACSAtypicalBiopsy",
+      "title": "Perform lifetime risk assessment",
+      "description": "Consider performing assessment of lifetime risk. \n\nIf estimated lifetime risk is >20%, patient may be eligible for supplemental screening with annual screening MRI.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "ACS",
+          "display": "American Cancer Society Guidelines for Breast Screening with MRI as an Adjunct to Mammography",
+          "citation": "Oeffinger KC, Fontham ETH, Etzioni R, et al. Breast Cancer Screening for Women at Average Risk: 2015 Guideline Update From the American Cancer Society. JAMA. 2015;314(15):1599–1614.",
+          "url": "https://acsjournals.onlinelibrary.wiley.com/doi/full/10.3322/canjclin.57.2.75"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ExistsACSMriAtypicalBiopsyHighRisk"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAtypicalBiopsyHighRiskCode"
+          },
+          "path": "%action.code[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAtypicalBiopsyHighRiskTiming"
+          },
+          "path": "%action.timingTiming"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAtypicalBiopsyHighRiskFlag"
+          },
+          "path": "%action.extension"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAtypicalBiopsyHighRiskCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAtypicalBiopsyHighRiskReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql-identifier",
+            "expression": "ACSMriAtypicalBiopsyHighRiskTimingEvent"
+          },
+          "path": "occurrenceDateTime"
+        }
+      ],
+      "id": "ACSMriAtypicalBiopsyHighRisk",
+      "title": "Annual screening MRI starting age 30",
+      "description": "An annual screening MRI starting at age 30 is recommended in patients with past atypical biopsy and lifetime risk > 20-25%.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-10-22",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention.",
+  "copyright": "(C) 2024 The MITRE Corporation. All Rights Reserved. Approved for Public Release: 24-2711. Distribution Unlimited. Unless otherwise noted, this work is available under an Apache 2.0 license. It was produced by the MITRE Corporation for the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention in accordance with the Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.",
+  "approvalDate": "2024-10-22",
+  "lastReviewDate": "2024-10-22",
+  "name": "flow-HighRiskExclusions",
+  "description": "Clinical characteristics that have been identified in the USPSTF breast screening recommendation statement as indicative of higher than average risk and therefore excluded from recommendation statement patient population. Provides criteria to determine age to start and age to stop, screening modality, and screening interval for these populations of patients.",
+  "type": {
+    "coding": [
+      {
+        "code": "eca-rule",
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type"
+      }
+    ]
+  }
+}

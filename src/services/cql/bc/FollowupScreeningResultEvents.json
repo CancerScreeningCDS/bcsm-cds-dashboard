@@ -11,7 +11,7 @@
          "s" : {
             "r" : "463",
             "s" : [ {
-               "value" : [ "","library FollowupScreeningResultEvents version '1.0.0'" ]
+               "value" : [ "/*  \n  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.\n\n  (C) 2024 The MITRE Corporation. All Rights Reserved. \n  Approved for Public Release: 24-2711. \n  Distribution Unlimited.\n\n  Unless otherwise noted, this work is available under an Apache 2.0 license. \n  It was produced by the MITRE Corporation for the Division of Cancer Prevention \n  and Control, Centers for Disease Control and Prevention in accordance with the \n  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.\n*/\n\n","library FollowupScreeningResultEvents version '1.0.0'" ]
             } ]
          }
       } ],
@@ -30,7 +30,7 @@
             "uri" : "urn:hl7-org:elm-types:r1"
          }, {
             "localId" : "206",
-            "locator" : "3:1-3:26",
+            "locator" : "16:1-16:26",
             "localIdentifier" : "FHIR",
             "uri" : "http://hl7.org/fhir",
             "version" : "4.0.1",
@@ -54,7 +54,7 @@
       "includes" : {
          "def" : [ {
             "localId" : "207",
-            "locator" : "4:1-4:55",
+            "locator" : "17:1-17:55",
             "localIdentifier" : "FHIRHelpers",
             "path" : "FHIRHelpers",
             "version" : "4.0.1",
@@ -75,7 +75,7 @@
             } ]
          }, {
             "localId" : "208",
-            "locator" : "6:1-6:56",
+            "locator" : "19:1-19:56",
             "localIdentifier" : "DataElements",
             "path" : "DataElements",
             "version" : "1.0.0",
@@ -96,7 +96,7 @@
             } ]
          }, {
             "localId" : "209",
-            "locator" : "7:1-7:68",
+            "locator" : "20:1-20:68",
             "localIdentifier" : "CSMCommonFunctions",
             "path" : "CSMCommonFunctions",
             "version" : "1.0.0",
@@ -117,7 +117,7 @@
             } ]
          }, {
             "localId" : "210",
-            "locator" : "8:1-8:61",
+            "locator" : "21:1-21:61",
             "localIdentifier" : "BCSMCommon",
             "path" : "BCSMCommonFunctions",
             "version" : "1.0.0",
@@ -141,7 +141,7 @@
       "codeSystems" : {
          "def" : [ {
             "localId" : "211",
-            "locator" : "10:1-10:48",
+            "locator" : "23:1-23:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "SNOMED-CT",
             "id" : "http://snomed.info/sct",
@@ -157,7 +157,7 @@
             } ]
          }, {
             "localId" : "212",
-            "locator" : "11:1-11:124",
+            "locator" : "24:1-24:124",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "BiopsyResultCS",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system",
@@ -176,7 +176,7 @@
       "codes" : {
          "def" : [ {
             "localId" : "213",
-            "locator" : "13:1-13:139",
+            "locator" : "27:1-27:139",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category0",
             "id" : "397138000",
@@ -187,7 +187,7 @@
                "s" : {
                   "r" : "213",
                   "s" : [ {
-                     "value" : [ "","code ","\"Category0\"",": ","'397138000'"," from " ]
+                     "value" : [ "// TODO: replace with valueset: \"BIRADS Assessment Category\": 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1032.402'. Will require some refactoring of FollowUpScreeningResult.cql\n","code ","\"Category0\"",": ","'397138000'"," from " ]
                   }, {
                      "r" : "214",
                      "s" : [ {
@@ -200,13 +200,13 @@
             } ],
             "codeSystem" : {
                "localId" : "214",
-               "locator" : "13:36-13:46",
+               "locator" : "27:36-27:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "215",
-            "locator" : "14:1-14:113",
+            "locator" : "28:1-28:113",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category1",
             "id" : "397140005",
@@ -230,13 +230,13 @@
             } ],
             "codeSystem" : {
                "localId" : "216",
-               "locator" : "14:36-14:46",
+               "locator" : "28:36-28:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "217",
-            "locator" : "15:1-15:119",
+            "locator" : "29:1-29:119",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category2",
             "id" : "397141009",
@@ -260,13 +260,13 @@
             } ],
             "codeSystem" : {
                "localId" : "218",
-               "locator" : "15:36-15:46",
+               "locator" : "29:36-29:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "219",
-            "locator" : "16:1-16:154",
+            "locator" : "30:1-30:154",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category3",
             "id" : "397143007",
@@ -290,13 +290,13 @@
             } ],
             "codeSystem" : {
                "localId" : "220",
-               "locator" : "16:36-16:46",
+               "locator" : "30:36-30:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "221",
-            "locator" : "17:1-17:156",
+            "locator" : "31:1-31:156",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category4",
             "id" : "397144001",
@@ -320,13 +320,13 @@
             } ],
             "codeSystem" : {
                "localId" : "222",
-               "locator" : "17:36-17:46",
+               "locator" : "31:36-31:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "223",
-            "locator" : "18:1-18:191",
+            "locator" : "32:1-32:191",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category4A",
             "id" : "6121000179106",
@@ -350,13 +350,13 @@
             } ],
             "codeSystem" : {
                "localId" : "224",
-               "locator" : "18:41-18:51",
+               "locator" : "32:41-32:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "225",
-            "locator" : "19:1-19:196",
+            "locator" : "33:1-33:196",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category4B",
             "id" : "6131000179108",
@@ -380,13 +380,13 @@
             } ],
             "codeSystem" : {
                "localId" : "226",
-               "locator" : "19:41-19:51",
+               "locator" : "33:41-33:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "227",
-            "locator" : "20:1-20:192",
+            "locator" : "34:1-34:192",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category4C",
             "id" : "6141000179100",
@@ -410,13 +410,13 @@
             } ],
             "codeSystem" : {
                "localId" : "228",
-               "locator" : "20:41-20:51",
+               "locator" : "34:41-34:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "229",
-            "locator" : "21:1-21:136",
+            "locator" : "35:1-35:136",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category5",
             "id" : "397145000",
@@ -440,13 +440,13 @@
             } ],
             "codeSystem" : {
                "localId" : "230",
-               "locator" : "21:36-21:46",
+               "locator" : "35:36-35:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "231",
-            "locator" : "22:1-22:140",
+            "locator" : "36:1-36:140",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category6",
             "id" : "6111000179101",
@@ -470,13 +470,13 @@
             } ],
             "codeSystem" : {
                "localId" : "232",
-               "locator" : "22:40-22:50",
+               "locator" : "36:40-36:50",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "233",
-            "locator" : "23:1-23:78",
+            "locator" : "38:1-38:78",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Negative",
             "id" : "Negative",
@@ -500,13 +500,13 @@
             } ],
             "codeSystem" : {
                "localId" : "234",
-               "locator" : "23:34-23:47",
+               "locator" : "38:34-38:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "235",
-            "locator" : "24:1-24:75",
+            "locator" : "39:1-39:75",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Benign",
             "id" : "Benign",
@@ -517,7 +517,7 @@
                "s" : {
                   "r" : "235",
                   "s" : [ {
-                     "value" : [ "","code ","\"Benign\"",": ","'Benign'"," from " ]
+                     "value" : [ "// '260385009' from \"SNOMED-CT\" display \"Negative (qualifier value)\"\n","code ","\"Benign\"",": ","'Benign'"," from " ]
                   }, {
                      "r" : "236",
                      "s" : [ {
@@ -530,13 +530,13 @@
             } ],
             "codeSystem" : {
                "localId" : "236",
-               "locator" : "24:30-24:43",
+               "locator" : "39:30-39:43",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "237",
-            "locator" : "25:1-25:81",
+            "locator" : "40:1-40:81",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Atypical",
             "id" : "Atypical",
@@ -547,7 +547,7 @@
                "s" : {
                   "r" : "237",
                   "s" : [ {
-                     "value" : [ "","code ","\"Atypical\"",": ","'Atypical'"," from " ]
+                     "value" : [ "// '30807003' from \"SNOMED-CT\" display 'Benign (qualifier value)'\n","code ","\"Atypical\"",": ","'Atypical'"," from " ]
                   }, {
                      "r" : "238",
                      "s" : [ {
@@ -560,13 +560,13 @@
             } ],
             "codeSystem" : {
                "localId" : "238",
-               "locator" : "25:34-25:47",
+               "locator" : "40:34-40:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "239",
-            "locator" : "26:1-26:84",
+            "locator" : "41:1-41:84",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Malignant",
             "id" : "Malignant",
@@ -577,7 +577,7 @@
                "s" : {
                   "r" : "239",
                   "s" : [ {
-                     "value" : [ "","code ","\"Malignant\"",": ","'Malignant'"," from " ]
+                     "value" : [ "// '112231000' from \"SNOMED-CT\" display 'Atypical (qualifier value)'\n","code ","\"Malignant\"",": ","'Malignant'"," from " ]
                   }, {
                      "r" : "240",
                      "s" : [ {
@@ -590,13 +590,13 @@
             } ],
             "codeSystem" : {
                "localId" : "240",
-               "locator" : "26:36-26:49",
+               "locator" : "41:36-41:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "241",
-            "locator" : "27:1-27:96",
+            "locator" : "42:1-42:96",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Indeterminate",
             "id" : "Indeterminate",
@@ -607,7 +607,7 @@
                "s" : {
                   "r" : "241",
                   "s" : [ {
-                     "value" : [ "","code ","\"Indeterminate\"",": ","'Indeterminate'"," from " ]
+                     "value" : [ "// '21594007' from \"SNOMED-CT\" display 'Malignant (qualifier value)'\n","code ","\"Indeterminate\"",": ","'Indeterminate'"," from " ]
                   }, {
                      "r" : "242",
                      "s" : [ {
@@ -620,13 +620,13 @@
             } ],
             "codeSystem" : {
                "localId" : "242",
-               "locator" : "27:44-27:57",
+               "locator" : "42:44-42:57",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "243",
-            "locator" : "28:1-28:87",
+            "locator" : "43:1-43:87",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Discordant",
             "id" : "Discordant",
@@ -637,7 +637,7 @@
                "s" : {
                   "r" : "243",
                   "s" : [ {
-                     "value" : [ "","code ","\"Discordant\"",": ","'Discordant'"," from " ]
+                     "value" : [ "// '82334004' from \"SNOMED-CT\" display ' Indeterminate (qualifier value)'\n","code ","\"Discordant\"",": ","'Discordant'"," from " ]
                   }, {
                      "r" : "244",
                      "s" : [ {
@@ -650,13 +650,13 @@
             } ],
             "codeSystem" : {
                "localId" : "244",
-               "locator" : "28:38-28:51",
+               "locator" : "43:38-43:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "245",
-            "locator" : "29:1-29:72",
+            "locator" : "44:1-44:72",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Other",
             "id" : "Other",
@@ -667,7 +667,7 @@
                "s" : {
                   "r" : "245",
                   "s" : [ {
-                     "value" : [ "","code ","\"Other\"",": ","'Other'"," from " ]
+                     "value" : [ "// closest match is '40885006' from \"SNOMED-CT\" display 'Variant (qualifier value)'\n","code ","\"Other\"",": ","'Other'"," from " ]
                   }, {
                      "r" : "246",
                      "s" : [ {
@@ -680,7 +680,7 @@
             } ],
             "codeSystem" : {
                "localId" : "246",
-               "locator" : "29:28-29:41",
+               "locator" : "44:28-44:41",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
@@ -689,14 +689,14 @@
       "contexts" : {
          "def" : [ {
             "localId" : "250",
-            "locator" : "31:1-31:15",
+            "locator" : "46:1-46:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
             "localId" : "248",
-            "locator" : "31:1-31:15",
+            "locator" : "46:1-46:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
@@ -705,7 +705,7 @@
                "signature" : [ ],
                "operand" : {
                   "localId" : "247",
-                  "locator" : "31:1-31:15",
+                  "locator" : "46:1-46:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -717,7 +717,7 @@
             }
          }, {
             "localId" : "259",
-            "locator" : "64:1-65:95",
+            "locator" : "79:1-80:95",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "MostRecentBreastImagingDate",
             "context" : "Patient",
@@ -765,7 +765,7 @@
             } ],
             "expression" : {
                "localId" : "263",
-               "locator" : "65:3-65:95",
+               "locator" : "80:3-80:95",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "name" : "DiagnosticReportDate",
                "libraryName" : "CSMCommonFunctions",
@@ -777,7 +777,7 @@
                } ],
                "operand" : [ {
                   "localId" : "262",
-                  "locator" : "65:43-65:94",
+                  "locator" : "80:43-80:94",
                   "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                   "name" : "MostRecentBreastImagingDiagnosticReport",
                   "libraryName" : "DataElements",
@@ -786,7 +786,7 @@
             }
          }, {
             "localId" : "269",
-            "locator" : "67:1-68:94",
+            "locator" : "82:1-83:94",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "MostRecentBreastBiopsyDate",
             "context" : "Patient",
@@ -834,7 +834,7 @@
             } ],
             "expression" : {
                "localId" : "273",
-               "locator" : "68:3-68:94",
+               "locator" : "83:3-83:94",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "name" : "DiagnosticReportDate",
                "libraryName" : "CSMCommonFunctions",
@@ -846,7 +846,7 @@
                } ],
                "operand" : [ {
                   "localId" : "272",
-                  "locator" : "68:43-68:93",
+                  "locator" : "83:43-83:93",
                   "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                   "name" : "MostRecentBreastBiopsyDiagnosticReport",
                   "libraryName" : "DataElements",
@@ -855,7 +855,7 @@
             }
          }, {
             "localId" : "308",
-            "locator" : "80:1-98:5",
+            "locator" : "95:1-113:5",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "BreastImagingBiradsResult",
             "context" : "Patient",
@@ -1220,17 +1220,17 @@
             } ],
             "expression" : {
                "localId" : "806",
-               "locator" : "81:3-98:5",
+               "locator" : "96:3-113:5",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "672",
-                  "locator" : "81:3-81:10",
+                  "locator" : "96:3-96:10",
                   "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                   "alias" : "D",
                   "expression" : {
                      "localId" : "673",
-                     "locator" : "81:3-81:8",
+                     "locator" : "96:3-96:8",
                      "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                      "name" : "report",
                      "type" : "OperandRef"
@@ -1238,7 +1238,7 @@
                } ],
                "let" : [ {
                   "localId" : "674",
-                  "locator" : "82:9-82:87",
+                  "locator" : "97:9-97:87",
                   "identifier" : "cC",
                   "resultTypeSpecifier" : {
                      "localId" : "691",
@@ -1251,7 +1251,7 @@
                   },
                   "expression" : {
                      "localId" : "683",
-                     "locator" : "82:13-82:87",
+                     "locator" : "97:13-97:87",
                      "name" : "CollateConclusionCodes",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -1279,13 +1279,13 @@
                      } ],
                      "operand" : [ {
                         "localId" : "676",
-                        "locator" : "82:47",
+                        "locator" : "97:47",
                         "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                         "name" : "D",
                         "type" : "AliasRef"
                      }, {
                         "localId" : "678",
-                        "locator" : "82:49-82:86",
+                        "locator" : "97:49-97:86",
                         "name" : "BreastImagingObservations",
                         "libraryName" : "DataElements",
                         "type" : "ExpressionRef",
@@ -1304,11 +1304,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "693",
-                  "locator" : "83:5-98:5",
+                  "locator" : "98:5-113:5",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "803",
-                     "locator" : "83:12-98:5",
+                     "locator" : "98:12-113:5",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "type" : "First",
                      "signature" : [ {
@@ -1322,7 +1322,7 @@
                      } ],
                      "source" : {
                         "localId" : "796",
-                        "locator" : "84:7-97:16",
+                        "locator" : "99:7-112:16",
                         "type" : "Query",
                         "resultTypeSpecifier" : {
                            "localId" : "797",
@@ -1335,7 +1335,7 @@
                         },
                         "source" : [ {
                            "localId" : "694",
-                           "locator" : "84:7-84:17",
+                           "locator" : "99:7-99:17",
                            "alias" : "C",
                            "resultTypeSpecifier" : {
                               "localId" : "708",
@@ -1348,7 +1348,7 @@
                            },
                            "expression" : {
                               "localId" : "705",
-                              "locator" : "84:7-84:15",
+                              "locator" : "99:7-99:15",
                               "type" : "Flatten",
                               "resultTypeSpecifier" : {
                                  "localId" : "706",
@@ -1413,12 +1413,12 @@
                         } ],
                         "let" : [ {
                            "localId" : "710",
-                           "locator" : "85:13-85:36",
+                           "locator" : "100:13-100:36",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                            "identifier" : "c",
                            "expression" : {
                               "localId" : "713",
-                              "locator" : "85:16-85:36",
+                              "locator" : "100:16-100:36",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                               "name" : "ToCode",
                               "libraryName" : "FHIRHelpers",
@@ -1430,7 +1430,7 @@
                               } ],
                               "operand" : [ {
                                  "localId" : "712",
-                                 "locator" : "85:35",
+                                 "locator" : "100:35",
                                  "resultTypeName" : "{http://hl7.org/fhir}Coding",
                                  "name" : "C",
                                  "type" : "AliasRef"
@@ -1440,7 +1440,7 @@
                         "relationship" : [ ],
                         "where" : {
                            "localId" : "715",
-                           "locator" : "86:9-96:28",
+                           "locator" : "101:9-111:28",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                            "type" : "Or",
                            "signature" : [ {
@@ -1454,7 +1454,7 @@
                            } ],
                            "operand" : [ {
                               "localId" : "716",
-                              "locator" : "87:11-95:28",
+                              "locator" : "102:11-110:28",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                               "type" : "Or",
                               "signature" : [ {
@@ -1468,7 +1468,7 @@
                               } ],
                               "operand" : [ {
                                  "localId" : "717",
-                                 "locator" : "87:11-94:29",
+                                 "locator" : "102:11-109:29",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                  "type" : "Or",
                                  "signature" : [ {
@@ -1482,7 +1482,7 @@
                                  } ],
                                  "operand" : [ {
                                     "localId" : "718",
-                                    "locator" : "87:11-93:29",
+                                    "locator" : "102:11-108:29",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                     "type" : "Or",
                                     "signature" : [ {
@@ -1496,7 +1496,7 @@
                                     } ],
                                     "operand" : [ {
                                        "localId" : "719",
-                                       "locator" : "87:11-92:29",
+                                       "locator" : "102:11-107:29",
                                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                        "type" : "Or",
                                        "signature" : [ {
@@ -1510,7 +1510,7 @@
                                        } ],
                                        "operand" : [ {
                                           "localId" : "720",
-                                          "locator" : "87:11-91:28",
+                                          "locator" : "102:11-106:28",
                                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                           "type" : "Or",
                                           "signature" : [ {
@@ -1524,7 +1524,7 @@
                                           } ],
                                           "operand" : [ {
                                              "localId" : "721",
-                                             "locator" : "87:11-90:28",
+                                             "locator" : "102:11-105:28",
                                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                              "type" : "Or",
                                              "signature" : [ {
@@ -1538,7 +1538,7 @@
                                              } ],
                                              "operand" : [ {
                                                 "localId" : "722",
-                                                "locator" : "87:11-89:28",
+                                                "locator" : "102:11-104:28",
                                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                                 "type" : "Or",
                                                 "signature" : [ {
@@ -1552,7 +1552,7 @@
                                                 } ],
                                                 "operand" : [ {
                                                    "localId" : "723",
-                                                   "locator" : "87:11-88:27",
+                                                   "locator" : "102:11-103:27",
                                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                                    "type" : "Or",
                                                    "signature" : [ {
@@ -1566,7 +1566,7 @@
                                                    } ],
                                                    "operand" : [ {
                                                       "localId" : "724",
-                                                      "locator" : "87:11-87:25",
+                                                      "locator" : "102:11-102:25",
                                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                                       "type" : "Equivalent",
                                                       "signature" : [ {
@@ -1580,20 +1580,20 @@
                                                       } ],
                                                       "operand" : [ {
                                                          "localId" : "725",
-                                                         "locator" : "87:11",
+                                                         "locator" : "102:11",
                                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                          "name" : "c",
                                                          "type" : "QueryLetRef"
                                                       }, {
                                                          "localId" : "726",
-                                                         "locator" : "87:15-87:25",
+                                                         "locator" : "102:15-102:25",
                                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                          "name" : "Category0",
                                                          "type" : "CodeRef"
                                                       } ]
                                                    }, {
                                                       "localId" : "729",
-                                                      "locator" : "88:14-88:27",
+                                                      "locator" : "103:14-103:27",
                                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                                       "type" : "Equivalent",
                                                       "signature" : [ {
@@ -1607,13 +1607,13 @@
                                                       } ],
                                                       "operand" : [ {
                                                          "localId" : "730",
-                                                         "locator" : "88:14",
+                                                         "locator" : "103:14",
                                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                          "name" : "c",
                                                          "type" : "QueryLetRef"
                                                       }, {
                                                          "localId" : "731",
-                                                         "locator" : "88:17-88:27",
+                                                         "locator" : "103:17-103:27",
                                                          "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                          "name" : "Category1",
                                                          "type" : "CodeRef"
@@ -1621,7 +1621,7 @@
                                                    } ]
                                                 }, {
                                                    "localId" : "736",
-                                                   "locator" : "89:14-89:28",
+                                                   "locator" : "104:14-104:28",
                                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                                    "type" : "Equivalent",
                                                    "signature" : [ {
@@ -1635,13 +1635,13 @@
                                                    } ],
                                                    "operand" : [ {
                                                       "localId" : "737",
-                                                      "locator" : "89:14",
+                                                      "locator" : "104:14",
                                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                       "name" : "c",
                                                       "type" : "QueryLetRef"
                                                    }, {
                                                       "localId" : "738",
-                                                      "locator" : "89:18-89:28",
+                                                      "locator" : "104:18-104:28",
                                                       "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                       "name" : "Category2",
                                                       "type" : "CodeRef"
@@ -1649,7 +1649,7 @@
                                                 } ]
                                              }, {
                                                 "localId" : "743",
-                                                "locator" : "90:14-90:28",
+                                                "locator" : "105:14-105:28",
                                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                                 "type" : "Equivalent",
                                                 "signature" : [ {
@@ -1663,13 +1663,13 @@
                                                 } ],
                                                 "operand" : [ {
                                                    "localId" : "744",
-                                                   "locator" : "90:14",
+                                                   "locator" : "105:14",
                                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                    "name" : "c",
                                                    "type" : "QueryLetRef"
                                                 }, {
                                                    "localId" : "745",
-                                                   "locator" : "90:18-90:28",
+                                                   "locator" : "105:18-105:28",
                                                    "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                    "name" : "Category3",
                                                    "type" : "CodeRef"
@@ -1677,7 +1677,7 @@
                                              } ]
                                           }, {
                                              "localId" : "750",
-                                             "locator" : "91:14-91:28",
+                                             "locator" : "106:14-106:28",
                                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                              "type" : "Equivalent",
                                              "signature" : [ {
@@ -1691,13 +1691,13 @@
                                              } ],
                                              "operand" : [ {
                                                 "localId" : "751",
-                                                "locator" : "91:14",
+                                                "locator" : "106:14",
                                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                 "name" : "c",
                                                 "type" : "QueryLetRef"
                                              }, {
                                                 "localId" : "752",
-                                                "locator" : "91:18-91:28",
+                                                "locator" : "106:18-106:28",
                                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                 "name" : "Category4",
                                                 "type" : "CodeRef"
@@ -1705,7 +1705,7 @@
                                           } ]
                                        }, {
                                           "localId" : "757",
-                                          "locator" : "92:14-92:29",
+                                          "locator" : "107:14-107:29",
                                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                           "type" : "Equivalent",
                                           "signature" : [ {
@@ -1719,13 +1719,13 @@
                                           } ],
                                           "operand" : [ {
                                              "localId" : "758",
-                                             "locator" : "92:14",
+                                             "locator" : "107:14",
                                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                              "name" : "c",
                                              "type" : "QueryLetRef"
                                           }, {
                                              "localId" : "759",
-                                             "locator" : "92:18-92:29",
+                                             "locator" : "107:18-107:29",
                                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                              "name" : "Category4A",
                                              "type" : "CodeRef"
@@ -1733,7 +1733,7 @@
                                        } ]
                                     }, {
                                        "localId" : "764",
-                                       "locator" : "93:14-93:29",
+                                       "locator" : "108:14-108:29",
                                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                        "type" : "Equivalent",
                                        "signature" : [ {
@@ -1747,13 +1747,13 @@
                                        } ],
                                        "operand" : [ {
                                           "localId" : "765",
-                                          "locator" : "93:14",
+                                          "locator" : "108:14",
                                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                           "name" : "c",
                                           "type" : "QueryLetRef"
                                        }, {
                                           "localId" : "766",
-                                          "locator" : "93:18-93:29",
+                                          "locator" : "108:18-108:29",
                                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                           "name" : "Category4B",
                                           "type" : "CodeRef"
@@ -1761,7 +1761,7 @@
                                     } ]
                                  }, {
                                     "localId" : "771",
-                                    "locator" : "94:14-94:29",
+                                    "locator" : "109:14-109:29",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                     "type" : "Equivalent",
                                     "signature" : [ {
@@ -1775,13 +1775,13 @@
                                     } ],
                                     "operand" : [ {
                                        "localId" : "772",
-                                       "locator" : "94:14",
+                                       "locator" : "109:14",
                                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                        "name" : "c",
                                        "type" : "QueryLetRef"
                                     }, {
                                        "localId" : "773",
-                                       "locator" : "94:18-94:29",
+                                       "locator" : "109:18-109:29",
                                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                        "name" : "Category4C",
                                        "type" : "CodeRef"
@@ -1789,7 +1789,7 @@
                                  } ]
                               }, {
                                  "localId" : "778",
-                                 "locator" : "95:14-95:28",
+                                 "locator" : "110:14-110:28",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                  "type" : "Equivalent",
                                  "signature" : [ {
@@ -1803,13 +1803,13 @@
                                  } ],
                                  "operand" : [ {
                                     "localId" : "779",
-                                    "locator" : "95:14",
+                                    "locator" : "110:14",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                     "name" : "c",
                                     "type" : "QueryLetRef"
                                  }, {
                                     "localId" : "780",
-                                    "locator" : "95:18-95:28",
+                                    "locator" : "110:18-110:28",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                     "name" : "Category5",
                                     "type" : "CodeRef"
@@ -1817,7 +1817,7 @@
                               } ]
                            }, {
                               "localId" : "785",
-                              "locator" : "96:14-96:28",
+                              "locator" : "111:14-111:28",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                               "type" : "Equivalent",
                               "signature" : [ {
@@ -1831,13 +1831,13 @@
                               } ],
                               "operand" : [ {
                                  "localId" : "786",
-                                 "locator" : "96:14",
+                                 "locator" : "111:14",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                  "name" : "c",
                                  "type" : "QueryLetRef"
                               }, {
                                  "localId" : "787",
-                                 "locator" : "96:18-96:28",
+                                 "locator" : "111:18-111:28",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                  "name" : "Category6",
                                  "type" : "CodeRef"
@@ -1846,7 +1846,7 @@
                         },
                         "return" : {
                            "localId" : "792",
-                           "locator" : "97:9-97:16",
+                           "locator" : "112:9-112:16",
                            "resultTypeSpecifier" : {
                               "localId" : "794",
                               "type" : "ListTypeSpecifier",
@@ -1858,7 +1858,7 @@
                            },
                            "expression" : {
                               "localId" : "793",
-                              "locator" : "97:16",
+                              "locator" : "112:16",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                               "name" : "c",
                               "type" : "QueryLetRef"
@@ -1873,7 +1873,7 @@
                "name" : "report",
                "operandTypeSpecifier" : {
                   "localId" : "309",
-                  "locator" : "80:50-80:65",
+                  "locator" : "95:50-95:65",
                   "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                   "name" : "{http://hl7.org/fhir}DiagnosticReport",
                   "type" : "NamedTypeSpecifier"
@@ -1881,7 +1881,7 @@
             } ]
          }, {
             "localId" : "305",
-            "locator" : "70:1-71:81",
+            "locator" : "85:1-86:81",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "MostRecentBreastImagingBiradsResult",
             "context" : "Patient",
@@ -1919,7 +1919,7 @@
             } ],
             "expression" : {
                "localId" : "311",
-               "locator" : "71:3-71:81",
+               "locator" : "86:3-86:81",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "BreastImagingBiradsResult",
                "type" : "FunctionRef",
@@ -1930,7 +1930,7 @@
                } ],
                "operand" : [ {
                   "localId" : "307",
-                  "locator" : "71:29-71:80",
+                  "locator" : "86:29-86:80",
                   "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                   "name" : "MostRecentBreastImagingDiagnosticReport",
                   "libraryName" : "DataElements",
@@ -1939,7 +1939,7 @@
             }
          }, {
             "localId" : "463",
-            "locator" : "100:1-115:5",
+            "locator" : "115:1-130:5",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "BreastBiopsyResult",
             "context" : "Patient",
@@ -2244,17 +2244,17 @@
             } ],
             "expression" : {
                "localId" : "917",
-               "locator" : "101:3-115:5",
+               "locator" : "116:3-130:5",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "807",
-                  "locator" : "101:3-101:10",
+                  "locator" : "116:3-116:10",
                   "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                   "alias" : "D",
                   "expression" : {
                      "localId" : "808",
-                     "locator" : "101:3-101:8",
+                     "locator" : "116:3-116:8",
                      "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                      "name" : "report",
                      "type" : "OperandRef"
@@ -2262,7 +2262,7 @@
                } ],
                "let" : [ {
                   "localId" : "809",
-                  "locator" : "102:9-102:80",
+                  "locator" : "117:9-117:80",
                   "identifier" : "cC",
                   "resultTypeSpecifier" : {
                      "localId" : "826",
@@ -2275,7 +2275,7 @@
                   },
                   "expression" : {
                      "localId" : "818",
-                     "locator" : "102:13-102:80",
+                     "locator" : "117:13-117:80",
                      "name" : "CollateConclusionCodes",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -2303,13 +2303,13 @@
                      } ],
                      "operand" : [ {
                         "localId" : "811",
-                        "locator" : "102:47",
+                        "locator" : "117:47",
                         "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                         "name" : "D",
                         "type" : "AliasRef"
                      }, {
                         "localId" : "813",
-                        "locator" : "102:49-102:79",
+                        "locator" : "117:49-117:79",
                         "name" : "BiopsyObservations",
                         "libraryName" : "DataElements",
                         "type" : "ExpressionRef",
@@ -2328,11 +2328,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "828",
-                  "locator" : "103:5-115:5",
+                  "locator" : "118:5-130:5",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "914",
-                     "locator" : "103:12-115:5",
+                     "locator" : "118:12-130:5",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "type" : "First",
                      "signature" : [ {
@@ -2346,7 +2346,7 @@
                      } ],
                      "source" : {
                         "localId" : "907",
-                        "locator" : "104:7-114:16",
+                        "locator" : "119:7-129:16",
                         "type" : "Query",
                         "resultTypeSpecifier" : {
                            "localId" : "908",
@@ -2359,7 +2359,7 @@
                         },
                         "source" : [ {
                            "localId" : "829",
-                           "locator" : "104:7-104:17",
+                           "locator" : "119:7-119:17",
                            "alias" : "C",
                            "resultTypeSpecifier" : {
                               "localId" : "843",
@@ -2372,7 +2372,7 @@
                            },
                            "expression" : {
                               "localId" : "840",
-                              "locator" : "104:7-104:15",
+                              "locator" : "119:7-119:15",
                               "type" : "Flatten",
                               "resultTypeSpecifier" : {
                                  "localId" : "841",
@@ -2437,12 +2437,12 @@
                         } ],
                         "let" : [ {
                            "localId" : "845",
-                           "locator" : "105:13-105:36",
+                           "locator" : "120:13-120:36",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                            "identifier" : "c",
                            "expression" : {
                               "localId" : "848",
-                              "locator" : "105:16-105:36",
+                              "locator" : "120:16-120:36",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                               "name" : "ToCode",
                               "libraryName" : "FHIRHelpers",
@@ -2454,7 +2454,7 @@
                               } ],
                               "operand" : [ {
                                  "localId" : "847",
-                                 "locator" : "105:35",
+                                 "locator" : "120:35",
                                  "resultTypeName" : "{http://hl7.org/fhir}Coding",
                                  "name" : "C",
                                  "type" : "AliasRef"
@@ -2464,7 +2464,7 @@
                         "relationship" : [ ],
                         "where" : {
                            "localId" : "850",
-                           "locator" : "106:9-113:24",
+                           "locator" : "121:9-128:24",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                            "type" : "Or",
                            "signature" : [ {
@@ -2478,7 +2478,7 @@
                            } ],
                            "operand" : [ {
                               "localId" : "851",
-                              "locator" : "107:11-112:27",
+                              "locator" : "122:11-127:27",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                               "type" : "Or",
                               "signature" : [ {
@@ -2492,7 +2492,7 @@
                               } ],
                               "operand" : [ {
                                  "localId" : "852",
-                                 "locator" : "107:11-111:25",
+                                 "locator" : "122:11-126:25",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                  "type" : "Or",
                                  "signature" : [ {
@@ -2506,7 +2506,7 @@
                                  } ],
                                  "operand" : [ {
                                     "localId" : "853",
-                                    "locator" : "107:11-110:27",
+                                    "locator" : "122:11-125:27",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                     "type" : "Or",
                                     "signature" : [ {
@@ -2520,7 +2520,7 @@
                                     } ],
                                     "operand" : [ {
                                        "localId" : "854",
-                                       "locator" : "107:11-109:29",
+                                       "locator" : "122:11-124:29",
                                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                        "type" : "Or",
                                        "signature" : [ {
@@ -2534,7 +2534,7 @@
                                        } ],
                                        "operand" : [ {
                                           "localId" : "855",
-                                          "locator" : "107:11-108:32",
+                                          "locator" : "122:11-123:32",
                                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                           "type" : "Or",
                                           "signature" : [ {
@@ -2548,7 +2548,7 @@
                                           } ],
                                           "operand" : [ {
                                              "localId" : "856",
-                                             "locator" : "107:11-107:25",
+                                             "locator" : "122:11-122:25",
                                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                              "type" : "Equivalent",
                                              "signature" : [ {
@@ -2562,20 +2562,20 @@
                                              } ],
                                              "operand" : [ {
                                                 "localId" : "857",
-                                                "locator" : "107:11",
+                                                "locator" : "122:11",
                                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                 "name" : "c",
                                                 "type" : "QueryLetRef"
                                              }, {
                                                 "localId" : "858",
-                                                "locator" : "107:15-107:25",
+                                                "locator" : "122:15-122:25",
                                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                 "name" : "Malignant",
                                                 "type" : "CodeRef"
                                              } ]
                                           }, {
                                              "localId" : "861",
-                                             "locator" : "108:14-108:32",
+                                             "locator" : "123:14-123:32",
                                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                              "type" : "Equivalent",
                                              "signature" : [ {
@@ -2589,13 +2589,13 @@
                                              } ],
                                              "operand" : [ {
                                                 "localId" : "862",
-                                                "locator" : "108:14",
+                                                "locator" : "123:14",
                                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                 "name" : "c",
                                                 "type" : "QueryLetRef"
                                              }, {
                                                 "localId" : "863",
-                                                "locator" : "108:18-108:32",
+                                                "locator" : "123:18-123:32",
                                                 "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                                 "name" : "Indeterminate",
                                                 "type" : "CodeRef"
@@ -2603,7 +2603,7 @@
                                           } ]
                                        }, {
                                           "localId" : "868",
-                                          "locator" : "109:14-109:29",
+                                          "locator" : "124:14-124:29",
                                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                           "type" : "Equivalent",
                                           "signature" : [ {
@@ -2617,13 +2617,13 @@
                                           } ],
                                           "operand" : [ {
                                              "localId" : "869",
-                                             "locator" : "109:14",
+                                             "locator" : "124:14",
                                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                              "name" : "c",
                                              "type" : "QueryLetRef"
                                           }, {
                                              "localId" : "870",
-                                             "locator" : "109:18-109:29",
+                                             "locator" : "124:18-124:29",
                                              "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                              "name" : "Discordant",
                                              "type" : "CodeRef"
@@ -2631,7 +2631,7 @@
                                        } ]
                                     }, {
                                        "localId" : "875",
-                                       "locator" : "110:14-110:27",
+                                       "locator" : "125:14-125:27",
                                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                        "type" : "Equivalent",
                                        "signature" : [ {
@@ -2645,13 +2645,13 @@
                                        } ],
                                        "operand" : [ {
                                           "localId" : "876",
-                                          "locator" : "110:14",
+                                          "locator" : "125:14",
                                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                           "name" : "c",
                                           "type" : "QueryLetRef"
                                        }, {
                                           "localId" : "877",
-                                          "locator" : "110:18-110:27",
+                                          "locator" : "125:18-125:27",
                                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                           "name" : "Atypical",
                                           "type" : "CodeRef"
@@ -2659,7 +2659,7 @@
                                     } ]
                                  }, {
                                     "localId" : "882",
-                                    "locator" : "111:14-111:25",
+                                    "locator" : "126:14-126:25",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                     "type" : "Equivalent",
                                     "signature" : [ {
@@ -2673,13 +2673,13 @@
                                     } ],
                                     "operand" : [ {
                                        "localId" : "883",
-                                       "locator" : "111:14",
+                                       "locator" : "126:14",
                                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                        "name" : "c",
                                        "type" : "QueryLetRef"
                                     }, {
                                        "localId" : "884",
-                                       "locator" : "111:18-111:25",
+                                       "locator" : "126:18-126:25",
                                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                        "name" : "Benign",
                                        "type" : "CodeRef"
@@ -2687,7 +2687,7 @@
                                  } ]
                               }, {
                                  "localId" : "889",
-                                 "locator" : "112:14-112:27",
+                                 "locator" : "127:14-127:27",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                  "type" : "Equivalent",
                                  "signature" : [ {
@@ -2701,13 +2701,13 @@
                                  } ],
                                  "operand" : [ {
                                     "localId" : "890",
-                                    "locator" : "112:14",
+                                    "locator" : "127:14",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                     "name" : "c",
                                     "type" : "QueryLetRef"
                                  }, {
                                     "localId" : "891",
-                                    "locator" : "112:18-112:27",
+                                    "locator" : "127:18-127:27",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                     "name" : "Negative",
                                     "type" : "CodeRef"
@@ -2715,7 +2715,7 @@
                               } ]
                            }, {
                               "localId" : "896",
-                              "locator" : "113:14-113:24",
+                              "locator" : "128:14-128:24",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                               "type" : "Equivalent",
                               "signature" : [ {
@@ -2729,13 +2729,13 @@
                               } ],
                               "operand" : [ {
                                  "localId" : "897",
-                                 "locator" : "113:14",
+                                 "locator" : "128:14",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                  "name" : "c",
                                  "type" : "QueryLetRef"
                               }, {
                                  "localId" : "898",
-                                 "locator" : "113:18-113:24",
+                                 "locator" : "128:18-128:24",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                                  "name" : "Other",
                                  "type" : "CodeRef"
@@ -2744,7 +2744,7 @@
                         },
                         "return" : {
                            "localId" : "903",
-                           "locator" : "114:9-114:16",
+                           "locator" : "129:9-129:16",
                            "resultTypeSpecifier" : {
                               "localId" : "905",
                               "type" : "ListTypeSpecifier",
@@ -2756,7 +2756,7 @@
                            },
                            "expression" : {
                               "localId" : "904",
-                              "locator" : "114:16",
+                              "locator" : "129:16",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                               "name" : "c",
                               "type" : "QueryLetRef"
@@ -2771,7 +2771,7 @@
                "name" : "report",
                "operandTypeSpecifier" : {
                   "localId" : "464",
-                  "locator" : "100:43-100:58",
+                  "locator" : "115:43-115:58",
                   "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                   "name" : "{http://hl7.org/fhir}DiagnosticReport",
                   "type" : "NamedTypeSpecifier"
@@ -2779,7 +2779,7 @@
             } ]
          }, {
             "localId" : "460",
-            "locator" : "73:1-74:73",
+            "locator" : "88:1-89:73",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "MostRecentBreastBiopsyResult",
             "context" : "Patient",
@@ -2817,7 +2817,7 @@
             } ],
             "expression" : {
                "localId" : "466",
-               "locator" : "74:3-74:73",
+               "locator" : "89:3-89:73",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "BreastBiopsyResult",
                "type" : "FunctionRef",
@@ -2828,7 +2828,7 @@
                } ],
                "operand" : [ {
                   "localId" : "462",
-                  "locator" : "74:22-74:72",
+                  "locator" : "89:22-89:72",
                   "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                   "name" : "MostRecentBreastBiopsyDiagnosticReport",
                   "libraryName" : "DataElements",
@@ -2837,7 +2837,7 @@
             }
          }, {
             "localId" : "254",
-            "locator" : "46:1-62:5",
+            "locator" : "61:1-77:5",
             "name" : "LatestTest",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3061,7 +3061,7 @@
             },
             "expression" : {
                "localId" : "255",
-               "locator" : "47:3-62:5",
+               "locator" : "62:3-77:5",
                "type" : "Case",
                "resultTypeSpecifier" : {
                   "localId" : "595",
@@ -3094,10 +3094,10 @@
                },
                "caseItem" : [ {
                   "localId" : "256",
-                  "locator" : "48:5-49:15",
+                  "locator" : "63:5-64:15",
                   "when" : {
                      "localId" : "257",
-                     "locator" : "48:10-48:83",
+                     "locator" : "63:10-63:83",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "And",
                      "signature" : [ {
@@ -3111,7 +3111,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "266",
-                        "locator" : "48:10-48:44",
+                        "locator" : "63:10-63:44",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "IsNull",
                         "signature" : [ {
@@ -3121,14 +3121,14 @@
                         } ],
                         "operand" : {
                            "localId" : "265",
-                           "locator" : "48:10-48:36",
+                           "locator" : "63:10-63:36",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                            "name" : "MostRecentBreastImagingDate",
                            "type" : "ExpressionRef"
                         }
                      }, {
                         "localId" : "276",
-                        "locator" : "48:50-48:83",
+                        "locator" : "63:50-63:83",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "IsNull",
                         "signature" : [ {
@@ -3138,7 +3138,7 @@
                         } ],
                         "operand" : {
                            "localId" : "275",
-                           "locator" : "48:50-48:75",
+                           "locator" : "63:50-63:75",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                            "name" : "MostRecentBreastBiopsyDate",
                            "type" : "ExpressionRef"
@@ -3151,7 +3151,7 @@
                      "signature" : [ ],
                      "operand" : {
                         "localId" : "280",
-                        "locator" : "49:12-49:15",
+                        "locator" : "64:12-64:15",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                         "type" : "Null"
                      },
@@ -3187,10 +3187,10 @@
                   }
                }, {
                   "localId" : "281",
-                  "locator" : "50:5-56:7",
+                  "locator" : "65:5-71:7",
                   "when" : {
                      "localId" : "282",
-                     "locator" : "50:10-51:117",
+                     "locator" : "65:10-66:117",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Or",
                      "signature" : [ {
@@ -3204,7 +3204,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "284",
-                        "locator" : "50:10-50:43",
+                        "locator" : "65:10-65:43",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "IsNull",
                         "signature" : [ {
@@ -3214,14 +3214,14 @@
                         } ],
                         "operand" : {
                            "localId" : "283",
-                           "locator" : "50:10-50:35",
+                           "locator" : "65:10-65:35",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                            "name" : "MostRecentBreastBiopsyDate",
                            "type" : "ExpressionRef"
                         }
                      }, {
                         "localId" : "286",
-                        "locator" : "51:12-51:117",
+                        "locator" : "66:12-66:117",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "And",
                         "signature" : [ {
@@ -3235,7 +3235,7 @@
                         } ],
                         "operand" : [ {
                            "localId" : "290",
-                           "locator" : "51:13-51:51",
+                           "locator" : "66:13-66:51",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                            "type" : "Not",
                            "signature" : [ {
@@ -3245,7 +3245,7 @@
                            } ],
                            "operand" : {
                               "localId" : "288",
-                              "locator" : "51:13-51:51",
+                              "locator" : "66:13-66:51",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                               "type" : "IsNull",
                               "signature" : [ {
@@ -3255,7 +3255,7 @@
                               } ],
                               "operand" : {
                                  "localId" : "287",
-                                 "locator" : "51:13-51:39",
+                                 "locator" : "66:13-66:39",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                                  "name" : "MostRecentBreastImagingDate",
                                  "type" : "ExpressionRef"
@@ -3263,7 +3263,7 @@
                            }
                         }, {
                            "localId" : "294",
-                           "locator" : "51:57-51:116",
+                           "locator" : "66:57-66:116",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                            "type" : "After",
                            "signature" : [ {
@@ -3277,13 +3277,13 @@
                            } ],
                            "operand" : [ {
                               "localId" : "292",
-                              "locator" : "51:57-51:83",
+                              "locator" : "66:57-66:83",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                               "name" : "MostRecentBreastImagingDate",
                               "type" : "ExpressionRef"
                            }, {
                               "localId" : "293",
-                              "locator" : "51:91-51:116",
+                              "locator" : "66:91-66:116",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                               "name" : "MostRecentBreastBiopsyDate",
                               "type" : "ExpressionRef"
@@ -3293,7 +3293,7 @@
                   },
                   "then" : {
                      "localId" : "301",
-                     "locator" : "52:12-56:7",
+                     "locator" : "67:12-71:7",
                      "type" : "Tuple",
                      "resultTypeSpecifier" : {
                         "localId" : "449",
@@ -3328,7 +3328,7 @@
                         "name" : "type",
                         "value" : {
                            "localId" : "302",
-                           "locator" : "53:15-53:23",
+                           "locator" : "68:15-68:23",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "valueType" : "{urn:hl7-org:elm-types:r1}String",
                            "value" : "imaging",
@@ -3338,7 +3338,7 @@
                         "name" : "date",
                         "value" : {
                            "localId" : "303",
-                           "locator" : "54:15-54:41",
+                           "locator" : "69:15-69:41",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                            "name" : "MostRecentBreastImagingDate",
                            "type" : "ExpressionRef"
@@ -3347,7 +3347,7 @@
                         "name" : "result",
                         "value" : {
                            "localId" : "448",
-                           "locator" : "55:17-55:51",
+                           "locator" : "70:17-70:51",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                            "name" : "MostRecentBreastImagingBiradsResult",
                            "type" : "ExpressionRef"
@@ -3357,7 +3357,7 @@
                } ],
                "else" : {
                   "localId" : "456",
-                  "locator" : "57:10-61:5",
+                  "locator" : "72:10-76:5",
                   "type" : "Tuple",
                   "resultTypeSpecifier" : {
                      "localId" : "580",
@@ -3392,7 +3392,7 @@
                      "name" : "type",
                      "value" : {
                         "localId" : "457",
-                        "locator" : "58:13-58:20",
+                        "locator" : "73:13-73:20",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "biopsy",
@@ -3402,7 +3402,7 @@
                      "name" : "date",
                      "value" : {
                         "localId" : "458",
-                        "locator" : "59:13-59:38",
+                        "locator" : "74:13-74:38",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "name" : "MostRecentBreastBiopsyDate",
                         "type" : "ExpressionRef"
@@ -3411,7 +3411,7 @@
                      "name" : "result",
                      "value" : {
                         "localId" : "579",
-                        "locator" : "60:15-60:42",
+                        "locator" : "75:15-75:42",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "name" : "MostRecentBreastBiopsyResult",
                         "type" : "ExpressionRef"
@@ -3421,7 +3421,7 @@
             }
          }, {
             "localId" : "252",
-            "locator" : "33:1-34:12",
+            "locator" : "48:1-49:12",
             "name" : "eve-latesttest",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3470,7 +3470,7 @@
             },
             "expression" : {
                "localId" : "609",
-               "locator" : "34:3-34:12",
+               "locator" : "49:3-49:12",
                "name" : "LatestTest",
                "type" : "ExpressionRef",
                "resultTypeSpecifier" : {
@@ -3505,7 +3505,7 @@
             }
          }, {
             "localId" : "625",
-            "locator" : "36:1-38:36",
+            "locator" : "51:1-53:36",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "eve-actionablebirads",
             "context" : "Patient",
@@ -3576,7 +3576,7 @@
             } ],
             "expression" : {
                "localId" : "626",
-               "locator" : "37:3-38:36",
+               "locator" : "52:3-53:36",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "And",
                "signature" : [ {
@@ -3590,7 +3590,7 @@
                } ],
                "operand" : [ {
                   "localId" : "640",
-                  "locator" : "37:3-37:34",
+                  "locator" : "52:3-52:34",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Not",
                   "signature" : [ {
@@ -3600,7 +3600,7 @@
                   } ],
                   "operand" : {
                      "localId" : "627",
-                     "locator" : "37:3-37:34",
+                     "locator" : "52:3-52:34",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equivalent",
                      "signature" : [ {
@@ -3614,13 +3614,13 @@
                      } ],
                      "operand" : [ {
                         "localId" : "636",
-                        "locator" : "37:3-37:19",
+                        "locator" : "52:3-52:19",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "result",
                         "type" : "Property",
                         "source" : {
                            "localId" : "628",
-                           "locator" : "37:3-37:12",
+                           "locator" : "52:3-52:12",
                            "name" : "LatestTest",
                            "type" : "ExpressionRef",
                            "resultTypeSpecifier" : {
@@ -3655,7 +3655,7 @@
                         }
                      }, {
                         "localId" : "637",
-                        "locator" : "37:24-37:34",
+                        "locator" : "52:24-52:34",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "name" : "Category1",
                         "type" : "CodeRef"
@@ -3663,7 +3663,7 @@
                   }
                }, {
                   "localId" : "655",
-                  "locator" : "38:5-38:36",
+                  "locator" : "53:5-53:36",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Not",
                   "signature" : [ {
@@ -3673,7 +3673,7 @@
                   } ],
                   "operand" : {
                      "localId" : "642",
-                     "locator" : "38:5-38:36",
+                     "locator" : "53:5-53:36",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equivalent",
                      "signature" : [ {
@@ -3687,13 +3687,13 @@
                      } ],
                      "operand" : [ {
                         "localId" : "651",
-                        "locator" : "38:5-38:21",
+                        "locator" : "53:5-53:21",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "result",
                         "type" : "Property",
                         "source" : {
                            "localId" : "643",
-                           "locator" : "38:5-38:14",
+                           "locator" : "53:5-53:14",
                            "name" : "LatestTest",
                            "type" : "ExpressionRef",
                            "resultTypeSpecifier" : {
@@ -3728,7 +3728,7 @@
                         }
                      }, {
                         "localId" : "652",
-                        "locator" : "38:26-38:36",
+                        "locator" : "53:26-53:36",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "name" : "Category2",
                         "type" : "CodeRef"
@@ -3738,7 +3738,7 @@
             }
          }, {
             "localId" : "660",
-            "locator" : "40:1-41:37",
+            "locator" : "55:1-56:37",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "eve-biradsscore",
             "context" : "Patient",
@@ -3759,14 +3759,14 @@
             } ],
             "expression" : {
                "localId" : "661",
-               "locator" : "41:3-41:37",
+               "locator" : "56:3-56:37",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "MostRecentBreastImagingBiradsResult",
                "type" : "ExpressionRef"
             }
          }, {
             "localId" : "663",
-            "locator" : "43:1-44:30",
+            "locator" : "58:1-59:30",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "eve-biopsyresult",
             "context" : "Patient",
@@ -3787,7 +3787,7 @@
             } ],
             "expression" : {
                "localId" : "664",
-               "locator" : "44:3-44:30",
+               "locator" : "59:3-59:30",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "MostRecentBreastBiopsyResult",
                "type" : "ExpressionRef"

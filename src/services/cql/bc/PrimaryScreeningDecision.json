@@ -11,7 +11,7 @@
          "s" : {
             "r" : "2772",
             "s" : [ {
-               "value" : [ "","library PrimaryScreeningDecision version '1.0.0'" ]
+               "value" : [ "/*  \n  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.\n\n  (C) 2024 The MITRE Corporation. All Rights Reserved. \n  Approved for Public Release: 24-2711. \n  Distribution Unlimited.\n\n  Unless otherwise noted, this work is available under an Apache 2.0 license. \n  It was produced by the MITRE Corporation for the Division of Cancer Prevention \n  and Control, Centers for Disease Control and Prevention in accordance with the \n  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.\n*/\n\n","library PrimaryScreeningDecision version '1.0.0'" ]
             } ]
          }
       } ],
@@ -30,7 +30,7 @@
             "uri" : "urn:hl7-org:elm-types:r1"
          }, {
             "localId" : "206",
-            "locator" : "3:1-3:26",
+            "locator" : "16:1-16:26",
             "localIdentifier" : "FHIR",
             "uri" : "http://hl7.org/fhir",
             "version" : "4.0.1",
@@ -54,7 +54,7 @@
       "includes" : {
          "def" : [ {
             "localId" : "207",
-            "locator" : "5:1-5:66",
+            "locator" : "18:1-18:66",
             "localIdentifier" : "ScreeningEligible",
             "path" : "ScreeningEligible",
             "version" : "1.0.0",
@@ -75,7 +75,7 @@
             } ]
          }, {
             "localId" : "208",
-            "locator" : "6:1-6:64",
+            "locator" : "19:1-19:64",
             "localIdentifier" : "DecisionToScreen",
             "path" : "DecisionToScreen",
             "version" : "1.0.0",
@@ -99,14 +99,14 @@
       "contexts" : {
          "def" : [ {
             "localId" : "212",
-            "locator" : "8:1-8:15",
+            "locator" : "21:1-21:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
             "localId" : "210",
-            "locator" : "8:1-8:15",
+            "locator" : "21:1-21:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
@@ -115,7 +115,7 @@
                "signature" : [ ],
                "operand" : {
                   "localId" : "209",
-                  "locator" : "8:1-8:15",
+                  "locator" : "21:1-21:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -127,7 +127,7 @@
             }
          }, {
             "localId" : "217",
-            "locator" : "19:1-20:44",
+            "locator" : "32:1-33:44",
             "name" : "flow-ScreeningEligible",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -198,7 +198,7 @@
             },
             "expression" : {
                "localId" : "219",
-               "locator" : "20:3-20:44",
+               "locator" : "33:3-33:44",
                "name" : "flow-ScreeningEligible",
                "libraryName" : "ScreeningEligible",
                "type" : "ExpressionRef",
@@ -246,7 +246,7 @@
             }
          }, {
             "localId" : "265",
-            "locator" : "33:1-34:41",
+            "locator" : "46:1-47:41",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsScreeningEligible",
             "context" : "Patient",
@@ -277,7 +277,7 @@
             } ],
             "expression" : {
                "localId" : "267",
-               "locator" : "34:3-34:41",
+               "locator" : "47:3-47:41",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "IsScreeningEligible",
                "libraryName" : "ScreeningEligible",
@@ -285,7 +285,7 @@
             }
          }, {
             "localId" : "262",
-            "locator" : "22:1-24:13",
+            "locator" : "35:1-37:13",
             "name" : "flow-DecisionToScreen",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -512,7 +512,7 @@
             },
             "expression" : {
                "localId" : "263",
-               "locator" : "23:3-24:13",
+               "locator" : "36:3-37:13",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "408",
@@ -698,14 +698,14 @@
                },
                "condition" : {
                   "localId" : "268",
-                  "locator" : "23:6-23:24",
+                  "locator" : "36:6-36:24",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "name" : "IsScreeningEligible",
                   "type" : "ExpressionRef"
                },
                "then" : {
                   "localId" : "270",
-                  "locator" : "23:31-23:70",
+                  "locator" : "36:31-36:70",
                   "name" : "flow-DecisionToScreen",
                   "libraryName" : "DecisionToScreen",
                   "type" : "ExpressionRef",
@@ -898,7 +898,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "361",
-                     "locator" : "24:10-24:13",
+                     "locator" : "37:10-37:13",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
@@ -1088,7 +1088,7 @@
             }
          }, {
             "localId" : "214",
-            "locator" : "14:1-17:3",
+            "locator" : "27:1-30:3",
             "name" : "PrimaryScreeningDecision",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1181,7 +1181,7 @@
             },
             "expression" : {
                "localId" : "635",
-               "locator" : "15:3-17:3",
+               "locator" : "28:3-30:3",
                "type" : "Flatten",
                "resultTypeSpecifier" : {
                   "localId" : "647",
@@ -1271,7 +1271,7 @@
                } ],
                "operand" : {
                   "localId" : "573",
-                  "locator" : "15:11-16:21",
+                  "locator" : "28:11-29:21",
                   "type" : "Except",
                   "resultTypeSpecifier" : {
                      "localId" : "611",
@@ -1409,7 +1409,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "215",
-                     "locator" : "15:11-15:63",
+                     "locator" : "28:11-28:63",
                      "type" : "List",
                      "resultTypeSpecifier" : {
                         "localId" : "558",
@@ -1458,7 +1458,7 @@
                      },
                      "element" : [ {
                         "localId" : "250",
-                        "locator" : "15:13-15:36",
+                        "locator" : "28:13-28:36",
                         "name" : "flow-ScreeningEligible",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -1510,7 +1510,7 @@
                            "alias" : "X",
                            "expression" : {
                               "localId" : "498",
-                              "locator" : "15:39-15:61",
+                              "locator" : "28:39-28:61",
                               "name" : "flow-DecisionToScreen",
                               "type" : "ExpressionRef",
                               "resultTypeSpecifier" : {
@@ -1759,7 +1759,7 @@
                         "alias" : "X",
                         "expression" : {
                            "localId" : "569",
-                           "locator" : "16:14-16:21",
+                           "locator" : "29:14-29:21",
                            "type" : "List",
                            "resultTypeSpecifier" : {
                               "localId" : "571",
@@ -1772,7 +1772,7 @@
                            },
                            "element" : [ {
                               "localId" : "570",
-                              "locator" : "16:16-16:19",
+                              "locator" : "29:16-29:19",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                               "type" : "Null"
                            } ]
@@ -1840,7 +1840,7 @@
             }
          }, {
             "localId" : "723",
-            "locator" : "30:1-31:49",
+            "locator" : "43:1-44:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "CheckIsIncludedAndNotExcluded",
             "context" : "Patient",
@@ -1871,7 +1871,7 @@
             } ],
             "expression" : {
                "localId" : "725",
-               "locator" : "31:3-31:49",
+               "locator" : "44:3-44:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "CheckIsIncludedAndNotExcluded",
                "libraryName" : "ScreeningEligible",
@@ -1879,7 +1879,7 @@
             }
          }, {
             "localId" : "727",
-            "locator" : "36:1-37:42",
+            "locator" : "49:1-50:42",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "IsNotScreeningEligible",
             "context" : "Patient",
@@ -1910,7 +1910,7 @@
             } ],
             "expression" : {
                "localId" : "729",
-               "locator" : "37:3-37:42",
+               "locator" : "50:3-50:42",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "IsNotScreeningEligible",
                "libraryName" : "ScreeningEligible",
@@ -1918,7 +1918,7 @@
             }
          }, {
             "localId" : "731",
-            "locator" : "39:1-40:61",
+            "locator" : "52:1-53:61",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsNotEligibleNotAssignedFemaleAtBirth",
             "context" : "Patient",
@@ -1949,7 +1949,7 @@
             } ],
             "expression" : {
                "localId" : "733",
-               "locator" : "40:3-40:61",
+               "locator" : "53:3-53:61",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsNotEligibleNotAssignedFemaleAtBirth",
                "libraryName" : "ScreeningEligible",
@@ -1957,7 +1957,7 @@
             }
          }, {
             "localId" : "735",
-            "locator" : "42:1-43:56",
+            "locator" : "55:1-56:56",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsNotEligibleCurrentBreastCancer",
             "context" : "Patient",
@@ -1988,7 +1988,7 @@
             } ],
             "expression" : {
                "localId" : "737",
-               "locator" : "43:3-43:56",
+               "locator" : "56:3-56:56",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsNotEligibleCurrentBreastCancer",
                "libraryName" : "ScreeningEligible",
@@ -1996,7 +1996,7 @@
             }
          }, {
             "localId" : "739",
-            "locator" : "45:1-46:56",
+            "locator" : "58:1-59:56",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsNotEligibleBilateralMastectomy",
             "context" : "Patient",
@@ -2027,7 +2027,7 @@
             } ],
             "expression" : {
                "localId" : "741",
-               "locator" : "46:3-46:56",
+               "locator" : "59:3-59:56",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsNotEligibleBilateralMastectomy",
                "libraryName" : "ScreeningEligible",
@@ -2035,7 +2035,7 @@
             }
          }, {
             "localId" : "743",
-            "locator" : "48:1-49:61",
+            "locator" : "61:1-62:61",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsNotEligibleBreastSymptomsOrFindings",
             "context" : "Patient",
@@ -2066,7 +2066,7 @@
             } ],
             "expression" : {
                "localId" : "745",
-               "locator" : "49:3-49:61",
+               "locator" : "62:3-62:61",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsNotEligibleBreastSymptomsOrFindings",
                "libraryName" : "ScreeningEligible",
@@ -2074,7 +2074,7 @@
             }
          }, {
             "localId" : "747",
-            "locator" : "51:1-52:41",
+            "locator" : "64:1-65:41",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ScreeningEligibleCode",
             "context" : "Patient",
@@ -2105,7 +2105,7 @@
             } ],
             "expression" : {
                "localId" : "749",
-               "locator" : "52:3-52:41",
+               "locator" : "65:3-65:41",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ScreeningEligibleCode",
                "libraryName" : "ScreeningEligible",
@@ -2113,7 +2113,7 @@
             }
          }, {
             "localId" : "751",
-            "locator" : "54:1-55:43",
+            "locator" : "67:1-68:43",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ScreeningEligibleReason",
             "context" : "Patient",
@@ -2144,7 +2144,7 @@
             } ],
             "expression" : {
                "localId" : "753",
-               "locator" : "55:3-55:43",
+               "locator" : "68:3-68:43",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ScreeningEligibleReason",
                "libraryName" : "ScreeningEligible",
@@ -2152,7 +2152,7 @@
             }
          }, {
             "localId" : "755",
-            "locator" : "61:1-62:49",
+            "locator" : "74:1-75:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsMammogramRecommendations",
             "context" : "Patient",
@@ -2183,7 +2183,7 @@
             } ],
             "expression" : {
                "localId" : "757",
-               "locator" : "62:3-62:49",
+               "locator" : "75:3-75:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsMammogramRecommendations",
                "libraryName" : "DecisionToScreen",
@@ -2191,7 +2191,7 @@
             }
          }, {
             "localId" : "759",
-            "locator" : "64:1-65:43",
+            "locator" : "77:1-78:43",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsMriRecommendations",
             "context" : "Patient",
@@ -2222,7 +2222,7 @@
             } ],
             "expression" : {
                "localId" : "761",
-               "locator" : "65:3-65:43",
+               "locator" : "78:3-78:43",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsMriRecommendations",
                "libraryName" : "DecisionToScreen",
@@ -2230,7 +2230,7 @@
             }
          }, {
             "localId" : "763",
-            "locator" : "67:1-68:48",
+            "locator" : "80:1-81:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsSDMContinueScreeningAge",
             "context" : "Patient",
@@ -2261,7 +2261,7 @@
             } ],
             "expression" : {
                "localId" : "765",
-               "locator" : "68:3-68:48",
+               "locator" : "81:3-81:48",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsSDMContinueScreeningAge",
                "libraryName" : "DecisionToScreen",
@@ -2269,7 +2269,7 @@
             }
          }, {
             "localId" : "767",
-            "locator" : "70:1-71:46",
+            "locator" : "83:1-84:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SDMContinueScreeningAgeCode",
             "context" : "Patient",
@@ -2300,7 +2300,7 @@
             } ],
             "expression" : {
                "localId" : "769",
-               "locator" : "71:3-71:46",
+               "locator" : "84:3-84:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SDMContinueScreeningAgeCode",
                "libraryName" : "DecisionToScreen",
@@ -2308,7 +2308,7 @@
             }
          }, {
             "localId" : "771",
-            "locator" : "73:1-74:48",
+            "locator" : "86:1-87:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SDMContinueScreeningAgeReason",
             "context" : "Patient",
@@ -2339,7 +2339,7 @@
             } ],
             "expression" : {
                "localId" : "773",
-               "locator" : "74:3-74:48",
+               "locator" : "87:3-87:48",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SDMContinueScreeningAgeReason",
                "libraryName" : "DecisionToScreen",
@@ -2347,7 +2347,7 @@
             }
          }, {
             "localId" : "775",
-            "locator" : "76:1-77:52",
+            "locator" : "89:1-90:52",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsSDMContinueScreeningLifeExp",
             "context" : "Patient",
@@ -2378,7 +2378,7 @@
             } ],
             "expression" : {
                "localId" : "777",
-               "locator" : "77:3-77:52",
+               "locator" : "90:3-90:52",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsSDMContinueScreeningLifeExp",
                "libraryName" : "DecisionToScreen",
@@ -2386,7 +2386,7 @@
             }
          }, {
             "localId" : "779",
-            "locator" : "79:1-80:50",
+            "locator" : "92:1-93:50",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SDMContinueScreeningLifeExpCode",
             "context" : "Patient",
@@ -2417,7 +2417,7 @@
             } ],
             "expression" : {
                "localId" : "781",
-               "locator" : "80:3-80:50",
+               "locator" : "93:3-93:50",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SDMContinueScreeningLifeExpCode",
                "libraryName" : "DecisionToScreen",
@@ -2425,7 +2425,7 @@
             }
          }, {
             "localId" : "783",
-            "locator" : "82:1-83:52",
+            "locator" : "95:1-96:52",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SDMContinueScreeningLifeExpReason",
             "context" : "Patient",
@@ -2456,7 +2456,7 @@
             } ],
             "expression" : {
                "localId" : "785",
-               "locator" : "83:3-83:52",
+               "locator" : "96:3-96:52",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SDMContinueScreeningLifeExpReason",
                "libraryName" : "DecisionToScreen",
@@ -2464,7 +2464,7 @@
             }
          }, {
             "localId" : "787",
-            "locator" : "85:1-86:51",
+            "locator" : "98:1-99:51",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsSDMDelayScreeningLactating",
             "context" : "Patient",
@@ -2495,7 +2495,7 @@
             } ],
             "expression" : {
                "localId" : "789",
-               "locator" : "86:3-86:51",
+               "locator" : "99:3-99:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsSDMDelayScreeningLactating",
                "libraryName" : "DecisionToScreen",
@@ -2503,7 +2503,7 @@
             }
          }, {
             "localId" : "791",
-            "locator" : "88:1-89:49",
+            "locator" : "101:1-102:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SDMDelayScreeningLactatingCode",
             "context" : "Patient",
@@ -2534,7 +2534,7 @@
             } ],
             "expression" : {
                "localId" : "793",
-               "locator" : "89:3-89:49",
+               "locator" : "102:3-102:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SDMDelayScreeningLactatingCode",
                "libraryName" : "DecisionToScreen",
@@ -2542,7 +2542,7 @@
             }
          }, {
             "localId" : "795",
-            "locator" : "91:1-92:51",
+            "locator" : "104:1-105:51",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SDMDelayScreeningLactatingReason",
             "context" : "Patient",
@@ -2573,7 +2573,7 @@
             } ],
             "expression" : {
                "localId" : "797",
-               "locator" : "92:3-92:51",
+               "locator" : "105:3-105:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SDMDelayScreeningLactatingReason",
                "libraryName" : "DecisionToScreen",
@@ -2581,7 +2581,7 @@
             }
          }, {
             "localId" : "799",
-            "locator" : "94:1-95:59",
+            "locator" : "107:1-108:59",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsHighRiskExclusionsRecommendations",
             "context" : "Patient",
@@ -2617,7 +2617,7 @@
             } ],
             "expression" : {
                "localId" : "800",
-               "locator" : "95:3-95:59",
+               "locator" : "108:3-108:59",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Exists",
                "signature" : [ {
@@ -2763,7 +2763,7 @@
                } ],
                "operand" : {
                   "localId" : "802",
-                  "locator" : "95:10-95:59",
+                  "locator" : "108:10-108:59",
                   "name" : "HighRiskExclusionsRecommendations",
                   "libraryName" : "DecisionToScreen",
                   "type" : "ExpressionRef",
@@ -2912,7 +2912,7 @@
             }
          }, {
             "localId" : "909",
-            "locator" : "97:1-98:59",
+            "locator" : "110:1-111:59",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsSpecialPopulationsRecommendations",
             "context" : "Patient",
@@ -2948,7 +2948,7 @@
             } ],
             "expression" : {
                "localId" : "910",
-               "locator" : "98:3-98:59",
+               "locator" : "111:3-111:59",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Exists",
                "signature" : [ {
@@ -3135,7 +3135,7 @@
                } ],
                "operand" : {
                   "localId" : "912",
-                  "locator" : "98:10-98:59",
+                  "locator" : "111:10-111:59",
                   "name" : "SpecialPopulationsRecommendations",
                   "libraryName" : "DecisionToScreen",
                   "type" : "ExpressionRef",
@@ -3325,7 +3325,7 @@
             }
          }, {
             "localId" : "1049",
-            "locator" : "100:1-101:52",
+            "locator" : "113:1-114:52",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsAverageRiskRecommendations",
             "context" : "Patient",
@@ -3361,7 +3361,7 @@
             } ],
             "expression" : {
                "localId" : "1050",
-               "locator" : "101:3-101:52",
+               "locator" : "114:3-114:52",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Exists",
                "signature" : [ {
@@ -3507,7 +3507,7 @@
                } ],
                "operand" : {
                   "localId" : "1052",
-                  "locator" : "101:10-101:52",
+                  "locator" : "114:10-114:52",
                   "name" : "AverageRiskRecommendations",
                   "libraryName" : "DecisionToScreen",
                   "type" : "ExpressionRef",
@@ -3656,7 +3656,7 @@
             }
          }, {
             "localId" : "1159",
-            "locator" : "107:1-108:55",
+            "locator" : "120:1-121:55",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsSpecialtyReferralGeneticRisk",
             "context" : "Patient",
@@ -3687,7 +3687,7 @@
             } ],
             "expression" : {
                "localId" : "1161",
-               "locator" : "108:3-108:55",
+               "locator" : "121:3-121:55",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsSpecialtyReferralGeneticRisk",
                "libraryName" : "DecisionToScreen",
@@ -3695,7 +3695,7 @@
             }
          }, {
             "localId" : "1163",
-            "locator" : "110:1-111:53",
+            "locator" : "123:1-124:53",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SpecialtyReferralGeneticRiskCode",
             "context" : "Patient",
@@ -3726,7 +3726,7 @@
             } ],
             "expression" : {
                "localId" : "1165",
-               "locator" : "111:3-111:53",
+               "locator" : "124:3-124:53",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SpecialtyReferralGeneticRiskCode",
                "libraryName" : "DecisionToScreen",
@@ -3734,7 +3734,7 @@
             }
          }, {
             "localId" : "1167",
-            "locator" : "113:1-114:55",
+            "locator" : "126:1-127:55",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SpecialtyReferralGeneticRiskReason",
             "context" : "Patient",
@@ -3765,7 +3765,7 @@
             } ],
             "expression" : {
                "localId" : "1169",
-               "locator" : "114:3-114:55",
+               "locator" : "127:3-127:55",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SpecialtyReferralGeneticRiskReason",
                "libraryName" : "DecisionToScreen",
@@ -3773,7 +3773,7 @@
             }
          }, {
             "localId" : "1171",
-            "locator" : "116:1-117:46",
+            "locator" : "129:1-130:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSGeneticRiskMammo",
             "context" : "Patient",
@@ -3804,7 +3804,7 @@
             } ],
             "expression" : {
                "localId" : "1173",
-               "locator" : "117:3-117:46",
+               "locator" : "130:3-130:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSGeneticRiskMammo",
                "libraryName" : "DecisionToScreen",
@@ -3812,7 +3812,7 @@
             }
          }, {
             "localId" : "1175",
-            "locator" : "119:1-120:44",
+            "locator" : "132:1-133:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSGeneticRiskMammoCode",
             "context" : "Patient",
@@ -3843,7 +3843,7 @@
             } ],
             "expression" : {
                "localId" : "1177",
-               "locator" : "120:3-120:44",
+               "locator" : "133:3-133:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSGeneticRiskMammoCode",
                "libraryName" : "DecisionToScreen",
@@ -3851,7 +3851,7 @@
             }
          }, {
             "localId" : "1179",
-            "locator" : "122:1-123:46",
+            "locator" : "135:1-136:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSGeneticRiskMammoReason",
             "context" : "Patient",
@@ -3882,7 +3882,7 @@
             } ],
             "expression" : {
                "localId" : "1181",
-               "locator" : "123:3-123:46",
+               "locator" : "136:3-136:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSGeneticRiskMammoReason",
                "libraryName" : "DecisionToScreen",
@@ -3890,7 +3890,7 @@
             }
          }, {
             "localId" : "1183",
-            "locator" : "125:1-126:46",
+            "locator" : "138:1-139:46",
             "name" : "ACSGeneticRiskMammoTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3985,7 +3985,7 @@
             },
             "expression" : {
                "localId" : "1185",
-               "locator" : "126:3-126:46",
+               "locator" : "139:3-139:46",
                "name" : "ACSGeneticRiskMammoTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -4057,7 +4057,7 @@
             }
          }, {
             "localId" : "1235",
-            "locator" : "128:1-129:51",
+            "locator" : "141:1-142:51",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSGeneticRiskMammoTimingEvent",
             "context" : "Patient",
@@ -4088,7 +4088,7 @@
             } ],
             "expression" : {
                "localId" : "1237",
-               "locator" : "129:3-129:51",
+               "locator" : "142:3-142:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSGeneticRiskMammoTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -4096,7 +4096,7 @@
             }
          }, {
             "localId" : "1239",
-            "locator" : "131:1-132:44",
+            "locator" : "144:1-145:44",
             "name" : "ACSGeneticRiskMammoFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4163,7 +4163,7 @@
             },
             "expression" : {
                "localId" : "1241",
-               "locator" : "132:3-132:44",
+               "locator" : "145:3-145:44",
                "name" : "ACSGeneticRiskMammoFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -4207,7 +4207,7 @@
             }
          }, {
             "localId" : "1270",
-            "locator" : "134:1-135:44",
+            "locator" : "147:1-148:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSGeneticRiskMri",
             "context" : "Patient",
@@ -4238,7 +4238,7 @@
             } ],
             "expression" : {
                "localId" : "1272",
-               "locator" : "135:3-135:44",
+               "locator" : "148:3-148:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSGeneticRiskMri",
                "libraryName" : "DecisionToScreen",
@@ -4246,7 +4246,7 @@
             }
          }, {
             "localId" : "1274",
-            "locator" : "137:1-138:42",
+            "locator" : "150:1-151:42",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSGeneticRiskMriCode",
             "context" : "Patient",
@@ -4277,7 +4277,7 @@
             } ],
             "expression" : {
                "localId" : "1276",
-               "locator" : "138:3-138:42",
+               "locator" : "151:3-151:42",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSGeneticRiskMriCode",
                "libraryName" : "DecisionToScreen",
@@ -4285,7 +4285,7 @@
             }
          }, {
             "localId" : "1278",
-            "locator" : "140:1-141:44",
+            "locator" : "153:1-154:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSGeneticRiskMriReason",
             "context" : "Patient",
@@ -4316,7 +4316,7 @@
             } ],
             "expression" : {
                "localId" : "1280",
-               "locator" : "141:3-141:44",
+               "locator" : "154:3-154:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSGeneticRiskMriReason",
                "libraryName" : "DecisionToScreen",
@@ -4324,7 +4324,7 @@
             }
          }, {
             "localId" : "1282",
-            "locator" : "143:1-144:44",
+            "locator" : "156:1-157:44",
             "name" : "ACSGeneticRiskMriTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4419,7 +4419,7 @@
             },
             "expression" : {
                "localId" : "1284",
-               "locator" : "144:3-144:44",
+               "locator" : "157:3-157:44",
                "name" : "ACSGeneticRiskMriTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -4491,7 +4491,7 @@
             }
          }, {
             "localId" : "1334",
-            "locator" : "146:1-147:49",
+            "locator" : "159:1-160:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSGeneticRiskMriTimingEvent",
             "context" : "Patient",
@@ -4522,7 +4522,7 @@
             } ],
             "expression" : {
                "localId" : "1336",
-               "locator" : "147:3-147:49",
+               "locator" : "160:3-160:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSGeneticRiskMriTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -4530,7 +4530,7 @@
             }
          }, {
             "localId" : "1338",
-            "locator" : "149:1-150:42",
+            "locator" : "162:1-163:42",
             "name" : "ACSGeneticRiskMriFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4597,7 +4597,7 @@
             },
             "expression" : {
                "localId" : "1340",
-               "locator" : "150:3-150:42",
+               "locator" : "163:3-163:42",
                "name" : "ACSGeneticRiskMriFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -4641,7 +4641,7 @@
             }
          }, {
             "localId" : "1369",
-            "locator" : "152:1-153:42",
+            "locator" : "165:1-166:42",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMammoAfterRT",
             "context" : "Patient",
@@ -4672,7 +4672,7 @@
             } ],
             "expression" : {
                "localId" : "1371",
-               "locator" : "153:3-153:42",
+               "locator" : "166:3-166:42",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMammoAfterRT",
                "libraryName" : "DecisionToScreen",
@@ -4680,7 +4680,7 @@
             }
          }, {
             "localId" : "1373",
-            "locator" : "155:1-156:40",
+            "locator" : "168:1-169:40",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAfterRTCode",
             "context" : "Patient",
@@ -4711,7 +4711,7 @@
             } ],
             "expression" : {
                "localId" : "1375",
-               "locator" : "156:3-156:40",
+               "locator" : "169:3-169:40",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAfterRTCode",
                "libraryName" : "DecisionToScreen",
@@ -4719,7 +4719,7 @@
             }
          }, {
             "localId" : "1377",
-            "locator" : "158:1-159:42",
+            "locator" : "171:1-172:42",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAfterRTReason",
             "context" : "Patient",
@@ -4750,7 +4750,7 @@
             } ],
             "expression" : {
                "localId" : "1379",
-               "locator" : "159:3-159:42",
+               "locator" : "172:3-172:42",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAfterRTReason",
                "libraryName" : "DecisionToScreen",
@@ -4758,7 +4758,7 @@
             }
          }, {
             "localId" : "1381",
-            "locator" : "161:1-162:42",
+            "locator" : "174:1-175:42",
             "name" : "ACSMammoAfterRTTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4853,7 +4853,7 @@
             },
             "expression" : {
                "localId" : "1383",
-               "locator" : "162:3-162:42",
+               "locator" : "175:3-175:42",
                "name" : "ACSMammoAfterRTTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -4925,7 +4925,7 @@
             }
          }, {
             "localId" : "1433",
-            "locator" : "164:1-165:47",
+            "locator" : "177:1-178:47",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMammoAfterRTTimingEvent",
             "context" : "Patient",
@@ -4956,7 +4956,7 @@
             } ],
             "expression" : {
                "localId" : "1435",
-               "locator" : "165:3-165:47",
+               "locator" : "178:3-178:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMammoAfterRTTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -4964,7 +4964,7 @@
             }
          }, {
             "localId" : "1437",
-            "locator" : "167:1-168:40",
+            "locator" : "180:1-181:40",
             "name" : "ACSMammoAfterRTFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5031,7 +5031,7 @@
             },
             "expression" : {
                "localId" : "1439",
-               "locator" : "168:3-168:40",
+               "locator" : "181:3-181:40",
                "name" : "ACSMammoAfterRTFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -5075,7 +5075,7 @@
             }
          }, {
             "localId" : "1468",
-            "locator" : "170:1-171:40",
+            "locator" : "183:1-184:40",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMriAfterRT",
             "context" : "Patient",
@@ -5106,7 +5106,7 @@
             } ],
             "expression" : {
                "localId" : "1470",
-               "locator" : "171:3-171:40",
+               "locator" : "184:3-184:40",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMriAfterRT",
                "libraryName" : "DecisionToScreen",
@@ -5114,7 +5114,7 @@
             }
          }, {
             "localId" : "1472",
-            "locator" : "173:1-174:38",
+            "locator" : "186:1-187:38",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMriAfterRTCode",
             "context" : "Patient",
@@ -5145,7 +5145,7 @@
             } ],
             "expression" : {
                "localId" : "1474",
-               "locator" : "174:3-174:38",
+               "locator" : "187:3-187:38",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMriAfterRTCode",
                "libraryName" : "DecisionToScreen",
@@ -5153,7 +5153,7 @@
             }
          }, {
             "localId" : "1476",
-            "locator" : "176:1-177:40",
+            "locator" : "189:1-190:40",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMriAfterRTReason",
             "context" : "Patient",
@@ -5184,7 +5184,7 @@
             } ],
             "expression" : {
                "localId" : "1478",
-               "locator" : "177:3-177:40",
+               "locator" : "190:3-190:40",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMriAfterRTReason",
                "libraryName" : "DecisionToScreen",
@@ -5192,7 +5192,7 @@
             }
          }, {
             "localId" : "1480",
-            "locator" : "179:1-180:40",
+            "locator" : "192:1-193:40",
             "name" : "ACSMriAfterRTTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5287,7 +5287,7 @@
             },
             "expression" : {
                "localId" : "1482",
-               "locator" : "180:3-180:40",
+               "locator" : "193:3-193:40",
                "name" : "ACSMriAfterRTTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -5359,7 +5359,7 @@
             }
          }, {
             "localId" : "1532",
-            "locator" : "182:1-183:45",
+            "locator" : "195:1-196:45",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMriAfterRTTimingEvent",
             "context" : "Patient",
@@ -5390,7 +5390,7 @@
             } ],
             "expression" : {
                "localId" : "1534",
-               "locator" : "183:3-183:45",
+               "locator" : "196:3-196:45",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMriAfterRTTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -5398,7 +5398,7 @@
             }
          }, {
             "localId" : "1536",
-            "locator" : "185:1-186:38",
+            "locator" : "198:1-199:38",
             "name" : "ACSMriAfterRTFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5465,7 +5465,7 @@
             },
             "expression" : {
                "localId" : "1538",
-               "locator" : "186:3-186:38",
+               "locator" : "199:3-199:38",
                "name" : "ACSMriAfterRTFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -5509,7 +5509,7 @@
             }
          }, {
             "localId" : "1567",
-            "locator" : "188:1-189:44",
+            "locator" : "201:1-202:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMammoAfterBrca",
             "context" : "Patient",
@@ -5540,7 +5540,7 @@
             } ],
             "expression" : {
                "localId" : "1569",
-               "locator" : "189:3-189:44",
+               "locator" : "202:3-202:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMammoAfterBrca",
                "libraryName" : "DecisionToScreen",
@@ -5548,7 +5548,7 @@
             }
          }, {
             "localId" : "1571",
-            "locator" : "191:1-192:42",
+            "locator" : "204:1-205:42",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAfterBrcaCode",
             "context" : "Patient",
@@ -5579,7 +5579,7 @@
             } ],
             "expression" : {
                "localId" : "1573",
-               "locator" : "192:3-192:42",
+               "locator" : "205:3-205:42",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAfterBrcaCode",
                "libraryName" : "DecisionToScreen",
@@ -5587,7 +5587,7 @@
             }
          }, {
             "localId" : "1575",
-            "locator" : "194:1-195:44",
+            "locator" : "207:1-208:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAfterBrcaReason",
             "context" : "Patient",
@@ -5618,7 +5618,7 @@
             } ],
             "expression" : {
                "localId" : "1577",
-               "locator" : "195:3-195:44",
+               "locator" : "208:3-208:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAfterBrcaReason",
                "libraryName" : "DecisionToScreen",
@@ -5626,7 +5626,7 @@
             }
          }, {
             "localId" : "1579",
-            "locator" : "197:1-198:44",
+            "locator" : "210:1-211:44",
             "name" : "ACSMammoAfterBrcaTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5721,7 +5721,7 @@
             },
             "expression" : {
                "localId" : "1581",
-               "locator" : "198:3-198:44",
+               "locator" : "211:3-211:44",
                "name" : "ACSMammoAfterBrcaTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -5793,7 +5793,7 @@
             }
          }, {
             "localId" : "1631",
-            "locator" : "200:1-201:49",
+            "locator" : "213:1-214:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMammoAfterBrcaTimingEvent",
             "context" : "Patient",
@@ -5824,7 +5824,7 @@
             } ],
             "expression" : {
                "localId" : "1633",
-               "locator" : "201:3-201:49",
+               "locator" : "214:3-214:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMammoAfterBrcaTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -5832,7 +5832,7 @@
             }
          }, {
             "localId" : "1635",
-            "locator" : "203:1-204:42",
+            "locator" : "216:1-217:42",
             "name" : "ACSMammoAfterBrcaFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5899,7 +5899,7 @@
             },
             "expression" : {
                "localId" : "1637",
-               "locator" : "204:3-204:42",
+               "locator" : "217:3-217:42",
                "name" : "ACSMammoAfterBrcaFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -5943,7 +5943,7 @@
             }
          }, {
             "localId" : "1666",
-            "locator" : "206:1-207:60",
+            "locator" : "219:1-220:60",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsSpecialtyReferralBreastCaWithin5y",
             "context" : "Patient",
@@ -5974,7 +5974,7 @@
             } ],
             "expression" : {
                "localId" : "1668",
-               "locator" : "207:3-207:60",
+               "locator" : "220:3-220:60",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsSpecialtyReferralBreastCaWithin5y",
                "libraryName" : "DecisionToScreen",
@@ -5982,7 +5982,7 @@
             }
          }, {
             "localId" : "1670",
-            "locator" : "209:1-210:58",
+            "locator" : "222:1-223:58",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SpecialtyReferralBreastCaWithin5yCode",
             "context" : "Patient",
@@ -6013,7 +6013,7 @@
             } ],
             "expression" : {
                "localId" : "1672",
-               "locator" : "210:3-210:58",
+               "locator" : "223:3-223:58",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SpecialtyReferralBreastCaWithin5yCode",
                "libraryName" : "DecisionToScreen",
@@ -6021,7 +6021,7 @@
             }
          }, {
             "localId" : "1674",
-            "locator" : "212:1-213:60",
+            "locator" : "225:1-226:60",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "SpecialtyReferralBreastCaWithin5yReason",
             "context" : "Patient",
@@ -6052,7 +6052,7 @@
             } ],
             "expression" : {
                "localId" : "1676",
-               "locator" : "213:3-213:60",
+               "locator" : "226:3-226:60",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "SpecialtyReferralBreastCaWithin5yReason",
                "libraryName" : "DecisionToScreen",
@@ -6060,7 +6060,7 @@
             }
          }, {
             "localId" : "1678",
-            "locator" : "215:1-216:49",
+            "locator" : "228:1-229:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMammoAtypicalBiopsy",
             "context" : "Patient",
@@ -6091,7 +6091,7 @@
             } ],
             "expression" : {
                "localId" : "1680",
-               "locator" : "216:3-216:49",
+               "locator" : "229:3-229:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMammoAtypicalBiopsy",
                "libraryName" : "DecisionToScreen",
@@ -6099,7 +6099,7 @@
             }
          }, {
             "localId" : "1682",
-            "locator" : "218:1-219:47",
+            "locator" : "231:1-232:47",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAtypicalBiopsyCode",
             "context" : "Patient",
@@ -6130,7 +6130,7 @@
             } ],
             "expression" : {
                "localId" : "1684",
-               "locator" : "219:3-219:47",
+               "locator" : "232:3-232:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAtypicalBiopsyCode",
                "libraryName" : "DecisionToScreen",
@@ -6138,7 +6138,7 @@
             }
          }, {
             "localId" : "1686",
-            "locator" : "221:1-222:49",
+            "locator" : "234:1-235:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAtypicalBiopsyReason",
             "context" : "Patient",
@@ -6169,7 +6169,7 @@
             } ],
             "expression" : {
                "localId" : "1688",
-               "locator" : "222:3-222:49",
+               "locator" : "235:3-235:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAtypicalBiopsyReason",
                "libraryName" : "DecisionToScreen",
@@ -6177,7 +6177,7 @@
             }
          }, {
             "localId" : "1690",
-            "locator" : "224:1-225:49",
+            "locator" : "237:1-238:49",
             "name" : "ACSMammoAtypicalBiopsyTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6272,7 +6272,7 @@
             },
             "expression" : {
                "localId" : "1692",
-               "locator" : "225:3-225:49",
+               "locator" : "238:3-238:49",
                "name" : "ACSMammoAtypicalBiopsyTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -6344,7 +6344,7 @@
             }
          }, {
             "localId" : "1742",
-            "locator" : "227:1-228:54",
+            "locator" : "240:1-241:54",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMammoAtypicalBiopsyTimingEvent",
             "context" : "Patient",
@@ -6375,7 +6375,7 @@
             } ],
             "expression" : {
                "localId" : "1744",
-               "locator" : "228:3-228:54",
+               "locator" : "241:3-241:54",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMammoAtypicalBiopsyTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -6383,7 +6383,7 @@
             }
          }, {
             "localId" : "1746",
-            "locator" : "230:1-231:47",
+            "locator" : "243:1-244:47",
             "name" : "ACSMammoAtypicalBiopsyFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6450,7 +6450,7 @@
             },
             "expression" : {
                "localId" : "1748",
-               "locator" : "231:3-231:47",
+               "locator" : "244:3-244:47",
                "name" : "ACSMammoAtypicalBiopsyFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -6494,7 +6494,7 @@
             }
          }, {
             "localId" : "1777",
-            "locator" : "233:1-234:44",
+            "locator" : "246:1-247:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSAtypicalBiopsy",
             "context" : "Patient",
@@ -6525,7 +6525,7 @@
             } ],
             "expression" : {
                "localId" : "1779",
-               "locator" : "234:3-234:44",
+               "locator" : "247:3-247:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSAtypicalBiopsy",
                "libraryName" : "DecisionToScreen",
@@ -6533,7 +6533,7 @@
             }
          }, {
             "localId" : "1781",
-            "locator" : "236:1-237:42",
+            "locator" : "249:1-250:42",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSAtypicalBiopsyCode",
             "context" : "Patient",
@@ -6564,7 +6564,7 @@
             } ],
             "expression" : {
                "localId" : "1783",
-               "locator" : "237:3-237:42",
+               "locator" : "250:3-250:42",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSAtypicalBiopsyCode",
                "libraryName" : "DecisionToScreen",
@@ -6572,7 +6572,7 @@
             }
          }, {
             "localId" : "1785",
-            "locator" : "239:1-240:44",
+            "locator" : "252:1-253:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSAtypicalBiopsyReason",
             "context" : "Patient",
@@ -6603,7 +6603,7 @@
             } ],
             "expression" : {
                "localId" : "1787",
-               "locator" : "240:3-240:44",
+               "locator" : "253:3-253:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSAtypicalBiopsyReason",
                "libraryName" : "DecisionToScreen",
@@ -6611,7 +6611,7 @@
             }
          }, {
             "localId" : "1789",
-            "locator" : "242:1-243:55",
+            "locator" : "255:1-256:55",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMriAtypicalBiopsyHighRisk",
             "context" : "Patient",
@@ -6642,7 +6642,7 @@
             } ],
             "expression" : {
                "localId" : "1791",
-               "locator" : "243:3-243:55",
+               "locator" : "256:3-256:55",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMriAtypicalBiopsyHighRisk",
                "libraryName" : "DecisionToScreen",
@@ -6650,7 +6650,7 @@
             }
          }, {
             "localId" : "1793",
-            "locator" : "245:1-246:53",
+            "locator" : "258:1-259:53",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMriAtypicalBiopsyHighRiskCode",
             "context" : "Patient",
@@ -6681,7 +6681,7 @@
             } ],
             "expression" : {
                "localId" : "1795",
-               "locator" : "246:3-246:53",
+               "locator" : "259:3-259:53",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMriAtypicalBiopsyHighRiskCode",
                "libraryName" : "DecisionToScreen",
@@ -6689,7 +6689,7 @@
             }
          }, {
             "localId" : "1797",
-            "locator" : "248:1-249:55",
+            "locator" : "261:1-262:55",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMriAtypicalBiopsyHighRiskReason",
             "context" : "Patient",
@@ -6720,7 +6720,7 @@
             } ],
             "expression" : {
                "localId" : "1799",
-               "locator" : "249:3-249:55",
+               "locator" : "262:3-262:55",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMriAtypicalBiopsyHighRiskReason",
                "libraryName" : "DecisionToScreen",
@@ -6728,7 +6728,7 @@
             }
          }, {
             "localId" : "1801",
-            "locator" : "251:1-252:55",
+            "locator" : "264:1-265:55",
             "name" : "ACSMriAtypicalBiopsyHighRiskTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6823,7 +6823,7 @@
             },
             "expression" : {
                "localId" : "1803",
-               "locator" : "252:3-252:55",
+               "locator" : "265:3-265:55",
                "name" : "ACSMriAtypicalBiopsyHighRiskTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -6895,7 +6895,7 @@
             }
          }, {
             "localId" : "1853",
-            "locator" : "254:1-255:60",
+            "locator" : "267:1-268:60",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMriAtypicalBiopsyHighRiskTimingEvent",
             "context" : "Patient",
@@ -6926,7 +6926,7 @@
             } ],
             "expression" : {
                "localId" : "1855",
-               "locator" : "255:3-255:60",
+               "locator" : "268:3-268:60",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMriAtypicalBiopsyHighRiskTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -6934,7 +6934,7 @@
             }
          }, {
             "localId" : "1857",
-            "locator" : "257:1-258:53",
+            "locator" : "270:1-271:53",
             "name" : "ACSMriAtypicalBiopsyHighRiskFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7001,7 +7001,7 @@
             },
             "expression" : {
                "localId" : "1859",
-               "locator" : "258:3-258:53",
+               "locator" : "271:3-271:53",
                "name" : "ACSMriAtypicalBiopsyHighRiskFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -7045,7 +7045,7 @@
             }
          }, {
             "localId" : "1888",
-            "locator" : "264:1-265:41",
+            "locator" : "277:1-278:41",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMammoHighRisk",
             "context" : "Patient",
@@ -7076,7 +7076,7 @@
             } ],
             "expression" : {
                "localId" : "1890",
-               "locator" : "265:3-265:41",
+               "locator" : "278:3-278:41",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMammoHighRisk",
                "libraryName" : "DecisionToScreen",
@@ -7084,7 +7084,7 @@
             }
          }, {
             "localId" : "1892",
-            "locator" : "267:1-268:39",
+            "locator" : "280:1-281:39",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoHighRiskCode",
             "context" : "Patient",
@@ -7115,7 +7115,7 @@
             } ],
             "expression" : {
                "localId" : "1894",
-               "locator" : "268:3-268:39",
+               "locator" : "281:3-281:39",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoHighRiskCode",
                "libraryName" : "DecisionToScreen",
@@ -7123,7 +7123,7 @@
             }
          }, {
             "localId" : "1896",
-            "locator" : "270:1-271:41",
+            "locator" : "283:1-284:41",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoHighRiskReason",
             "context" : "Patient",
@@ -7154,7 +7154,7 @@
             } ],
             "expression" : {
                "localId" : "1898",
-               "locator" : "271:3-271:41",
+               "locator" : "284:3-284:41",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoHighRiskReason",
                "libraryName" : "DecisionToScreen",
@@ -7162,7 +7162,7 @@
             }
          }, {
             "localId" : "1900",
-            "locator" : "273:1-274:41",
+            "locator" : "286:1-287:41",
             "name" : "ACSMammoHighRiskTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7257,7 +7257,7 @@
             },
             "expression" : {
                "localId" : "1902",
-               "locator" : "274:3-274:41",
+               "locator" : "287:3-287:41",
                "name" : "ACSMammoHighRiskTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -7329,7 +7329,7 @@
             }
          }, {
             "localId" : "1952",
-            "locator" : "276:1-277:46",
+            "locator" : "289:1-290:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMammoHighRiskTimingEvent",
             "context" : "Patient",
@@ -7360,7 +7360,7 @@
             } ],
             "expression" : {
                "localId" : "1954",
-               "locator" : "277:3-277:46",
+               "locator" : "290:3-290:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMammoHighRiskTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -7368,7 +7368,7 @@
             }
          }, {
             "localId" : "1956",
-            "locator" : "279:1-280:39",
+            "locator" : "292:1-293:39",
             "name" : "ACSMammoHighRiskFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7435,7 +7435,7 @@
             },
             "expression" : {
                "localId" : "1958",
-               "locator" : "280:3-280:39",
+               "locator" : "293:3-293:39",
                "name" : "ACSMammoHighRiskFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -7479,7 +7479,7 @@
             }
          }, {
             "localId" : "1987",
-            "locator" : "282:1-283:39",
+            "locator" : "295:1-296:39",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMriHighRisk",
             "context" : "Patient",
@@ -7510,7 +7510,7 @@
             } ],
             "expression" : {
                "localId" : "1989",
-               "locator" : "283:3-283:39",
+               "locator" : "296:3-296:39",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMriHighRisk",
                "libraryName" : "DecisionToScreen",
@@ -7518,7 +7518,7 @@
             }
          }, {
             "localId" : "1991",
-            "locator" : "285:1-286:37",
+            "locator" : "298:1-299:37",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMriHighRiskCode",
             "context" : "Patient",
@@ -7549,7 +7549,7 @@
             } ],
             "expression" : {
                "localId" : "1993",
-               "locator" : "286:3-286:37",
+               "locator" : "299:3-299:37",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMriHighRiskCode",
                "libraryName" : "DecisionToScreen",
@@ -7557,7 +7557,7 @@
             }
          }, {
             "localId" : "1995",
-            "locator" : "288:1-289:39",
+            "locator" : "301:1-302:39",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMriHighRiskReason",
             "context" : "Patient",
@@ -7588,7 +7588,7 @@
             } ],
             "expression" : {
                "localId" : "1997",
-               "locator" : "289:3-289:39",
+               "locator" : "302:3-302:39",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMriHighRiskReason",
                "libraryName" : "DecisionToScreen",
@@ -7596,7 +7596,7 @@
             }
          }, {
             "localId" : "1999",
-            "locator" : "291:1-292:39",
+            "locator" : "304:1-305:39",
             "name" : "ACSMriHighRiskTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7691,7 +7691,7 @@
             },
             "expression" : {
                "localId" : "2001",
-               "locator" : "292:3-292:39",
+               "locator" : "305:3-305:39",
                "name" : "ACSMriHighRiskTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -7763,7 +7763,7 @@
             }
          }, {
             "localId" : "2051",
-            "locator" : "294:1-295:44",
+            "locator" : "307:1-308:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMriHighRiskTimingEvent",
             "context" : "Patient",
@@ -7794,7 +7794,7 @@
             } ],
             "expression" : {
                "localId" : "2053",
-               "locator" : "295:3-295:44",
+               "locator" : "308:3-308:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMriHighRiskTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -7802,7 +7802,7 @@
             }
          }, {
             "localId" : "2055",
-            "locator" : "297:1-298:37",
+            "locator" : "310:1-311:37",
             "name" : "ACSMriHighRiskFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7869,7 +7869,7 @@
             },
             "expression" : {
                "localId" : "2057",
-               "locator" : "298:3-298:37",
+               "locator" : "311:3-311:37",
                "name" : "ACSMriHighRiskFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -7913,7 +7913,7 @@
             }
          }, {
             "localId" : "2086",
-            "locator" : "300:1-301:48",
+            "locator" : "313:1-314:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSFirstDegGeneticMammo",
             "context" : "Patient",
@@ -7944,7 +7944,7 @@
             } ],
             "expression" : {
                "localId" : "2088",
-               "locator" : "301:3-301:48",
+               "locator" : "314:3-314:48",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSFirstDegGeneticMammo",
                "libraryName" : "DecisionToScreen",
@@ -7952,7 +7952,7 @@
             }
          }, {
             "localId" : "2090",
-            "locator" : "303:1-304:46",
+            "locator" : "316:1-317:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSFirstDegGeneticMammoCode",
             "context" : "Patient",
@@ -7983,7 +7983,7 @@
             } ],
             "expression" : {
                "localId" : "2092",
-               "locator" : "304:3-304:46",
+               "locator" : "317:3-317:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSFirstDegGeneticMammoCode",
                "libraryName" : "DecisionToScreen",
@@ -7991,7 +7991,7 @@
             }
          }, {
             "localId" : "2094",
-            "locator" : "306:1-307:48",
+            "locator" : "319:1-320:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSFirstDegGeneticMammoReason",
             "context" : "Patient",
@@ -8022,7 +8022,7 @@
             } ],
             "expression" : {
                "localId" : "2096",
-               "locator" : "307:3-307:48",
+               "locator" : "320:3-320:48",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSFirstDegGeneticMammoReason",
                "libraryName" : "DecisionToScreen",
@@ -8030,7 +8030,7 @@
             }
          }, {
             "localId" : "2098",
-            "locator" : "309:1-310:48",
+            "locator" : "322:1-323:48",
             "name" : "ACSFirstDegGeneticMammoTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8125,7 +8125,7 @@
             },
             "expression" : {
                "localId" : "2100",
-               "locator" : "310:3-310:48",
+               "locator" : "323:3-323:48",
                "name" : "ACSFirstDegGeneticMammoTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -8197,7 +8197,7 @@
             }
          }, {
             "localId" : "2150",
-            "locator" : "312:1-313:53",
+            "locator" : "325:1-326:53",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSFirstDegGeneticMammoTimingEvent",
             "context" : "Patient",
@@ -8228,7 +8228,7 @@
             } ],
             "expression" : {
                "localId" : "2152",
-               "locator" : "313:3-313:53",
+               "locator" : "326:3-326:53",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSFirstDegGeneticMammoTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -8236,7 +8236,7 @@
             }
          }, {
             "localId" : "2154",
-            "locator" : "315:1-316:46",
+            "locator" : "328:1-329:46",
             "name" : "ACSFirstDegGeneticMammoFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8303,7 +8303,7 @@
             },
             "expression" : {
                "localId" : "2156",
-               "locator" : "316:3-316:46",
+               "locator" : "329:3-329:46",
                "name" : "ACSFirstDegGeneticMammoFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -8347,7 +8347,7 @@
             }
          }, {
             "localId" : "2185",
-            "locator" : "318:1-319:46",
+            "locator" : "331:1-332:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSFirstDegGeneticMri",
             "context" : "Patient",
@@ -8378,7 +8378,7 @@
             } ],
             "expression" : {
                "localId" : "2187",
-               "locator" : "319:3-319:46",
+               "locator" : "332:3-332:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSFirstDegGeneticMri",
                "libraryName" : "DecisionToScreen",
@@ -8386,7 +8386,7 @@
             }
          }, {
             "localId" : "2189",
-            "locator" : "321:1-322:44",
+            "locator" : "334:1-335:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSFirstDegGeneticMriCode",
             "context" : "Patient",
@@ -8417,7 +8417,7 @@
             } ],
             "expression" : {
                "localId" : "2191",
-               "locator" : "322:3-322:44",
+               "locator" : "335:3-335:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSFirstDegGeneticMriCode",
                "libraryName" : "DecisionToScreen",
@@ -8425,7 +8425,7 @@
             }
          }, {
             "localId" : "2193",
-            "locator" : "324:1-325:46",
+            "locator" : "337:1-338:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSFirstDegGeneticMriReason",
             "context" : "Patient",
@@ -8456,7 +8456,7 @@
             } ],
             "expression" : {
                "localId" : "2195",
-               "locator" : "325:3-325:46",
+               "locator" : "338:3-338:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSFirstDegGeneticMriReason",
                "libraryName" : "DecisionToScreen",
@@ -8464,7 +8464,7 @@
             }
          }, {
             "localId" : "2197",
-            "locator" : "327:1-328:46",
+            "locator" : "340:1-341:46",
             "name" : "ACSFirstDegGeneticMriTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8559,7 +8559,7 @@
             },
             "expression" : {
                "localId" : "2199",
-               "locator" : "328:3-328:46",
+               "locator" : "341:3-341:46",
                "name" : "ACSFirstDegGeneticMriTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -8631,7 +8631,7 @@
             }
          }, {
             "localId" : "2249",
-            "locator" : "330:1-331:51",
+            "locator" : "343:1-344:51",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSFirstDegGeneticMriTimingEvent",
             "context" : "Patient",
@@ -8662,7 +8662,7 @@
             } ],
             "expression" : {
                "localId" : "2251",
-               "locator" : "331:3-331:51",
+               "locator" : "344:3-344:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSFirstDegGeneticMriTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -8670,7 +8670,7 @@
             }
          }, {
             "localId" : "2253",
-            "locator" : "333:1-334:44",
+            "locator" : "346:1-347:44",
             "name" : "ACSFirstDegGeneticMriFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8737,7 +8737,7 @@
             },
             "expression" : {
                "localId" : "2255",
-               "locator" : "334:3-334:44",
+               "locator" : "347:3-347:44",
                "name" : "ACSFirstDegGeneticMriFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -8781,7 +8781,7 @@
             }
          }, {
             "localId" : "2284",
-            "locator" : "336:1-337:68",
+            "locator" : "349:1-350:68",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsBreastImagingHeterogenouslyOrExtremelyDense",
             "context" : "Patient",
@@ -8812,7 +8812,7 @@
             } ],
             "expression" : {
                "localId" : "2286",
-               "locator" : "337:3-337:68",
+               "locator" : "350:3-350:68",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsBreastImagingHeterogenouslyOrExtremelyDense",
                "libraryName" : "DecisionToScreen",
@@ -8820,7 +8820,7 @@
             }
          }, {
             "localId" : "2288",
-            "locator" : "339:1-340:66",
+            "locator" : "352:1-353:66",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "BreastImagingHeterogenouslyOrExtremelyDenseCode",
             "context" : "Patient",
@@ -8851,7 +8851,7 @@
             } ],
             "expression" : {
                "localId" : "2290",
-               "locator" : "340:3-340:66",
+               "locator" : "353:3-353:66",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "BreastImagingHeterogenouslyOrExtremelyDenseCode",
                "libraryName" : "DecisionToScreen",
@@ -8859,7 +8859,7 @@
             }
          }, {
             "localId" : "2292",
-            "locator" : "342:1-343:68",
+            "locator" : "355:1-356:68",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "BreastImagingHeterogenouslyOrExtremelyDenseReason",
             "context" : "Patient",
@@ -8890,7 +8890,7 @@
             } ],
             "expression" : {
                "localId" : "2294",
-               "locator" : "343:3-343:68",
+               "locator" : "356:3-356:68",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "BreastImagingHeterogenouslyOrExtremelyDenseReason",
                "libraryName" : "DecisionToScreen",
@@ -8898,7 +8898,7 @@
             }
          }, {
             "localId" : "2296",
-            "locator" : "345:1-346:48",
+            "locator" : "358:1-359:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsCompellingFamilyHistory",
             "context" : "Patient",
@@ -8929,7 +8929,7 @@
             } ],
             "expression" : {
                "localId" : "2298",
-               "locator" : "346:3-346:48",
+               "locator" : "359:3-359:48",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsCompellingFamilyHistory",
                "libraryName" : "DecisionToScreen",
@@ -8937,7 +8937,7 @@
             }
          }, {
             "localId" : "2300",
-            "locator" : "348:1-349:46",
+            "locator" : "361:1-362:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "CompellingFamilyHistoryCode",
             "context" : "Patient",
@@ -8968,7 +8968,7 @@
             } ],
             "expression" : {
                "localId" : "2302",
-               "locator" : "349:3-349:46",
+               "locator" : "362:3-362:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "CompellingFamilyHistoryCode",
                "libraryName" : "DecisionToScreen",
@@ -8976,7 +8976,7 @@
             }
          }, {
             "localId" : "2304",
-            "locator" : "351:1-352:48",
+            "locator" : "364:1-365:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "CompellingFamilyHistoryReason",
             "context" : "Patient",
@@ -9007,7 +9007,7 @@
             } ],
             "expression" : {
                "localId" : "2306",
-               "locator" : "352:3-352:48",
+               "locator" : "365:3-365:48",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "CompellingFamilyHistoryReason",
                "libraryName" : "DecisionToScreen",
@@ -9015,7 +9015,7 @@
             }
          }, {
             "localId" : "2308",
-            "locator" : "354:1-355:45",
+            "locator" : "367:1-368:45",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsUSPSTFRecommendation",
             "context" : "Patient",
@@ -9046,7 +9046,7 @@
             } ],
             "expression" : {
                "localId" : "2310",
-               "locator" : "355:3-355:45",
+               "locator" : "368:3-368:45",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsUSPSTFRecommendation",
                "libraryName" : "DecisionToScreen",
@@ -9054,7 +9054,7 @@
             }
          }, {
             "localId" : "2312",
-            "locator" : "357:1-358:43",
+            "locator" : "370:1-371:43",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "USPSTFRecommendationCode",
             "context" : "Patient",
@@ -9085,7 +9085,7 @@
             } ],
             "expression" : {
                "localId" : "2314",
-               "locator" : "358:3-358:43",
+               "locator" : "371:3-371:43",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "USPSTFRecommendationCode",
                "libraryName" : "DecisionToScreen",
@@ -9093,7 +9093,7 @@
             }
          }, {
             "localId" : "2316",
-            "locator" : "360:1-361:45",
+            "locator" : "373:1-374:45",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "USPSTFRecommendationReason",
             "context" : "Patient",
@@ -9124,7 +9124,7 @@
             } ],
             "expression" : {
                "localId" : "2318",
-               "locator" : "361:3-361:45",
+               "locator" : "374:3-374:45",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "USPSTFRecommendationReason",
                "libraryName" : "DecisionToScreen",
@@ -9132,7 +9132,7 @@
             }
          }, {
             "localId" : "2320",
-            "locator" : "363:1-364:45",
+            "locator" : "376:1-377:45",
             "name" : "USPSTFRecommendationTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9227,7 +9227,7 @@
             },
             "expression" : {
                "localId" : "2322",
-               "locator" : "364:3-364:45",
+               "locator" : "377:3-377:45",
                "name" : "USPSTFRecommendationTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -9299,7 +9299,7 @@
             }
          }, {
             "localId" : "2372",
-            "locator" : "366:1-367:50",
+            "locator" : "379:1-380:50",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "USPSTFRecommendationTimingEvent",
             "context" : "Patient",
@@ -9330,7 +9330,7 @@
             } ],
             "expression" : {
                "localId" : "2374",
-               "locator" : "367:3-367:50",
+               "locator" : "380:3-380:50",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "USPSTFRecommendationTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -9338,7 +9338,7 @@
             }
          }, {
             "localId" : "2376",
-            "locator" : "369:1-370:43",
+            "locator" : "382:1-383:43",
             "name" : "USPSTFRecommendationFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9405,7 +9405,7 @@
             },
             "expression" : {
                "localId" : "2378",
-               "locator" : "370:3-370:43",
+               "locator" : "383:3-383:43",
                "name" : "USPSTFRecommendationFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -9449,7 +9449,7 @@
             }
          }, {
             "localId" : "2407",
-            "locator" : "376:1-377:50",
+            "locator" : "389:1-390:50",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMammoAvgRiskAgeUnder45",
             "context" : "Patient",
@@ -9480,7 +9480,7 @@
             } ],
             "expression" : {
                "localId" : "2409",
-               "locator" : "377:3-377:50",
+               "locator" : "390:3-390:50",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMammoAvgRiskAgeUnder45",
                "libraryName" : "DecisionToScreen",
@@ -9488,7 +9488,7 @@
             }
          }, {
             "localId" : "2411",
-            "locator" : "379:1-380:48",
+            "locator" : "392:1-393:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAvgRiskAgeUnder45Code",
             "context" : "Patient",
@@ -9519,7 +9519,7 @@
             } ],
             "expression" : {
                "localId" : "2413",
-               "locator" : "380:3-380:48",
+               "locator" : "393:3-393:48",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAvgRiskAgeUnder45Code",
                "libraryName" : "DecisionToScreen",
@@ -9527,7 +9527,7 @@
             }
          }, {
             "localId" : "2415",
-            "locator" : "382:1-383:50",
+            "locator" : "395:1-396:50",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAvgRiskAgeUnder45Reason",
             "context" : "Patient",
@@ -9558,7 +9558,7 @@
             } ],
             "expression" : {
                "localId" : "2417",
-               "locator" : "383:3-383:50",
+               "locator" : "396:3-396:50",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAvgRiskAgeUnder45Reason",
                "libraryName" : "DecisionToScreen",
@@ -9566,7 +9566,7 @@
             }
          }, {
             "localId" : "2419",
-            "locator" : "385:1-386:50",
+            "locator" : "398:1-399:50",
             "name" : "ACSMammoAvgRiskAgeUnder45Timing",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9661,7 +9661,7 @@
             },
             "expression" : {
                "localId" : "2421",
-               "locator" : "386:3-386:50",
+               "locator" : "399:3-399:50",
                "name" : "ACSMammoAvgRiskAgeUnder45Timing",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -9733,7 +9733,7 @@
             }
          }, {
             "localId" : "2471",
-            "locator" : "388:1-389:55",
+            "locator" : "401:1-402:55",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMammoAvgRiskAgeUnder45TimingEvent",
             "context" : "Patient",
@@ -9764,7 +9764,7 @@
             } ],
             "expression" : {
                "localId" : "2473",
-               "locator" : "389:3-389:55",
+               "locator" : "402:3-402:55",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMammoAvgRiskAgeUnder45TimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -9772,7 +9772,7 @@
             }
          }, {
             "localId" : "2475",
-            "locator" : "391:1-392:48",
+            "locator" : "404:1-405:48",
             "name" : "ACSMammoAvgRiskAgeUnder45Flag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9839,7 +9839,7 @@
             },
             "expression" : {
                "localId" : "2477",
-               "locator" : "392:3-392:48",
+               "locator" : "405:3-405:48",
                "name" : "ACSMammoAvgRiskAgeUnder45Flag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -9883,7 +9883,7 @@
             }
          }, {
             "localId" : "2506",
-            "locator" : "394:1-395:49",
+            "locator" : "407:1-408:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMammoAvgRiskAge45to54",
             "context" : "Patient",
@@ -9914,7 +9914,7 @@
             } ],
             "expression" : {
                "localId" : "2508",
-               "locator" : "395:3-395:49",
+               "locator" : "408:3-408:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMammoAvgRiskAge45to54",
                "libraryName" : "DecisionToScreen",
@@ -9922,7 +9922,7 @@
             }
          }, {
             "localId" : "2510",
-            "locator" : "397:1-398:47",
+            "locator" : "410:1-411:47",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAvgRiskAge45to54Code",
             "context" : "Patient",
@@ -9953,7 +9953,7 @@
             } ],
             "expression" : {
                "localId" : "2512",
-               "locator" : "398:3-398:47",
+               "locator" : "411:3-411:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAvgRiskAge45to54Code",
                "libraryName" : "DecisionToScreen",
@@ -9961,7 +9961,7 @@
             }
          }, {
             "localId" : "2514",
-            "locator" : "400:1-401:49",
+            "locator" : "413:1-414:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAvgRiskAge45to54Reason",
             "context" : "Patient",
@@ -9992,7 +9992,7 @@
             } ],
             "expression" : {
                "localId" : "2516",
-               "locator" : "401:3-401:49",
+               "locator" : "414:3-414:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAvgRiskAge45to54Reason",
                "libraryName" : "DecisionToScreen",
@@ -10000,7 +10000,7 @@
             }
          }, {
             "localId" : "2518",
-            "locator" : "403:1-404:49",
+            "locator" : "416:1-417:49",
             "name" : "ACSMammoAvgRiskAge45to54Timing",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10095,7 +10095,7 @@
             },
             "expression" : {
                "localId" : "2520",
-               "locator" : "404:3-404:49",
+               "locator" : "417:3-417:49",
                "name" : "ACSMammoAvgRiskAge45to54Timing",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -10167,7 +10167,7 @@
             }
          }, {
             "localId" : "2570",
-            "locator" : "406:1-407:54",
+            "locator" : "419:1-420:54",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMammoAvgRiskAge45to54TimingEvent",
             "context" : "Patient",
@@ -10198,7 +10198,7 @@
             } ],
             "expression" : {
                "localId" : "2572",
-               "locator" : "407:3-407:54",
+               "locator" : "420:3-420:54",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMammoAvgRiskAge45to54TimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -10206,7 +10206,7 @@
             }
          }, {
             "localId" : "2574",
-            "locator" : "409:1-410:47",
+            "locator" : "422:1-423:47",
             "name" : "ACSMammoAvgRiskAge45to54Flag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10273,7 +10273,7 @@
             },
             "expression" : {
                "localId" : "2576",
-               "locator" : "410:3-410:47",
+               "locator" : "423:3-423:47",
                "name" : "ACSMammoAvgRiskAge45to54Flag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -10317,7 +10317,7 @@
             }
          }, {
             "localId" : "2605",
-            "locator" : "412:1-413:49",
+            "locator" : "425:1-426:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsACSMammoAvgRiskAgeOver54",
             "context" : "Patient",
@@ -10348,7 +10348,7 @@
             } ],
             "expression" : {
                "localId" : "2607",
-               "locator" : "413:3-413:49",
+               "locator" : "426:3-426:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsACSMammoAvgRiskAgeOver54",
                "libraryName" : "DecisionToScreen",
@@ -10356,7 +10356,7 @@
             }
          }, {
             "localId" : "2609",
-            "locator" : "415:1-416:47",
+            "locator" : "428:1-429:47",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAvgRiskAgeOver54Code",
             "context" : "Patient",
@@ -10387,7 +10387,7 @@
             } ],
             "expression" : {
                "localId" : "2611",
-               "locator" : "416:3-416:47",
+               "locator" : "429:3-429:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAvgRiskAgeOver54Code",
                "libraryName" : "DecisionToScreen",
@@ -10395,7 +10395,7 @@
             }
          }, {
             "localId" : "2613",
-            "locator" : "418:1-419:49",
+            "locator" : "431:1-432:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "ACSMammoAvgRiskAgeOver54Reason",
             "context" : "Patient",
@@ -10426,7 +10426,7 @@
             } ],
             "expression" : {
                "localId" : "2615",
-               "locator" : "419:3-419:49",
+               "locator" : "432:3-432:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "ACSMammoAvgRiskAgeOver54Reason",
                "libraryName" : "DecisionToScreen",
@@ -10434,7 +10434,7 @@
             }
          }, {
             "localId" : "2617",
-            "locator" : "421:1-422:49",
+            "locator" : "434:1-435:49",
             "name" : "ACSMammoAvgRiskAgeOver54Timing",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10529,7 +10529,7 @@
             },
             "expression" : {
                "localId" : "2619",
-               "locator" : "422:3-422:49",
+               "locator" : "435:3-435:49",
                "name" : "ACSMammoAvgRiskAgeOver54Timing",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -10601,7 +10601,7 @@
             }
          }, {
             "localId" : "2669",
-            "locator" : "424:1-425:54",
+            "locator" : "437:1-438:54",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "ACSMammoAvgRiskAgeOver54TimingEvent",
             "context" : "Patient",
@@ -10632,7 +10632,7 @@
             } ],
             "expression" : {
                "localId" : "2671",
-               "locator" : "425:3-425:54",
+               "locator" : "438:3-438:54",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "ACSMammoAvgRiskAgeOver54TimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -10640,7 +10640,7 @@
             }
          }, {
             "localId" : "2673",
-            "locator" : "427:1-428:47",
+            "locator" : "440:1-441:47",
             "name" : "ACSMammoAvgRiskAgeOver54Flag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10707,7 +10707,7 @@
             },
             "expression" : {
                "localId" : "2675",
-               "locator" : "428:3-428:47",
+               "locator" : "441:3-441:47",
                "name" : "ACSMammoAvgRiskAgeOver54Flag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -10751,7 +10751,7 @@
             }
          }, {
             "localId" : "2704",
-            "locator" : "430:1-431:38",
+            "locator" : "443:1-444:38",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsUSPSTFAvgRisk",
             "context" : "Patient",
@@ -10782,7 +10782,7 @@
             } ],
             "expression" : {
                "localId" : "2706",
-               "locator" : "431:3-431:38",
+               "locator" : "444:3-444:38",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "ExistsUSPSTFAvgRisk",
                "libraryName" : "DecisionToScreen",
@@ -10790,7 +10790,7 @@
             }
          }, {
             "localId" : "2708",
-            "locator" : "433:1-434:36",
+            "locator" : "446:1-447:36",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "USPSTFAvgRiskCode",
             "context" : "Patient",
@@ -10821,7 +10821,7 @@
             } ],
             "expression" : {
                "localId" : "2710",
-               "locator" : "434:3-434:36",
+               "locator" : "447:3-447:36",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "USPSTFAvgRiskCode",
                "libraryName" : "DecisionToScreen",
@@ -10829,7 +10829,7 @@
             }
          }, {
             "localId" : "2712",
-            "locator" : "436:1-437:38",
+            "locator" : "449:1-450:38",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "USPSTFAvgRiskReason",
             "context" : "Patient",
@@ -10860,7 +10860,7 @@
             } ],
             "expression" : {
                "localId" : "2714",
-               "locator" : "437:3-437:38",
+               "locator" : "450:3-450:38",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "name" : "USPSTFAvgRiskReason",
                "libraryName" : "DecisionToScreen",
@@ -10868,7 +10868,7 @@
             }
          }, {
             "localId" : "2716",
-            "locator" : "439:1-440:38",
+            "locator" : "452:1-453:38",
             "name" : "USPSTFAvgRiskTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10963,7 +10963,7 @@
             },
             "expression" : {
                "localId" : "2718",
-               "locator" : "440:3-440:38",
+               "locator" : "453:3-453:38",
                "name" : "USPSTFAvgRiskTiming",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",
@@ -11035,7 +11035,7 @@
             }
          }, {
             "localId" : "2768",
-            "locator" : "442:1-443:43",
+            "locator" : "455:1-456:43",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "USPSTFAvgRiskTimingEvent",
             "context" : "Patient",
@@ -11066,7 +11066,7 @@
             } ],
             "expression" : {
                "localId" : "2770",
-               "locator" : "443:3-443:43",
+               "locator" : "456:3-456:43",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "name" : "USPSTFAvgRiskTimingEvent",
                "libraryName" : "DecisionToScreen",
@@ -11074,7 +11074,7 @@
             }
          }, {
             "localId" : "2772",
-            "locator" : "445:1-446:36",
+            "locator" : "458:1-459:36",
             "name" : "USPSTFAvgRiskFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -11141,7 +11141,7 @@
             },
             "expression" : {
                "localId" : "2774",
-               "locator" : "446:3-446:36",
+               "locator" : "459:3-459:36",
                "name" : "USPSTFAvgRiskFlag",
                "libraryName" : "DecisionToScreen",
                "type" : "ExpressionRef",

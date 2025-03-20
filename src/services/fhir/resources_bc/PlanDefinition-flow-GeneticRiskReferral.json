@@ -1,0 +1,282 @@
+{
+  "resourceType": "PlanDefinition",
+  "id": "flow-GeneticRiskReferral",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computableplandefinition"
+    ]
+  },
+  "url": "http://cancerscreeningcds.github.io/bcsm-cds/PlanDefinition/flow-GeneticRiskReferral",
+  "title": "Genetic Risk Referral",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    }
+  ],
+  "author": [
+    {
+      "name": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention."
+    }
+  ],
+  "editor": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "reviewer": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "endorser": [
+    {
+      "name": "Division of Cancer Prevention and Control, Centers for Disease Control and Prevention"
+    }
+  ],
+  "library": [
+    "Library/GeneticRiskReferral|1.0.0"
+  ],
+  "action": [
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "BRCA-Related Cancer: Risk Assessment, Genetic Counseling, and Genetic Testing",
+          "citation": "US Preventive Services Task Force. Risk Assessment, Genetic Counseling, and Genetic Testing for BRCA-Related Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(7):652–665.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/brca-related-cancer-risk-assessment-genetic-counseling-and-genetic-testing"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "ExistsGeneticReferralVariant"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "GeneticRiskReferralCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "GeneticRiskReferralReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "GeneticReferralVariant",
+      "title": "Referral for genetic risk counseling",
+      "description": "Referral for genetic counseling if not previously evaluated for variant of concern based on known family history.\n\nAny blood relative with known BRCA1/BRCA2 variants, Li-Fraumeni syndrome (TP53 variant), Cowden or Bannayan-Riley-Ruvalcaba syndromes (PTEN variants), and other variants known to be associated with increased risk of development of breast cancer. Variants may include ATM, BARD1, CDH1, CHEK2, NF1, PALB2, RAD51C, RAD51D, STK11.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/GeneticCounselingReferralRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "BRCA-Related Cancer: Risk Assessment, Genetic Counseling, and Genetic Testing",
+          "citation": "US Preventive Services Task Force. Risk Assessment, Genetic Counseling, and Genetic Testing for BRCA-Related Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(7):652–665.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/brca-related-cancer-risk-assessment-genetic-counseling-and-genetic-testing"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "ExistsGeneticReferralAncestry"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "GeneticRiskReferralCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "GeneticRiskReferralReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "GeneticReferralAncestry",
+      "title": "Referral for genetic risk counseling",
+      "description": "Referral for genetic counseling if not previously consulted, or if limited panel was done and additional testing may be warranted.\n\nCan offer referral to individuals who have one grandparent identified as of Ashkenazi Jewish ancestry, irrespective of cancer history in the family and without additional risk factors.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/GeneticCounselingReferralRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "BRCA-Related Cancer: Risk Assessment, Genetic Counseling, and Genetic Testing",
+          "citation": "US Preventive Services Task Force. Risk Assessment, Genetic Counseling, and Genetic Testing for BRCA-Related Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(7):652–665.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/brca-related-cancer-risk-assessment-genetic-counseling-and-genetic-testing"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "ExistsGeneticReferralRisk"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "dynamicValue": [
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "GeneticRiskReferralCode"
+          },
+          "path": "code.coding[0]"
+        },
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "GeneticRiskReferralReason"
+          },
+          "path": "reasonCode[0].coding[0]"
+        }
+      ],
+      "id": "GeneticReferralRisk",
+      "title": "Referral for genetic risk counseling",
+      "description": "Referral for genetic counseling if not previously consulted, or if limited panel was done and additional testing may be warranted.\n\nWomen with a positive result on family history based risk assessment should receive genetic counseling and, if indicated after counseling, genetic testing.",
+      "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/GeneticCounselingReferralRequest|1.0.0"
+    },
+    {
+      "documentation": [
+        {
+          "type": "citation",
+          "label": "USPSTF",
+          "display": "BRCA-Related Cancer: Risk Assessment, Genetic Counseling, and Genetic Testing",
+          "citation": "US Preventive Services Task Force. Risk Assessment, Genetic Counseling, and Genetic Testing for BRCA-Related Cancer: US Preventive Services Task Force Recommendation Statement. JAMA. 2019;322(7):652–665.",
+          "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/brca-related-cancer-risk-assessment-genetic-counseling-and-genetic-testing"
+        }
+      ],
+      "condition": [
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "CheckIsIncludedAndNotExcluded"
+          },
+          "kind": "applicability"
+        },
+        {
+          "expression": {
+            "language": "text/cql",
+            "expression": "ExistsGeneticRiskAssessment"
+          },
+          "kind": "applicability"
+        }
+      ],
+      "action": [
+        {
+          "dynamicValue": [
+            {
+              "expression": {
+                "language": "text/cql",
+                "expression": "GeneticRiskAssessmentCode"
+              },
+              "path": "code.coding[0]"
+            },
+            {
+              "expression": {
+                "language": "text/cql",
+                "expression": "GeneticRiskAssessmentReason"
+              },
+              "path": "reasonCode[0].coding[0]"
+            }
+          ],
+          "id": "FhxGeneticRiskAssessment",
+          "title": "Informal genetic risk assessment",
+          "description": "Perform assessment based on criteria in first- or second-degree blood relatives known to be associated with increased risk of inherited breast cancer susceptibility variant.",
+          "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/GeneticRiskAssessmentRequest|1.0.0"
+        },
+        {
+          "dynamicValue": [
+            {
+              "expression": {
+                "language": "text/cql",
+                "expression": "GeneticRiskAssessmentToolCode"
+              },
+              "path": "code.coding[0]"
+            },
+            {
+              "expression": {
+                "language": "text/cql",
+                "expression": "GeneticRiskAssessmentToolReason"
+              },
+              "path": "reasonCode[0].coding[0]"
+            }
+          ],
+          "id": "FhxGeneticRiskAssessmentTool",
+          "title": "Genetic risk assessment instrument",
+          "description": "Tools evaluated by the USPSTF include the Ontario Family History Assessment Tool, Manchester Scoring System, Referral Screening Tool, Pedigree Assessment Tool, 7-Question Family History Screening Tool, International Breast Cancer Intervention Study instrument (Tyrer-Cuzick), and brief versions of BRCAPRO. ",
+          "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/GeneticRiskAssessmentRequest|1.0.0"
+        }
+      ],
+      "id": "GeneticRiskAssessment",
+      "title": "Perform genetic risk assessment",
+      "description": "A genetic risk assessment, either informal or formal using a validated instrument, will help determine if the patient may benefit from referral for genetic risk counseling and testing.\n\nWomen with a positive result on the risk assessment tool should receive genetic counseling and, if indicated after counseling, genetic testing.",
+      "selectionBehavior": "any"
+    }
+  ],
+  "version": "1.0.0",
+  "date": "2024-10-22",
+  "status": "draft",
+  "experimental": true,
+  "publisher": "The Health FFRDC, operated by The MITRE Corporation, in support of the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention.",
+  "copyright": "(C) 2024 The MITRE Corporation. All Rights Reserved. Approved for Public Release: 24-2711. Distribution Unlimited. Unless otherwise noted, this work is available under an Apache 2.0 license. It was produced by the MITRE Corporation for the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention in accordance with the Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.",
+  "approvalDate": "2024-10-22",
+  "lastReviewDate": "2024-10-22",
+  "name": "flow-GeneticRiskReferral",
+  "description": "Risk assessment for women who have family history that may be associated with an increased risk for potentially harmful mutations in breast cancer susceptibility genes to determine who should receive referral for genetic counseling and, if indicated after counseling, testing.",
+  "type": {
+    "coding": [
+      {
+        "code": "eca-rule",
+        "system": "http://terminology.hl7.org/CodeSystem/plan-definition-type"
+      }
+    ]
+  }
+}

@@ -7,6 +7,7 @@ import { formatDate } from 'util/formatDate';
 
 import './style.scss';
 function RecommendationCardBody({
+  id,
   errors,
   isCdsApplied,
   recommendation,
@@ -14,6 +15,7 @@ function RecommendationCardBody({
   recommendationDetails,
   recommendationGroup,
   documentation,
+  idx,
   disclaimer,
   suggestedOrders,
   setDataToView
@@ -55,7 +57,14 @@ function RecommendationCardBody({
         return (<React.Fragment key={doc.label}>
           <span className="fw-bold">Source:</span>{" "}
           <a href={doc.url} target="_blank" rel="noopener noreferrer">
-            {doc.label}
+            {doc.label}: ({doc.display})
+          </a><br />
+        </React.Fragment>
+        )}
+        if (doc.type == 'documentation') {
+        return (<React.Fragment key={doc.label}>
+          <a href={doc.url} target="_blank" rel="noopener noreferrer">
+            {doc.display}
           </a><br />
         </React.Fragment>
         )
@@ -91,6 +100,7 @@ function Recommendations({ inputs, toggleStatus, onToggleStatusChange }) {
         <Card.Header>Screening and Management Recommendation</Card.Header>
         {Array.isArray(inputs) ? inputs.map((input, index) => {
           let {
+            id = '',
             recommendation = '',
             recommendationGroup = '',
             recommendationDetails = [],
@@ -114,6 +124,7 @@ function Recommendations({ inputs, toggleStatus, onToggleStatusChange }) {
           return (
             <React.Fragment key = {index}>
               <RecommendationCardBody
+                id={id}
                 errors={errors}
                 isCdsApplied={isCdsApplied}
                 recommendation={recommendation}
@@ -122,6 +133,7 @@ function Recommendations({ inputs, toggleStatus, onToggleStatusChange }) {
                 recommendationGroup={recommendationGroup}
                 documentation={documentation}
                 disclaimer={disclaimer}
+                idx={index}
                 suggestedOrders={suggestedOrders}
                 setDataToView={setDataToView}
               />
