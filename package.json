@@ -2,7 +2,7 @@
   "name": "bcsm-cds-dashboard",
   "version": "0.3.5",
   "license": "Apache-2.0",
-  "homepage": "/",
+  "homepage": "https://cancerscreeningcds.github.io/bcsm-cds-dashboard",
   "dependencies": {
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^6.5.1",
