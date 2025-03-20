@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4bb74415.css",
+    "main.js": "/static/js/main.bfceae1b.js",
+    "static/js/572.8f14fdc1.chunk.js": "/static/js/572.8f14fdc1.chunk.js",
+    "static/js/819.8226a43a.chunk.js": "/static/js/819.8226a43a.chunk.js",
+    "static/js/507.cedda3ed.chunk.js": "/static/js/507.cedda3ed.chunk.js",
+    "static/js/415.a2d13299.chunk.js": "/static/js/415.a2d13299.chunk.js",
+    "static/js/932.88d462a5.chunk.js": "/static/js/932.88d462a5.chunk.js",
+    "static/js/829.eb01c844.chunk.js": "/static/js/829.eb01c844.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.7ff3ca6fa798de3f8ac2.woff",
+    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.f2539a501be3a673de05.woff2",
+    "static/media/bcsm-tulip.svg": "/static/media/bcsm-tulip.de26e0df1412734f02388904f3891666.svg",
+    "static/media/certificate-paper.svg": "/static/media/certificate-paper.00d544fc7c3da2661bcc.svg",
+    "index.html": "/index.html",
+    "static/media/plus-square.svg": "/static/media/plus-square.1254f9745b42217d16e8c047e1aea764.svg",
+    "main.4bb74415.css.map": "/static/css/main.4bb74415.css.map",
+    "main.bfceae1b.js.map": "/static/js/main.bfceae1b.js.map",
+    "572.8f14fdc1.chunk.js.map": "/static/js/572.8f14fdc1.chunk.js.map",
+    "819.8226a43a.chunk.js.map": "/static/js/819.8226a43a.chunk.js.map",
+    "507.cedda3ed.chunk.js.map": "/static/js/507.cedda3ed.chunk.js.map",
+    "415.a2d13299.chunk.js.map": "/static/js/415.a2d13299.chunk.js.map",
+    "932.88d462a5.chunk.js.map": "/static/js/932.88d462a5.chunk.js.map",
+    "829.eb01c844.chunk.js.map": "/static/js/829.eb01c844.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4bb74415.css",
+    "static/js/main.bfceae1b.js"
+  ]
+}
