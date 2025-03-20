@@ -65,6 +65,7 @@
   "url": "http://cancerscreeningcds.github.io/bcsm-cds/Library/ScreeningDueActions",
   "version": "1.0.0",
   "name": "ScreeningDueActions",
+  "title": "Screening Due Actions",
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

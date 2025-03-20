@@ -1,3 +1,16 @@
+/*  
+  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.
+
+  (C) 2024 The MITRE Corporation. All Rights Reserved. 
+  Approved for Public Release: 24-2711. 
+  Distribution Unlimited.
+
+  Unless otherwise noted, this work is available under an Apache 2.0 license. 
+  It was produced by the MITRE Corporation for the Division of Cancer Prevention 
+  and Control, Centers for Disease Control and Prevention in accordance with the 
+  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.
+*/
+
 library AverageRisk version '1.0.0'
 
 using FHIR version '4.0.1'
@@ -7,6 +20,9 @@ include AverageRiskEvents version '1.0.0' called Events
 include AverageRiskActions version '1.0.0' called Actions
 include DataElements version '1.0.0' called DataElements
 include BCSMCommonFunctions version '1.0.0' called BCSMCommon
+
+parameter ACS System.Boolean default true
+parameter USPSTF System.Boolean default true
 
 context Patient
 
@@ -24,19 +40,20 @@ define "flow-AverageRisk":
   except { null }
 
 define ACSMammoAvgRiskAgeUnder45:
-  if Events."eve-ageUnder40" or Events."eve-age40to44" is true
+  if ACS and Events."eve-ageUnder40" or Events."eve-age40to44" is true
   then Actions."act-acsavgrecs40" else null 
 
 define ACSMammoAvgRiskAge45to54:
-  if Events."eve-Age45to54" is true
+  if ACS and Events."eve-Age45to54" is true
   then Actions."act-acsavgrecs45" else null    
 
 define ACSMammoAvgRiskAgeOver54:
-  if Events."eve-AgeOver54" is true
+  if ACS and Events."eve-AgeOver54" is true
   then Actions."act-acsavgrecs55" else null  
 
 define USPSTFAvgRisk:
-  Actions."act-uspstfavgrecs"  
+  if USPSTF 
+  then Actions."act-uspstfavgrecs" else null  
 
 //------------------------------------------------------------------------------
 // DYNAMIC VALUES

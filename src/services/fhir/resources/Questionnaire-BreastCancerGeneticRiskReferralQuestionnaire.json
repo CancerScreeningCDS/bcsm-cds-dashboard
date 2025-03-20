@@ -83,19 +83,17 @@
           "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system"
         }
       ],
-      "linkId": "fhxrisktool",
-      "text": "Brief familial risk assessment tool",
-      "type": "boolean"
-    },
-    {
-      "code": [
+      "answerOption": [
         {
-          "code": "highfamilialrisk",
-          "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system"
+          "valueCoding": {
+            "code": "highfamilialrisk",
+            "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
+            "display": "High familial risk"
+          }
         }
       ],
-      "linkId": "highfamilialrisk",
-      "text": "High familial risk",
+      "linkId": "fhxrisktool",
+      "text": "Brief familial risk assessment tool",
       "type": "boolean"
     }
   ],

@@ -11,7 +11,7 @@
          "s" : {
             "r" : "454",
             "s" : [ {
-               "value" : [ "","library HighRiskReferralActions version '1.0.0'" ]
+               "value" : [ "/*  \n  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.\n\n  (C) 2024 The MITRE Corporation. All Rights Reserved. \n  Approved for Public Release: 24-2711. \n  Distribution Unlimited.\n\n  Unless otherwise noted, this work is available under an Apache 2.0 license. \n  It was produced by the MITRE Corporation for the Division of Cancer Prevention \n  and Control, Centers for Disease Control and Prevention in accordance with the \n  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.\n*/\n\n","library HighRiskReferralActions version '1.0.0'" ]
             } ]
          }
       } ],
@@ -30,7 +30,7 @@
             "uri" : "urn:hl7-org:elm-types:r1"
          }, {
             "localId" : "206",
-            "locator" : "3:1-3:26",
+            "locator" : "16:1-16:26",
             "localIdentifier" : "FHIR",
             "uri" : "http://hl7.org/fhir",
             "version" : "4.0.1",
@@ -54,7 +54,7 @@
       "includes" : {
          "def" : [ {
             "localId" : "207",
-            "locator" : "5:1-5:55",
+            "locator" : "18:1-18:55",
             "localIdentifier" : "FHIRHelpers",
             "path" : "FHIRHelpers",
             "version" : "4.0.1",
@@ -75,7 +75,7 @@
             } ]
          }, {
             "localId" : "208",
-            "locator" : "6:1-6:61",
+            "locator" : "19:1-19:61",
             "localIdentifier" : "BCSMCommon",
             "path" : "BCSMCommonFunctions",
             "version" : "1.0.0",
@@ -99,7 +99,7 @@
       "codeSystems" : {
          "def" : [ {
             "localId" : "209",
-            "locator" : "8:1-8:114",
+            "locator" : "21:1-21:114",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "ActCode",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
@@ -115,7 +115,7 @@
             } ]
          }, {
             "localId" : "210",
-            "locator" : "9:1-9:111",
+            "locator" : "22:1-22:111",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "LOCAL",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
@@ -131,7 +131,7 @@
             } ]
          }, {
             "localId" : "211",
-            "locator" : "10:1-10:124",
+            "locator" : "23:1-23:124",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "BiopsyResultCS",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system",
@@ -150,7 +150,7 @@
       "codes" : {
          "def" : [ {
             "localId" : "212",
-            "locator" : "13:1-13:101",
+            "locator" : "26:1-26:101",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "5 year risk assessment tool",
             "id" : "5yrisktool",
@@ -174,13 +174,13 @@
             } ],
             "codeSystem" : {
                "localId" : "213",
-               "locator" : "13:55-13:63",
+               "locator" : "26:55-26:63",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "214",
-            "locator" : "14:1-14:127",
+            "locator" : "27:1-27:127",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Perform informal 5 year risk assessment",
             "id" : "5YRiskAssess",
@@ -204,13 +204,13 @@
             } ],
             "codeSystem" : {
                "localId" : "215",
-               "locator" : "14:69-14:77",
+               "locator" : "27:69-27:77",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "216",
-            "locator" : "15:1-15:90",
+            "locator" : "28:1-28:90",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "High risk referral",
             "id" : "highriskreferral",
@@ -234,13 +234,13 @@
             } ],
             "codeSystem" : {
                "localId" : "217",
-               "locator" : "15:53-15:61",
+               "locator" : "28:53-28:61",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "218",
-            "locator" : "16:1-16:102",
+            "locator" : "29:1-29:102",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Consider life expectancy",
             "id" : "estlifexpectancy",
@@ -264,13 +264,13 @@
             } ],
             "codeSystem" : {
                "localId" : "219",
-               "locator" : "16:59-16:67",
+               "locator" : "29:59-29:67",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "220",
-            "locator" : "18:1-18:87",
+            "locator" : "31:1-31:87",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "High familial risk",
             "id" : "highfamilialrisk",
@@ -294,13 +294,13 @@
             } ],
             "codeSystem" : {
                "localId" : "221",
-               "locator" : "18:52-18:58",
+               "locator" : "31:52-31:58",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "222",
-            "locator" : "19:1-19:121",
+            "locator" : "32:1-32:121",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "History of chest radiation ages 10-30 y",
             "id" : "chestxrt",
@@ -324,13 +324,13 @@
             } ],
             "codeSystem" : {
                "localId" : "223",
-               "locator" : "19:65-19:71",
+               "locator" : "32:65-32:71",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "224",
-            "locator" : "20:1-20:96",
+            "locator" : "33:1-33:96",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Atypical breast finding",
             "id" : "Atypical",
@@ -354,13 +354,13 @@
             } ],
             "codeSystem" : {
                "localId" : "225",
-               "locator" : "20:49-20:62",
+               "locator" : "33:49-33:62",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "226",
-            "locator" : "21:1-21:77",
+            "locator" : "34:1-34:77",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "High 5 year risk",
             "id" : "high5yrisk",
@@ -384,13 +384,13 @@
             } ],
             "codeSystem" : {
                "localId" : "227",
-               "locator" : "21:44-21:50",
+               "locator" : "34:44-34:50",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "228",
-            "locator" : "22:1-22:110",
+            "locator" : "35:1-35:110",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "5 year risk at least 1.67%",
             "id" : "higherthanaverage5yrisk",
@@ -414,13 +414,13 @@
             } ],
             "codeSystem" : {
                "localId" : "229",
-               "locator" : "22:67-22:73",
+               "locator" : "35:67-35:73",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
          }, {
             "localId" : "230",
-            "locator" : "23:1-23:124",
+            "locator" : "36:1-36:124",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Personal or family history risk factors",
             "id" : "riskfactors",
@@ -444,7 +444,7 @@
             } ],
             "codeSystem" : {
                "localId" : "231",
-               "locator" : "23:68-23:74",
+               "locator" : "36:68-36:74",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "LOCAL"
             }
@@ -453,14 +453,14 @@
       "contexts" : {
          "def" : [ {
             "localId" : "235",
-            "locator" : "25:1-25:15",
+            "locator" : "38:1-38:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
             "localId" : "233",
-            "locator" : "25:1-25:15",
+            "locator" : "38:1-38:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
@@ -469,7 +469,7 @@
                "signature" : [ ],
                "operand" : {
                   "localId" : "232",
-                  "locator" : "25:1-25:15",
+                  "locator" : "38:1-38:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -481,7 +481,7 @@
             }
          }, {
             "localId" : "237",
-            "locator" : "27:1-32:2",
+            "locator" : "40:1-45:2",
             "name" : "act-estlifexpectancy",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -577,7 +577,7 @@
             },
             "expression" : {
                "localId" : "238",
-               "locator" : "28:3-32:2",
+               "locator" : "41:3-45:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "249",
@@ -620,7 +620,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "239",
-                     "locator" : "29:9-29:34",
+                     "locator" : "42:9-42:34",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Consider life expectancy",
                      "type" : "CodeRef"
@@ -629,7 +629,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "240",
-                     "locator" : "30:13-30:16",
+                     "locator" : "43:13-43:16",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   }
@@ -637,7 +637,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "242",
-                     "locator" : "31:20-31:55",
+                     "locator" : "44:20-44:55",
                      "name" : "SourceDocumentationUSPSTF",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -659,7 +659,7 @@
             }
          }, {
             "localId" : "268",
-            "locator" : "34:1-39:2",
+            "locator" : "47:1-52:2",
             "name" : "act-HighRiskReferralGenetic",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -759,7 +759,7 @@
             },
             "expression" : {
                "localId" : "269",
-               "locator" : "35:3-39:2",
+               "locator" : "48:3-52:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "280",
@@ -802,7 +802,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "270",
-                     "locator" : "36:9-36:28",
+                     "locator" : "49:9-49:28",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "High risk referral",
                      "type" : "CodeRef"
@@ -811,7 +811,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "271",
-                     "locator" : "37:13-37:32",
+                     "locator" : "50:13-50:32",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "High familial risk",
                      "type" : "CodeRef"
@@ -820,7 +820,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "273",
-                     "locator" : "38:20-38:55",
+                     "locator" : "51:20-51:55",
                      "name" : "SourceDocumentationUSPSTF",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -842,7 +842,7 @@
             }
          }, {
             "localId" : "299",
-            "locator" : "41:1-46:2",
+            "locator" : "54:1-59:2",
             "name" : "act-HighRiskReferralChestXRT",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -942,7 +942,7 @@
             },
             "expression" : {
                "localId" : "300",
-               "locator" : "42:3-46:2",
+               "locator" : "55:3-59:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "311",
@@ -985,7 +985,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "301",
-                     "locator" : "43:9-43:28",
+                     "locator" : "56:9-56:28",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "High risk referral",
                      "type" : "CodeRef"
@@ -994,7 +994,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "302",
-                     "locator" : "44:13-44:53",
+                     "locator" : "57:13-57:53",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "History of chest radiation ages 10-30 y",
                      "type" : "CodeRef"
@@ -1003,7 +1003,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "304",
-                     "locator" : "45:20-45:55",
+                     "locator" : "58:20-58:55",
                      "name" : "SourceDocumentationUSPSTF",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -1025,7 +1025,7 @@
             }
          }, {
             "localId" : "330",
-            "locator" : "49:1-54:2",
+            "locator" : "62:1-67:2",
             "name" : "act-HighRiskReferralAtypicalBiopsy",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1125,7 +1125,7 @@
             },
             "expression" : {
                "localId" : "331",
-               "locator" : "50:3-54:2",
+               "locator" : "63:3-67:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "342",
@@ -1168,7 +1168,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "332",
-                     "locator" : "51:9-51:28",
+                     "locator" : "64:9-64:28",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "High risk referral",
                      "type" : "CodeRef"
@@ -1177,7 +1177,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "333",
-                     "locator" : "52:13-52:37",
+                     "locator" : "65:13-65:37",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Atypical breast finding",
                      "type" : "CodeRef"
@@ -1186,7 +1186,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "335",
-                     "locator" : "53:20-53:55",
+                     "locator" : "66:20-66:55",
                      "name" : "SourceDocumentationUSPSTF",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -1208,7 +1208,7 @@
             }
          }, {
             "localId" : "361",
-            "locator" : "56:1-61:2",
+            "locator" : "69:1-74:2",
             "name" : "act-HighRiskReferral",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1308,7 +1308,7 @@
             },
             "expression" : {
                "localId" : "362",
-               "locator" : "57:3-61:2",
+               "locator" : "70:3-74:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "373",
@@ -1351,7 +1351,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "363",
-                     "locator" : "58:9-58:28",
+                     "locator" : "71:9-71:28",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "High risk referral",
                      "type" : "CodeRef"
@@ -1360,7 +1360,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "364",
-                     "locator" : "59:13-59:30",
+                     "locator" : "72:13-72:30",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "High 5 year risk",
                      "type" : "CodeRef"
@@ -1369,7 +1369,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "366",
-                     "locator" : "60:20-60:55",
+                     "locator" : "73:20-73:55",
                      "name" : "SourceDocumentationUSPSTF",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -1391,7 +1391,7 @@
             }
          }, {
             "localId" : "392",
-            "locator" : "63:1-68:2",
+            "locator" : "76:1-81:2",
             "name" : "act-ConsiderHighRiskReferral",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1491,7 +1491,7 @@
             },
             "expression" : {
                "localId" : "393",
-               "locator" : "64:3-68:2",
+               "locator" : "77:3-81:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "404",
@@ -1534,7 +1534,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "394",
-                     "locator" : "65:9-65:28",
+                     "locator" : "78:9-78:28",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "High risk referral",
                      "type" : "CodeRef"
@@ -1543,7 +1543,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "395",
-                     "locator" : "66:13-66:40",
+                     "locator" : "79:13-79:40",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "5 year risk at least 1.67%",
                      "type" : "CodeRef"
@@ -1552,7 +1552,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "397",
-                     "locator" : "67:20-67:55",
+                     "locator" : "80:20-80:55",
                      "name" : "SourceDocumentationUSPSTF",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -1574,7 +1574,7 @@
             }
          }, {
             "localId" : "423",
-            "locator" : "70:1-75:2",
+            "locator" : "83:1-88:2",
             "name" : "act-5YRiskAssessment",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1674,7 +1674,7 @@
             },
             "expression" : {
                "localId" : "424",
-               "locator" : "71:3-75:2",
+               "locator" : "84:3-88:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "435",
@@ -1717,7 +1717,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "425",
-                     "locator" : "72:9-72:49",
+                     "locator" : "85:9-85:49",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Perform informal 5 year risk assessment",
                      "type" : "CodeRef"
@@ -1726,7 +1726,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "426",
-                     "locator" : "73:13-73:53",
+                     "locator" : "86:13-86:53",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Personal or family history risk factors",
                      "type" : "CodeRef"
@@ -1735,7 +1735,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "428",
-                     "locator" : "74:20-74:55",
+                     "locator" : "87:20-87:55",
                      "name" : "SourceDocumentationUSPSTF",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",
@@ -1757,7 +1757,7 @@
             }
          }, {
             "localId" : "454",
-            "locator" : "77:1-82:2",
+            "locator" : "90:1-95:2",
             "name" : "act-5YRiskAssessmentTool",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1857,7 +1857,7 @@
             },
             "expression" : {
                "localId" : "455",
-               "locator" : "78:3-82:2",
+               "locator" : "91:3-95:2",
                "type" : "Tuple",
                "resultTypeSpecifier" : {
                   "localId" : "466",
@@ -1900,7 +1900,7 @@
                   "name" : "code",
                   "value" : {
                      "localId" : "456",
-                     "locator" : "79:9-79:37",
+                     "locator" : "92:9-92:37",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "5 year risk assessment tool",
                      "type" : "CodeRef"
@@ -1909,7 +1909,7 @@
                   "name" : "reason",
                   "value" : {
                      "localId" : "457",
-                     "locator" : "80:13-80:53",
+                     "locator" : "93:13-93:53",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Personal or family history risk factors",
                      "type" : "CodeRef"
@@ -1918,7 +1918,7 @@
                   "name" : "documentation",
                   "value" : {
                      "localId" : "459",
-                     "locator" : "81:20-81:55",
+                     "locator" : "94:20-94:55",
                      "name" : "SourceDocumentationUSPSTF",
                      "libraryName" : "BCSMCommon",
                      "type" : "ExpressionRef",

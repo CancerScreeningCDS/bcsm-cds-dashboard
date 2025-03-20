@@ -105,7 +105,7 @@
         }
       ],
       "id": "ACSGeneticRiskMammo",
-      "title": "Annual screeening mammogram starting age 30",
+      "title": "Annual screening mammogram starting age 30",
       "description": "An annual screening mammogram starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on known genetic markers or syndromes should get a mammogram every year, typically starting at age 30.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -173,7 +173,7 @@
         }
       ],
       "id": "ACSGeneticRiskMri",
-      "title": "Annual screeening MRI starting age 30",
+      "title": "Annual screening MRI starting age 30",
       "description": "An annual screening MRI starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on known genetic markers or syndromes should get a breast MRI every year, typically starting at age 30.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -278,7 +278,7 @@
         }
       ],
       "id": "ACSMammoAfterRT",
-      "title": "Annual screeening mammogram",
+      "title": "Annual screening mammogram",
       "description": "An annual screening mammogram starting 8 years after radiotherapy and no earlier than age 25 is recommended.\n\nRefer to patient's Oncologic treatment team or Survivorship Care Plan for patient specific guidance.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -346,7 +346,7 @@
         }
       ],
       "id": "ACSMriAfterRT",
-      "title": "Annual screeening MRI",
+      "title": "Annual screening MRI",
       "description": "An annual screening MRI starting 8 years after radiotherapy and no earlier than age 25 is recommended.\n\nRefer to patient's Oncologic treatment team or Survivorship Care Plan for patient specific guidance.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -413,8 +413,8 @@
         }
       ],
       "id": "ACSMammoAfterBrca",
-      "title": "Annual screeening mammogram",
-      "description": "Annual screeening mammogram after 5 years in remission from breast cancer is recomended.",
+      "title": "Annual screening mammogram",
+      "description": "Annual screening mammogram after 5 years in remission from breast cancer is recomended.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
     {
@@ -518,7 +518,7 @@
         }
       ],
       "id": "ACSMammoAtypicalBiopsy",
-      "title": "Annual screeening mammogram starting age 30",
+      "title": "Annual screening mammogram starting age 30",
       "description": "An annual screening mammogram starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on past atypical biopsy should get a mammogram every year, typically starting at age 30.\n",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -633,7 +633,7 @@
         }
       ],
       "id": "ACSMriAtypicalBiopsyHighRisk",
-      "title": "Annual screeening MRI starting age 30",
+      "title": "Annual screening MRI starting age 30",
       "description": "An annual screening MRI starting at age 30 is recommended in patients with past atypical biopsy and lifetime risk > 20-25%.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     }

@@ -44,8 +44,8 @@
         "action": [
           {
             "id": "ACSMammoAvgRiskAge45to54",
-            "title": "Annual screeening mammogram starting age 40",
-            "description": "Annual screeening mammogram is recommended for women 45 to 54.",
+            "title": "Annual screening mammogram starting age 40",
+            "description": "Annual screening mammogram is recommended for women 45 to 54.",
             "documentation": [
               {
                 "type": "citation",
@@ -99,8 +99,8 @@
           },
           {
             "id": "USPSTFAvgRisk",
-            "title": "Biennial screeening mammogram starting age 40",
-            "description": "Biennial screeening mammogram starting at age 40",
+            "title": "Biennial screening mammogram starting age 40",
+            "description": "Biennial screening mammogram starting at age 40",
             "documentation": [
               {
                 "type": "citation",

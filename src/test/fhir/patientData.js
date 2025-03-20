@@ -4,6 +4,8 @@ import JustineWallace from './bundles/patients/JustineWallace_brca1.json';
 import LindaNadler from './bundles/patients/LindaNadler-dcis.json';
 import MarionHenderson from './bundles/patients/MarionHenderson_avg_45_to_54.json';
 import NadiaWills from './bundles/patients/NadiaWills_palpable_breast_mass.json';
+import PatriciaLambert from './bundles/patients/PatriciaLambert_remission_lt_5_years.json'
+
 
 
 export const testData = {
@@ -12,5 +14,7 @@ export const testData = {
   "JustineWallace_brca1" : JustineWallace,
   "LindaNadler-dcis" : LindaNadler,
   "MarionHenderson_avg_45_to_54" : MarionHenderson,
-  "NadiaWills_palpable_breast_mass" : NadiaWills
+  "NadiaWills_palpable_breast_mass" : NadiaWills,
+  "PatriciaLambert_remission_lt_5_years" : PatriciaLambert
+
   }

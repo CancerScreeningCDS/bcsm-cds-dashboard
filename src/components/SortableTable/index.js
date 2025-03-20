@@ -98,7 +98,7 @@ function RenderRowElement(hdr, itm, formInfo, setDataToView) {
       details.map(d => d?.value).join('; ') :
       details;
     return <span className={incompleteClass} title={detailText}>
-      {itm[key] ?? ''}
+      {itm[key] ?? detailText}
       {
         itm.edited ? <span className="is_manual">*</span> : null
       }

@@ -11,7 +11,7 @@
          "s" : {
             "r" : "238",
             "s" : [ {
-               "value" : [ "","library DecisionToScreenEvents version '1.0.0'" ]
+               "value" : [ "/*  \n  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.\n\n  (C) 2024 The MITRE Corporation. All Rights Reserved. \n  Approved for Public Release: 24-2711. \n  Distribution Unlimited.\n\n  Unless otherwise noted, this work is available under an Apache 2.0 license. \n  It was produced by the MITRE Corporation for the Division of Cancer Prevention \n  and Control, Centers for Disease Control and Prevention in accordance with the \n  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.\n*/\n\n","library DecisionToScreenEvents version '1.0.0'" ]
             } ]
          }
       } ],
@@ -30,7 +30,7 @@
             "uri" : "urn:hl7-org:elm-types:r1"
          }, {
             "localId" : "206",
-            "locator" : "3:1-3:26",
+            "locator" : "16:1-16:26",
             "localIdentifier" : "FHIR",
             "uri" : "http://hl7.org/fhir",
             "version" : "4.0.1",
@@ -54,7 +54,7 @@
       "includes" : {
          "def" : [ {
             "localId" : "207",
-            "locator" : "5:1-5:55",
+            "locator" : "18:1-18:55",
             "localIdentifier" : "FHIRHelpers",
             "path" : "FHIRHelpers",
             "version" : "4.0.1",
@@ -75,7 +75,7 @@
             } ]
          }, {
             "localId" : "208",
-            "locator" : "6:1-6:63",
+            "locator" : "19:1-19:63",
             "localIdentifier" : "C3F",
             "path" : "CDSConnectCommonsforFHIRv401",
             "version" : "1.0.0",
@@ -96,7 +96,7 @@
             } ]
          }, {
             "localId" : "209",
-            "locator" : "7:1-7:56",
+            "locator" : "20:1-20:56",
             "localIdentifier" : "DataElements",
             "path" : "DataElements",
             "version" : "1.0.0",
@@ -120,7 +120,7 @@
       "parameters" : {
          "def" : [ {
             "localId" : "211",
-            "locator" : "19:1-19:51",
+            "locator" : "32:1-32:51",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "ObservationLookbackPeriod",
             "accessLevel" : "Public",
@@ -140,7 +140,7 @@
             } ],
             "default" : {
                "localId" : "212",
-               "locator" : "19:45-19:51",
+               "locator" : "32:45-32:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "value" : 14,
                "unit" : "days",
@@ -148,7 +148,7 @@
             }
          }, {
             "localId" : "213",
-            "locator" : "20:1-20:45",
+            "locator" : "33:1-33:45",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
             "name" : "SymptomaticLookBack",
             "accessLevel" : "Public",
@@ -168,7 +168,7 @@
             } ],
             "default" : {
                "localId" : "214",
-               "locator" : "20:39-20:45",
+               "locator" : "33:39-33:45",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Quantity",
                "value" : 14,
                "unit" : "days",
@@ -179,7 +179,7 @@
       "codeSystems" : {
          "def" : [ {
             "localId" : "210",
-            "locator" : "13:1-13:111",
+            "locator" : "26:1-26:111",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "LOCAL",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
@@ -198,14 +198,14 @@
       "contexts" : {
          "def" : [ {
             "localId" : "218",
-            "locator" : "22:1-22:15",
+            "locator" : "35:1-35:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
             "localId" : "216",
-            "locator" : "22:1-22:15",
+            "locator" : "35:1-35:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
@@ -214,7 +214,7 @@
                "signature" : [ ],
                "operand" : {
                   "localId" : "215",
-                  "locator" : "22:1-22:15",
+                  "locator" : "35:1-35:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -226,7 +226,7 @@
             }
          }, {
             "localId" : "220",
-            "locator" : "24:1-25:19",
+            "locator" : "37:1-38:19",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "eve-AgeOver74",
             "context" : "Patient",
@@ -253,7 +253,7 @@
             } ],
             "expression" : {
                "localId" : "221",
-               "locator" : "25:3-25:19",
+               "locator" : "38:3-38:19",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Greater",
                "signature" : [ {
@@ -267,7 +267,7 @@
                } ],
                "operand" : [ {
                   "localId" : "226",
-                  "locator" : "25:3-25:14",
+                  "locator" : "38:3-38:14",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "precision" : "Year",
                   "type" : "CalculateAge",
@@ -288,7 +288,7 @@
                   }
                }, {
                   "localId" : "228",
-                  "locator" : "25:18-25:19",
+                  "locator" : "38:18-38:19",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Integer",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
                   "value" : "74",
@@ -297,7 +297,7 @@
             }
          }, {
             "localId" : "232",
-            "locator" : "27:1-28:27",
+            "locator" : "40:1-41:27",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "eve-LifeExp",
             "context" : "Patient",
@@ -328,7 +328,7 @@
             } ],
             "expression" : {
                "localId" : "234",
-               "locator" : "28:3-28:27",
+               "locator" : "41:3-41:27",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "de-lifeexp",
                "libraryName" : "DataElements",
@@ -336,7 +336,7 @@
             }
          }, {
             "localId" : "238",
-            "locator" : "33:1-36:12",
+            "locator" : "46:1-49:12",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Lactating",
             "context" : "Patient",
@@ -434,12 +434,12 @@
             } ],
             "expression" : {
                "localId" : "239",
-               "locator" : "34:3-36:12",
+               "locator" : "47:3-49:12",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "If",
                "condition" : {
                   "localId" : "244",
-                  "locator" : "34:6-34:60",
+                  "locator" : "47:6-47:60",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Not",
                   "signature" : [ {
@@ -449,7 +449,7 @@
                   } ],
                   "operand" : {
                      "localId" : "242",
-                     "locator" : "34:6-34:60",
+                     "locator" : "47:6-47:60",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "IsNull",
                      "signature" : [ {
@@ -459,7 +459,7 @@
                      } ],
                      "operand" : {
                         "localId" : "241",
-                        "locator" : "34:6-34:48",
+                        "locator" : "47:6-47:48",
                         "resultTypeName" : "{http://hl7.org/fhir}Observation",
                         "name" : "MostRecentLactatingObservation",
                         "libraryName" : "DataElements",
@@ -469,7 +469,7 @@
                },
                "then" : {
                   "localId" : "276",
-                  "locator" : "35:10-35:92",
+                  "locator" : "48:10-48:92",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "name" : "ToBoolean",
                   "libraryName" : "FHIRHelpers",
@@ -481,14 +481,14 @@
                   } ],
                   "operand" : [ {
                      "localId" : "247",
-                     "locator" : "35:32-35:91",
+                     "locator" : "48:32-48:91",
                      "resultTypeName" : "{http://hl7.org/fhir}boolean",
                      "strict" : false,
                      "type" : "As",
                      "signature" : [ ],
                      "operand" : {
                         "localId" : "250",
-                        "locator" : "35:32-35:80",
+                        "locator" : "48:32-48:80",
                         "path" : "value",
                         "type" : "Property",
                         "resultTypeSpecifier" : {
@@ -543,7 +543,7 @@
                         },
                         "source" : {
                            "localId" : "249",
-                           "locator" : "35:32-35:74",
+                           "locator" : "48:32-48:74",
                            "resultTypeName" : "{http://hl7.org/fhir}Observation",
                            "name" : "MostRecentLactatingObservation",
                            "libraryName" : "DataElements",
@@ -552,7 +552,7 @@
                      },
                      "asTypeSpecifier" : {
                         "localId" : "275",
-                        "locator" : "35:85-35:91",
+                        "locator" : "48:85-48:91",
                         "resultTypeName" : "{http://hl7.org/fhir}boolean",
                         "name" : "{http://hl7.org/fhir}boolean",
                         "type" : "NamedTypeSpecifier"
@@ -561,7 +561,7 @@
                },
                "else" : {
                   "localId" : "278",
-                  "locator" : "36:8-36:12",
+                  "locator" : "49:8-49:12",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "valueType" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "value" : "false",
@@ -570,7 +570,7 @@
             }
          }, {
             "localId" : "236",
-            "locator" : "30:1-31:12",
+            "locator" : "43:1-44:12",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "eve-lactating",
             "context" : "Patient",
@@ -591,7 +591,7 @@
             } ],
             "expression" : {
                "localId" : "279",
-               "locator" : "31:4-31:12",
+               "locator" : "44:4-44:12",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "name" : "Lactating",
                "type" : "ExpressionRef"

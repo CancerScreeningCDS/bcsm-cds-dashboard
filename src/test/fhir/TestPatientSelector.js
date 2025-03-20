@@ -50,12 +50,12 @@ export function TestPatientSelector() {
             <tr className="group">
               <td colSpan="6">Genetic Risk Referral</td>
             </tr>
-            { geneticRiskData.map((rd,idx) => <IndexRow key={idx} index={geneticRiskPad+idx} rowData={rd} library="GeneticRiskReferral" />) }
+            { geneticRiskData.map((rd,idx) => <IndexRow key={idx} index={geneticRiskPad+idx} rowData={rd} library="flow-GeneticRiskReferral" />) }
 
             <tr className="group">
               <td colSpan="6">High Risk Referral</td>
             </tr>
-            { highRiskData.map((rd,idx) => <IndexRow key={idx} index={highRiskPad+idx} rowData={rd} library="HighRiskReferral" />) }
+            { highRiskData.map((rd,idx) => <IndexRow key={idx} index={highRiskPad+idx} rowData={rd} library="flow-HighRiskReferral" />) }
 
           </tbody>
         </Table>

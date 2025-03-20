@@ -7,6 +7,7 @@ import { formatDate } from 'util/formatDate';
 
 import './style.scss';
 function RecommendationCardBody({
+  id,
   errors,
   isCdsApplied,
   recommendation,
@@ -14,6 +15,7 @@ function RecommendationCardBody({
   recommendationDetails,
   recommendationGroup,
   documentation,
+  idx,
   disclaimer,
   suggestedOrders,
   setDataToView
@@ -23,7 +25,6 @@ function RecommendationCardBody({
     if (errors.length > 0 || disclaimer !== '') setShow(true);
     else setShow(false);
   }, [errors, disclaimer]);
-
   return (
     <Card.Body>
       <Card.Title as='h3'>
@@ -40,7 +41,7 @@ function RecommendationCardBody({
         }
       </Card.Title>
       <Card.Subtitle as='h4'>
-        <div>{recommendationDate !== '' ? 'Due: ' + formatDate(recommendationDate) : null}</div>
+        <div>{recommendationDate !== null && recommendationDate !== ''  ? 'Due: ' + formatDate(recommendationDate) : null}</div>
       </Card.Subtitle>
       {
         !isCdsApplied || errors.length > 0 ? ''
@@ -52,13 +53,22 @@ function RecommendationCardBody({
       }
       <div className="recommendation-group-text">{recommendationGroup}</div>
       {documentation.map((doc) => {
+      if (doc.type == 'citation') {
         return (<React.Fragment key={doc.label}>
           <span className="fw-bold">Source:</span>{" "}
           <a href={doc.url} target="_blank" rel="noopener noreferrer">
-            {doc.label}
-          </a>
+            {doc.label}: ({doc.display})
+          </a><br />
+        </React.Fragment>
+        )}
+        if (doc.type == 'documentation') {
+        return (<React.Fragment key={doc.label}>
+          <a href={doc.url} target="_blank" rel="noopener noreferrer">
+            {doc.display}
+          </a><br />
         </React.Fragment>
         )
+        } 
       }
       )}
 
@@ -90,6 +100,7 @@ function Recommendations({ inputs, toggleStatus, onToggleStatusChange }) {
         <Card.Header>Screening and Management Recommendation</Card.Header>
         {Array.isArray(inputs) ? inputs.map((input, index) => {
           let {
+            id = '',
             recommendation = '',
             recommendationGroup = '',
             recommendationDetails = [],
@@ -113,6 +124,7 @@ function Recommendations({ inputs, toggleStatus, onToggleStatusChange }) {
           return (
             <React.Fragment key = {index}>
               <RecommendationCardBody
+                id={id}
                 errors={errors}
                 isCdsApplied={isCdsApplied}
                 recommendation={recommendation}
@@ -121,11 +133,11 @@ function Recommendations({ inputs, toggleStatus, onToggleStatusChange }) {
                 recommendationGroup={recommendationGroup}
                 documentation={documentation}
                 disclaimer={disclaimer}
+                idx={index}
                 suggestedOrders={suggestedOrders}
                 setDataToView={setDataToView}
               />
               <RiskEstimates input={riskTable} />
-              <hr />
             </React.Fragment>
           );
         }) : 'Loading'}

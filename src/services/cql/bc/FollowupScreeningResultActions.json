@@ -11,7 +11,7 @@
          "s" : {
             "r" : "932",
             "s" : [ {
-               "value" : [ "","library FollowupScreeningResultActions version '1.0.0'" ]
+               "value" : [ "/*  \n  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.\n\n  (C) 2024 The MITRE Corporation. All Rights Reserved. \n  Approved for Public Release: 24-2711. \n  Distribution Unlimited.\n\n  Unless otherwise noted, this work is available under an Apache 2.0 license. \n  It was produced by the MITRE Corporation for the Division of Cancer Prevention \n  and Control, Centers for Disease Control and Prevention in accordance with the \n  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.\n*/\n\n","library FollowupScreeningResultActions version '1.0.0'" ]
             } ]
          }
       } ],
@@ -30,7 +30,7 @@
             "uri" : "urn:hl7-org:elm-types:r1"
          }, {
             "localId" : "206",
-            "locator" : "3:1-3:26",
+            "locator" : "16:1-16:26",
             "localIdentifier" : "FHIR",
             "uri" : "http://hl7.org/fhir",
             "version" : "4.0.1",
@@ -54,7 +54,7 @@
       "includes" : {
          "def" : [ {
             "localId" : "207",
-            "locator" : "5:1-5:55",
+            "locator" : "18:1-18:55",
             "localIdentifier" : "FHIRHelpers",
             "path" : "FHIRHelpers",
             "version" : "4.0.1",
@@ -75,7 +75,7 @@
             } ]
          }, {
             "localId" : "208",
-            "locator" : "6:1-6:56",
+            "locator" : "19:1-19:56",
             "localIdentifier" : "DataElements",
             "path" : "DataElements",
             "version" : "1.0.0",
@@ -96,7 +96,7 @@
             } ]
          }, {
             "localId" : "209",
-            "locator" : "7:1-7:61",
+            "locator" : "20:1-20:61",
             "localIdentifier" : "BCSMCommon",
             "path" : "BCSMCommonFunctions",
             "version" : "1.0.0",
@@ -117,7 +117,7 @@
             } ]
          }, {
             "localId" : "210",
-            "locator" : "8:1-8:67",
+            "locator" : "21:1-21:67",
             "localIdentifier" : "Events",
             "path" : "FollowupScreeningResultEvents",
             "version" : "1.0.0",
@@ -141,7 +141,7 @@
       "codeSystems" : {
          "def" : [ {
             "localId" : "211",
-            "locator" : "10:1-10:114",
+            "locator" : "23:1-23:114",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "ActCode",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/plan-definition-action-code-system",
@@ -157,7 +157,7 @@
             } ]
          }, {
             "localId" : "212",
-            "locator" : "11:1-11:111",
+            "locator" : "24:1-24:111",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "LOCAL",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/screening-observation-code-system",
@@ -173,7 +173,7 @@
             } ]
          }, {
             "localId" : "213",
-            "locator" : "12:1-12:48",
+            "locator" : "25:1-25:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "SNOMED-CT",
             "id" : "http://snomed.info/sct",
@@ -189,7 +189,7 @@
             } ]
          }, {
             "localId" : "214",
-            "locator" : "13:1-13:124",
+            "locator" : "26:1-26:124",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
             "name" : "BiopsyResultCS",
             "id" : "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system",
@@ -208,7 +208,7 @@
       "codes" : {
          "def" : [ {
             "localId" : "215",
-            "locator" : "16:1-16:99",
+            "locator" : "29:1-29:99",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Determine next due date",
             "id" : "determinenextdue",
@@ -232,13 +232,13 @@
             } ],
             "codeSystem" : {
                "localId" : "216",
-               "locator" : "16:57-16:65",
+               "locator" : "29:57-29:65",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "217",
-            "locator" : "17:1-17:124",
+            "locator" : "30:1-30:124",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Follow-up radiologist recommendations",
             "id" : "radiologyrecs",
@@ -262,13 +262,13 @@
             } ],
             "codeSystem" : {
                "localId" : "218",
-               "locator" : "17:68-17:76",
+               "locator" : "30:68-30:76",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "219",
-            "locator" : "18:1-18:95",
+            "locator" : "31:1-31:95",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Order interval imaging",
             "id" : "intervalscreen",
@@ -292,13 +292,13 @@
             } ],
             "codeSystem" : {
                "localId" : "220",
-               "locator" : "18:54-18:62",
+               "locator" : "31:54-31:62",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "221",
-            "locator" : "19:1-19:76",
+            "locator" : "32:1-32:76",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Breast biopsy",
             "id" : "breastbiopsy",
@@ -322,13 +322,13 @@
             } ],
             "codeSystem" : {
                "localId" : "222",
-               "locator" : "19:44-19:52",
+               "locator" : "32:44-32:52",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "223",
-            "locator" : "20:1-20:100",
+            "locator" : "33:1-33:100",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Breast surgeon referral",
             "id" : "surgicalreferral",
@@ -352,13 +352,13 @@
             } ],
             "codeSystem" : {
                "localId" : "224",
-               "locator" : "20:58-20:66",
+               "locator" : "33:58-33:66",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "225",
-            "locator" : "21:1-21:85",
+            "locator" : "34:1-34:85",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Oncologic referral",
             "id" : "oncreferral",
@@ -382,13 +382,13 @@
             } ],
             "codeSystem" : {
                "localId" : "226",
-               "locator" : "21:48-21:56",
+               "locator" : "34:48-34:56",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "ActCode"
             }
          }, {
             "localId" : "227",
-            "locator" : "23:1-23:139",
+            "locator" : "36:1-36:139",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category0",
             "id" : "397138000",
@@ -412,13 +412,13 @@
             } ],
             "codeSystem" : {
                "localId" : "228",
-               "locator" : "23:36-23:46",
+               "locator" : "36:36-36:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "229",
-            "locator" : "24:1-24:154",
+            "locator" : "37:1-37:154",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category3",
             "id" : "397143007",
@@ -442,13 +442,13 @@
             } ],
             "codeSystem" : {
                "localId" : "230",
-               "locator" : "24:36-24:46",
+               "locator" : "37:36-37:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "231",
-            "locator" : "25:1-25:156",
+            "locator" : "38:1-38:156",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category4",
             "id" : "397144001",
@@ -472,13 +472,13 @@
             } ],
             "codeSystem" : {
                "localId" : "232",
-               "locator" : "25:36-25:46",
+               "locator" : "38:36-38:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "233",
-            "locator" : "26:1-26:136",
+            "locator" : "39:1-39:136",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Category5",
             "id" : "397145000",
@@ -502,13 +502,13 @@
             } ],
             "codeSystem" : {
                "localId" : "234",
-               "locator" : "26:36-26:46",
+               "locator" : "39:36-39:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "SNOMED-CT"
             }
          }, {
             "localId" : "235",
-            "locator" : "27:1-27:78",
+            "locator" : "40:1-40:78",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Negative",
             "id" : "Negative",
@@ -532,13 +532,13 @@
             } ],
             "codeSystem" : {
                "localId" : "236",
-               "locator" : "27:34-27:47",
+               "locator" : "40:34-40:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "237",
-            "locator" : "28:1-28:75",
+            "locator" : "41:1-41:75",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Benign",
             "id" : "Benign",
@@ -562,13 +562,13 @@
             } ],
             "codeSystem" : {
                "localId" : "238",
-               "locator" : "28:30-28:43",
+               "locator" : "41:30-41:43",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "239",
-            "locator" : "29:1-29:81",
+            "locator" : "42:1-42:81",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Atypical",
             "id" : "Atypical",
@@ -592,13 +592,13 @@
             } ],
             "codeSystem" : {
                "localId" : "240",
-               "locator" : "29:34-29:47",
+               "locator" : "42:34-42:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "241",
-            "locator" : "30:1-30:84",
+            "locator" : "43:1-43:84",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Malignant",
             "id" : "Malignant",
@@ -622,13 +622,13 @@
             } ],
             "codeSystem" : {
                "localId" : "242",
-               "locator" : "30:36-30:49",
+               "locator" : "43:36-43:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "243",
-            "locator" : "31:1-31:96",
+            "locator" : "44:1-44:96",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Indeterminate",
             "id" : "Indeterminate",
@@ -652,13 +652,13 @@
             } ],
             "codeSystem" : {
                "localId" : "244",
-               "locator" : "31:44-31:57",
+               "locator" : "44:44-44:57",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
          }, {
             "localId" : "245",
-            "locator" : "32:1-32:87",
+            "locator" : "45:1-45:87",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "Discordant",
             "id" : "Discordant",
@@ -682,7 +682,7 @@
             } ],
             "codeSystem" : {
                "localId" : "246",
-               "locator" : "32:38-32:51",
+               "locator" : "45:38-45:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}CodeSystem",
                "name" : "BiopsyResultCS"
             }
@@ -691,14 +691,14 @@
       "contexts" : {
          "def" : [ {
             "localId" : "250",
-            "locator" : "34:1-34:15",
+            "locator" : "47:1-47:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
             "localId" : "248",
-            "locator" : "34:1-34:15",
+            "locator" : "47:1-47:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
@@ -707,7 +707,7 @@
                "signature" : [ ],
                "operand" : {
                   "localId" : "247",
-                  "locator" : "34:1-34:15",
+                  "locator" : "47:1-47:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -719,7 +719,7 @@
             }
          }, {
             "localId" : "252",
-            "locator" : "36:1-41:27",
+            "locator" : "49:1-54:27",
             "name" : "act-incompletescreen",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -872,7 +872,7 @@
             },
             "expression" : {
                "localId" : "281",
-               "locator" : "37:3-41:27",
+               "locator" : "50:3-54:27",
                "name" : "SetFollowupRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -968,19 +968,19 @@
                } ],
                "operand" : [ {
                   "localId" : "254",
-                  "locator" : "38:5-38:43",
+                  "locator" : "51:5-51:43",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Follow-up radiologist recommendations",
                   "type" : "CodeRef"
                }, {
                   "localId" : "255",
-                  "locator" : "39:5-39:15",
+                  "locator" : "52:5-52:15",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Category0",
                   "type" : "CodeRef"
                }, {
                   "localId" : "257",
-                  "locator" : "40:5-40:39",
+                  "locator" : "53:5-53:39",
                   "name" : "SourceDocumentationOther",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -999,13 +999,13 @@
                   }
                }, {
                   "localId" : "280",
-                  "locator" : "41:5-41:26",
+                  "locator" : "54:5-54:26",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "path" : "date",
                   "type" : "Property",
                   "source" : {
                      "localId" : "265",
-                     "locator" : "41:5-41:21",
+                     "locator" : "54:5-54:21",
                      "name" : "LatestTest",
                      "libraryName" : "Events",
                      "type" : "ExpressionRef",
@@ -1043,7 +1043,7 @@
             }
          }, {
             "localId" : "337",
-            "locator" : "43:1-48:27",
+            "locator" : "56:1-61:27",
             "name" : "act-intervalscreen",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1196,7 +1196,7 @@
             },
             "expression" : {
                "localId" : "366",
-               "locator" : "44:3-48:27",
+               "locator" : "57:3-61:27",
                "name" : "SetFollowupRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -1292,19 +1292,19 @@
                } ],
                "operand" : [ {
                   "localId" : "339",
-                  "locator" : "45:5-45:28",
+                  "locator" : "58:5-58:28",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Order interval imaging",
                   "type" : "CodeRef"
                }, {
                   "localId" : "340",
-                  "locator" : "46:5-46:15",
+                  "locator" : "59:5-59:15",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Category3",
                   "type" : "CodeRef"
                }, {
                   "localId" : "342",
-                  "locator" : "47:5-47:39",
+                  "locator" : "60:5-60:39",
                   "name" : "SourceDocumentationOther",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -1323,13 +1323,13 @@
                   }
                }, {
                   "localId" : "365",
-                  "locator" : "48:5-48:26",
+                  "locator" : "61:5-61:26",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "path" : "date",
                   "type" : "Property",
                   "source" : {
                      "localId" : "350",
-                     "locator" : "48:5-48:21",
+                     "locator" : "61:5-61:21",
                      "name" : "LatestTest",
                      "libraryName" : "Events",
                      "type" : "ExpressionRef",
@@ -1367,7 +1367,7 @@
             }
          }, {
             "localId" : "422",
-            "locator" : "50:1-55:27",
+            "locator" : "63:1-68:27",
             "name" : "act-biopsy4",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1520,7 +1520,7 @@
             },
             "expression" : {
                "localId" : "451",
-               "locator" : "51:3-55:27",
+               "locator" : "64:3-68:27",
                "name" : "SetFollowupRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -1616,19 +1616,19 @@
                } ],
                "operand" : [ {
                   "localId" : "424",
-                  "locator" : "52:5-52:19",
+                  "locator" : "65:5-65:19",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Breast biopsy",
                   "type" : "CodeRef"
                }, {
                   "localId" : "425",
-                  "locator" : "53:5-53:15",
+                  "locator" : "66:5-66:15",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Category4",
                   "type" : "CodeRef"
                }, {
                   "localId" : "427",
-                  "locator" : "54:5-54:39",
+                  "locator" : "67:5-67:39",
                   "name" : "SourceDocumentationOther",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -1647,13 +1647,13 @@
                   }
                }, {
                   "localId" : "450",
-                  "locator" : "55:5-55:26",
+                  "locator" : "68:5-68:26",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "path" : "date",
                   "type" : "Property",
                   "source" : {
                      "localId" : "435",
-                     "locator" : "55:5-55:21",
+                     "locator" : "68:5-68:21",
                      "name" : "LatestTest",
                      "libraryName" : "Events",
                      "type" : "ExpressionRef",
@@ -1691,7 +1691,7 @@
             }
          }, {
             "localId" : "507",
-            "locator" : "57:1-62:27",
+            "locator" : "70:1-75:27",
             "name" : "act-biopsy5",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1844,7 +1844,7 @@
             },
             "expression" : {
                "localId" : "536",
-               "locator" : "58:3-62:27",
+               "locator" : "71:3-75:27",
                "name" : "SetFollowupRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -1940,19 +1940,19 @@
                } ],
                "operand" : [ {
                   "localId" : "509",
-                  "locator" : "59:5-59:19",
+                  "locator" : "72:5-72:19",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Breast biopsy",
                   "type" : "CodeRef"
                }, {
                   "localId" : "510",
-                  "locator" : "60:5-60:15",
+                  "locator" : "73:5-73:15",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Category5",
                   "type" : "CodeRef"
                }, {
                   "localId" : "512",
-                  "locator" : "61:5-61:39",
+                  "locator" : "74:5-74:39",
                   "name" : "SourceDocumentationOther",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -1971,13 +1971,13 @@
                   }
                }, {
                   "localId" : "535",
-                  "locator" : "62:5-62:26",
+                  "locator" : "75:5-75:26",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "path" : "date",
                   "type" : "Property",
                   "source" : {
                      "localId" : "520",
-                     "locator" : "62:5-62:21",
+                     "locator" : "75:5-75:21",
                      "name" : "LatestTest",
                      "libraryName" : "Events",
                      "type" : "ExpressionRef",
@@ -2015,7 +2015,7 @@
             }
          }, {
             "localId" : "592",
-            "locator" : "64:1-69:27",
+            "locator" : "77:1-82:27",
             "name" : "act-benignbiopsy",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2168,7 +2168,7 @@
             },
             "expression" : {
                "localId" : "621",
-               "locator" : "65:3-69:27",
+               "locator" : "78:3-82:27",
                "name" : "SetFollowupRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -2264,19 +2264,19 @@
                } ],
                "operand" : [ {
                   "localId" : "594",
-                  "locator" : "66:5-66:29",
+                  "locator" : "79:5-79:29",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Determine next due date",
                   "type" : "CodeRef"
                }, {
                   "localId" : "595",
-                  "locator" : "67:5-67:12",
+                  "locator" : "80:5-80:12",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Benign",
                   "type" : "CodeRef"
                }, {
                   "localId" : "597",
-                  "locator" : "68:5-68:39",
+                  "locator" : "81:5-81:39",
                   "name" : "SourceDocumentationOther",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -2295,13 +2295,13 @@
                   }
                }, {
                   "localId" : "620",
-                  "locator" : "69:5-69:26",
+                  "locator" : "82:5-82:26",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "path" : "date",
                   "type" : "Property",
                   "source" : {
                      "localId" : "605",
-                     "locator" : "69:5-69:21",
+                     "locator" : "82:5-82:21",
                      "name" : "LatestTest",
                      "libraryName" : "Events",
                      "type" : "ExpressionRef",
@@ -2339,7 +2339,7 @@
             }
          }, {
             "localId" : "677",
-            "locator" : "71:1-76:27",
+            "locator" : "84:1-89:27",
             "name" : "act-highriskreferral",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2492,7 +2492,7 @@
             },
             "expression" : {
                "localId" : "706",
-               "locator" : "72:3-76:27",
+               "locator" : "85:3-89:27",
                "name" : "SetFollowupRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -2588,19 +2588,19 @@
                } ],
                "operand" : [ {
                   "localId" : "679",
-                  "locator" : "73:5-73:29",
+                  "locator" : "86:5-86:29",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Breast surgeon referral",
                   "type" : "CodeRef"
                }, {
                   "localId" : "680",
-                  "locator" : "74:5-74:14",
+                  "locator" : "87:5-87:14",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Atypical",
                   "type" : "CodeRef"
                }, {
                   "localId" : "682",
-                  "locator" : "75:5-75:39",
+                  "locator" : "88:5-88:39",
                   "name" : "SourceDocumentationOther",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -2619,13 +2619,13 @@
                   }
                }, {
                   "localId" : "705",
-                  "locator" : "76:5-76:26",
+                  "locator" : "89:5-89:26",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "path" : "date",
                   "type" : "Property",
                   "source" : {
                      "localId" : "690",
-                     "locator" : "76:5-76:21",
+                     "locator" : "89:5-89:21",
                      "name" : "LatestTest",
                      "libraryName" : "Events",
                      "type" : "ExpressionRef",
@@ -2663,7 +2663,7 @@
             }
          }, {
             "localId" : "762",
-            "locator" : "78:1-83:27",
+            "locator" : "91:1-96:27",
             "name" : "act-indeterminatebiopsy",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2816,7 +2816,7 @@
             },
             "expression" : {
                "localId" : "791",
-               "locator" : "79:3-83:27",
+               "locator" : "92:3-96:27",
                "name" : "SetFollowupRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -2912,19 +2912,19 @@
                } ],
                "operand" : [ {
                   "localId" : "764",
-                  "locator" : "80:5-80:29",
+                  "locator" : "93:5-93:29",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Breast surgeon referral",
                   "type" : "CodeRef"
                }, {
                   "localId" : "765",
-                  "locator" : "81:5-81:19",
+                  "locator" : "94:5-94:19",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Indeterminate",
                   "type" : "CodeRef"
                }, {
                   "localId" : "767",
-                  "locator" : "82:5-82:39",
+                  "locator" : "95:5-95:39",
                   "name" : "SourceDocumentationOther",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -2943,13 +2943,13 @@
                   }
                }, {
                   "localId" : "790",
-                  "locator" : "83:5-83:26",
+                  "locator" : "96:5-96:26",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "path" : "date",
                   "type" : "Property",
                   "source" : {
                      "localId" : "775",
-                     "locator" : "83:5-83:21",
+                     "locator" : "96:5-96:21",
                      "name" : "LatestTest",
                      "libraryName" : "Events",
                      "type" : "ExpressionRef",
@@ -2987,7 +2987,7 @@
             }
          }, {
             "localId" : "847",
-            "locator" : "85:1-90:27",
+            "locator" : "98:1-103:27",
             "name" : "act-discordantbiopsy",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3140,7 +3140,7 @@
             },
             "expression" : {
                "localId" : "876",
-               "locator" : "86:3-90:27",
+               "locator" : "99:3-103:27",
                "name" : "SetFollowupRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -3236,19 +3236,19 @@
                } ],
                "operand" : [ {
                   "localId" : "849",
-                  "locator" : "87:5-87:29",
+                  "locator" : "100:5-100:29",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Breast surgeon referral",
                   "type" : "CodeRef"
                }, {
                   "localId" : "850",
-                  "locator" : "88:5-88:16",
+                  "locator" : "101:5-101:16",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Discordant",
                   "type" : "CodeRef"
                }, {
                   "localId" : "852",
-                  "locator" : "89:5-89:39",
+                  "locator" : "102:5-102:39",
                   "name" : "SourceDocumentationOther",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -3267,13 +3267,13 @@
                   }
                }, {
                   "localId" : "875",
-                  "locator" : "90:5-90:26",
+                  "locator" : "103:5-103:26",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "path" : "date",
                   "type" : "Property",
                   "source" : {
                      "localId" : "860",
-                     "locator" : "90:5-90:21",
+                     "locator" : "103:5-103:21",
                      "name" : "LatestTest",
                      "libraryName" : "Events",
                      "type" : "ExpressionRef",
@@ -3311,7 +3311,7 @@
             }
          }, {
             "localId" : "932",
-            "locator" : "92:1-97:27",
+            "locator" : "105:1-110:27",
             "name" : "act-oncreferral",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3464,7 +3464,7 @@
             },
             "expression" : {
                "localId" : "961",
-               "locator" : "93:3-97:27",
+               "locator" : "106:3-110:27",
                "name" : "SetFollowupRecommendation",
                "libraryName" : "BCSMCommon",
                "type" : "FunctionRef",
@@ -3560,19 +3560,19 @@
                } ],
                "operand" : [ {
                   "localId" : "934",
-                  "locator" : "94:5-94:24",
+                  "locator" : "107:5-107:24",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Oncologic referral",
                   "type" : "CodeRef"
                }, {
                   "localId" : "935",
-                  "locator" : "95:5-95:15",
+                  "locator" : "108:5-108:15",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "name" : "Malignant",
                   "type" : "CodeRef"
                }, {
                   "localId" : "937",
-                  "locator" : "96:5-96:39",
+                  "locator" : "109:5-109:39",
                   "name" : "SourceDocumentationOther",
                   "libraryName" : "BCSMCommon",
                   "type" : "ExpressionRef",
@@ -3591,13 +3591,13 @@
                   }
                }, {
                   "localId" : "960",
-                  "locator" : "97:5-97:26",
+                  "locator" : "110:5-110:26",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "path" : "date",
                   "type" : "Property",
                   "source" : {
                      "localId" : "945",
-                     "locator" : "97:5-97:21",
+                     "locator" : "110:5-110:21",
                      "name" : "LatestTest",
                      "libraryName" : "Events",
                      "type" : "ExpressionRef",

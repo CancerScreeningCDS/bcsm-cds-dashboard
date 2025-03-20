@@ -43,6 +43,29 @@
   ],
   "action": [
     {
+      "documentation": [
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR BI-RADS Atlas Excerpt: Mammography Reporting System",
+          "citation": "American College of Radiology. ACR BI-RADS Atlas: Breast Imaging Reporting and Data System. 5th ed., American College of Radiology, 2013.",
+          "url": "https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/BI-RADS/Mammography-Reporting.pdf"
+        },
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR BI-RADS Atlas Excerpt: MRI Reporting System",
+          "citation": "American College of Radiology. ACR BI-RADS Atlas: Breast Imaging Reporting and Data System. 5th ed., American College of Radiology, 2013.",
+          "url": "https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/BI-RADS/Breast-MRI-Reporting.pdf"
+        },
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR BI-RADS Atlas Excerpt: Ultrasound Reporting System",
+          "citation": "American College of Radiology. ACR BI-RADS Atlas: Breast Imaging Reporting and Data System. 5th ed., American College of Radiology, 2013.",
+          "url": "https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/BI-RADS/Breast-Ultrasound-Reporting.pdf"
+        }
+      ],
       "condition": [
         {
           "expression": {
@@ -109,6 +132,29 @@
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
     {
+      "documentation": [
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR BI-RADS Atlas Excerpt: Mammography Reporting System",
+          "citation": "American College of Radiology. ACR BI-RADS Atlas: Breast Imaging Reporting and Data System. 5th ed., American College of Radiology, 2013.",
+          "url": "https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/BI-RADS/Mammography-Reporting.pdf"
+        },
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR BI-RADS Atlas Excerpt: MRI Reporting System",
+          "citation": "American College of Radiology. ACR BI-RADS Atlas: Breast Imaging Reporting and Data System. 5th ed., American College of Radiology, 2013.",
+          "url": "https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/BI-RADS/Breast-MRI-Reporting.pdf"
+        },
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR BI-RADS Atlas Excerpt: Ultrasound Reporting System",
+          "citation": "American College of Radiology. ACR BI-RADS Atlas: Breast Imaging Reporting and Data System. 5th ed., American College of Radiology, 2013.",
+          "url": "https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/BI-RADS/Breast-Ultrasound-Reporting.pdf"
+        }
+      ],
       "condition": [
         {
           "expression": {
@@ -176,6 +222,27 @@
     },
     {
       "documentation": [
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR BI-RADS Atlas Excerpt: Mammography Reporting System",
+          "citation": "American College of Radiology. ACR BI-RADS Atlas: Breast Imaging Reporting and Data System. 5th ed., American College of Radiology, 2013.",
+          "url": "https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/BI-RADS/Mammography-Reporting.pdf"
+        },
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR BI-RADS Atlas Excerpt: MRI Reporting System",
+          "citation": "American College of Radiology. ACR BI-RADS Atlas: Breast Imaging Reporting and Data System. 5th ed., American College of Radiology, 2013.",
+          "url": "https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/BI-RADS/Breast-MRI-Reporting.pdf"
+        },
+        {
+          "type": "documentation",
+          "label": "ACR",
+          "display": "ACR BI-RADS Atlas Excerpt: Ultrasound Reporting System",
+          "citation": "American College of Radiology. ACR BI-RADS Atlas: Breast Imaging Reporting and Data System. 5th ed., American College of Radiology, 2013.",
+          "url": "https://edge.sitecorecloud.io/americancoldf5f-acrorgf92a-productioncb02-3650/media/ACR/Files/RADS/BI-RADS/Breast-Ultrasound-Reporting.pdf"
+        },
         {
           "type": "citation",
           "label": "ASBrS",

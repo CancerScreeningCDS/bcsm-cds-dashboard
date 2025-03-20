@@ -11,7 +11,7 @@
          "s" : {
             "r" : "4435",
             "s" : [ {
-               "value" : [ "","library FollowupScreeningResult version '1.0.0'" ]
+               "value" : [ "/*  \n  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.\n\n  (C) 2024 The MITRE Corporation. All Rights Reserved. \n  Approved for Public Release: 24-2711. \n  Distribution Unlimited.\n\n  Unless otherwise noted, this work is available under an Apache 2.0 license. \n  It was produced by the MITRE Corporation for the Division of Cancer Prevention \n  and Control, Centers for Disease Control and Prevention in accordance with the \n  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.\n*/\n\n","library FollowupScreeningResult version '1.0.0'" ]
             } ]
          }
       } ],
@@ -30,7 +30,7 @@
             "uri" : "urn:hl7-org:elm-types:r1"
          }, {
             "localId" : "206",
-            "locator" : "3:1-3:26",
+            "locator" : "16:1-16:26",
             "localIdentifier" : "FHIR",
             "uri" : "http://hl7.org/fhir",
             "version" : "4.0.1",
@@ -54,7 +54,7 @@
       "includes" : {
          "def" : [ {
             "localId" : "207",
-            "locator" : "4:1-4:55",
+            "locator" : "17:1-17:55",
             "localIdentifier" : "FHIRHelpers",
             "path" : "FHIRHelpers",
             "version" : "4.0.1",
@@ -75,7 +75,7 @@
             } ]
          }, {
             "localId" : "208",
-            "locator" : "6:1-6:67",
+            "locator" : "19:1-19:67",
             "localIdentifier" : "Events",
             "path" : "FollowupScreeningResultEvents",
             "version" : "1.0.0",
@@ -96,7 +96,7 @@
             } ]
          }, {
             "localId" : "209",
-            "locator" : "7:1-7:69",
+            "locator" : "20:1-20:69",
             "localIdentifier" : "Actions",
             "path" : "FollowupScreeningResultActions",
             "version" : "1.0.0",
@@ -117,7 +117,7 @@
             } ]
          }, {
             "localId" : "210",
-            "locator" : "8:1-8:56",
+            "locator" : "21:1-21:56",
             "localIdentifier" : "DataElements",
             "path" : "DataElements",
             "version" : "1.0.0",
@@ -138,7 +138,7 @@
             } ]
          }, {
             "localId" : "211",
-            "locator" : "9:1-9:61",
+            "locator" : "22:1-22:61",
             "localIdentifier" : "BCSMCommon",
             "path" : "BCSMCommonFunctions",
             "version" : "1.0.0",
@@ -162,14 +162,14 @@
       "contexts" : {
          "def" : [ {
             "localId" : "215",
-            "locator" : "11:1-11:15",
+            "locator" : "24:1-24:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
             "localId" : "213",
-            "locator" : "11:1-11:15",
+            "locator" : "24:1-24:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
@@ -178,7 +178,7 @@
                "signature" : [ ],
                "operand" : {
                   "localId" : "212",
-                  "locator" : "11:1-11:15",
+                  "locator" : "24:1-24:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -190,7 +190,7 @@
             }
          }, {
             "localId" : "224",
-            "locator" : "89:1-95:93",
+            "locator" : "102:1-108:93",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ErrorBreastBiopsyWithNoConclusionCodes",
             "context" : "Patient",
@@ -306,7 +306,7 @@
             } ],
             "expression" : {
                "localId" : "225",
-               "locator" : "90:3-95:93",
+               "locator" : "103:3-108:93",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "And",
                "signature" : [ {
@@ -320,7 +320,7 @@
                } ],
                "operand" : [ {
                   "localId" : "226",
-                  "locator" : "90:3-90:41",
+                  "locator" : "103:3-103:41",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equal",
                   "signature" : [ {
@@ -334,13 +334,13 @@
                   } ],
                   "operand" : [ {
                      "localId" : "243",
-                     "locator" : "90:3-90:30",
+                     "locator" : "103:3-103:30",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "path" : "type",
                      "type" : "Property",
                      "source" : {
                         "localId" : "228",
-                        "locator" : "90:3-90:25",
+                        "locator" : "103:3-103:25",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -376,7 +376,7 @@
                      }
                   }, {
                      "localId" : "244",
-                     "locator" : "90:34-90:41",
+                     "locator" : "103:34-103:41",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "biopsy",
@@ -384,7 +384,7 @@
                   } ]
                }, {
                   "localId" : "261",
-                  "locator" : "91:3-95:93",
+                  "locator" : "104:3-108:93",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Message",
                   "signature" : [ {
@@ -410,7 +410,7 @@
                   } ],
                   "source" : {
                      "localId" : "248",
-                     "locator" : "91:11-91:78",
+                     "locator" : "104:11-104:78",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "MostRecentBreastBiopsyDiagnosticReportNoConclusionCodes",
                      "libraryName" : "DataElements",
@@ -418,7 +418,7 @@
                   },
                   "condition" : {
                      "localId" : "250",
-                     "locator" : "92:5-92:72",
+                     "locator" : "105:5-105:72",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "MostRecentBreastBiopsyDiagnosticReportNoConclusionCodes",
                      "libraryName" : "DataElements",
@@ -426,7 +426,7 @@
                   },
                   "code" : {
                      "localId" : "251",
-                     "locator" : "93:5-93:95",
+                     "locator" : "106:5-106:95",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "http://example.org/CodeSystem/plan-definition-action-reason-code-system/missingresultcode",
@@ -434,7 +434,7 @@
                   },
                   "severity" : {
                      "localId" : "252",
-                     "locator" : "94:5-94:13",
+                     "locator" : "107:5-107:13",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "Warning",
@@ -442,7 +442,7 @@
                   },
                   "message" : {
                      "localId" : "253",
-                     "locator" : "95:5-95:92",
+                     "locator" : "108:5-108:92",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "A laboratory test was found without a result. Please review patient record to resolve.",
@@ -452,7 +452,7 @@
             }
          }, {
             "localId" : "271",
-            "locator" : "97:1-103:91",
+            "locator" : "110:1-116:91",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ErrorBreastImagingWithNoConclusionCodes",
             "context" : "Patient",
@@ -568,7 +568,7 @@
             } ],
             "expression" : {
                "localId" : "272",
-               "locator" : "98:3-103:91",
+               "locator" : "111:3-116:91",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "And",
                "signature" : [ {
@@ -582,7 +582,7 @@
                } ],
                "operand" : [ {
                   "localId" : "273",
-                  "locator" : "98:3-98:42",
+                  "locator" : "111:3-111:42",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equal",
                   "signature" : [ {
@@ -596,13 +596,13 @@
                   } ],
                   "operand" : [ {
                      "localId" : "290",
-                     "locator" : "98:3-98:30",
+                     "locator" : "111:3-111:30",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "path" : "type",
                      "type" : "Property",
                      "source" : {
                         "localId" : "275",
-                        "locator" : "98:3-98:25",
+                        "locator" : "111:3-111:25",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -638,7 +638,7 @@
                      }
                   }, {
                      "localId" : "291",
-                     "locator" : "98:34-98:42",
+                     "locator" : "111:34-111:42",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "imaging",
@@ -646,7 +646,7 @@
                   } ]
                }, {
                   "localId" : "308",
-                  "locator" : "99:5-103:91",
+                  "locator" : "112:5-116:91",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Message",
                   "signature" : [ {
@@ -672,7 +672,7 @@
                   } ],
                   "source" : {
                      "localId" : "295",
-                     "locator" : "99:13-99:81",
+                     "locator" : "112:13-112:81",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "MostRecentBreastImagingDiagnosticReportNoConclusionCodes",
                      "libraryName" : "DataElements",
@@ -680,7 +680,7 @@
                   },
                   "condition" : {
                      "localId" : "297",
-                     "locator" : "100:5-100:73",
+                     "locator" : "113:5-113:73",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "MostRecentBreastImagingDiagnosticReportNoConclusionCodes",
                      "libraryName" : "DataElements",
@@ -688,7 +688,7 @@
                   },
                   "code" : {
                      "localId" : "298",
-                     "locator" : "101:5-101:95",
+                     "locator" : "114:5-114:95",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "http://example.org/CodeSystem/plan-definition-action-reason-code-system/missingresultcode",
@@ -696,7 +696,7 @@
                   },
                   "severity" : {
                      "localId" : "299",
-                     "locator" : "102:5-102:13",
+                     "locator" : "115:5-115:13",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "Warning",
@@ -704,7 +704,7 @@
                   },
                   "message" : {
                      "localId" : "300",
-                     "locator" : "103:5-103:90",
+                     "locator" : "116:5-116:90",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "valueType" : "{urn:hl7-org:elm-types:r1}String",
                      "value" : "An imaging test was found without a result. Please review patient record to resolve.",
@@ -714,7 +714,7 @@
             }
          }, {
             "localId" : "320",
-            "locator" : "105:1-110:107",
+            "locator" : "118:1-123:107",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ErrorDiagnosticReportWithUnsupportedConclusionCode",
             "context" : "Patient",
@@ -820,7 +820,7 @@
             } ],
             "expression" : {
                "localId" : "369",
-               "locator" : "106:3-110:107",
+               "locator" : "119:3-123:107",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Message",
                "signature" : [ {
@@ -846,7 +846,7 @@
                } ],
                "source" : {
                   "localId" : "338",
-                  "locator" : "106:11-106:48",
+                  "locator" : "119:11-119:48",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -856,13 +856,13 @@
                   } ],
                   "operand" : {
                      "localId" : "337",
-                     "locator" : "106:11-106:40",
+                     "locator" : "119:11-119:40",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "result",
                      "type" : "Property",
                      "source" : {
                         "localId" : "322",
-                        "locator" : "106:11-106:33",
+                        "locator" : "119:11-119:33",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -900,7 +900,7 @@
                },
                "condition" : {
                   "localId" : "357",
-                  "locator" : "107:5-107:42",
+                  "locator" : "120:5-120:42",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -910,13 +910,13 @@
                   } ],
                   "operand" : {
                      "localId" : "356",
-                     "locator" : "107:5-107:34",
+                     "locator" : "120:5-120:34",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "result",
                      "type" : "Property",
                      "source" : {
                         "localId" : "341",
-                        "locator" : "107:5-107:27",
+                        "locator" : "120:5-120:27",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -954,7 +954,7 @@
                },
                "code" : {
                   "localId" : "359",
-                  "locator" : "108:5-108:95",
+                  "locator" : "121:5-121:95",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "http://example.org/CodeSystem/plan-definition-action-reason-code-system/unknownresultcode",
@@ -962,7 +962,7 @@
                },
                "severity" : {
                   "localId" : "360",
-                  "locator" : "109:5-109:13",
+                  "locator" : "122:5-122:13",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "Warning",
@@ -970,7 +970,7 @@
                },
                "message" : {
                   "localId" : "361",
-                  "locator" : "110:5-110:106",
+                  "locator" : "123:5-123:106",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "valueType" : "{urn:hl7-org:elm-types:r1}String",
                   "value" : "A laboratory test was found with an unexpected result code. Please review patient record to resolve.",
@@ -979,7 +979,7 @@
             }
          }, {
             "localId" : "220",
-            "locator" : "81:1-84:54",
+            "locator" : "94:1-97:54",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "Errors",
             "context" : "Patient",
@@ -1020,7 +1020,7 @@
             } ],
             "expression" : {
                "localId" : "221",
-               "locator" : "82:3-84:54",
+               "locator" : "95:3-97:54",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Or",
                "signature" : [ {
@@ -1034,7 +1034,7 @@
                } ],
                "operand" : [ {
                   "localId" : "222",
-                  "locator" : "82:3-83:43",
+                  "locator" : "95:3-96:43",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Or",
                   "signature" : [ {
@@ -1048,20 +1048,20 @@
                   } ],
                   "operand" : [ {
                      "localId" : "269",
-                     "locator" : "82:3-82:40",
+                     "locator" : "95:3-95:40",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "ErrorBreastBiopsyWithNoConclusionCodes",
                      "type" : "ExpressionRef"
                   }, {
                      "localId" : "316",
-                     "locator" : "83:5-83:43",
+                     "locator" : "96:5-96:43",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "ErrorBreastImagingWithNoConclusionCodes",
                      "type" : "ExpressionRef"
                   } ]
                }, {
                   "localId" : "375",
-                  "locator" : "84:5-84:54",
+                  "locator" : "97:5-97:54",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "name" : "ErrorDiagnosticReportWithUnsupportedConclusionCode",
                   "type" : "ExpressionRef"
@@ -1069,7 +1069,7 @@
             }
          }, {
             "localId" : "384",
-            "locator" : "32:1-35:11",
+            "locator" : "45:1-48:11",
             "name" : "FollowupBirads0Result",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1219,7 +1219,7 @@
             },
             "expression" : {
                "localId" : "385",
-               "locator" : "33:3-35:11",
+               "locator" : "46:3-48:11",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "460",
@@ -1288,7 +1288,7 @@
                },
                "condition" : {
                   "localId" : "386",
-                  "locator" : "33:6-33:56",
+                  "locator" : "46:6-46:56",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equivalent",
                   "signature" : [ {
@@ -1302,13 +1302,13 @@
                   } ],
                   "operand" : [ {
                      "localId" : "403",
-                     "locator" : "33:6-33:35",
+                     "locator" : "46:6-46:35",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "result",
                      "type" : "Property",
                      "source" : {
                         "localId" : "388",
-                        "locator" : "33:6-33:28",
+                        "locator" : "46:6-46:28",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -1344,7 +1344,7 @@
                      }
                   }, {
                      "localId" : "405",
-                     "locator" : "33:39-33:56",
+                     "locator" : "46:39-46:56",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Category0",
                      "libraryName" : "Events",
@@ -1353,7 +1353,7 @@
                },
                "then" : {
                   "localId" : "409",
-                  "locator" : "34:8-34:37",
+                  "locator" : "47:8-47:37",
                   "name" : "act-incompletescreen",
                   "libraryName" : "Actions",
                   "type" : "ExpressionRef",
@@ -1429,7 +1429,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "442",
-                     "locator" : "35:8-35:11",
+                     "locator" : "48:8-48:11",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
@@ -1502,7 +1502,7 @@
             }
          }, {
             "localId" : "510",
-            "locator" : "37:1-40:11",
+            "locator" : "50:1-53:11",
             "name" : "FollowupBirads3Result",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1652,7 +1652,7 @@
             },
             "expression" : {
                "localId" : "511",
-               "locator" : "38:3-40:11",
+               "locator" : "51:3-53:11",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "586",
@@ -1721,7 +1721,7 @@
                },
                "condition" : {
                   "localId" : "512",
-                  "locator" : "38:6-38:56",
+                  "locator" : "51:6-51:56",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equivalent",
                   "signature" : [ {
@@ -1735,13 +1735,13 @@
                   } ],
                   "operand" : [ {
                      "localId" : "529",
-                     "locator" : "38:6-38:35",
+                     "locator" : "51:6-51:35",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "result",
                      "type" : "Property",
                      "source" : {
                         "localId" : "514",
-                        "locator" : "38:6-38:28",
+                        "locator" : "51:6-51:28",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -1777,7 +1777,7 @@
                      }
                   }, {
                      "localId" : "531",
-                     "locator" : "38:39-38:56",
+                     "locator" : "51:39-51:56",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Category3",
                      "libraryName" : "Events",
@@ -1786,7 +1786,7 @@
                },
                "then" : {
                   "localId" : "535",
-                  "locator" : "39:8-39:35",
+                  "locator" : "52:8-52:35",
                   "name" : "act-intervalscreen",
                   "libraryName" : "Actions",
                   "type" : "ExpressionRef",
@@ -1862,7 +1862,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "568",
-                     "locator" : "40:8-40:11",
+                     "locator" : "53:8-53:11",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
@@ -1935,7 +1935,7 @@
             }
          }, {
             "localId" : "636",
-            "locator" : "42:1-50:11",
+            "locator" : "55:1-63:11",
             "name" : "FollowupBirads4Or5Result",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2304,7 +2304,7 @@
             },
             "expression" : {
                "localId" : "637",
-               "locator" : "43:3-50:11",
+               "locator" : "56:3-63:11",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "860",
@@ -2373,7 +2373,7 @@
                },
                "condition" : {
                   "localId" : "638",
-                  "locator" : "43:6-46:56",
+                  "locator" : "56:6-59:56",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Or",
                   "signature" : [ {
@@ -2387,7 +2387,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "639",
-                     "locator" : "43:6-45:56",
+                     "locator" : "56:6-58:56",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Or",
                      "signature" : [ {
@@ -2401,7 +2401,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "640",
-                        "locator" : "43:6-44:56",
+                        "locator" : "56:6-57:56",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Or",
                         "signature" : [ {
@@ -2415,7 +2415,7 @@
                         } ],
                         "operand" : [ {
                            "localId" : "641",
-                           "locator" : "43:6-43:56",
+                           "locator" : "56:6-56:56",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                            "type" : "Equivalent",
                            "signature" : [ {
@@ -2429,13 +2429,13 @@
                            } ],
                            "operand" : [ {
                               "localId" : "658",
-                              "locator" : "43:6-43:35",
+                              "locator" : "56:6-56:35",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                               "path" : "result",
                               "type" : "Property",
                               "source" : {
                                  "localId" : "643",
-                                 "locator" : "43:6-43:28",
+                                 "locator" : "56:6-56:28",
                                  "name" : "eve-latesttest",
                                  "libraryName" : "Events",
                                  "type" : "ExpressionRef",
@@ -2471,7 +2471,7 @@
                               }
                            }, {
                               "localId" : "660",
-                              "locator" : "43:39-43:56",
+                              "locator" : "56:39-56:56",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                               "name" : "Category4",
                               "libraryName" : "Events",
@@ -2479,7 +2479,7 @@
                            } ]
                         }, {
                            "localId" : "663",
-                           "locator" : "44:5-44:56",
+                           "locator" : "57:5-57:56",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                            "type" : "Equivalent",
                            "signature" : [ {
@@ -2493,13 +2493,13 @@
                            } ],
                            "operand" : [ {
                               "localId" : "680",
-                              "locator" : "44:5-44:34",
+                              "locator" : "57:5-57:34",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                               "path" : "result",
                               "type" : "Property",
                               "source" : {
                                  "localId" : "665",
-                                 "locator" : "44:5-44:27",
+                                 "locator" : "57:5-57:27",
                                  "name" : "eve-latesttest",
                                  "libraryName" : "Events",
                                  "type" : "ExpressionRef",
@@ -2535,7 +2535,7 @@
                               }
                            }, {
                               "localId" : "682",
-                              "locator" : "44:38-44:56",
+                              "locator" : "57:38-57:56",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                               "name" : "Category4A",
                               "libraryName" : "Events",
@@ -2544,7 +2544,7 @@
                         } ]
                      }, {
                         "localId" : "687",
-                        "locator" : "45:5-45:56",
+                        "locator" : "58:5-58:56",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Equivalent",
                         "signature" : [ {
@@ -2558,13 +2558,13 @@
                         } ],
                         "operand" : [ {
                            "localId" : "704",
-                           "locator" : "45:5-45:34",
+                           "locator" : "58:5-58:34",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                            "path" : "result",
                            "type" : "Property",
                            "source" : {
                               "localId" : "689",
-                              "locator" : "45:5-45:27",
+                              "locator" : "58:5-58:27",
                               "name" : "eve-latesttest",
                               "libraryName" : "Events",
                               "type" : "ExpressionRef",
@@ -2600,7 +2600,7 @@
                            }
                         }, {
                            "localId" : "706",
-                           "locator" : "45:38-45:56",
+                           "locator" : "58:38-58:56",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                            "name" : "Category4B",
                            "libraryName" : "Events",
@@ -2609,7 +2609,7 @@
                      } ]
                   }, {
                      "localId" : "711",
-                     "locator" : "46:5-46:56",
+                     "locator" : "59:5-59:56",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equivalent",
                      "signature" : [ {
@@ -2623,13 +2623,13 @@
                      } ],
                      "operand" : [ {
                         "localId" : "728",
-                        "locator" : "46:5-46:34",
+                        "locator" : "59:5-59:34",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "result",
                         "type" : "Property",
                         "source" : {
                            "localId" : "713",
-                           "locator" : "46:5-46:27",
+                           "locator" : "59:5-59:27",
                            "name" : "eve-latesttest",
                            "libraryName" : "Events",
                            "type" : "ExpressionRef",
@@ -2665,7 +2665,7 @@
                         }
                      }, {
                         "localId" : "730",
-                        "locator" : "46:38-46:56",
+                        "locator" : "59:38-59:56",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "name" : "Category4C",
                         "libraryName" : "Events",
@@ -2675,7 +2675,7 @@
                },
                "then" : {
                   "localId" : "736",
-                  "locator" : "47:8-47:28",
+                  "locator" : "60:8-60:28",
                   "name" : "act-biopsy4",
                   "libraryName" : "Actions",
                   "type" : "ExpressionRef",
@@ -2747,7 +2747,7 @@
                },
                "else" : {
                   "localId" : "769",
-                  "locator" : "48:8-50:11",
+                  "locator" : "61:8-63:11",
                   "type" : "If",
                   "resultTypeSpecifier" : {
                      "localId" : "844",
@@ -2816,7 +2816,7 @@
                   },
                   "condition" : {
                      "localId" : "770",
-                     "locator" : "48:11-48:61",
+                     "locator" : "61:11-61:61",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Equivalent",
                      "signature" : [ {
@@ -2830,13 +2830,13 @@
                      } ],
                      "operand" : [ {
                         "localId" : "787",
-                        "locator" : "48:11-48:40",
+                        "locator" : "61:11-61:40",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "result",
                         "type" : "Property",
                         "source" : {
                            "localId" : "772",
-                           "locator" : "48:11-48:33",
+                           "locator" : "61:11-61:33",
                            "name" : "eve-latesttest",
                            "libraryName" : "Events",
                            "type" : "ExpressionRef",
@@ -2872,7 +2872,7 @@
                         }
                      }, {
                         "localId" : "789",
-                        "locator" : "48:44-48:61",
+                        "locator" : "61:44-61:61",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "name" : "Category5",
                         "libraryName" : "Events",
@@ -2881,7 +2881,7 @@
                   },
                   "then" : {
                      "localId" : "793",
-                     "locator" : "49:8-49:28",
+                     "locator" : "62:8-62:28",
                      "name" : "act-biopsy5",
                      "libraryName" : "Actions",
                      "type" : "ExpressionRef",
@@ -2957,7 +2957,7 @@
                      "signature" : [ ],
                      "operand" : {
                         "localId" : "826",
-                        "locator" : "50:8-50:11",
+                        "locator" : "63:8-63:11",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                         "type" : "Null"
                      },
@@ -3031,7 +3031,7 @@
             }
          }, {
             "localId" : "910",
-            "locator" : "52:1-55:11",
+            "locator" : "65:1-68:11",
             "name" : "FollowupBenignBiopsyResult",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3181,7 +3181,7 @@
             },
             "expression" : {
                "localId" : "911",
-               "locator" : "53:3-55:11",
+               "locator" : "66:3-68:11",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "986",
@@ -3250,7 +3250,7 @@
                },
                "condition" : {
                   "localId" : "912",
-                  "locator" : "53:6-53:53",
+                  "locator" : "66:6-66:53",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equivalent",
                   "signature" : [ {
@@ -3264,13 +3264,13 @@
                   } ],
                   "operand" : [ {
                      "localId" : "929",
-                     "locator" : "53:6-53:35",
+                     "locator" : "66:6-66:35",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "result",
                      "type" : "Property",
                      "source" : {
                         "localId" : "914",
-                        "locator" : "53:6-53:28",
+                        "locator" : "66:6-66:28",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -3306,7 +3306,7 @@
                      }
                   }, {
                      "localId" : "931",
-                     "locator" : "53:39-53:53",
+                     "locator" : "66:39-66:53",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Benign",
                      "libraryName" : "Events",
@@ -3315,7 +3315,7 @@
                },
                "then" : {
                   "localId" : "935",
-                  "locator" : "54:8-54:33",
+                  "locator" : "67:8-67:33",
                   "name" : "act-benignbiopsy",
                   "libraryName" : "Actions",
                   "type" : "ExpressionRef",
@@ -3391,7 +3391,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "968",
-                     "locator" : "55:8-55:11",
+                     "locator" : "68:8-68:11",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
@@ -3464,7 +3464,7 @@
             }
          }, {
             "localId" : "1036",
-            "locator" : "57:1-60:11",
+            "locator" : "70:1-73:11",
             "name" : "FollowupAtypicalBiopsyResult",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3614,7 +3614,7 @@
             },
             "expression" : {
                "localId" : "1037",
-               "locator" : "58:3-60:11",
+               "locator" : "71:3-73:11",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "1112",
@@ -3683,7 +3683,7 @@
                },
                "condition" : {
                   "localId" : "1038",
-                  "locator" : "58:6-58:55",
+                  "locator" : "71:6-71:55",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equivalent",
                   "signature" : [ {
@@ -3697,13 +3697,13 @@
                   } ],
                   "operand" : [ {
                      "localId" : "1055",
-                     "locator" : "58:6-58:35",
+                     "locator" : "71:6-71:35",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "result",
                      "type" : "Property",
                      "source" : {
                         "localId" : "1040",
-                        "locator" : "58:6-58:28",
+                        "locator" : "71:6-71:28",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -3739,7 +3739,7 @@
                      }
                   }, {
                      "localId" : "1057",
-                     "locator" : "58:39-58:55",
+                     "locator" : "71:39-71:55",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Atypical",
                      "libraryName" : "Events",
@@ -3748,7 +3748,7 @@
                },
                "then" : {
                   "localId" : "1061",
-                  "locator" : "59:8-59:37",
+                  "locator" : "72:8-72:37",
                   "name" : "act-highriskreferral",
                   "libraryName" : "Actions",
                   "type" : "ExpressionRef",
@@ -3824,7 +3824,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "1094",
-                     "locator" : "60:8-60:11",
+                     "locator" : "73:8-73:11",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
@@ -3897,7 +3897,7 @@
             }
          }, {
             "localId" : "1162",
-            "locator" : "62:1-65:11",
+            "locator" : "75:1-78:11",
             "name" : "FollowupMalignantBiopsyResult",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4047,7 +4047,7 @@
             },
             "expression" : {
                "localId" : "1163",
-               "locator" : "63:3-65:11",
+               "locator" : "76:3-78:11",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "1238",
@@ -4116,7 +4116,7 @@
                },
                "condition" : {
                   "localId" : "1164",
-                  "locator" : "63:6-63:56",
+                  "locator" : "76:6-76:56",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equivalent",
                   "signature" : [ {
@@ -4130,13 +4130,13 @@
                   } ],
                   "operand" : [ {
                      "localId" : "1181",
-                     "locator" : "63:6-63:35",
+                     "locator" : "76:6-76:35",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "result",
                      "type" : "Property",
                      "source" : {
                         "localId" : "1166",
-                        "locator" : "63:6-63:28",
+                        "locator" : "76:6-76:28",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -4172,7 +4172,7 @@
                      }
                   }, {
                      "localId" : "1183",
-                     "locator" : "63:39-63:56",
+                     "locator" : "76:39-76:56",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Malignant",
                      "libraryName" : "Events",
@@ -4181,7 +4181,7 @@
                },
                "then" : {
                   "localId" : "1187",
-                  "locator" : "64:8-64:32",
+                  "locator" : "77:8-77:32",
                   "name" : "act-oncreferral",
                   "libraryName" : "Actions",
                   "type" : "ExpressionRef",
@@ -4257,7 +4257,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "1220",
-                     "locator" : "65:8-65:11",
+                     "locator" : "78:8-78:11",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
@@ -4330,7 +4330,7 @@
             }
          }, {
             "localId" : "1288",
-            "locator" : "67:1-70:11",
+            "locator" : "80:1-83:11",
             "name" : "FollowupIndeterminateBiopsyResult",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4480,7 +4480,7 @@
             },
             "expression" : {
                "localId" : "1289",
-               "locator" : "68:3-70:11",
+               "locator" : "81:3-83:11",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "1364",
@@ -4549,7 +4549,7 @@
                },
                "condition" : {
                   "localId" : "1290",
-                  "locator" : "68:6-68:60",
+                  "locator" : "81:6-81:60",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equivalent",
                   "signature" : [ {
@@ -4563,13 +4563,13 @@
                   } ],
                   "operand" : [ {
                      "localId" : "1307",
-                     "locator" : "68:6-68:35",
+                     "locator" : "81:6-81:35",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "result",
                      "type" : "Property",
                      "source" : {
                         "localId" : "1292",
-                        "locator" : "68:6-68:28",
+                        "locator" : "81:6-81:28",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -4605,7 +4605,7 @@
                      }
                   }, {
                      "localId" : "1309",
-                     "locator" : "68:39-68:60",
+                     "locator" : "81:39-81:60",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Indeterminate",
                      "libraryName" : "Events",
@@ -4614,7 +4614,7 @@
                },
                "then" : {
                   "localId" : "1313",
-                  "locator" : "69:8-69:40",
+                  "locator" : "82:8-82:40",
                   "name" : "act-indeterminatebiopsy",
                   "libraryName" : "Actions",
                   "type" : "ExpressionRef",
@@ -4690,7 +4690,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "1346",
-                     "locator" : "70:8-70:11",
+                     "locator" : "83:8-83:11",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
@@ -4763,7 +4763,7 @@
             }
          }, {
             "localId" : "1414",
-            "locator" : "72:1-75:11",
+            "locator" : "85:1-88:11",
             "name" : "FollowupDiscordantBiopsyResult",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4913,7 +4913,7 @@
             },
             "expression" : {
                "localId" : "1415",
-               "locator" : "73:3-75:11",
+               "locator" : "86:3-88:11",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "1490",
@@ -4982,7 +4982,7 @@
                },
                "condition" : {
                   "localId" : "1416",
-                  "locator" : "73:6-73:57",
+                  "locator" : "86:6-86:57",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Equivalent",
                   "signature" : [ {
@@ -4996,13 +4996,13 @@
                   } ],
                   "operand" : [ {
                      "localId" : "1433",
-                     "locator" : "73:6-73:35",
+                     "locator" : "86:6-86:35",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "result",
                      "type" : "Property",
                      "source" : {
                         "localId" : "1418",
-                        "locator" : "73:6-73:28",
+                        "locator" : "86:6-86:28",
                         "name" : "eve-latesttest",
                         "libraryName" : "Events",
                         "type" : "ExpressionRef",
@@ -5038,7 +5038,7 @@
                      }
                   }, {
                      "localId" : "1435",
-                     "locator" : "73:39-73:57",
+                     "locator" : "86:39-86:57",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "name" : "Discordant",
                      "libraryName" : "Events",
@@ -5047,7 +5047,7 @@
                },
                "then" : {
                   "localId" : "1439",
-                  "locator" : "74:8-74:37",
+                  "locator" : "87:8-87:37",
                   "name" : "act-discordantbiopsy",
                   "libraryName" : "Actions",
                   "type" : "ExpressionRef",
@@ -5123,7 +5123,7 @@
                   "signature" : [ ],
                   "operand" : {
                      "localId" : "1472",
-                     "locator" : "75:8-75:11",
+                     "locator" : "88:8-88:11",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                      "type" : "Null"
                   },
@@ -5196,7 +5196,7 @@
             }
          }, {
             "localId" : "217",
-            "locator" : "17:1-30:19",
+            "locator" : "30:1-43:19",
             "name" : "flow-FollowupScreeningResult",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5305,7 +5305,7 @@
             },
             "expression" : {
                "localId" : "218",
-               "locator" : "18:3-30:19",
+               "locator" : "31:3-43:19",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "1633",
@@ -5318,14 +5318,14 @@
                },
                "condition" : {
                   "localId" : "378",
-                  "locator" : "18:6-18:11",
+                  "locator" : "31:6-31:11",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "name" : "Errors",
                   "type" : "ExpressionRef"
                },
                "then" : {
                   "localId" : "379",
-                  "locator" : "18:18-18:19",
+                  "locator" : "31:18-31:19",
                   "type" : "List",
                   "resultTypeSpecifier" : {
                      "localId" : "380",
@@ -5340,7 +5340,7 @@
                },
                "else" : {
                   "localId" : "1560",
-                  "locator" : "20:5-30:19",
+                  "locator" : "33:5-43:19",
                   "type" : "Except",
                   "resultTypeSpecifier" : {
                      "localId" : "1616",
@@ -5550,7 +5550,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "382",
-                     "locator" : "20:5-29:5",
+                     "locator" : "33:5-42:5",
                      "type" : "List",
                      "resultTypeSpecifier" : {
                         "localId" : "1539",
@@ -5623,7 +5623,7 @@
                      },
                      "element" : [ {
                         "localId" : "492",
-                        "locator" : "21:7-21:27",
+                        "locator" : "34:7-34:27",
                         "name" : "FollowupBirads0Result",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -5693,7 +5693,7 @@
                         }
                      }, {
                         "localId" : "618",
-                        "locator" : "22:7-22:27",
+                        "locator" : "35:7-35:27",
                         "name" : "FollowupBirads3Result",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -5763,7 +5763,7 @@
                         }
                      }, {
                         "localId" : "892",
-                        "locator" : "23:7-23:30",
+                        "locator" : "36:7-36:30",
                         "name" : "FollowupBirads4Or5Result",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -5833,7 +5833,7 @@
                         }
                      }, {
                         "localId" : "1018",
-                        "locator" : "24:7-24:32",
+                        "locator" : "37:7-37:32",
                         "name" : "FollowupBenignBiopsyResult",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -5903,7 +5903,7 @@
                         }
                      }, {
                         "localId" : "1144",
-                        "locator" : "25:7-25:34",
+                        "locator" : "38:7-38:34",
                         "name" : "FollowupAtypicalBiopsyResult",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -5973,7 +5973,7 @@
                         }
                      }, {
                         "localId" : "1270",
-                        "locator" : "26:7-26:35",
+                        "locator" : "39:7-39:35",
                         "name" : "FollowupMalignantBiopsyResult",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -6043,7 +6043,7 @@
                         }
                      }, {
                         "localId" : "1396",
-                        "locator" : "27:7-27:39",
+                        "locator" : "40:7-40:39",
                         "name" : "FollowupIndeterminateBiopsyResult",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -6113,7 +6113,7 @@
                         }
                      }, {
                         "localId" : "1522",
-                        "locator" : "28:7-28:36",
+                        "locator" : "41:7-41:36",
                         "name" : "FollowupDiscordantBiopsyResult",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -6190,7 +6190,7 @@
                         "alias" : "X",
                         "expression" : {
                            "localId" : "1556",
-                           "locator" : "30:12-30:19",
+                           "locator" : "43:12-43:19",
                            "type" : "List",
                            "resultTypeSpecifier" : {
                               "localId" : "1558",
@@ -6203,7 +6203,7 @@
                            },
                            "element" : [ {
                               "localId" : "1557",
-                              "locator" : "30:14-30:17",
+                              "locator" : "43:14-43:17",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Any",
                               "type" : "Null"
                            } ]
@@ -6295,7 +6295,7 @@
             }
          }, {
             "localId" : "1766",
-            "locator" : "86:1-87:12",
+            "locator" : "99:1-100:12",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "NoErrorsHaveOccurred",
             "context" : "Patient",
@@ -6321,7 +6321,7 @@
             } ],
             "expression" : {
                "localId" : "1767",
-               "locator" : "87:3-87:12",
+               "locator" : "100:3-100:12",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Not",
                "signature" : [ {
@@ -6331,7 +6331,7 @@
                } ],
                "operand" : {
                   "localId" : "1768",
-                  "locator" : "87:7-87:12",
+                  "locator" : "100:7-100:12",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "name" : "Errors",
                   "type" : "ExpressionRef"
@@ -6339,7 +6339,7 @@
             }
          }, {
             "localId" : "1771",
-            "locator" : "116:1-117:35",
+            "locator" : "129:1-130:35",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsFollowupBirads0Result",
             "context" : "Patient",
@@ -6365,7 +6365,7 @@
             } ],
             "expression" : {
                "localId" : "1791",
-               "locator" : "117:3-117:35",
+               "locator" : "130:3-130:35",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Not",
                "signature" : [ {
@@ -6375,7 +6375,7 @@
                } ],
                "operand" : {
                   "localId" : "1789",
-                  "locator" : "117:3-117:35",
+                  "locator" : "130:3-130:35",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -6385,7 +6385,7 @@
                   } ],
                   "operand" : {
                      "localId" : "1772",
-                     "locator" : "117:3-117:23",
+                     "locator" : "130:3-130:23",
                      "name" : "FollowupBirads0Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -6458,7 +6458,7 @@
             }
          }, {
             "localId" : "1794",
-            "locator" : "119:1-120:39",
+            "locator" : "132:1-133:39",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupBirads0ResultCode",
             "context" : "Patient",
@@ -6513,12 +6513,12 @@
             } ],
             "expression" : {
                "localId" : "1848",
-               "locator" : "120:3-120:39",
+               "locator" : "133:3-133:39",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "1795",
-                  "locator" : "120:3-120:25",
+                  "locator" : "133:3-133:25",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "1813",
@@ -6587,7 +6587,7 @@
                   },
                   "expression" : {
                      "localId" : "1796",
-                     "locator" : "120:3-120:23",
+                     "locator" : "133:3-133:23",
                      "name" : "FollowupBirads0Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -6661,11 +6661,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "1829",
-                  "locator" : "120:27-120:39",
+                  "locator" : "133:27-133:39",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "1847",
-                     "locator" : "120:34-120:39",
+                     "locator" : "133:34-133:39",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "code",
                      "scope" : "R",
@@ -6675,7 +6675,7 @@
             }
          }, {
             "localId" : "1850",
-            "locator" : "122:1-123:41",
+            "locator" : "135:1-136:41",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupBirads0ResultReason",
             "context" : "Patient",
@@ -6730,12 +6730,12 @@
             } ],
             "expression" : {
                "localId" : "1904",
-               "locator" : "123:3-123:41",
+               "locator" : "136:3-136:41",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "1851",
-                  "locator" : "123:3-123:25",
+                  "locator" : "136:3-136:25",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "1869",
@@ -6804,7 +6804,7 @@
                   },
                   "expression" : {
                      "localId" : "1852",
-                     "locator" : "123:3-123:23",
+                     "locator" : "136:3-136:23",
                      "name" : "FollowupBirads0Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -6878,11 +6878,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "1885",
-                  "locator" : "123:27-123:41",
+                  "locator" : "136:27-136:41",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "1903",
-                     "locator" : "123:34-123:41",
+                     "locator" : "136:34-136:41",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "reason",
                      "scope" : "R",
@@ -6892,7 +6892,7 @@
             }
          }, {
             "localId" : "1906",
-            "locator" : "125:1-126:47",
+            "locator" : "138:1-139:47",
             "name" : "FollowupBirads0ResultTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6963,7 +6963,7 @@
             },
             "expression" : {
                "localId" : "1972",
-               "locator" : "126:3-126:47",
+               "locator" : "139:3-139:47",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "1973",
@@ -6984,7 +6984,7 @@
                },
                "source" : [ {
                   "localId" : "1907",
-                  "locator" : "126:3-126:25",
+                  "locator" : "139:3-139:25",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "1925",
@@ -7053,7 +7053,7 @@
                   },
                   "expression" : {
                      "localId" : "1908",
-                     "locator" : "126:3-126:23",
+                     "locator" : "139:3-139:23",
                      "name" : "FollowupBirads0Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -7127,7 +7127,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "1941",
-                  "locator" : "126:27-126:47",
+                  "locator" : "139:27-139:47",
                   "resultTypeSpecifier" : {
                      "localId" : "1968",
                      "type" : "TupleTypeSpecifier",
@@ -7147,7 +7147,7 @@
                   },
                   "expression" : {
                      "localId" : "1959",
-                     "locator" : "126:34-126:47",
+                     "locator" : "139:34-139:47",
                      "path" : "timingTiming",
                      "scope" : "R",
                      "type" : "Property",
@@ -7173,7 +7173,7 @@
             }
          }, {
             "localId" : "1982",
-            "locator" : "128:1-129:53",
+            "locator" : "141:1-142:53",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "FollowupBirads0ResultTimingEvent",
             "context" : "Patient",
@@ -7235,12 +7235,12 @@
             } ],
             "expression" : {
                "localId" : "2011",
-               "locator" : "129:3-129:53",
+               "locator" : "142:3-142:53",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Query",
                "source" : [ {
                   "localId" : "1983",
-                  "locator" : "129:3-129:31",
+                  "locator" : "142:3-142:31",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "1989",
@@ -7261,7 +7261,7 @@
                   },
                   "expression" : {
                      "localId" : "1984",
-                     "locator" : "129:3-129:29",
+                     "locator" : "142:3-142:29",
                      "name" : "FollowupBirads0ResultTiming",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -7287,11 +7287,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "1993",
-                  "locator" : "129:33-129:53",
+                  "locator" : "142:33-142:53",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "expression" : {
                      "localId" : "2008",
-                     "locator" : "129:40-129:53",
+                     "locator" : "142:40-142:53",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "First",
                      "signature" : [ {
@@ -7305,7 +7305,7 @@
                      } ],
                      "source" : {
                         "localId" : "1999",
-                        "locator" : "129:46-129:52",
+                        "locator" : "142:46-142:52",
                         "path" : "event",
                         "scope" : "R",
                         "type" : "Property",
@@ -7324,7 +7324,7 @@
             }
          }, {
             "localId" : "2013",
-            "locator" : "131:1-132:85",
+            "locator" : "144:1-145:85",
             "name" : "FollowupBirads0ResultFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -7432,7 +7432,7 @@
             },
             "expression" : {
                "localId" : "2097",
-               "locator" : "132:3-132:85",
+               "locator" : "145:3-145:85",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "2098",
@@ -7473,7 +7473,7 @@
                },
                "source" : [ {
                   "localId" : "2014",
-                  "locator" : "132:3-132:25",
+                  "locator" : "145:3-145:25",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2032",
@@ -7542,7 +7542,7 @@
                   },
                   "expression" : {
                      "localId" : "2015",
-                     "locator" : "132:3-132:23",
+                     "locator" : "145:3-145:23",
                      "name" : "FollowupBirads0Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -7616,7 +7616,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2048",
-                  "locator" : "132:27-132:85",
+                  "locator" : "145:27-145:85",
                   "resultTypeSpecifier" : {
                      "localId" : "2088",
                      "type" : "ListTypeSpecifier",
@@ -7656,7 +7656,7 @@
                   },
                   "expression" : {
                      "localId" : "2068",
-                     "locator" : "132:34-132:85",
+                     "locator" : "145:34-145:85",
                      "name" : "CreateRecommendationFlagExtension",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -7704,7 +7704,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "2067",
-                        "locator" : "132:79-132:84",
+                        "locator" : "145:79-145:84",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "flag",
                         "scope" : "R",
@@ -7715,7 +7715,7 @@
             }
          }, {
             "localId" : "2117",
-            "locator" : "134:1-135:35",
+            "locator" : "147:1-148:35",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsFollowupBirads3Result",
             "context" : "Patient",
@@ -7741,7 +7741,7 @@
             } ],
             "expression" : {
                "localId" : "2137",
-               "locator" : "135:3-135:35",
+               "locator" : "148:3-148:35",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Not",
                "signature" : [ {
@@ -7751,7 +7751,7 @@
                } ],
                "operand" : {
                   "localId" : "2135",
-                  "locator" : "135:3-135:35",
+                  "locator" : "148:3-148:35",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -7761,7 +7761,7 @@
                   } ],
                   "operand" : {
                      "localId" : "2118",
-                     "locator" : "135:3-135:23",
+                     "locator" : "148:3-148:23",
                      "name" : "FollowupBirads3Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -7834,7 +7834,7 @@
             }
          }, {
             "localId" : "2140",
-            "locator" : "137:1-138:39",
+            "locator" : "150:1-151:39",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupBirads3ResultCode",
             "context" : "Patient",
@@ -7889,12 +7889,12 @@
             } ],
             "expression" : {
                "localId" : "2194",
-               "locator" : "138:3-138:39",
+               "locator" : "151:3-151:39",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "2141",
-                  "locator" : "138:3-138:25",
+                  "locator" : "151:3-151:25",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2159",
@@ -7963,7 +7963,7 @@
                   },
                   "expression" : {
                      "localId" : "2142",
-                     "locator" : "138:3-138:23",
+                     "locator" : "151:3-151:23",
                      "name" : "FollowupBirads3Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -8037,11 +8037,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2175",
-                  "locator" : "138:27-138:39",
+                  "locator" : "151:27-151:39",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "2193",
-                     "locator" : "138:34-138:39",
+                     "locator" : "151:34-151:39",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "code",
                      "scope" : "R",
@@ -8051,7 +8051,7 @@
             }
          }, {
             "localId" : "2196",
-            "locator" : "140:1-141:41",
+            "locator" : "153:1-154:41",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupBirads3ResultReason",
             "context" : "Patient",
@@ -8106,12 +8106,12 @@
             } ],
             "expression" : {
                "localId" : "2250",
-               "locator" : "141:3-141:41",
+               "locator" : "154:3-154:41",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "2197",
-                  "locator" : "141:3-141:25",
+                  "locator" : "154:3-154:25",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2215",
@@ -8180,7 +8180,7 @@
                   },
                   "expression" : {
                      "localId" : "2198",
-                     "locator" : "141:3-141:23",
+                     "locator" : "154:3-154:23",
                      "name" : "FollowupBirads3Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -8254,11 +8254,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2231",
-                  "locator" : "141:27-141:41",
+                  "locator" : "154:27-154:41",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "2249",
-                     "locator" : "141:34-141:41",
+                     "locator" : "154:34-154:41",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "reason",
                      "scope" : "R",
@@ -8268,7 +8268,7 @@
             }
          }, {
             "localId" : "2252",
-            "locator" : "143:1-144:47",
+            "locator" : "156:1-157:47",
             "name" : "FollowupBirads3ResultTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8339,7 +8339,7 @@
             },
             "expression" : {
                "localId" : "2318",
-               "locator" : "144:3-144:47",
+               "locator" : "157:3-157:47",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "2319",
@@ -8360,7 +8360,7 @@
                },
                "source" : [ {
                   "localId" : "2253",
-                  "locator" : "144:3-144:25",
+                  "locator" : "157:3-157:25",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2271",
@@ -8429,7 +8429,7 @@
                   },
                   "expression" : {
                      "localId" : "2254",
-                     "locator" : "144:3-144:23",
+                     "locator" : "157:3-157:23",
                      "name" : "FollowupBirads3Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -8503,7 +8503,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2287",
-                  "locator" : "144:27-144:47",
+                  "locator" : "157:27-157:47",
                   "resultTypeSpecifier" : {
                      "localId" : "2314",
                      "type" : "TupleTypeSpecifier",
@@ -8523,7 +8523,7 @@
                   },
                   "expression" : {
                      "localId" : "2305",
-                     "locator" : "144:34-144:47",
+                     "locator" : "157:34-157:47",
                      "path" : "timingTiming",
                      "scope" : "R",
                      "type" : "Property",
@@ -8549,7 +8549,7 @@
             }
          }, {
             "localId" : "2328",
-            "locator" : "146:1-147:53",
+            "locator" : "159:1-160:53",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "FollowupBirads3ResultTimingEvent",
             "context" : "Patient",
@@ -8611,12 +8611,12 @@
             } ],
             "expression" : {
                "localId" : "2357",
-               "locator" : "147:3-147:53",
+               "locator" : "160:3-160:53",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Query",
                "source" : [ {
                   "localId" : "2329",
-                  "locator" : "147:3-147:31",
+                  "locator" : "160:3-160:31",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2335",
@@ -8637,7 +8637,7 @@
                   },
                   "expression" : {
                      "localId" : "2330",
-                     "locator" : "147:3-147:29",
+                     "locator" : "160:3-160:29",
                      "name" : "FollowupBirads3ResultTiming",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -8663,11 +8663,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2339",
-                  "locator" : "147:33-147:53",
+                  "locator" : "160:33-160:53",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "expression" : {
                      "localId" : "2354",
-                     "locator" : "147:40-147:53",
+                     "locator" : "160:40-160:53",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "First",
                      "signature" : [ {
@@ -8681,7 +8681,7 @@
                      } ],
                      "source" : {
                         "localId" : "2345",
-                        "locator" : "147:46-147:52",
+                        "locator" : "160:46-160:52",
                         "path" : "event",
                         "scope" : "R",
                         "type" : "Property",
@@ -8700,7 +8700,7 @@
             }
          }, {
             "localId" : "2359",
-            "locator" : "149:1-150:85",
+            "locator" : "162:1-163:85",
             "name" : "FollowupBirads3ResultFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -8808,7 +8808,7 @@
             },
             "expression" : {
                "localId" : "2443",
-               "locator" : "150:3-150:85",
+               "locator" : "163:3-163:85",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "2444",
@@ -8849,7 +8849,7 @@
                },
                "source" : [ {
                   "localId" : "2360",
-                  "locator" : "150:3-150:25",
+                  "locator" : "163:3-163:25",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2378",
@@ -8918,7 +8918,7 @@
                   },
                   "expression" : {
                      "localId" : "2361",
-                     "locator" : "150:3-150:23",
+                     "locator" : "163:3-163:23",
                      "name" : "FollowupBirads3Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -8992,7 +8992,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2394",
-                  "locator" : "150:27-150:85",
+                  "locator" : "163:27-163:85",
                   "resultTypeSpecifier" : {
                      "localId" : "2434",
                      "type" : "ListTypeSpecifier",
@@ -9032,7 +9032,7 @@
                   },
                   "expression" : {
                      "localId" : "2414",
-                     "locator" : "150:34-150:85",
+                     "locator" : "163:34-163:85",
                      "name" : "CreateRecommendationFlagExtension",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -9080,7 +9080,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "2413",
-                        "locator" : "150:79-150:84",
+                        "locator" : "163:79-163:84",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "flag",
                         "scope" : "R",
@@ -9091,7 +9091,7 @@
             }
          }, {
             "localId" : "2463",
-            "locator" : "152:1-153:38",
+            "locator" : "165:1-166:38",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsFollowupBirads4Or5Result",
             "context" : "Patient",
@@ -9117,7 +9117,7 @@
             } ],
             "expression" : {
                "localId" : "2483",
-               "locator" : "153:3-153:38",
+               "locator" : "166:3-166:38",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Not",
                "signature" : [ {
@@ -9127,7 +9127,7 @@
                } ],
                "operand" : {
                   "localId" : "2481",
-                  "locator" : "153:3-153:38",
+                  "locator" : "166:3-166:38",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -9137,7 +9137,7 @@
                   } ],
                   "operand" : {
                      "localId" : "2464",
-                     "locator" : "153:3-153:26",
+                     "locator" : "166:3-166:26",
                      "name" : "FollowupBirads4Or5Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -9210,7 +9210,7 @@
             }
          }, {
             "localId" : "2486",
-            "locator" : "155:1-156:42",
+            "locator" : "168:1-169:42",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupBirads4Or5ResultCode",
             "context" : "Patient",
@@ -9265,12 +9265,12 @@
             } ],
             "expression" : {
                "localId" : "2540",
-               "locator" : "156:3-156:42",
+               "locator" : "169:3-169:42",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "2487",
-                  "locator" : "156:3-156:28",
+                  "locator" : "169:3-169:28",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2505",
@@ -9339,7 +9339,7 @@
                   },
                   "expression" : {
                      "localId" : "2488",
-                     "locator" : "156:3-156:26",
+                     "locator" : "169:3-169:26",
                      "name" : "FollowupBirads4Or5Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -9413,11 +9413,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2521",
-                  "locator" : "156:30-156:42",
+                  "locator" : "169:30-169:42",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "2539",
-                     "locator" : "156:37-156:42",
+                     "locator" : "169:37-169:42",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "code",
                      "scope" : "R",
@@ -9427,7 +9427,7 @@
             }
          }, {
             "localId" : "2542",
-            "locator" : "158:1-159:44",
+            "locator" : "171:1-172:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupBirads4Or5ResultReason",
             "context" : "Patient",
@@ -9482,12 +9482,12 @@
             } ],
             "expression" : {
                "localId" : "2596",
-               "locator" : "159:3-159:44",
+               "locator" : "172:3-172:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "2543",
-                  "locator" : "159:3-159:28",
+                  "locator" : "172:3-172:28",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2561",
@@ -9556,7 +9556,7 @@
                   },
                   "expression" : {
                      "localId" : "2544",
-                     "locator" : "159:3-159:26",
+                     "locator" : "172:3-172:26",
                      "name" : "FollowupBirads4Or5Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -9630,11 +9630,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2577",
-                  "locator" : "159:30-159:44",
+                  "locator" : "172:30-172:44",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "2595",
-                     "locator" : "159:37-159:44",
+                     "locator" : "172:37-172:44",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "reason",
                      "scope" : "R",
@@ -9644,7 +9644,7 @@
             }
          }, {
             "localId" : "2598",
-            "locator" : "161:1-162:50",
+            "locator" : "174:1-175:50",
             "name" : "FollowupBirads4Or5ResultTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -9715,7 +9715,7 @@
             },
             "expression" : {
                "localId" : "2664",
-               "locator" : "162:3-162:50",
+               "locator" : "175:3-175:50",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "2665",
@@ -9736,7 +9736,7 @@
                },
                "source" : [ {
                   "localId" : "2599",
-                  "locator" : "162:3-162:28",
+                  "locator" : "175:3-175:28",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2617",
@@ -9805,7 +9805,7 @@
                   },
                   "expression" : {
                      "localId" : "2600",
-                     "locator" : "162:3-162:26",
+                     "locator" : "175:3-175:26",
                      "name" : "FollowupBirads4Or5Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -9879,7 +9879,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2633",
-                  "locator" : "162:30-162:50",
+                  "locator" : "175:30-175:50",
                   "resultTypeSpecifier" : {
                      "localId" : "2660",
                      "type" : "TupleTypeSpecifier",
@@ -9899,7 +9899,7 @@
                   },
                   "expression" : {
                      "localId" : "2651",
-                     "locator" : "162:37-162:50",
+                     "locator" : "175:37-175:50",
                      "path" : "timingTiming",
                      "scope" : "R",
                      "type" : "Property",
@@ -9925,7 +9925,7 @@
             }
          }, {
             "localId" : "2674",
-            "locator" : "164:1-165:56",
+            "locator" : "177:1-178:56",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "FollowupBirads4Or5ResultTimingEvent",
             "context" : "Patient",
@@ -9987,12 +9987,12 @@
             } ],
             "expression" : {
                "localId" : "2703",
-               "locator" : "165:3-165:56",
+               "locator" : "178:3-178:56",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Query",
                "source" : [ {
                   "localId" : "2675",
-                  "locator" : "165:3-165:34",
+                  "locator" : "178:3-178:34",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2681",
@@ -10013,7 +10013,7 @@
                   },
                   "expression" : {
                      "localId" : "2676",
-                     "locator" : "165:3-165:32",
+                     "locator" : "178:3-178:32",
                      "name" : "FollowupBirads4Or5ResultTiming",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -10039,11 +10039,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2685",
-                  "locator" : "165:36-165:56",
+                  "locator" : "178:36-178:56",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "expression" : {
                      "localId" : "2700",
-                     "locator" : "165:43-165:56",
+                     "locator" : "178:43-178:56",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "First",
                      "signature" : [ {
@@ -10057,7 +10057,7 @@
                      } ],
                      "source" : {
                         "localId" : "2691",
-                        "locator" : "165:49-165:55",
+                        "locator" : "178:49-178:55",
                         "path" : "event",
                         "scope" : "R",
                         "type" : "Property",
@@ -10076,7 +10076,7 @@
             }
          }, {
             "localId" : "2705",
-            "locator" : "167:1-168:88",
+            "locator" : "180:1-181:88",
             "name" : "FollowupBirads4Or5ResultFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -10184,7 +10184,7 @@
             },
             "expression" : {
                "localId" : "2789",
-               "locator" : "168:3-168:88",
+               "locator" : "181:3-181:88",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "2790",
@@ -10225,7 +10225,7 @@
                },
                "source" : [ {
                   "localId" : "2706",
-                  "locator" : "168:3-168:28",
+                  "locator" : "181:3-181:28",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2724",
@@ -10294,7 +10294,7 @@
                   },
                   "expression" : {
                      "localId" : "2707",
-                     "locator" : "168:3-168:26",
+                     "locator" : "181:3-181:26",
                      "name" : "FollowupBirads4Or5Result",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -10368,7 +10368,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2740",
-                  "locator" : "168:30-168:88",
+                  "locator" : "181:30-181:88",
                   "resultTypeSpecifier" : {
                      "localId" : "2780",
                      "type" : "ListTypeSpecifier",
@@ -10408,7 +10408,7 @@
                   },
                   "expression" : {
                      "localId" : "2760",
-                     "locator" : "168:37-168:88",
+                     "locator" : "181:37-181:88",
                      "name" : "CreateRecommendationFlagExtension",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -10456,7 +10456,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "2759",
-                        "locator" : "168:82-168:87",
+                        "locator" : "181:82-181:87",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "flag",
                         "scope" : "R",
@@ -10467,7 +10467,7 @@
             }
          }, {
             "localId" : "2809",
-            "locator" : "170:1-171:40",
+            "locator" : "183:1-184:40",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsFollowupBenignBiopsyResult",
             "context" : "Patient",
@@ -10493,7 +10493,7 @@
             } ],
             "expression" : {
                "localId" : "2829",
-               "locator" : "171:3-171:40",
+               "locator" : "184:3-184:40",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Not",
                "signature" : [ {
@@ -10503,7 +10503,7 @@
                } ],
                "operand" : {
                   "localId" : "2827",
-                  "locator" : "171:3-171:40",
+                  "locator" : "184:3-184:40",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -10513,7 +10513,7 @@
                   } ],
                   "operand" : {
                      "localId" : "2810",
-                     "locator" : "171:3-171:28",
+                     "locator" : "184:3-184:28",
                      "name" : "FollowupBenignBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -10586,7 +10586,7 @@
             }
          }, {
             "localId" : "2832",
-            "locator" : "173:1-174:44",
+            "locator" : "186:1-187:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupBenignBiopsyResultCode",
             "context" : "Patient",
@@ -10641,12 +10641,12 @@
             } ],
             "expression" : {
                "localId" : "2886",
-               "locator" : "174:3-174:44",
+               "locator" : "187:3-187:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "2833",
-                  "locator" : "174:3-174:30",
+                  "locator" : "187:3-187:30",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2851",
@@ -10715,7 +10715,7 @@
                   },
                   "expression" : {
                      "localId" : "2834",
-                     "locator" : "174:3-174:28",
+                     "locator" : "187:3-187:28",
                      "name" : "FollowupBenignBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -10789,11 +10789,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2867",
-                  "locator" : "174:32-174:44",
+                  "locator" : "187:32-187:44",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "2885",
-                     "locator" : "174:39-174:44",
+                     "locator" : "187:39-187:44",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "code",
                      "scope" : "R",
@@ -10803,7 +10803,7 @@
             }
          }, {
             "localId" : "2888",
-            "locator" : "176:1-177:46",
+            "locator" : "189:1-190:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupBenignBiopsyResultReason",
             "context" : "Patient",
@@ -10858,12 +10858,12 @@
             } ],
             "expression" : {
                "localId" : "2942",
-               "locator" : "177:3-177:46",
+               "locator" : "190:3-190:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "2889",
-                  "locator" : "177:3-177:30",
+                  "locator" : "190:3-190:30",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2907",
@@ -10932,7 +10932,7 @@
                   },
                   "expression" : {
                      "localId" : "2890",
-                     "locator" : "177:3-177:28",
+                     "locator" : "190:3-190:28",
                      "name" : "FollowupBenignBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -11006,11 +11006,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2923",
-                  "locator" : "177:32-177:46",
+                  "locator" : "190:32-190:46",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "2941",
-                     "locator" : "177:39-177:46",
+                     "locator" : "190:39-190:46",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "reason",
                      "scope" : "R",
@@ -11020,7 +11020,7 @@
             }
          }, {
             "localId" : "2944",
-            "locator" : "179:1-180:52",
+            "locator" : "192:1-193:52",
             "name" : "FollowupBenignBiopsyResultTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -11091,7 +11091,7 @@
             },
             "expression" : {
                "localId" : "3010",
-               "locator" : "180:3-180:52",
+               "locator" : "193:3-193:52",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "3011",
@@ -11112,7 +11112,7 @@
                },
                "source" : [ {
                   "localId" : "2945",
-                  "locator" : "180:3-180:30",
+                  "locator" : "193:3-193:30",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "2963",
@@ -11181,7 +11181,7 @@
                   },
                   "expression" : {
                      "localId" : "2946",
-                     "locator" : "180:3-180:28",
+                     "locator" : "193:3-193:28",
                      "name" : "FollowupBenignBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -11255,7 +11255,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "2979",
-                  "locator" : "180:32-180:52",
+                  "locator" : "193:32-193:52",
                   "resultTypeSpecifier" : {
                      "localId" : "3006",
                      "type" : "TupleTypeSpecifier",
@@ -11275,7 +11275,7 @@
                   },
                   "expression" : {
                      "localId" : "2997",
-                     "locator" : "180:39-180:52",
+                     "locator" : "193:39-193:52",
                      "path" : "timingTiming",
                      "scope" : "R",
                      "type" : "Property",
@@ -11301,7 +11301,7 @@
             }
          }, {
             "localId" : "3020",
-            "locator" : "182:1-183:58",
+            "locator" : "195:1-196:58",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "FollowupBenignBiopsyResultTimingEvent",
             "context" : "Patient",
@@ -11363,12 +11363,12 @@
             } ],
             "expression" : {
                "localId" : "3049",
-               "locator" : "183:3-183:58",
+               "locator" : "196:3-196:58",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Query",
                "source" : [ {
                   "localId" : "3021",
-                  "locator" : "183:3-183:36",
+                  "locator" : "196:3-196:36",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3027",
@@ -11389,7 +11389,7 @@
                   },
                   "expression" : {
                      "localId" : "3022",
-                     "locator" : "183:3-183:34",
+                     "locator" : "196:3-196:34",
                      "name" : "FollowupBenignBiopsyResultTiming",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -11415,11 +11415,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3031",
-                  "locator" : "183:38-183:58",
+                  "locator" : "196:38-196:58",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "expression" : {
                      "localId" : "3046",
-                     "locator" : "183:45-183:58",
+                     "locator" : "196:45-196:58",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "First",
                      "signature" : [ {
@@ -11433,7 +11433,7 @@
                      } ],
                      "source" : {
                         "localId" : "3037",
-                        "locator" : "183:51-183:57",
+                        "locator" : "196:51-196:57",
                         "path" : "event",
                         "scope" : "R",
                         "type" : "Property",
@@ -11452,7 +11452,7 @@
             }
          }, {
             "localId" : "3051",
-            "locator" : "185:1-186:90",
+            "locator" : "198:1-199:90",
             "name" : "FollowupBenignBiopsyResultFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -11560,7 +11560,7 @@
             },
             "expression" : {
                "localId" : "3135",
-               "locator" : "186:3-186:90",
+               "locator" : "199:3-199:90",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "3136",
@@ -11601,7 +11601,7 @@
                },
                "source" : [ {
                   "localId" : "3052",
-                  "locator" : "186:3-186:30",
+                  "locator" : "199:3-199:30",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3070",
@@ -11670,7 +11670,7 @@
                   },
                   "expression" : {
                      "localId" : "3053",
-                     "locator" : "186:3-186:28",
+                     "locator" : "199:3-199:28",
                      "name" : "FollowupBenignBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -11744,7 +11744,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3086",
-                  "locator" : "186:32-186:90",
+                  "locator" : "199:32-199:90",
                   "resultTypeSpecifier" : {
                      "localId" : "3126",
                      "type" : "ListTypeSpecifier",
@@ -11784,7 +11784,7 @@
                   },
                   "expression" : {
                      "localId" : "3106",
-                     "locator" : "186:39-186:90",
+                     "locator" : "199:39-199:90",
                      "name" : "CreateRecommendationFlagExtension",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -11832,7 +11832,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "3105",
-                        "locator" : "186:84-186:89",
+                        "locator" : "199:84-199:89",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "flag",
                         "scope" : "R",
@@ -11843,7 +11843,7 @@
             }
          }, {
             "localId" : "3155",
-            "locator" : "188:1-189:42",
+            "locator" : "201:1-202:42",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsFollowupAtypicalBiopsyResult",
             "context" : "Patient",
@@ -11869,7 +11869,7 @@
             } ],
             "expression" : {
                "localId" : "3175",
-               "locator" : "189:3-189:42",
+               "locator" : "202:3-202:42",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Not",
                "signature" : [ {
@@ -11879,7 +11879,7 @@
                } ],
                "operand" : {
                   "localId" : "3173",
-                  "locator" : "189:3-189:42",
+                  "locator" : "202:3-202:42",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -11889,7 +11889,7 @@
                   } ],
                   "operand" : {
                      "localId" : "3156",
-                     "locator" : "189:3-189:30",
+                     "locator" : "202:3-202:30",
                      "name" : "FollowupAtypicalBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -11962,7 +11962,7 @@
             }
          }, {
             "localId" : "3178",
-            "locator" : "191:1-192:46",
+            "locator" : "204:1-205:46",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupAtypicalBiopsyResultCode",
             "context" : "Patient",
@@ -12017,12 +12017,12 @@
             } ],
             "expression" : {
                "localId" : "3232",
-               "locator" : "192:3-192:46",
+               "locator" : "205:3-205:46",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "3179",
-                  "locator" : "192:3-192:32",
+                  "locator" : "205:3-205:32",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3197",
@@ -12091,7 +12091,7 @@
                   },
                   "expression" : {
                      "localId" : "3180",
-                     "locator" : "192:3-192:30",
+                     "locator" : "205:3-205:30",
                      "name" : "FollowupAtypicalBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -12165,11 +12165,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3213",
-                  "locator" : "192:34-192:46",
+                  "locator" : "205:34-205:46",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "3231",
-                     "locator" : "192:41-192:46",
+                     "locator" : "205:41-205:46",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "code",
                      "scope" : "R",
@@ -12179,7 +12179,7 @@
             }
          }, {
             "localId" : "3234",
-            "locator" : "194:1-195:48",
+            "locator" : "207:1-208:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupAtypicalBiopsyResultReason",
             "context" : "Patient",
@@ -12234,12 +12234,12 @@
             } ],
             "expression" : {
                "localId" : "3288",
-               "locator" : "195:3-195:48",
+               "locator" : "208:3-208:48",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "3235",
-                  "locator" : "195:3-195:32",
+                  "locator" : "208:3-208:32",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3253",
@@ -12308,7 +12308,7 @@
                   },
                   "expression" : {
                      "localId" : "3236",
-                     "locator" : "195:3-195:30",
+                     "locator" : "208:3-208:30",
                      "name" : "FollowupAtypicalBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -12382,11 +12382,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3269",
-                  "locator" : "195:34-195:48",
+                  "locator" : "208:34-208:48",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "3287",
-                     "locator" : "195:41-195:48",
+                     "locator" : "208:41-208:48",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "reason",
                      "scope" : "R",
@@ -12396,7 +12396,7 @@
             }
          }, {
             "localId" : "3290",
-            "locator" : "197:1-198:54",
+            "locator" : "210:1-211:54",
             "name" : "FollowupAtypicalBiopsyResultTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -12467,7 +12467,7 @@
             },
             "expression" : {
                "localId" : "3356",
-               "locator" : "198:3-198:54",
+               "locator" : "211:3-211:54",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "3357",
@@ -12488,7 +12488,7 @@
                },
                "source" : [ {
                   "localId" : "3291",
-                  "locator" : "198:3-198:32",
+                  "locator" : "211:3-211:32",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3309",
@@ -12557,7 +12557,7 @@
                   },
                   "expression" : {
                      "localId" : "3292",
-                     "locator" : "198:3-198:30",
+                     "locator" : "211:3-211:30",
                      "name" : "FollowupAtypicalBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -12631,7 +12631,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3325",
-                  "locator" : "198:34-198:54",
+                  "locator" : "211:34-211:54",
                   "resultTypeSpecifier" : {
                      "localId" : "3352",
                      "type" : "TupleTypeSpecifier",
@@ -12651,7 +12651,7 @@
                   },
                   "expression" : {
                      "localId" : "3343",
-                     "locator" : "198:41-198:54",
+                     "locator" : "211:41-211:54",
                      "path" : "timingTiming",
                      "scope" : "R",
                      "type" : "Property",
@@ -12677,7 +12677,7 @@
             }
          }, {
             "localId" : "3366",
-            "locator" : "200:1-201:60",
+            "locator" : "213:1-214:60",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "FollowupAtypicalBiopsyResultTimingEvent",
             "context" : "Patient",
@@ -12739,12 +12739,12 @@
             } ],
             "expression" : {
                "localId" : "3395",
-               "locator" : "201:3-201:60",
+               "locator" : "214:3-214:60",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Query",
                "source" : [ {
                   "localId" : "3367",
-                  "locator" : "201:3-201:38",
+                  "locator" : "214:3-214:38",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3373",
@@ -12765,7 +12765,7 @@
                   },
                   "expression" : {
                      "localId" : "3368",
-                     "locator" : "201:3-201:36",
+                     "locator" : "214:3-214:36",
                      "name" : "FollowupAtypicalBiopsyResultTiming",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -12791,11 +12791,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3377",
-                  "locator" : "201:40-201:60",
+                  "locator" : "214:40-214:60",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "expression" : {
                      "localId" : "3392",
-                     "locator" : "201:47-201:60",
+                     "locator" : "214:47-214:60",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "First",
                      "signature" : [ {
@@ -12809,7 +12809,7 @@
                      } ],
                      "source" : {
                         "localId" : "3383",
-                        "locator" : "201:53-201:59",
+                        "locator" : "214:53-214:59",
                         "path" : "event",
                         "scope" : "R",
                         "type" : "Property",
@@ -12828,7 +12828,7 @@
             }
          }, {
             "localId" : "3397",
-            "locator" : "203:1-204:92",
+            "locator" : "216:1-217:92",
             "name" : "FollowupAtypicalBiopsyResultFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -12936,7 +12936,7 @@
             },
             "expression" : {
                "localId" : "3481",
-               "locator" : "204:3-204:92",
+               "locator" : "217:3-217:92",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "3482",
@@ -12977,7 +12977,7 @@
                },
                "source" : [ {
                   "localId" : "3398",
-                  "locator" : "204:3-204:32",
+                  "locator" : "217:3-217:32",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3416",
@@ -13046,7 +13046,7 @@
                   },
                   "expression" : {
                      "localId" : "3399",
-                     "locator" : "204:3-204:30",
+                     "locator" : "217:3-217:30",
                      "name" : "FollowupAtypicalBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -13120,7 +13120,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3432",
-                  "locator" : "204:34-204:92",
+                  "locator" : "217:34-217:92",
                   "resultTypeSpecifier" : {
                      "localId" : "3472",
                      "type" : "ListTypeSpecifier",
@@ -13160,7 +13160,7 @@
                   },
                   "expression" : {
                      "localId" : "3452",
-                     "locator" : "204:41-204:92",
+                     "locator" : "217:41-217:92",
                      "name" : "CreateRecommendationFlagExtension",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -13208,7 +13208,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "3451",
-                        "locator" : "204:86-204:91",
+                        "locator" : "217:86-217:91",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "flag",
                         "scope" : "R",
@@ -13219,7 +13219,7 @@
             }
          }, {
             "localId" : "3501",
-            "locator" : "206:1-207:43",
+            "locator" : "219:1-220:43",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsFollowupMalignantBiopsyResult",
             "context" : "Patient",
@@ -13245,7 +13245,7 @@
             } ],
             "expression" : {
                "localId" : "3521",
-               "locator" : "207:3-207:43",
+               "locator" : "220:3-220:43",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Not",
                "signature" : [ {
@@ -13255,7 +13255,7 @@
                } ],
                "operand" : {
                   "localId" : "3519",
-                  "locator" : "207:3-207:43",
+                  "locator" : "220:3-220:43",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -13265,7 +13265,7 @@
                   } ],
                   "operand" : {
                      "localId" : "3502",
-                     "locator" : "207:3-207:31",
+                     "locator" : "220:3-220:31",
                      "name" : "FollowupMalignantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -13338,7 +13338,7 @@
             }
          }, {
             "localId" : "3524",
-            "locator" : "209:1-210:47",
+            "locator" : "222:1-223:47",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupMalignantBiopsyResultCode",
             "context" : "Patient",
@@ -13393,12 +13393,12 @@
             } ],
             "expression" : {
                "localId" : "3578",
-               "locator" : "210:3-210:47",
+               "locator" : "223:3-223:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "3525",
-                  "locator" : "210:3-210:33",
+                  "locator" : "223:3-223:33",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3543",
@@ -13467,7 +13467,7 @@
                   },
                   "expression" : {
                      "localId" : "3526",
-                     "locator" : "210:3-210:31",
+                     "locator" : "223:3-223:31",
                      "name" : "FollowupMalignantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -13541,11 +13541,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3559",
-                  "locator" : "210:35-210:47",
+                  "locator" : "223:35-223:47",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "3577",
-                     "locator" : "210:42-210:47",
+                     "locator" : "223:42-223:47",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "code",
                      "scope" : "R",
@@ -13555,7 +13555,7 @@
             }
          }, {
             "localId" : "3580",
-            "locator" : "212:1-213:49",
+            "locator" : "225:1-226:49",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupMalignantBiopsyResultReason",
             "context" : "Patient",
@@ -13610,12 +13610,12 @@
             } ],
             "expression" : {
                "localId" : "3634",
-               "locator" : "213:3-213:49",
+               "locator" : "226:3-226:49",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "3581",
-                  "locator" : "213:3-213:33",
+                  "locator" : "226:3-226:33",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3599",
@@ -13684,7 +13684,7 @@
                   },
                   "expression" : {
                      "localId" : "3582",
-                     "locator" : "213:3-213:31",
+                     "locator" : "226:3-226:31",
                      "name" : "FollowupMalignantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -13758,11 +13758,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3615",
-                  "locator" : "213:35-213:49",
+                  "locator" : "226:35-226:49",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "3633",
-                     "locator" : "213:42-213:49",
+                     "locator" : "226:42-226:49",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "reason",
                      "scope" : "R",
@@ -13772,7 +13772,7 @@
             }
          }, {
             "localId" : "3636",
-            "locator" : "215:1-216:55",
+            "locator" : "228:1-229:55",
             "name" : "FollowupMalignantBiopsyResultTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -13843,7 +13843,7 @@
             },
             "expression" : {
                "localId" : "3702",
-               "locator" : "216:3-216:55",
+               "locator" : "229:3-229:55",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "3703",
@@ -13864,7 +13864,7 @@
                },
                "source" : [ {
                   "localId" : "3637",
-                  "locator" : "216:3-216:33",
+                  "locator" : "229:3-229:33",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3655",
@@ -13933,7 +13933,7 @@
                   },
                   "expression" : {
                      "localId" : "3638",
-                     "locator" : "216:3-216:31",
+                     "locator" : "229:3-229:31",
                      "name" : "FollowupMalignantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -14007,7 +14007,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3671",
-                  "locator" : "216:35-216:55",
+                  "locator" : "229:35-229:55",
                   "resultTypeSpecifier" : {
                      "localId" : "3698",
                      "type" : "TupleTypeSpecifier",
@@ -14027,7 +14027,7 @@
                   },
                   "expression" : {
                      "localId" : "3689",
-                     "locator" : "216:42-216:55",
+                     "locator" : "229:42-229:55",
                      "path" : "timingTiming",
                      "scope" : "R",
                      "type" : "Property",
@@ -14053,7 +14053,7 @@
             }
          }, {
             "localId" : "3712",
-            "locator" : "218:1-219:61",
+            "locator" : "231:1-232:61",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "FollowupMalignantBiopsyResultTimingEvent",
             "context" : "Patient",
@@ -14115,12 +14115,12 @@
             } ],
             "expression" : {
                "localId" : "3741",
-               "locator" : "219:3-219:61",
+               "locator" : "232:3-232:61",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Query",
                "source" : [ {
                   "localId" : "3713",
-                  "locator" : "219:3-219:39",
+                  "locator" : "232:3-232:39",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3719",
@@ -14141,7 +14141,7 @@
                   },
                   "expression" : {
                      "localId" : "3714",
-                     "locator" : "219:3-219:37",
+                     "locator" : "232:3-232:37",
                      "name" : "FollowupMalignantBiopsyResultTiming",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -14167,11 +14167,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3723",
-                  "locator" : "219:41-219:61",
+                  "locator" : "232:41-232:61",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "expression" : {
                      "localId" : "3738",
-                     "locator" : "219:48-219:61",
+                     "locator" : "232:48-232:61",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "First",
                      "signature" : [ {
@@ -14185,7 +14185,7 @@
                      } ],
                      "source" : {
                         "localId" : "3729",
-                        "locator" : "219:54-219:60",
+                        "locator" : "232:54-232:60",
                         "path" : "event",
                         "scope" : "R",
                         "type" : "Property",
@@ -14204,7 +14204,7 @@
             }
          }, {
             "localId" : "3743",
-            "locator" : "221:1-222:93",
+            "locator" : "234:1-235:93",
             "name" : "FollowupMalignantBiopsyResultFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -14312,7 +14312,7 @@
             },
             "expression" : {
                "localId" : "3827",
-               "locator" : "222:3-222:93",
+               "locator" : "235:3-235:93",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "3828",
@@ -14353,7 +14353,7 @@
                },
                "source" : [ {
                   "localId" : "3744",
-                  "locator" : "222:3-222:33",
+                  "locator" : "235:3-235:33",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3762",
@@ -14422,7 +14422,7 @@
                   },
                   "expression" : {
                      "localId" : "3745",
-                     "locator" : "222:3-222:31",
+                     "locator" : "235:3-235:31",
                      "name" : "FollowupMalignantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -14496,7 +14496,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3778",
-                  "locator" : "222:35-222:93",
+                  "locator" : "235:35-235:93",
                   "resultTypeSpecifier" : {
                      "localId" : "3818",
                      "type" : "ListTypeSpecifier",
@@ -14536,7 +14536,7 @@
                   },
                   "expression" : {
                      "localId" : "3798",
-                     "locator" : "222:42-222:93",
+                     "locator" : "235:42-235:93",
                      "name" : "CreateRecommendationFlagExtension",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -14584,7 +14584,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "3797",
-                        "locator" : "222:87-222:92",
+                        "locator" : "235:87-235:92",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "flag",
                         "scope" : "R",
@@ -14595,7 +14595,7 @@
             }
          }, {
             "localId" : "3847",
-            "locator" : "224:1-225:47",
+            "locator" : "237:1-238:47",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsFollowupIndeterminateBiopsyResult",
             "context" : "Patient",
@@ -14621,7 +14621,7 @@
             } ],
             "expression" : {
                "localId" : "3867",
-               "locator" : "225:3-225:47",
+               "locator" : "238:3-238:47",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Not",
                "signature" : [ {
@@ -14631,7 +14631,7 @@
                } ],
                "operand" : {
                   "localId" : "3865",
-                  "locator" : "225:3-225:47",
+                  "locator" : "238:3-238:47",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -14641,7 +14641,7 @@
                   } ],
                   "operand" : {
                      "localId" : "3848",
-                     "locator" : "225:3-225:35",
+                     "locator" : "238:3-238:35",
                      "name" : "FollowupIndeterminateBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -14714,7 +14714,7 @@
             }
          }, {
             "localId" : "3870",
-            "locator" : "227:1-228:51",
+            "locator" : "240:1-241:51",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupIndeterminateBiopsyResultCode",
             "context" : "Patient",
@@ -14769,12 +14769,12 @@
             } ],
             "expression" : {
                "localId" : "3924",
-               "locator" : "228:3-228:51",
+               "locator" : "241:3-241:51",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "3871",
-                  "locator" : "228:3-228:37",
+                  "locator" : "241:3-241:37",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3889",
@@ -14843,7 +14843,7 @@
                   },
                   "expression" : {
                      "localId" : "3872",
-                     "locator" : "228:3-228:35",
+                     "locator" : "241:3-241:35",
                      "name" : "FollowupIndeterminateBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -14917,11 +14917,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3905",
-                  "locator" : "228:39-228:51",
+                  "locator" : "241:39-241:51",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "3923",
-                     "locator" : "228:46-228:51",
+                     "locator" : "241:46-241:51",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "code",
                      "scope" : "R",
@@ -14931,7 +14931,7 @@
             }
          }, {
             "localId" : "3926",
-            "locator" : "230:1-231:53",
+            "locator" : "243:1-244:53",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupIndeterminateBiopsyResultReason",
             "context" : "Patient",
@@ -14986,12 +14986,12 @@
             } ],
             "expression" : {
                "localId" : "3980",
-               "locator" : "231:3-231:53",
+               "locator" : "244:3-244:53",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "3927",
-                  "locator" : "231:3-231:37",
+                  "locator" : "244:3-244:37",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "3945",
@@ -15060,7 +15060,7 @@
                   },
                   "expression" : {
                      "localId" : "3928",
-                     "locator" : "231:3-231:35",
+                     "locator" : "244:3-244:35",
                      "name" : "FollowupIndeterminateBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -15134,11 +15134,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "3961",
-                  "locator" : "231:39-231:53",
+                  "locator" : "244:39-244:53",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "3979",
-                     "locator" : "231:46-231:53",
+                     "locator" : "244:46-244:53",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "reason",
                      "scope" : "R",
@@ -15148,7 +15148,7 @@
             }
          }, {
             "localId" : "3982",
-            "locator" : "233:1-234:59",
+            "locator" : "246:1-247:59",
             "name" : "FollowupIndeterminateBiopsyResultTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -15219,7 +15219,7 @@
             },
             "expression" : {
                "localId" : "4048",
-               "locator" : "234:3-234:59",
+               "locator" : "247:3-247:59",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "4049",
@@ -15240,7 +15240,7 @@
                },
                "source" : [ {
                   "localId" : "3983",
-                  "locator" : "234:3-234:37",
+                  "locator" : "247:3-247:37",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "4001",
@@ -15309,7 +15309,7 @@
                   },
                   "expression" : {
                      "localId" : "3984",
-                     "locator" : "234:3-234:35",
+                     "locator" : "247:3-247:35",
                      "name" : "FollowupIndeterminateBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -15383,7 +15383,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "4017",
-                  "locator" : "234:39-234:59",
+                  "locator" : "247:39-247:59",
                   "resultTypeSpecifier" : {
                      "localId" : "4044",
                      "type" : "TupleTypeSpecifier",
@@ -15403,7 +15403,7 @@
                   },
                   "expression" : {
                      "localId" : "4035",
-                     "locator" : "234:46-234:59",
+                     "locator" : "247:46-247:59",
                      "path" : "timingTiming",
                      "scope" : "R",
                      "type" : "Property",
@@ -15429,7 +15429,7 @@
             }
          }, {
             "localId" : "4058",
-            "locator" : "236:1-237:65",
+            "locator" : "249:1-250:65",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "FollowupIndeterminateBiopsyResultTimingEvent",
             "context" : "Patient",
@@ -15491,12 +15491,12 @@
             } ],
             "expression" : {
                "localId" : "4087",
-               "locator" : "237:3-237:65",
+               "locator" : "250:3-250:65",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Query",
                "source" : [ {
                   "localId" : "4059",
-                  "locator" : "237:3-237:43",
+                  "locator" : "250:3-250:43",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "4065",
@@ -15517,7 +15517,7 @@
                   },
                   "expression" : {
                      "localId" : "4060",
-                     "locator" : "237:3-237:41",
+                     "locator" : "250:3-250:41",
                      "name" : "FollowupIndeterminateBiopsyResultTiming",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -15543,11 +15543,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "4069",
-                  "locator" : "237:45-237:65",
+                  "locator" : "250:45-250:65",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "expression" : {
                      "localId" : "4084",
-                     "locator" : "237:52-237:65",
+                     "locator" : "250:52-250:65",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "First",
                      "signature" : [ {
@@ -15561,7 +15561,7 @@
                      } ],
                      "source" : {
                         "localId" : "4075",
-                        "locator" : "237:58-237:64",
+                        "locator" : "250:58-250:64",
                         "path" : "event",
                         "scope" : "R",
                         "type" : "Property",
@@ -15580,7 +15580,7 @@
             }
          }, {
             "localId" : "4089",
-            "locator" : "239:1-240:97",
+            "locator" : "252:1-253:97",
             "name" : "FollowupIndeterminateBiopsyResultFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -15688,7 +15688,7 @@
             },
             "expression" : {
                "localId" : "4173",
-               "locator" : "240:3-240:97",
+               "locator" : "253:3-253:97",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "4174",
@@ -15729,7 +15729,7 @@
                },
                "source" : [ {
                   "localId" : "4090",
-                  "locator" : "240:3-240:37",
+                  "locator" : "253:3-253:37",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "4108",
@@ -15798,7 +15798,7 @@
                   },
                   "expression" : {
                      "localId" : "4091",
-                     "locator" : "240:3-240:35",
+                     "locator" : "253:3-253:35",
                      "name" : "FollowupIndeterminateBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -15872,7 +15872,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "4124",
-                  "locator" : "240:39-240:97",
+                  "locator" : "253:39-253:97",
                   "resultTypeSpecifier" : {
                      "localId" : "4164",
                      "type" : "ListTypeSpecifier",
@@ -15912,7 +15912,7 @@
                   },
                   "expression" : {
                      "localId" : "4144",
-                     "locator" : "240:46-240:97",
+                     "locator" : "253:46-253:97",
                      "name" : "CreateRecommendationFlagExtension",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -15960,7 +15960,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "4143",
-                        "locator" : "240:91-240:96",
+                        "locator" : "253:91-253:96",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "flag",
                         "scope" : "R",
@@ -15971,7 +15971,7 @@
             }
          }, {
             "localId" : "4193",
-            "locator" : "242:1-243:44",
+            "locator" : "255:1-256:44",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "ExistsFollowupDiscordantBiopsyResult",
             "context" : "Patient",
@@ -15997,7 +15997,7 @@
             } ],
             "expression" : {
                "localId" : "4213",
-               "locator" : "243:3-243:44",
+               "locator" : "256:3-256:44",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Not",
                "signature" : [ {
@@ -16007,7 +16007,7 @@
                } ],
                "operand" : {
                   "localId" : "4211",
-                  "locator" : "243:3-243:44",
+                  "locator" : "256:3-256:44",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -16017,7 +16017,7 @@
                   } ],
                   "operand" : {
                      "localId" : "4194",
-                     "locator" : "243:3-243:32",
+                     "locator" : "256:3-256:32",
                      "name" : "FollowupDiscordantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -16090,7 +16090,7 @@
             }
          }, {
             "localId" : "4216",
-            "locator" : "245:1-246:48",
+            "locator" : "258:1-259:48",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupDiscordantBiopsyResultCode",
             "context" : "Patient",
@@ -16145,12 +16145,12 @@
             } ],
             "expression" : {
                "localId" : "4270",
-               "locator" : "246:3-246:48",
+               "locator" : "259:3-259:48",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "4217",
-                  "locator" : "246:3-246:34",
+                  "locator" : "259:3-259:34",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "4235",
@@ -16219,7 +16219,7 @@
                   },
                   "expression" : {
                      "localId" : "4218",
-                     "locator" : "246:3-246:32",
+                     "locator" : "259:3-259:32",
                      "name" : "FollowupDiscordantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -16293,11 +16293,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "4251",
-                  "locator" : "246:36-246:48",
+                  "locator" : "259:36-259:48",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "4269",
-                     "locator" : "246:43-246:48",
+                     "locator" : "259:43-259:48",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "code",
                      "scope" : "R",
@@ -16307,7 +16307,7 @@
             }
          }, {
             "localId" : "4272",
-            "locator" : "248:1-249:50",
+            "locator" : "261:1-262:50",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
             "name" : "FollowupDiscordantBiopsyResultReason",
             "context" : "Patient",
@@ -16362,12 +16362,12 @@
             } ],
             "expression" : {
                "localId" : "4326",
-               "locator" : "249:3-249:50",
+               "locator" : "262:3-262:50",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                "type" : "Query",
                "source" : [ {
                   "localId" : "4273",
-                  "locator" : "249:3-249:34",
+                  "locator" : "262:3-262:34",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "4291",
@@ -16436,7 +16436,7 @@
                   },
                   "expression" : {
                      "localId" : "4274",
-                     "locator" : "249:3-249:32",
+                     "locator" : "262:3-262:32",
                      "name" : "FollowupDiscordantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -16510,11 +16510,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "4307",
-                  "locator" : "249:36-249:50",
+                  "locator" : "262:36-262:50",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                   "expression" : {
                      "localId" : "4325",
-                     "locator" : "249:43-249:50",
+                     "locator" : "262:43-262:50",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                      "path" : "reason",
                      "scope" : "R",
@@ -16524,7 +16524,7 @@
             }
          }, {
             "localId" : "4328",
-            "locator" : "251:1-252:56",
+            "locator" : "264:1-265:56",
             "name" : "FollowupDiscordantBiopsyResultTiming",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -16595,7 +16595,7 @@
             },
             "expression" : {
                "localId" : "4394",
-               "locator" : "252:3-252:56",
+               "locator" : "265:3-265:56",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "4395",
@@ -16616,7 +16616,7 @@
                },
                "source" : [ {
                   "localId" : "4329",
-                  "locator" : "252:3-252:34",
+                  "locator" : "265:3-265:34",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "4347",
@@ -16685,7 +16685,7 @@
                   },
                   "expression" : {
                      "localId" : "4330",
-                     "locator" : "252:3-252:32",
+                     "locator" : "265:3-265:32",
                      "name" : "FollowupDiscordantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -16759,7 +16759,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "4363",
-                  "locator" : "252:36-252:56",
+                  "locator" : "265:36-265:56",
                   "resultTypeSpecifier" : {
                      "localId" : "4390",
                      "type" : "TupleTypeSpecifier",
@@ -16779,7 +16779,7 @@
                   },
                   "expression" : {
                      "localId" : "4381",
-                     "locator" : "252:43-252:56",
+                     "locator" : "265:43-265:56",
                      "path" : "timingTiming",
                      "scope" : "R",
                      "type" : "Property",
@@ -16805,7 +16805,7 @@
             }
          }, {
             "localId" : "4404",
-            "locator" : "254:1-255:62",
+            "locator" : "267:1-268:62",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
             "name" : "FollowupDiscordantBiopsyResultTimingEvent",
             "context" : "Patient",
@@ -16867,12 +16867,12 @@
             } ],
             "expression" : {
                "localId" : "4433",
-               "locator" : "255:3-255:62",
+               "locator" : "268:3-268:62",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                "type" : "Query",
                "source" : [ {
                   "localId" : "4405",
-                  "locator" : "255:3-255:40",
+                  "locator" : "268:3-268:40",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "4411",
@@ -16893,7 +16893,7 @@
                   },
                   "expression" : {
                      "localId" : "4406",
-                     "locator" : "255:3-255:38",
+                     "locator" : "268:3-268:38",
                      "name" : "FollowupDiscordantBiopsyResultTiming",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -16919,11 +16919,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "4415",
-                  "locator" : "255:42-255:62",
+                  "locator" : "268:42-268:62",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                   "expression" : {
                      "localId" : "4430",
-                     "locator" : "255:49-255:62",
+                     "locator" : "268:49-268:62",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                      "type" : "First",
                      "signature" : [ {
@@ -16937,7 +16937,7 @@
                      } ],
                      "source" : {
                         "localId" : "4421",
-                        "locator" : "255:55-255:61",
+                        "locator" : "268:55-268:61",
                         "path" : "event",
                         "scope" : "R",
                         "type" : "Property",
@@ -16956,7 +16956,7 @@
             }
          }, {
             "localId" : "4435",
-            "locator" : "257:1-258:94",
+            "locator" : "270:1-271:94",
             "name" : "FollowupDiscordantBiopsyResultFlag",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -17064,7 +17064,7 @@
             },
             "expression" : {
                "localId" : "4519",
-               "locator" : "258:3-258:94",
+               "locator" : "271:3-271:94",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "4520",
@@ -17105,7 +17105,7 @@
                },
                "source" : [ {
                   "localId" : "4436",
-                  "locator" : "258:3-258:34",
+                  "locator" : "271:3-271:34",
                   "alias" : "R",
                   "resultTypeSpecifier" : {
                      "localId" : "4454",
@@ -17174,7 +17174,7 @@
                   },
                   "expression" : {
                      "localId" : "4437",
-                     "locator" : "258:3-258:32",
+                     "locator" : "271:3-271:32",
                      "name" : "FollowupDiscordantBiopsyResult",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -17248,7 +17248,7 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "4470",
-                  "locator" : "258:36-258:94",
+                  "locator" : "271:36-271:94",
                   "resultTypeSpecifier" : {
                      "localId" : "4510",
                      "type" : "ListTypeSpecifier",
@@ -17288,7 +17288,7 @@
                   },
                   "expression" : {
                      "localId" : "4490",
-                     "locator" : "258:43-258:94",
+                     "locator" : "271:43-271:94",
                      "name" : "CreateRecommendationFlagExtension",
                      "libraryName" : "BCSMCommon",
                      "type" : "FunctionRef",
@@ -17336,7 +17336,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "4489",
-                        "locator" : "258:88-258:93",
+                        "locator" : "271:88-271:93",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Code",
                         "path" : "flag",
                         "scope" : "R",

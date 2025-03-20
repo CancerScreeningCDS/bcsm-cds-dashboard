@@ -1,3 +1,16 @@
+/*  
+  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.
+
+  (C) 2024 The MITRE Corporation. All Rights Reserved. 
+  Approved for Public Release: 24-2711. 
+  Distribution Unlimited.
+
+  Unless otherwise noted, this work is available under an Apache 2.0 license. 
+  It was produced by the MITRE Corporation for the Division of Cancer Prevention 
+  and Control, Centers for Disease Control and Prevention in accordance with the 
+  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.
+*/
+
 library SpecialPopulations version '1.0.0'
 
 using FHIR version '4.0.1'
@@ -8,6 +21,9 @@ include SpecialPopulationsActions version '1.0.0' called Actions
 include DataElements version '1.0.0' called DataElements
 include BCSMCommonFunctions version '1.0.0' called BCSMCommon
 
+parameter ACS System.Boolean default true
+parameter USPSTF System.Boolean default true
+
 context Patient
 
 //------------------------------------------------------------------------------
@@ -15,7 +31,7 @@ context Patient
 //------------------------------------------------------------------------------
 
 define "flow-SpecialPopulations":
-  ACSRecommendations union {USPSTFRecommendation}
+  ACSRecommendations union {USPSTFRecommendation} except { null }
 
 define ACSRecommendations:
   {    
@@ -29,35 +45,33 @@ define ACSRecommendations:
   except { null }
 
 define ACSMammoHighRisk:
-  if Events."eve-highlifetimerisk" is true
+  if ACS and Events."eve-highlifetimerisk" is true
   then Actions."act-acshighriskmammo" else null       
 
 define ACSMriHighRisk:
-  if Events."eve-highlifetimerisk" is true
+  if ACS and Events."eve-highlifetimerisk" is true
   then Actions."act-acshighriskmri" else null       
 
 define ACSFirstDegGeneticMammo:
-  if Events."eve-firstdeggenetic" is true
+  if ACS and Events."eve-firstdeggenetic" is true
   then Actions."act-firstdeggeneticmammo" else null   
 
 define ACSFirstDegGeneticMri:
-  if Events."eve-firstdeggenetic" is true
+  if ACS and Events."eve-firstdeggenetic" is true
   then Actions."act-firstdeggeneticmri" else null  
 
 define BreastImagingHeterogenouslyOrExtremelyDense:
-  if Events."eve-breastdensitycord" is true
-    then Actions."act-breastdensitycord"
-    else null
+  if ACS and Events."eve-breastdensitycord" is true
+  then Actions."act-breastdensitycord" else null
 
 define CompellingFamilyHistory:
-  if Events."eve-fhxbreastcarisk" is true
-    then Actions."act-fhxbreastcarisk"
-    else null
+  if ACS and Events."eve-fhxbreastcarisk" is true
+  then Actions."act-fhxbreastcarisk" else null
 
+// only show recommendation if ACS recs exists, otherwise AverageRisk flow applies
 define USPSTFRecommendation:
-  if exists ACSRecommendations 
-    then Actions."act-uspstfrecs"
-    else null
+  if ACS and exists ACSRecommendations 
+  then Actions."act-uspstfrecs" else null
 
 //------------------------------------------------------------------------------
 // DYNAMIC VALUES

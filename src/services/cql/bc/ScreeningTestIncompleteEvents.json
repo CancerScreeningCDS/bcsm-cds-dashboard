@@ -21,7 +21,7 @@
          "s" : {
             "r" : "507",
             "s" : [ {
-               "value" : [ "","library ScreeningTestIncompleteEvents version '1.0.0'" ]
+               "value" : [ "/*  \n  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.\n\n  (C) 2024 The MITRE Corporation. All Rights Reserved. \n  Approved for Public Release: 24-2711. \n  Distribution Unlimited.\n\n  Unless otherwise noted, this work is available under an Apache 2.0 license. \n  It was produced by the MITRE Corporation for the Division of Cancer Prevention \n  and Control, Centers for Disease Control and Prevention in accordance with the \n  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.\n*/\n\n","library ScreeningTestIncompleteEvents version '1.0.0'" ]
             } ]
          }
       } ],
@@ -40,7 +40,7 @@
             "uri" : "urn:hl7-org:elm-types:r1"
          }, {
             "localId" : "206",
-            "locator" : "3:1-3:26",
+            "locator" : "16:1-16:26",
             "localIdentifier" : "FHIR",
             "uri" : "http://hl7.org/fhir",
             "version" : "4.0.1",
@@ -64,7 +64,7 @@
       "includes" : {
          "def" : [ {
             "localId" : "207",
-            "locator" : "4:1-4:55",
+            "locator" : "17:1-17:55",
             "localIdentifier" : "FHIRHelpers",
             "path" : "FHIRHelpers",
             "version" : "4.0.1",
@@ -85,7 +85,7 @@
             } ]
          }, {
             "localId" : "208",
-            "locator" : "6:1-6:56",
+            "locator" : "19:1-19:56",
             "localIdentifier" : "DataElements",
             "path" : "DataElements",
             "version" : "1.0.0",
@@ -106,7 +106,7 @@
             } ]
          }, {
             "localId" : "209",
-            "locator" : "7:1-7:63",
+            "locator" : "20:1-20:63",
             "localIdentifier" : "C3F",
             "path" : "CDSConnectCommonsforFHIRv401",
             "version" : "1.0.0",
@@ -127,7 +127,7 @@
             } ]
          }, {
             "localId" : "210",
-            "locator" : "8:1-8:56",
+            "locator" : "21:1-21:56",
             "localIdentifier" : "Common",
             "path" : "CSMCommonFunctions",
             "version" : "1.0.0",
@@ -148,7 +148,7 @@
             } ]
          }, {
             "localId" : "211",
-            "locator" : "9:1-9:61",
+            "locator" : "22:1-22:61",
             "localIdentifier" : "BCSMCommon",
             "path" : "BCSMCommonFunctions",
             "version" : "1.0.0",
@@ -172,14 +172,14 @@
       "contexts" : {
          "def" : [ {
             "localId" : "215",
-            "locator" : "11:1-11:15",
+            "locator" : "24:1-24:15",
             "name" : "Patient"
          } ]
       },
       "statements" : {
          "def" : [ {
             "localId" : "213",
-            "locator" : "11:1-11:15",
+            "locator" : "24:1-24:15",
             "name" : "Patient",
             "context" : "Patient",
             "expression" : {
@@ -188,7 +188,7 @@
                "signature" : [ ],
                "operand" : {
                   "localId" : "212",
-                  "locator" : "11:1-11:15",
+                  "locator" : "24:1-24:15",
                   "dataType" : "{http://hl7.org/fhir}Patient",
                   "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
                   "type" : "Retrieve",
@@ -200,7 +200,7 @@
             }
          }, {
             "localId" : "222",
-            "locator" : "60:1-62:53",
+            "locator" : "73:1-75:53",
             "name" : "BreastCancerScreeningOrders",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -209,7 +209,7 @@
                "s" : {
                   "r" : "222",
                   "s" : [ {
-                     "value" : [ "","define ","BreastCancerScreeningOrders",":\n  " ]
+                     "value" : [ "","define ","BreastCancerScreeningOrders",":  \n  " ]
                   }, {
                      "r" : "259",
                      "s" : [ {
@@ -227,7 +227,7 @@
                                        "value" : [ "[","ServiceRequest",": " ]
                                     }, {
                                        "s" : [ {
-                                          "value" : [ "DataElements",".","\"BREAST CANCER IMAGING ORDERS\"" ]
+                                          "value" : [ "DataElements",".","\"Breast Cancer Imaging Orders\"" ]
                                        } ]
                                     }, {
                                        "value" : [ "]" ]
@@ -240,7 +240,7 @@
                                        "value" : [ "[","ServiceRequest",": " ]
                                     }, {
                                        "s" : [ {
-                                          "value" : [ "DataElements",".","\"BREAST CANCER BIOPSY ORDERS\"" ]
+                                          "value" : [ "DataElements",".","\"Breast Cancer Biopsy Orders\"" ]
                                        } ]
                                     }, {
                                        "value" : [ "]" ]
@@ -297,7 +297,7 @@
             },
             "expression" : {
                "localId" : "259",
-               "locator" : "61:3-62:53",
+               "locator" : "74:3-75:53",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "260",
@@ -310,7 +310,7 @@
                },
                "source" : [ {
                   "localId" : "223",
-                  "locator" : "61:3-61:134",
+                  "locator" : "74:3-74:134",
                   "alias" : "O",
                   "resultTypeSpecifier" : {
                      "localId" : "253",
@@ -323,7 +323,7 @@
                   },
                   "expression" : {
                      "localId" : "244",
-                     "locator" : "61:3-61:132",
+                     "locator" : "74:3-74:132",
                      "type" : "Union",
                      "resultTypeSpecifier" : {
                         "localId" : "251",
@@ -353,7 +353,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "227",
-                        "locator" : "61:4-61:64",
+                        "locator" : "74:4-74:64",
                         "dataType" : "{http://hl7.org/fhir}ServiceRequest",
                         "templateId" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
                         "codeProperty" : "code",
@@ -370,9 +370,9 @@
                         },
                         "codes" : {
                            "localId" : "226",
-                           "locator" : "61:21-61:63",
+                           "locator" : "74:21-74:63",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
-                           "name" : "BREAST CANCER IMAGING ORDERS",
+                           "name" : "Breast Cancer Imaging Orders",
                            "libraryName" : "DataElements",
                            "type" : "ValueSetRef"
                         },
@@ -382,7 +382,7 @@
                         "otherFilter" : [ ]
                      }, {
                         "localId" : "237",
-                        "locator" : "61:72-61:131",
+                        "locator" : "74:72-74:131",
                         "dataType" : "{http://hl7.org/fhir}ServiceRequest",
                         "templateId" : "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
                         "codeProperty" : "code",
@@ -399,9 +399,9 @@
                         },
                         "codes" : {
                            "localId" : "236",
-                           "locator" : "61:89-61:130",
+                           "locator" : "74:89-74:130",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
-                           "name" : "BREAST CANCER BIOPSY ORDERS",
+                           "name" : "Breast Cancer Biopsy Orders",
                            "libraryName" : "DataElements",
                            "type" : "ValueSetRef"
                         },
@@ -416,7 +416,7 @@
                "relationship" : [ ],
                "where" : {
                   "localId" : "257",
-                  "locator" : "62:5-62:53",
+                  "locator" : "75:5-75:53",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "name" : "ServiceRequestWithOrderIntent",
                   "libraryName" : "BCSMCommon",
@@ -428,7 +428,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "256",
-                     "locator" : "62:52",
+                     "locator" : "75:52",
                      "resultTypeName" : "{http://hl7.org/fhir}ServiceRequest",
                      "name" : "O",
                      "type" : "AliasRef"
@@ -437,7 +437,7 @@
             }
          }, {
             "localId" : "219",
-            "locator" : "56:1-58:32",
+            "locator" : "69:1-71:32",
             "name" : "ActiveBreastCancerScreeningOrders",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -517,7 +517,7 @@
             },
             "expression" : {
                "localId" : "281",
-               "locator" : "57:3-58:32",
+               "locator" : "70:3-71:32",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "282",
@@ -530,7 +530,7 @@
                },
                "source" : [ {
                   "localId" : "220",
-                  "locator" : "57:3-57:31",
+                  "locator" : "70:3-70:31",
                   "alias" : "O",
                   "resultTypeSpecifier" : {
                      "localId" : "267",
@@ -543,7 +543,7 @@
                   },
                   "expression" : {
                      "localId" : "264",
-                     "locator" : "57:3-57:29",
+                     "locator" : "70:3-70:29",
                      "name" : "BreastCancerScreeningOrders",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -561,7 +561,7 @@
                "relationship" : [ ],
                "where" : {
                   "localId" : "275",
-                  "locator" : "58:5-58:32",
+                  "locator" : "71:5-71:32",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "In",
                   "signature" : [ {
@@ -589,7 +589,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "270",
-                        "locator" : "58:11-58:18",
+                        "locator" : "71:11-71:18",
                         "resultTypeName" : "{http://hl7.org/fhir}ServiceRequestStatus",
                         "path" : "status",
                         "scope" : "O",
@@ -597,7 +597,7 @@
                      } ]
                   }, {
                      "localId" : "271",
-                     "locator" : "58:23-58:32",
+                     "locator" : "71:23-71:32",
                      "type" : "List",
                      "resultTypeSpecifier" : {
                         "localId" : "273",
@@ -610,7 +610,7 @@
                      },
                      "element" : [ {
                         "localId" : "272",
-                        "locator" : "58:24-58:31",
+                        "locator" : "71:24-71:31",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "active",
@@ -621,7 +621,7 @@
             }
          }, {
             "localId" : "335",
-            "locator" : "52:1-54:35",
+            "locator" : "65:1-67:35",
             "name" : "CompletedBreastCancerScreeningOrders",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -701,7 +701,7 @@
             },
             "expression" : {
                "localId" : "354",
-               "locator" : "53:3-54:35",
+               "locator" : "66:3-67:35",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "355",
@@ -714,7 +714,7 @@
                },
                "source" : [ {
                   "localId" : "336",
-                  "locator" : "53:3-53:31",
+                  "locator" : "66:3-66:31",
                   "alias" : "O",
                   "resultTypeSpecifier" : {
                      "localId" : "340",
@@ -727,7 +727,7 @@
                   },
                   "expression" : {
                      "localId" : "337",
-                     "locator" : "53:3-53:29",
+                     "locator" : "66:3-66:29",
                      "name" : "BreastCancerScreeningOrders",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -745,7 +745,7 @@
                "relationship" : [ ],
                "where" : {
                   "localId" : "348",
-                  "locator" : "54:5-54:35",
+                  "locator" : "67:5-67:35",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "In",
                   "signature" : [ {
@@ -773,7 +773,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "343",
-                        "locator" : "54:11-54:18",
+                        "locator" : "67:11-67:18",
                         "resultTypeName" : "{http://hl7.org/fhir}ServiceRequestStatus",
                         "path" : "status",
                         "scope" : "O",
@@ -781,7 +781,7 @@
                      } ]
                   }, {
                      "localId" : "344",
-                     "locator" : "54:23-54:35",
+                     "locator" : "67:23-67:35",
                      "type" : "List",
                      "resultTypeSpecifier" : {
                         "localId" : "346",
@@ -794,7 +794,7 @@
                      },
                      "element" : [ {
                         "localId" : "345",
-                        "locator" : "54:24-54:34",
+                        "locator" : "67:24-67:34",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "completed",
@@ -805,7 +805,7 @@
             }
          }, {
             "localId" : "321",
-            "locator" : "43:1-50:12",
+            "locator" : "56:1-63:12",
             "name" : "CompletedOrdersWithoutDiagnosticReport",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -1001,7 +1001,7 @@
             },
             "expression" : {
                "localId" : "322",
-               "locator" : "44:3-50:12",
+               "locator" : "57:3-63:12",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "417",
@@ -1014,7 +1014,7 @@
                },
                "condition" : {
                   "localId" : "323",
-                  "locator" : "44:6-44:76",
+                  "locator" : "57:6-57:76",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Not",
                   "signature" : [ {
@@ -1024,7 +1024,7 @@
                   } ],
                   "operand" : {
                      "localId" : "324",
-                     "locator" : "44:10-44:76",
+                     "locator" : "57:10-57:76",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Exists",
                      "signature" : [ {
@@ -1038,7 +1038,7 @@
                      } ],
                      "operand" : {
                         "localId" : "326",
-                        "locator" : "44:17-44:76",
+                        "locator" : "57:17-57:76",
                         "name" : "CompletedBreastCancerScreeningDiagnosticReports",
                         "libraryName" : "DataElements",
                         "type" : "ExpressionRef",
@@ -1056,7 +1056,7 @@
                },
                "then" : {
                   "localId" : "359",
-                  "locator" : "45:10-45:45",
+                  "locator" : "58:10-58:45",
                   "name" : "CompletedBreastCancerScreeningOrders",
                   "type" : "ExpressionRef",
                   "resultTypeSpecifier" : {
@@ -1071,7 +1071,7 @@
                },
                "else" : {
                   "localId" : "414",
-                  "locator" : "47:5-50:12",
+                  "locator" : "60:5-63:12",
                   "type" : "Query",
                   "resultTypeSpecifier" : {
                      "localId" : "415",
@@ -1084,7 +1084,7 @@
                   },
                   "source" : [ {
                      "localId" : "362",
-                     "locator" : "47:10-47:47",
+                     "locator" : "60:10-60:47",
                      "alias" : "O",
                      "resultTypeSpecifier" : {
                         "localId" : "366",
@@ -1097,7 +1097,7 @@
                      },
                      "expression" : {
                         "localId" : "363",
-                        "locator" : "47:10-47:45",
+                        "locator" : "60:10-60:45",
                         "name" : "CompletedBreastCancerScreeningOrders",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -1112,7 +1112,7 @@
                      }
                   }, {
                      "localId" : "368",
-                     "locator" : "48:7-48:69",
+                     "locator" : "61:7-61:69",
                      "alias" : "DR",
                      "resultTypeSpecifier" : {
                         "localId" : "373",
@@ -1125,7 +1125,7 @@
                      },
                      "expression" : {
                         "localId" : "370",
-                        "locator" : "48:7-48:66",
+                        "locator" : "61:7-61:66",
                         "name" : "CompletedBreastCancerScreeningDiagnosticReports",
                         "libraryName" : "DataElements",
                         "type" : "ExpressionRef",
@@ -1144,7 +1144,7 @@
                   "relationship" : [ ],
                   "where" : {
                      "localId" : "375",
-                     "locator" : "49:5-49:80",
+                     "locator" : "62:5-62:80",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Not",
                      "signature" : [ {
@@ -1154,7 +1154,7 @@
                      } ],
                      "operand" : {
                         "localId" : "406",
-                        "locator" : "49:15-49:80",
+                        "locator" : "62:15-62:80",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Exists",
                         "signature" : [ {
@@ -1168,7 +1168,7 @@
                         } ],
                         "operand" : {
                            "localId" : "399",
-                           "locator" : "49:23-49:79",
+                           "locator" : "62:23-62:79",
                            "type" : "Query",
                            "resultTypeSpecifier" : {
                               "localId" : "400",
@@ -1181,7 +1181,7 @@
                            },
                            "source" : [ {
                               "localId" : "376",
-                              "locator" : "49:23-49:34",
+                              "locator" : "62:23-62:34",
                               "alias" : "B",
                               "resultTypeSpecifier" : {
                                  "localId" : "381",
@@ -1194,7 +1194,7 @@
                               },
                               "expression" : {
                                  "localId" : "378",
-                                 "locator" : "49:23-49:32",
+                                 "locator" : "62:23-62:32",
                                  "path" : "basedOn",
                                  "scope" : "DR",
                                  "type" : "Property",
@@ -1213,7 +1213,7 @@
                            "relationship" : [ ],
                            "where" : {
                               "localId" : "383",
-                              "locator" : "49:36-49:79",
+                              "locator" : "62:36-62:79",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                               "type" : "Equal",
                               "signature" : [ {
@@ -1237,7 +1237,7 @@
                                  } ],
                                  "operand" : [ {
                                     "localId" : "385",
-                                    "locator" : "49:42-49:52",
+                                    "locator" : "62:42-62:52",
                                     "resultTypeName" : "{http://hl7.org/fhir}string",
                                     "path" : "reference",
                                     "scope" : "B",
@@ -1245,13 +1245,13 @@
                                  } ]
                               }, {
                                  "localId" : "394",
-                                 "locator" : "49:56-49:79",
+                                 "locator" : "62:56-62:79",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                  "type" : "Concatenate",
                                  "signature" : [ ],
                                  "operand" : [ {
                                     "localId" : "387",
-                                    "locator" : "49:56-49:72",
+                                    "locator" : "62:56-62:72",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
                                     "value" : "ServiceRequest/",
@@ -1268,7 +1268,7 @@
                                     } ],
                                     "operand" : [ {
                                        "localId" : "389",
-                                       "locator" : "49:76-49:79",
+                                       "locator" : "62:76-62:79",
                                        "resultTypeName" : "{http://hl7.org/fhir}id",
                                        "path" : "id",
                                        "scope" : "O",
@@ -1282,7 +1282,7 @@
                   },
                   "return" : {
                      "localId" : "410",
-                     "locator" : "50:5-50:12",
+                     "locator" : "63:5-63:12",
                      "resultTypeSpecifier" : {
                         "localId" : "412",
                         "type" : "ListTypeSpecifier",
@@ -1294,7 +1294,7 @@
                      },
                      "expression" : {
                         "localId" : "411",
-                        "locator" : "50:12",
+                        "locator" : "63:12",
                         "resultTypeName" : "{http://hl7.org/fhir}ServiceRequest",
                         "name" : "O",
                         "type" : "AliasRef"
@@ -1304,7 +1304,7 @@
             }
          }, {
             "localId" : "429",
-            "locator" : "121:1-125:23",
+            "locator" : "134:1-138:23",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
             "name" : "LastReportDateByCode",
             "context" : "Patient",
@@ -1415,17 +1415,17 @@
             } ],
             "expression" : {
                "localId" : "1139",
-               "locator" : "122:3-125:23",
+               "locator" : "135:3-138:23",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                "type" : "Query",
                "source" : [ {
                   "localId" : "1123",
-                  "locator" : "122:3-122:8",
+                  "locator" : "135:3-135:8",
                   "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
                   "alias" : "C",
                   "expression" : {
                      "localId" : "1124",
-                     "locator" : "122:3-122:6",
+                     "locator" : "135:3-135:6",
                      "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
                      "name" : "code",
                      "type" : "OperandRef"
@@ -1433,12 +1433,12 @@
                } ],
                "let" : [ {
                   "localId" : "1125",
-                  "locator" : "123:7-123:64",
+                  "locator" : "136:7-136:64",
                   "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                   "identifier" : "lastReport",
                   "expression" : {
                      "localId" : "1128",
-                     "locator" : "123:19-123:64",
+                     "locator" : "136:19-136:64",
                      "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                      "name" : "MostRecentDiagnosticReportByCode",
                      "libraryName" : "BCSMCommon",
@@ -1460,7 +1460,7 @@
                         } ],
                         "operand" : [ {
                            "localId" : "1127",
-                           "locator" : "123:63",
+                           "locator" : "136:63",
                            "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
                            "name" : "C",
                            "type" : "AliasRef"
@@ -1469,12 +1469,12 @@
                   }
                }, {
                   "localId" : "1132",
-                  "locator" : "124:3-124:57",
+                  "locator" : "137:3-137:57",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "identifier" : "lastReportDate",
                   "expression" : {
                      "localId" : "1135",
-                     "locator" : "124:19-124:57",
+                     "locator" : "137:19-137:57",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                      "name" : "DiagnosticReportDate",
                      "libraryName" : "Common",
@@ -1486,7 +1486,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "1134",
-                        "locator" : "124:47-124:56",
+                        "locator" : "137:47-137:56",
                         "resultTypeName" : "{http://hl7.org/fhir}DiagnosticReport",
                         "name" : "lastReport",
                         "type" : "QueryLetRef"
@@ -1496,11 +1496,11 @@
                "relationship" : [ ],
                "return" : {
                   "localId" : "1137",
-                  "locator" : "125:3-125:23",
+                  "locator" : "138:3-138:23",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "expression" : {
                      "localId" : "1138",
-                     "locator" : "125:10-125:23",
+                     "locator" : "138:10-138:23",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                      "name" : "lastReportDate",
                      "type" : "QueryLetRef"
@@ -1512,7 +1512,7 @@
                "name" : "code",
                "operandTypeSpecifier" : {
                   "localId" : "430",
-                  "locator" : "121:43-121:62",
+                  "locator" : "134:43-134:62",
                   "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
                   "name" : "{http://hl7.org/fhir}CodeableConcept",
                   "type" : "NamedTypeSpecifier"
@@ -1520,7 +1520,7 @@
             } ]
          }, {
             "localId" : "465",
-            "locator" : "127:1-129:64",
+            "locator" : "140:1-142:64",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LastReportNotAfterOccurrenceDateTime",
             "context" : "Patient",
@@ -1592,7 +1592,7 @@
             } ],
             "expression" : {
                "localId" : "1140",
-               "locator" : "128:3-129:64",
+               "locator" : "141:3-142:64",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Or",
                "signature" : [ {
@@ -1606,7 +1606,7 @@
                } ],
                "operand" : [ {
                   "localId" : "1142",
-                  "locator" : "128:3-128:24",
+                  "locator" : "141:3-141:24",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -1616,14 +1616,14 @@
                   } ],
                   "operand" : {
                      "localId" : "1141",
-                     "locator" : "128:3-128:16",
+                     "locator" : "141:3-141:16",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                      "name" : "lastReportDate",
                      "type" : "OperandRef"
                   }
                }, {
                   "localId" : "1144",
-                  "locator" : "129:8-129:64",
+                  "locator" : "142:8-142:64",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "And",
                   "signature" : [ {
@@ -1637,7 +1637,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "1148",
-                     "locator" : "129:9-129:30",
+                     "locator" : "142:9-142:30",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Not",
                      "signature" : [ {
@@ -1647,7 +1647,7 @@
                      } ],
                      "operand" : {
                         "localId" : "1146",
-                        "locator" : "129:9-129:30",
+                        "locator" : "142:9-142:30",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "IsNull",
                         "signature" : [ {
@@ -1657,7 +1657,7 @@
                         } ],
                         "operand" : {
                            "localId" : "1145",
-                           "locator" : "129:9-129:18",
+                           "locator" : "142:9-142:18",
                            "resultTypeName" : "{http://hl7.org/fhir}dateTime",
                            "name" : "occurrence",
                            "type" : "OperandRef"
@@ -1665,7 +1665,7 @@
                      }
                   }, {
                      "localId" : "1150",
-                     "locator" : "129:36-129:63",
+                     "locator" : "142:36-142:63",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "LessOrEqual",
                      "signature" : [ {
@@ -1679,7 +1679,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "1151",
-                        "locator" : "129:36-129:49",
+                        "locator" : "142:36-142:49",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "name" : "lastReportDate",
                         "type" : "OperandRef"
@@ -1695,7 +1695,7 @@
                         } ],
                         "operand" : [ {
                            "localId" : "1152",
-                           "locator" : "129:54-129:63",
+                           "locator" : "142:54-142:63",
                            "resultTypeName" : "{http://hl7.org/fhir}dateTime",
                            "name" : "occurrence",
                            "type" : "OperandRef"
@@ -1709,7 +1709,7 @@
                "name" : "occurrence",
                "operandTypeSpecifier" : {
                   "localId" : "466",
-                  "locator" : "127:65-127:77",
+                  "locator" : "140:65-140:77",
                   "resultTypeName" : "{http://hl7.org/fhir}dateTime",
                   "name" : "{http://hl7.org/fhir}dateTime",
                   "type" : "NamedTypeSpecifier"
@@ -1719,7 +1719,7 @@
                "name" : "lastReportDate",
                "operandTypeSpecifier" : {
                   "localId" : "468",
-                  "locator" : "127:95-127:109",
+                  "locator" : "140:95-140:109",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "name" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "NamedTypeSpecifier"
@@ -1727,7 +1727,7 @@
             } ]
          }, {
             "localId" : "507",
-            "locator" : "131:1-133:90",
+            "locator" : "144:1-146:90",
             "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
             "name" : "LastReportNotAfterOccurrencePeriod",
             "context" : "Patient",
@@ -1817,7 +1817,7 @@
             } ],
             "expression" : {
                "localId" : "1161",
-               "locator" : "132:3-133:90",
+               "locator" : "145:3-146:90",
                "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                "type" : "Or",
                "signature" : [ {
@@ -1831,7 +1831,7 @@
                } ],
                "operand" : [ {
                   "localId" : "1163",
-                  "locator" : "132:3-132:24",
+                  "locator" : "145:3-145:24",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "IsNull",
                   "signature" : [ {
@@ -1841,14 +1841,14 @@
                   } ],
                   "operand" : {
                      "localId" : "1162",
-                     "locator" : "132:3-132:16",
+                     "locator" : "145:3-145:16",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                      "name" : "lastReportDate",
                      "type" : "OperandRef"
                   }
                }, {
                   "localId" : "1165",
-                  "locator" : "133:8-133:90",
+                  "locator" : "146:8-146:90",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "And",
                   "signature" : [ {
@@ -1862,7 +1862,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "1169",
-                     "locator" : "133:9-133:30",
+                     "locator" : "146:9-146:30",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Not",
                      "signature" : [ {
@@ -1872,7 +1872,7 @@
                      } ],
                      "operand" : {
                         "localId" : "1167",
-                        "locator" : "133:9-133:30",
+                        "locator" : "146:9-146:30",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "IsNull",
                         "signature" : [ {
@@ -1882,7 +1882,7 @@
                         } ],
                         "operand" : {
                            "localId" : "1166",
-                           "locator" : "133:9-133:18",
+                           "locator" : "146:9-146:18",
                            "resultTypeName" : "{http://hl7.org/fhir}Period",
                            "name" : "occurrence",
                            "type" : "OperandRef"
@@ -1890,7 +1890,7 @@
                      }
                   }, {
                      "localId" : "1180",
-                     "locator" : "133:36-133:89",
+                     "locator" : "146:36-146:89",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Before",
                      "signature" : [ {
@@ -1919,7 +1919,7 @@
                            "signature" : [ ],
                            "operand" : {
                               "localId" : "1171",
-                              "locator" : "133:36-133:49",
+                              "locator" : "146:36-146:49",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                               "name" : "lastReportDate",
                               "type" : "OperandRef"
@@ -1945,14 +1945,14 @@
                            "type" : "Interval",
                            "low" : {
                               "localId" : "1171",
-                              "locator" : "133:36-133:49",
+                              "locator" : "146:36-146:49",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                               "name" : "lastReportDate",
                               "type" : "OperandRef"
                            },
                            "high" : {
                               "localId" : "1171",
-                              "locator" : "133:36-133:49",
+                              "locator" : "146:36-146:49",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                               "name" : "lastReportDate",
                               "type" : "OperandRef"
@@ -1960,7 +1960,7 @@
                         }
                      }, {
                         "localId" : "1174",
-                        "locator" : "133:58-133:89",
+                        "locator" : "146:58-146:89",
                         "name" : "PeriodToInterval",
                         "libraryName" : "C3F",
                         "type" : "FunctionRef",
@@ -1980,7 +1980,7 @@
                         } ],
                         "operand" : [ {
                            "localId" : "1173",
-                           "locator" : "133:79-133:88",
+                           "locator" : "146:79-146:88",
                            "resultTypeName" : "{http://hl7.org/fhir}Period",
                            "name" : "occurrence",
                            "type" : "OperandRef"
@@ -1994,7 +1994,7 @@
                "name" : "occurrence",
                "operandTypeSpecifier" : {
                   "localId" : "508",
-                  "locator" : "131:63-131:73",
+                  "locator" : "144:63-144:73",
                   "resultTypeName" : "{http://hl7.org/fhir}Period",
                   "name" : "{http://hl7.org/fhir}Period",
                   "type" : "NamedTypeSpecifier"
@@ -2004,7 +2004,7 @@
                "name" : "lastReportDate",
                "operandTypeSpecifier" : {
                   "localId" : "510",
-                  "locator" : "131:91-131:105",
+                  "locator" : "144:91-144:105",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "name" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "type" : "NamedTypeSpecifier"
@@ -2012,7 +2012,7 @@
             } ]
          }, {
             "localId" : "318",
-            "locator" : "37:1-41:86",
+            "locator" : "50:1-54:86",
             "name" : "CompletedOrdersWithoutSubsequentReport",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2176,7 +2176,7 @@
             },
             "expression" : {
                "localId" : "551",
-               "locator" : "38:3-41:86",
+               "locator" : "51:3-54:86",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "552",
@@ -2189,7 +2189,7 @@
                },
                "source" : [ {
                   "localId" : "319",
-                  "locator" : "38:3-38:42",
+                  "locator" : "51:3-51:42",
                   "alias" : "O",
                   "resultTypeSpecifier" : {
                      "localId" : "424",
@@ -2202,7 +2202,7 @@
                   },
                   "expression" : {
                      "localId" : "421",
-                     "locator" : "38:3-38:40",
+                     "locator" : "51:3-51:40",
                      "name" : "CompletedOrdersWithoutDiagnosticReport",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -2218,12 +2218,12 @@
                } ],
                "let" : [ {
                   "localId" : "426",
-                  "locator" : "39:7-39:50",
+                  "locator" : "52:7-52:50",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "identifier" : "lastReportDate",
                   "expression" : {
                      "localId" : "432",
-                     "locator" : "39:23-39:50",
+                     "locator" : "52:23-52:50",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                      "name" : "LastReportDateByCode",
                      "type" : "FunctionRef",
@@ -2234,7 +2234,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "428",
-                        "locator" : "39:44-39:49",
+                        "locator" : "52:44-52:49",
                         "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
                         "path" : "code",
                         "scope" : "O",
@@ -2245,7 +2245,7 @@
                "relationship" : [ ],
                "where" : {
                   "localId" : "451",
-                  "locator" : "40:3-41:86",
+                  "locator" : "53:3-54:86",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Or",
                   "signature" : [ {
@@ -2259,7 +2259,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "470",
-                     "locator" : "40:9-40:91",
+                     "locator" : "53:9-53:91",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "LastReportNotAfterOccurrenceDateTime",
                      "type" : "FunctionRef",
@@ -2274,14 +2274,14 @@
                      } ],
                      "operand" : [ {
                         "localId" : "452",
-                        "locator" : "40:46-40:74",
+                        "locator" : "53:46-53:74",
                         "resultTypeName" : "{http://hl7.org/fhir}dateTime",
                         "strict" : false,
                         "type" : "As",
                         "signature" : [ ],
                         "operand" : {
                            "localId" : "454",
-                           "locator" : "40:46-40:57",
+                           "locator" : "53:46-53:57",
                            "path" : "occurrence",
                            "scope" : "O",
                            "type" : "Property",
@@ -2306,21 +2306,21 @@
                         },
                         "asTypeSpecifier" : {
                            "localId" : "463",
-                           "locator" : "40:62-40:74",
+                           "locator" : "53:62-53:74",
                            "resultTypeName" : "{http://hl7.org/fhir}dateTime",
                            "name" : "{http://hl7.org/fhir}dateTime",
                            "type" : "NamedTypeSpecifier"
                         }
                      }, {
                         "localId" : "464",
-                        "locator" : "40:77-40:90",
+                        "locator" : "53:77-53:90",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "name" : "lastReportDate",
                         "type" : "QueryLetRef"
                      } ]
                   }, {
                      "localId" : "512",
-                     "locator" : "41:8-41:86",
+                     "locator" : "54:8-54:86",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "LastReportNotAfterOccurrencePeriod",
                      "type" : "FunctionRef",
@@ -2335,14 +2335,14 @@
                      } ],
                      "operand" : [ {
                         "localId" : "494",
-                        "locator" : "41:43-41:69",
+                        "locator" : "54:43-54:69",
                         "resultTypeName" : "{http://hl7.org/fhir}Period",
                         "strict" : false,
                         "type" : "As",
                         "signature" : [ ],
                         "operand" : {
                            "localId" : "496",
-                           "locator" : "41:43-41:54",
+                           "locator" : "54:43-54:54",
                            "path" : "occurrence",
                            "scope" : "O",
                            "type" : "Property",
@@ -2367,14 +2367,14 @@
                         },
                         "asTypeSpecifier" : {
                            "localId" : "505",
-                           "locator" : "41:59-41:69",
+                           "locator" : "54:59-54:69",
                            "resultTypeName" : "{http://hl7.org/fhir}Period",
                            "name" : "{http://hl7.org/fhir}Period",
                            "type" : "NamedTypeSpecifier"
                         }
                      }, {
                         "localId" : "506",
-                        "locator" : "41:72-41:85",
+                        "locator" : "54:72-54:85",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "name" : "lastReportDate",
                         "type" : "QueryLetRef"
@@ -2384,7 +2384,7 @@
             }
          }, {
             "localId" : "290",
-            "locator" : "27:1-35:12",
+            "locator" : "40:1-48:12",
             "name" : "CompletedOrdersWithoutResults",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -2645,7 +2645,7 @@
             },
             "expression" : {
                "localId" : "291",
-               "locator" : "28:3-35:12",
+               "locator" : "41:3-48:12",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "631",
@@ -2658,7 +2658,7 @@
                },
                "condition" : {
                   "localId" : "292",
-                  "locator" : "28:6-29:52",
+                  "locator" : "41:6-42:52",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "And",
                   "signature" : [ {
@@ -2672,7 +2672,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "293",
-                     "locator" : "28:6-28:54",
+                     "locator" : "41:6-41:54",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Not",
                      "signature" : [ {
@@ -2682,7 +2682,7 @@
                      } ],
                      "operand" : {
                         "localId" : "294",
-                        "locator" : "28:10-28:54",
+                        "locator" : "41:10-41:54",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Exists",
                         "signature" : [ {
@@ -2696,7 +2696,7 @@
                         } ],
                         "operand" : {
                            "localId" : "296",
-                           "locator" : "28:17-28:54",
+                           "locator" : "41:17-41:54",
                            "name" : "BreastImagingObservations",
                            "libraryName" : "DataElements",
                            "type" : "ExpressionRef",
@@ -2713,7 +2713,7 @@
                      }
                   }, {
                      "localId" : "304",
-                     "locator" : "29:11-29:52",
+                     "locator" : "42:11-42:52",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Not",
                      "signature" : [ {
@@ -2723,7 +2723,7 @@
                      } ],
                      "operand" : {
                         "localId" : "305",
-                        "locator" : "29:15-29:52",
+                        "locator" : "42:15-42:52",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Exists",
                         "signature" : [ {
@@ -2737,7 +2737,7 @@
                         } ],
                         "operand" : {
                            "localId" : "307",
-                           "locator" : "29:22-29:52",
+                           "locator" : "42:22-42:52",
                            "name" : "BiopsyObservations",
                            "libraryName" : "DataElements",
                            "type" : "ExpressionRef",
@@ -2756,7 +2756,7 @@
                },
                "then" : {
                   "localId" : "556",
-                  "locator" : "30:10-30:47",
+                  "locator" : "43:10-43:47",
                   "name" : "CompletedOrdersWithoutSubsequentReport",
                   "type" : "ExpressionRef",
                   "resultTypeSpecifier" : {
@@ -2771,7 +2771,7 @@
                },
                "else" : {
                   "localId" : "628",
-                  "locator" : "32:5-35:12",
+                  "locator" : "45:5-48:12",
                   "type" : "Query",
                   "resultTypeSpecifier" : {
                      "localId" : "629",
@@ -2784,7 +2784,7 @@
                   },
                   "source" : [ {
                      "localId" : "559",
-                     "locator" : "32:10-32:49",
+                     "locator" : "45:10-45:49",
                      "alias" : "O",
                      "resultTypeSpecifier" : {
                         "localId" : "563",
@@ -2797,7 +2797,7 @@
                      },
                      "expression" : {
                         "localId" : "560",
-                        "locator" : "32:10-32:47",
+                        "locator" : "45:10-45:47",
                         "name" : "CompletedOrdersWithoutSubsequentReport",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -2812,7 +2812,7 @@
                      }
                   }, {
                      "localId" : "565",
-                     "locator" : "33:7-33:88",
+                     "locator" : "46:7-46:88",
                      "alias" : "Obs",
                      "resultTypeSpecifier" : {
                         "localId" : "587",
@@ -2825,7 +2825,7 @@
                      },
                      "expression" : {
                         "localId" : "578",
-                        "locator" : "33:7-33:84",
+                        "locator" : "46:7-46:84",
                         "type" : "Union",
                         "resultTypeSpecifier" : {
                            "localId" : "585",
@@ -2855,7 +2855,7 @@
                         } ],
                         "operand" : [ {
                            "localId" : "567",
-                           "locator" : "33:8-33:45",
+                           "locator" : "46:8-46:45",
                            "name" : "BreastImagingObservations",
                            "libraryName" : "DataElements",
                            "type" : "ExpressionRef",
@@ -2870,7 +2870,7 @@
                            }
                         }, {
                            "localId" : "573",
-                           "locator" : "33:53-33:83",
+                           "locator" : "46:53-46:83",
                            "name" : "BiopsyObservations",
                            "libraryName" : "DataElements",
                            "type" : "ExpressionRef",
@@ -2890,7 +2890,7 @@
                   "relationship" : [ ],
                   "where" : {
                      "localId" : "589",
-                     "locator" : "34:5-34:81",
+                     "locator" : "47:5-47:81",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Not",
                      "signature" : [ {
@@ -2900,7 +2900,7 @@
                      } ],
                      "operand" : {
                         "localId" : "620",
-                        "locator" : "34:15-34:81",
+                        "locator" : "47:15-47:81",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Exists",
                         "signature" : [ {
@@ -2914,7 +2914,7 @@
                         } ],
                         "operand" : {
                            "localId" : "613",
-                           "locator" : "34:23-34:80",
+                           "locator" : "47:23-47:80",
                            "type" : "Query",
                            "resultTypeSpecifier" : {
                               "localId" : "614",
@@ -2927,7 +2927,7 @@
                            },
                            "source" : [ {
                               "localId" : "590",
-                              "locator" : "34:23-34:35",
+                              "locator" : "47:23-47:35",
                               "alias" : "B",
                               "resultTypeSpecifier" : {
                                  "localId" : "595",
@@ -2940,7 +2940,7 @@
                               },
                               "expression" : {
                                  "localId" : "592",
-                                 "locator" : "34:23-34:33",
+                                 "locator" : "47:23-47:33",
                                  "path" : "basedOn",
                                  "scope" : "Obs",
                                  "type" : "Property",
@@ -2959,7 +2959,7 @@
                            "relationship" : [ ],
                            "where" : {
                               "localId" : "597",
-                              "locator" : "34:37-34:80",
+                              "locator" : "47:37-47:80",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                               "type" : "Equal",
                               "signature" : [ {
@@ -2983,7 +2983,7 @@
                                  } ],
                                  "operand" : [ {
                                     "localId" : "599",
-                                    "locator" : "34:43-34:53",
+                                    "locator" : "47:43-47:53",
                                     "resultTypeName" : "{http://hl7.org/fhir}string",
                                     "path" : "reference",
                                     "scope" : "B",
@@ -2991,13 +2991,13 @@
                                  } ]
                               }, {
                                  "localId" : "608",
-                                 "locator" : "34:57-34:80",
+                                 "locator" : "47:57-47:80",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                  "type" : "Concatenate",
                                  "signature" : [ ],
                                  "operand" : [ {
                                     "localId" : "601",
-                                    "locator" : "34:57-34:73",
+                                    "locator" : "47:57-47:73",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
                                     "value" : "ServiceRequest/",
@@ -3014,7 +3014,7 @@
                                     } ],
                                     "operand" : [ {
                                        "localId" : "603",
-                                       "locator" : "34:77-34:80",
+                                       "locator" : "47:77-47:80",
                                        "resultTypeName" : "{http://hl7.org/fhir}id",
                                        "path" : "id",
                                        "scope" : "O",
@@ -3028,7 +3028,7 @@
                   },
                   "return" : {
                      "localId" : "624",
-                     "locator" : "35:5-35:12",
+                     "locator" : "48:5-48:12",
                      "resultTypeSpecifier" : {
                         "localId" : "626",
                         "type" : "ListTypeSpecifier",
@@ -3040,7 +3040,7 @@
                      },
                      "expression" : {
                         "localId" : "625",
-                        "locator" : "35:12",
+                        "locator" : "48:12",
                         "resultTypeName" : "{http://hl7.org/fhir}ServiceRequest",
                         "name" : "O",
                         "type" : "AliasRef"
@@ -3050,7 +3050,7 @@
             }
          }, {
             "localId" : "217",
-            "locator" : "13:1-15:31",
+            "locator" : "26:1-28:31",
             "name" : "eve-pendingorders",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3089,7 +3089,7 @@
             },
             "expression" : {
                "localId" : "638",
-               "locator" : "14:3-15:31",
+               "locator" : "27:3-28:31",
                "type" : "Union",
                "resultTypeSpecifier" : {
                   "localId" : "643",
@@ -3119,7 +3119,7 @@
                } ],
                "operand" : [ {
                   "localId" : "286",
-                  "locator" : "14:3-14:35",
+                  "locator" : "27:3-27:35",
                   "name" : "ActiveBreastCancerScreeningOrders",
                   "type" : "ExpressionRef",
                   "resultTypeSpecifier" : {
@@ -3133,7 +3133,7 @@
                   }
                }, {
                   "localId" : "635",
-                  "locator" : "15:3-15:31",
+                  "locator" : "28:3-28:31",
                   "name" : "CompletedOrdersWithoutResults",
                   "type" : "ExpressionRef",
                   "resultTypeSpecifier" : {
@@ -3149,7 +3149,7 @@
             }
          }, {
             "localId" : "700",
-            "locator" : "104:1-108:12",
+            "locator" : "117:1-121:12",
             "name" : "BreastCancerScreeningOrderedProcedures",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3302,7 +3302,7 @@
             },
             "expression" : {
                "localId" : "752",
-               "locator" : "105:3-108:12",
+               "locator" : "118:3-121:12",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "753",
@@ -3315,7 +3315,7 @@
                },
                "source" : [ {
                   "localId" : "701",
-                  "locator" : "105:8-105:45",
+                  "locator" : "118:8-118:45",
                   "alias" : "O",
                   "resultTypeSpecifier" : {
                      "localId" : "705",
@@ -3328,7 +3328,7 @@
                   },
                   "expression" : {
                      "localId" : "702",
-                     "locator" : "105:8-105:43",
+                     "locator" : "118:8-118:43",
                      "name" : "CompletedBreastCancerScreeningOrders",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -3343,7 +3343,7 @@
                   }
                }, {
                   "localId" : "707",
-                  "locator" : "106:5-106:17",
+                  "locator" : "119:5-119:17",
                   "alias" : "P",
                   "resultTypeSpecifier" : {
                      "localId" : "713",
@@ -3356,7 +3356,7 @@
                   },
                   "expression" : {
                      "localId" : "708",
-                     "locator" : "106:5-106:15",
+                     "locator" : "119:5-119:15",
                      "dataType" : "{http://hl7.org/fhir}Procedure",
                      "templateId" : "http://hl7.org/fhir/StructureDefinition/Procedure",
                      "type" : "Retrieve",
@@ -3379,7 +3379,7 @@
                "relationship" : [ ],
                "where" : {
                   "localId" : "745",
-                  "locator" : "107:3-107:73",
+                  "locator" : "120:3-120:73",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Exists",
                   "signature" : [ {
@@ -3393,7 +3393,7 @@
                   } ],
                   "operand" : {
                      "localId" : "738",
-                     "locator" : "107:17-107:72",
+                     "locator" : "120:17-120:72",
                      "type" : "Query",
                      "resultTypeSpecifier" : {
                         "localId" : "739",
@@ -3406,7 +3406,7 @@
                      },
                      "source" : [ {
                         "localId" : "715",
-                        "locator" : "107:17-107:27",
+                        "locator" : "120:17-120:27",
                         "alias" : "B",
                         "resultTypeSpecifier" : {
                            "localId" : "720",
@@ -3419,7 +3419,7 @@
                         },
                         "expression" : {
                            "localId" : "717",
-                           "locator" : "107:17-107:25",
+                           "locator" : "120:17-120:25",
                            "path" : "basedOn",
                            "scope" : "P",
                            "type" : "Property",
@@ -3438,7 +3438,7 @@
                      "relationship" : [ ],
                      "where" : {
                         "localId" : "722",
-                        "locator" : "107:29-107:72",
+                        "locator" : "120:29-120:72",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Equal",
                         "signature" : [ {
@@ -3462,7 +3462,7 @@
                            } ],
                            "operand" : [ {
                               "localId" : "724",
-                              "locator" : "107:35-107:45",
+                              "locator" : "120:35-120:45",
                               "resultTypeName" : "{http://hl7.org/fhir}string",
                               "path" : "reference",
                               "scope" : "B",
@@ -3470,13 +3470,13 @@
                            } ]
                         }, {
                            "localId" : "733",
-                           "locator" : "107:49-107:72",
+                           "locator" : "120:49-120:72",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                            "type" : "Concatenate",
                            "signature" : [ ],
                            "operand" : [ {
                               "localId" : "726",
-                              "locator" : "107:49-107:65",
+                              "locator" : "120:49-120:65",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                               "valueType" : "{urn:hl7-org:elm-types:r1}String",
                               "value" : "ServiceRequest/",
@@ -3493,7 +3493,7 @@
                               } ],
                               "operand" : [ {
                                  "localId" : "728",
-                                 "locator" : "107:69-107:72",
+                                 "locator" : "120:69-120:72",
                                  "resultTypeName" : "{http://hl7.org/fhir}id",
                                  "path" : "id",
                                  "scope" : "O",
@@ -3506,7 +3506,7 @@
                },
                "return" : {
                   "localId" : "748",
-                  "locator" : "108:5-108:12",
+                  "locator" : "121:5-121:12",
                   "resultTypeSpecifier" : {
                      "localId" : "750",
                      "type" : "ListTypeSpecifier",
@@ -3518,7 +3518,7 @@
                   },
                   "expression" : {
                      "localId" : "749",
-                     "locator" : "108:12",
+                     "locator" : "121:12",
                      "resultTypeName" : "{http://hl7.org/fhir}Procedure",
                      "name" : "P",
                      "type" : "AliasRef"
@@ -3527,7 +3527,7 @@
             }
          }, {
             "localId" : "698",
-            "locator" : "98:1-102:60",
+            "locator" : "111:1-115:60",
             "name" : "BreastCancerScreeningProcedures",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3602,7 +3602,7 @@
                                     }, {
                                        "r" : "772",
                                        "s" : [ {
-                                          "value" : [ "\"BREAST CANCER IMAGING ORDERS\"" ]
+                                          "value" : [ "\"Breast Cancer Imaging Orders\"" ]
                                        } ]
                                     } ]
                                  } ]
@@ -3639,7 +3639,7 @@
                                     }, {
                                        "r" : "780",
                                        "s" : [ {
-                                          "value" : [ "\"BREAST CANCER BIOPSY ORDERS\"" ]
+                                          "value" : [ "\"Breast Cancer Biopsy Orders\"" ]
                                        } ]
                                     } ]
                                  } ]
@@ -3661,7 +3661,7 @@
             },
             "expression" : {
                "localId" : "790",
-               "locator" : "99:3-102:60",
+               "locator" : "112:3-115:60",
                "type" : "Union",
                "resultTypeSpecifier" : {
                   "localId" : "795",
@@ -3691,7 +3691,7 @@
                } ],
                "operand" : [ {
                   "localId" : "757",
-                  "locator" : "99:3-99:40",
+                  "locator" : "112:3-112:40",
                   "name" : "BreastCancerScreeningOrderedProcedures",
                   "type" : "ExpressionRef",
                   "resultTypeSpecifier" : {
@@ -3705,7 +3705,7 @@
                   }
                }, {
                   "localId" : "787",
-                  "locator" : "100:3-102:60",
+                  "locator" : "113:3-115:60",
                   "type" : "Query",
                   "resultTypeSpecifier" : {
                      "localId" : "788",
@@ -3718,7 +3718,7 @@
                   },
                   "source" : [ {
                      "localId" : "760",
-                     "locator" : "100:3-100:15",
+                     "locator" : "113:3-113:15",
                      "alias" : "P",
                      "resultTypeSpecifier" : {
                         "localId" : "766",
@@ -3731,7 +3731,7 @@
                      },
                      "expression" : {
                         "localId" : "761",
-                        "locator" : "100:3-100:13",
+                        "locator" : "113:3-113:13",
                         "dataType" : "{http://hl7.org/fhir}Procedure",
                         "templateId" : "http://hl7.org/fhir/StructureDefinition/Procedure",
                         "type" : "Retrieve",
@@ -3754,7 +3754,7 @@
                   "relationship" : [ ],
                   "where" : {
                      "localId" : "768",
-                     "locator" : "101:5-102:60",
+                     "locator" : "114:5-115:60",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Or",
                      "signature" : [ {
@@ -3768,7 +3768,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "773",
-                        "locator" : "101:11-101:63",
+                        "locator" : "114:11-114:63",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "InValueSet",
                         "signature" : [ {
@@ -3788,7 +3788,7 @@
                            } ],
                            "operand" : [ {
                               "localId" : "770",
-                              "locator" : "101:11-101:16",
+                              "locator" : "114:11-114:16",
                               "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
                               "path" : "code",
                               "scope" : "P",
@@ -3797,14 +3797,14 @@
                         },
                         "valueset" : {
                            "localId" : "772",
-                           "locator" : "101:21-101:63",
+                           "locator" : "114:21-114:63",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
-                           "name" : "BREAST CANCER IMAGING ORDERS",
+                           "name" : "Breast Cancer Imaging Orders",
                            "libraryName" : "DataElements"
                         }
                      }, {
                         "localId" : "781",
-                        "locator" : "102:9-102:60",
+                        "locator" : "115:9-115:60",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "InValueSet",
                         "signature" : [ {
@@ -3824,7 +3824,7 @@
                            } ],
                            "operand" : [ {
                               "localId" : "778",
-                              "locator" : "102:9-102:14",
+                              "locator" : "115:9-115:14",
                               "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
                               "path" : "code",
                               "scope" : "P",
@@ -3833,9 +3833,9 @@
                         },
                         "valueset" : {
                            "localId" : "780",
-                           "locator" : "102:19-102:60",
+                           "locator" : "115:19-115:60",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}ValueSet",
-                           "name" : "BREAST CANCER BIOPSY ORDERS",
+                           "name" : "Breast Cancer Biopsy Orders",
                            "libraryName" : "DataElements"
                         }
                      } ]
@@ -3844,7 +3844,7 @@
             }
          }, {
             "localId" : "695",
-            "locator" : "94:1-96:35",
+            "locator" : "107:1-109:35",
             "name" : "CompletedBreastCancerScreeningProcedures",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -3924,7 +3924,7 @@
             },
             "expression" : {
                "localId" : "816",
-               "locator" : "95:3-96:35",
+               "locator" : "108:3-109:35",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "817",
@@ -3937,7 +3937,7 @@
                },
                "source" : [ {
                   "localId" : "696",
-                  "locator" : "95:3-95:35",
+                  "locator" : "108:3-108:35",
                   "alias" : "P",
                   "resultTypeSpecifier" : {
                      "localId" : "802",
@@ -3950,7 +3950,7 @@
                   },
                   "expression" : {
                      "localId" : "799",
-                     "locator" : "95:3-95:33",
+                     "locator" : "108:3-108:33",
                      "name" : "BreastCancerScreeningProcedures",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -3968,7 +3968,7 @@
                "relationship" : [ ],
                "where" : {
                   "localId" : "810",
-                  "locator" : "96:5-96:35",
+                  "locator" : "109:5-109:35",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "In",
                   "signature" : [ {
@@ -3996,7 +3996,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "805",
-                        "locator" : "96:11-96:18",
+                        "locator" : "109:11-109:18",
                         "resultTypeName" : "{http://hl7.org/fhir}ProcedureStatus",
                         "path" : "status",
                         "scope" : "P",
@@ -4004,7 +4004,7 @@
                      } ]
                   }, {
                      "localId" : "806",
-                     "locator" : "96:23-96:35",
+                     "locator" : "109:23-109:35",
                      "type" : "List",
                      "resultTypeSpecifier" : {
                         "localId" : "808",
@@ -4017,7 +4017,7 @@
                      },
                      "element" : [ {
                         "localId" : "807",
-                        "locator" : "96:24-96:34",
+                        "locator" : "109:24-109:34",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                         "valueType" : "{urn:hl7-org:elm-types:r1}String",
                         "value" : "completed",
@@ -4028,7 +4028,7 @@
             }
          }, {
             "localId" : "681",
-            "locator" : "85:1-92:12",
+            "locator" : "98:1-105:12",
             "name" : "CompletedProceduresWithoutDiagnosticReport",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4224,7 +4224,7 @@
             },
             "expression" : {
                "localId" : "682",
-               "locator" : "86:3-92:12",
+               "locator" : "99:3-105:12",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "879",
@@ -4237,7 +4237,7 @@
                },
                "condition" : {
                   "localId" : "683",
-                  "locator" : "86:6-86:76",
+                  "locator" : "99:6-99:76",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Not",
                   "signature" : [ {
@@ -4247,7 +4247,7 @@
                   } ],
                   "operand" : {
                      "localId" : "684",
-                     "locator" : "86:10-86:76",
+                     "locator" : "99:10-99:76",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Exists",
                      "signature" : [ {
@@ -4261,7 +4261,7 @@
                      } ],
                      "operand" : {
                         "localId" : "686",
-                        "locator" : "86:17-86:76",
+                        "locator" : "99:17-99:76",
                         "name" : "CompletedBreastCancerScreeningDiagnosticReports",
                         "libraryName" : "DataElements",
                         "type" : "ExpressionRef",
@@ -4279,7 +4279,7 @@
                },
                "then" : {
                   "localId" : "821",
-                  "locator" : "87:10-87:49",
+                  "locator" : "100:10-100:49",
                   "name" : "CompletedBreastCancerScreeningProcedures",
                   "type" : "ExpressionRef",
                   "resultTypeSpecifier" : {
@@ -4294,7 +4294,7 @@
                },
                "else" : {
                   "localId" : "876",
-                  "locator" : "89:5-92:12",
+                  "locator" : "102:5-105:12",
                   "type" : "Query",
                   "resultTypeSpecifier" : {
                      "localId" : "877",
@@ -4307,7 +4307,7 @@
                   },
                   "source" : [ {
                      "localId" : "824",
-                     "locator" : "89:10-89:51",
+                     "locator" : "102:10-102:51",
                      "alias" : "P",
                      "resultTypeSpecifier" : {
                         "localId" : "828",
@@ -4320,7 +4320,7 @@
                      },
                      "expression" : {
                         "localId" : "825",
-                        "locator" : "89:10-89:49",
+                        "locator" : "102:10-102:49",
                         "name" : "CompletedBreastCancerScreeningProcedures",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -4335,7 +4335,7 @@
                      }
                   }, {
                      "localId" : "830",
-                     "locator" : "90:7-90:69",
+                     "locator" : "103:7-103:69",
                      "alias" : "DR",
                      "resultTypeSpecifier" : {
                         "localId" : "835",
@@ -4348,7 +4348,7 @@
                      },
                      "expression" : {
                         "localId" : "832",
-                        "locator" : "90:7-90:66",
+                        "locator" : "103:7-103:66",
                         "name" : "CompletedBreastCancerScreeningDiagnosticReports",
                         "libraryName" : "DataElements",
                         "type" : "ExpressionRef",
@@ -4367,7 +4367,7 @@
                   "relationship" : [ ],
                   "where" : {
                      "localId" : "837",
-                     "locator" : "91:5-91:75",
+                     "locator" : "104:5-104:75",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Not",
                      "signature" : [ {
@@ -4377,7 +4377,7 @@
                      } ],
                      "operand" : {
                         "localId" : "868",
-                        "locator" : "91:15-91:75",
+                        "locator" : "104:15-104:75",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Exists",
                         "signature" : [ {
@@ -4391,7 +4391,7 @@
                         } ],
                         "operand" : {
                            "localId" : "861",
-                           "locator" : "91:23-91:74",
+                           "locator" : "104:23-104:74",
                            "type" : "Query",
                            "resultTypeSpecifier" : {
                               "localId" : "862",
@@ -4404,7 +4404,7 @@
                            },
                            "source" : [ {
                               "localId" : "838",
-                              "locator" : "91:23-91:34",
+                              "locator" : "104:23-104:34",
                               "alias" : "B",
                               "resultTypeSpecifier" : {
                                  "localId" : "843",
@@ -4417,7 +4417,7 @@
                               },
                               "expression" : {
                                  "localId" : "840",
-                                 "locator" : "91:23-91:32",
+                                 "locator" : "104:23-104:32",
                                  "path" : "basedOn",
                                  "scope" : "DR",
                                  "type" : "Property",
@@ -4436,7 +4436,7 @@
                            "relationship" : [ ],
                            "where" : {
                               "localId" : "845",
-                              "locator" : "91:36-91:74",
+                              "locator" : "104:36-104:74",
                               "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                               "type" : "Equal",
                               "signature" : [ {
@@ -4460,7 +4460,7 @@
                                  } ],
                                  "operand" : [ {
                                     "localId" : "847",
-                                    "locator" : "91:42-91:52",
+                                    "locator" : "104:42-104:52",
                                     "resultTypeName" : "{http://hl7.org/fhir}string",
                                     "path" : "reference",
                                     "scope" : "B",
@@ -4468,13 +4468,13 @@
                                  } ]
                               }, {
                                  "localId" : "856",
-                                 "locator" : "91:56-91:74",
+                                 "locator" : "104:56-104:74",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                  "type" : "Concatenate",
                                  "signature" : [ ],
                                  "operand" : [ {
                                     "localId" : "849",
-                                    "locator" : "91:56-91:67",
+                                    "locator" : "104:56-104:67",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                     "valueType" : "{urn:hl7-org:elm-types:r1}String",
                                     "value" : "Procedure/",
@@ -4491,7 +4491,7 @@
                                     } ],
                                     "operand" : [ {
                                        "localId" : "851",
-                                       "locator" : "91:71-91:74",
+                                       "locator" : "104:71-104:74",
                                        "resultTypeName" : "{http://hl7.org/fhir}id",
                                        "path" : "id",
                                        "scope" : "P",
@@ -4505,7 +4505,7 @@
                   },
                   "return" : {
                      "localId" : "872",
-                     "locator" : "92:5-92:12",
+                     "locator" : "105:5-105:12",
                      "resultTypeSpecifier" : {
                         "localId" : "874",
                         "type" : "ListTypeSpecifier",
@@ -4517,7 +4517,7 @@
                      },
                      "expression" : {
                         "localId" : "873",
-                        "locator" : "92:12",
+                        "locator" : "105:12",
                         "resultTypeName" : "{http://hl7.org/fhir}Procedure",
                         "name" : "P",
                         "type" : "AliasRef"
@@ -4527,7 +4527,7 @@
             }
          }, {
             "localId" : "678",
-            "locator" : "79:1-83:85",
+            "locator" : "92:1-96:85",
             "name" : "CompletedProceduresWithoutSubsequentReport",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -4691,7 +4691,7 @@
             },
             "expression" : {
                "localId" : "936",
-               "locator" : "80:3-83:85",
+               "locator" : "93:3-96:85",
                "type" : "Query",
                "resultTypeSpecifier" : {
                   "localId" : "937",
@@ -4704,7 +4704,7 @@
                },
                "source" : [ {
                   "localId" : "679",
-                  "locator" : "80:3-80:46",
+                  "locator" : "93:3-93:46",
                   "alias" : "P",
                   "resultTypeSpecifier" : {
                      "localId" : "886",
@@ -4717,7 +4717,7 @@
                   },
                   "expression" : {
                      "localId" : "883",
-                     "locator" : "80:3-80:44",
+                     "locator" : "93:3-93:44",
                      "name" : "CompletedProceduresWithoutDiagnosticReport",
                      "type" : "ExpressionRef",
                      "resultTypeSpecifier" : {
@@ -4733,12 +4733,12 @@
                } ],
                "let" : [ {
                   "localId" : "888",
-                  "locator" : "81:7-81:50",
+                  "locator" : "94:7-94:50",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                   "identifier" : "lastReportDate",
                   "expression" : {
                      "localId" : "891",
-                     "locator" : "81:23-81:50",
+                     "locator" : "94:23-94:50",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                      "name" : "LastReportDateByCode",
                      "type" : "FunctionRef",
@@ -4749,7 +4749,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "890",
-                        "locator" : "81:44-81:49",
+                        "locator" : "94:44-94:49",
                         "resultTypeName" : "{http://hl7.org/fhir}CodeableConcept",
                         "path" : "code",
                         "scope" : "P",
@@ -4760,7 +4760,7 @@
                "relationship" : [ ],
                "where" : {
                   "localId" : "893",
-                  "locator" : "82:3-83:85",
+                  "locator" : "95:3-96:85",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "Or",
                   "signature" : [ {
@@ -4774,7 +4774,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "911",
-                     "locator" : "82:9-82:90",
+                     "locator" : "95:9-95:90",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "LastReportNotAfterOccurrenceDateTime",
                      "type" : "FunctionRef",
@@ -4789,14 +4789,14 @@
                      } ],
                      "operand" : [ {
                         "localId" : "894",
-                        "locator" : "82:46-82:73",
+                        "locator" : "95:46-95:73",
                         "resultTypeName" : "{http://hl7.org/fhir}dateTime",
                         "strict" : false,
                         "type" : "As",
                         "signature" : [ ],
                         "operand" : {
                            "localId" : "896",
-                           "locator" : "82:46-82:56",
+                           "locator" : "95:46-95:56",
                            "path" : "performed",
                            "scope" : "P",
                            "type" : "Property",
@@ -4829,21 +4829,21 @@
                         },
                         "asTypeSpecifier" : {
                            "localId" : "909",
-                           "locator" : "82:61-82:73",
+                           "locator" : "95:61-95:73",
                            "resultTypeName" : "{http://hl7.org/fhir}dateTime",
                            "name" : "{http://hl7.org/fhir}dateTime",
                            "type" : "NamedTypeSpecifier"
                         }
                      }, {
                         "localId" : "910",
-                        "locator" : "82:76-82:89",
+                        "locator" : "95:76-95:89",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "name" : "lastReportDate",
                         "type" : "QueryLetRef"
                      } ]
                   }, {
                      "localId" : "931",
-                     "locator" : "83:8-83:85",
+                     "locator" : "96:8-96:85",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "name" : "LastReportNotAfterOccurrencePeriod",
                      "type" : "FunctionRef",
@@ -4858,14 +4858,14 @@
                      } ],
                      "operand" : [ {
                         "localId" : "914",
-                        "locator" : "83:43-83:68",
+                        "locator" : "96:43-96:68",
                         "resultTypeName" : "{http://hl7.org/fhir}Period",
                         "strict" : false,
                         "type" : "As",
                         "signature" : [ ],
                         "operand" : {
                            "localId" : "916",
-                           "locator" : "83:43-83:53",
+                           "locator" : "96:43-96:53",
                            "path" : "performed",
                            "scope" : "P",
                            "type" : "Property",
@@ -4898,14 +4898,14 @@
                         },
                         "asTypeSpecifier" : {
                            "localId" : "929",
-                           "locator" : "83:58-83:68",
+                           "locator" : "96:58-96:68",
                            "resultTypeName" : "{http://hl7.org/fhir}Period",
                            "name" : "{http://hl7.org/fhir}Period",
                            "type" : "NamedTypeSpecifier"
                         }
                      }, {
                         "localId" : "930",
-                        "locator" : "83:71-83:84",
+                        "locator" : "96:71-96:84",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}DateTime",
                         "name" : "lastReportDate",
                         "type" : "QueryLetRef"
@@ -4915,7 +4915,7 @@
             }
          }, {
             "localId" : "650",
-            "locator" : "68:1-77:12",
+            "locator" : "81:1-90:12",
             "name" : "CompletedProceduresWithoutResults",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5293,7 +5293,7 @@
             },
             "expression" : {
                "localId" : "651",
-               "locator" : "69:3-77:12",
+               "locator" : "82:3-90:12",
                "type" : "If",
                "resultTypeSpecifier" : {
                   "localId" : "1071",
@@ -5306,7 +5306,7 @@
                },
                "condition" : {
                   "localId" : "652",
-                  "locator" : "69:6-70:52",
+                  "locator" : "82:6-83:52",
                   "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                   "type" : "And",
                   "signature" : [ {
@@ -5320,7 +5320,7 @@
                   } ],
                   "operand" : [ {
                      "localId" : "653",
-                     "locator" : "69:6-69:54",
+                     "locator" : "82:6-82:54",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Not",
                      "signature" : [ {
@@ -5330,7 +5330,7 @@
                      } ],
                      "operand" : {
                         "localId" : "654",
-                        "locator" : "69:10-69:54",
+                        "locator" : "82:10-82:54",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Exists",
                         "signature" : [ {
@@ -5344,7 +5344,7 @@
                         } ],
                         "operand" : {
                            "localId" : "656",
-                           "locator" : "69:17-69:54",
+                           "locator" : "82:17-82:54",
                            "name" : "BreastImagingObservations",
                            "libraryName" : "DataElements",
                            "type" : "ExpressionRef",
@@ -5361,7 +5361,7 @@
                      }
                   }, {
                      "localId" : "664",
-                     "locator" : "70:11-70:52",
+                     "locator" : "83:11-83:52",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "Not",
                      "signature" : [ {
@@ -5371,7 +5371,7 @@
                      } ],
                      "operand" : {
                         "localId" : "665",
-                        "locator" : "70:15-70:52",
+                        "locator" : "83:15-83:52",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Exists",
                         "signature" : [ {
@@ -5385,7 +5385,7 @@
                         } ],
                         "operand" : {
                            "localId" : "667",
-                           "locator" : "70:22-70:52",
+                           "locator" : "83:22-83:52",
                            "name" : "BiopsyObservations",
                            "libraryName" : "DataElements",
                            "type" : "ExpressionRef",
@@ -5404,7 +5404,7 @@
                },
                "then" : {
                   "localId" : "941",
-                  "locator" : "71:10-71:51",
+                  "locator" : "84:10-84:51",
                   "name" : "CompletedProceduresWithoutSubsequentReport",
                   "type" : "ExpressionRef",
                   "resultTypeSpecifier" : {
@@ -5419,7 +5419,7 @@
                },
                "else" : {
                   "localId" : "1068",
-                  "locator" : "73:5-77:12",
+                  "locator" : "86:5-90:12",
                   "type" : "Query",
                   "resultTypeSpecifier" : {
                      "localId" : "1069",
@@ -5432,7 +5432,7 @@
                   },
                   "source" : [ {
                      "localId" : "944",
-                     "locator" : "73:10-73:53",
+                     "locator" : "86:10-86:53",
                      "alias" : "P",
                      "resultTypeSpecifier" : {
                         "localId" : "948",
@@ -5445,7 +5445,7 @@
                      },
                      "expression" : {
                         "localId" : "945",
-                        "locator" : "73:10-73:51",
+                        "locator" : "86:10-86:51",
                         "name" : "CompletedProceduresWithoutSubsequentReport",
                         "type" : "ExpressionRef",
                         "resultTypeSpecifier" : {
@@ -5460,7 +5460,7 @@
                      }
                   }, {
                      "localId" : "950",
-                     "locator" : "74:7-74:88",
+                     "locator" : "87:7-87:88",
                      "alias" : "Obs",
                      "resultTypeSpecifier" : {
                         "localId" : "972",
@@ -5473,7 +5473,7 @@
                      },
                      "expression" : {
                         "localId" : "963",
-                        "locator" : "74:7-74:84",
+                        "locator" : "87:7-87:84",
                         "type" : "Union",
                         "resultTypeSpecifier" : {
                            "localId" : "970",
@@ -5503,7 +5503,7 @@
                         } ],
                         "operand" : [ {
                            "localId" : "952",
-                           "locator" : "74:8-74:45",
+                           "locator" : "87:8-87:45",
                            "name" : "BreastImagingObservations",
                            "libraryName" : "DataElements",
                            "type" : "ExpressionRef",
@@ -5518,7 +5518,7 @@
                            }
                         }, {
                            "localId" : "958",
-                           "locator" : "74:53-74:83",
+                           "locator" : "87:53-87:83",
                            "name" : "BiopsyObservations",
                            "libraryName" : "DataElements",
                            "type" : "ExpressionRef",
@@ -5538,7 +5538,7 @@
                   "relationship" : [ ],
                   "where" : {
                      "localId" : "974",
-                     "locator" : "75:5-76:84",
+                     "locator" : "88:5-89:84",
                      "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                      "type" : "And",
                      "signature" : [ {
@@ -5552,7 +5552,7 @@
                      } ],
                      "operand" : [ {
                         "localId" : "975",
-                        "locator" : "75:11-75:76",
+                        "locator" : "88:11-88:76",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Not",
                         "signature" : [ {
@@ -5562,7 +5562,7 @@
                         } ],
                         "operand" : {
                            "localId" : "1006",
-                           "locator" : "75:15-75:76",
+                           "locator" : "88:15-88:76",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                            "type" : "Exists",
                            "signature" : [ {
@@ -5576,7 +5576,7 @@
                            } ],
                            "operand" : {
                               "localId" : "999",
-                              "locator" : "75:23-75:75",
+                              "locator" : "88:23-88:75",
                               "type" : "Query",
                               "resultTypeSpecifier" : {
                                  "localId" : "1000",
@@ -5589,7 +5589,7 @@
                               },
                               "source" : [ {
                                  "localId" : "976",
-                                 "locator" : "75:23-75:35",
+                                 "locator" : "88:23-88:35",
                                  "alias" : "B",
                                  "resultTypeSpecifier" : {
                                     "localId" : "981",
@@ -5602,7 +5602,7 @@
                                  },
                                  "expression" : {
                                     "localId" : "978",
-                                    "locator" : "75:23-75:33",
+                                    "locator" : "88:23-88:33",
                                     "path" : "basedOn",
                                     "scope" : "Obs",
                                     "type" : "Property",
@@ -5621,7 +5621,7 @@
                               "relationship" : [ ],
                               "where" : {
                                  "localId" : "983",
-                                 "locator" : "75:37-75:75",
+                                 "locator" : "88:37-88:75",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                  "type" : "Equal",
                                  "signature" : [ {
@@ -5645,7 +5645,7 @@
                                     } ],
                                     "operand" : [ {
                                        "localId" : "985",
-                                       "locator" : "75:43-75:53",
+                                       "locator" : "88:43-88:53",
                                        "resultTypeName" : "{http://hl7.org/fhir}string",
                                        "path" : "reference",
                                        "scope" : "B",
@@ -5653,13 +5653,13 @@
                                     } ]
                                  }, {
                                     "localId" : "994",
-                                    "locator" : "75:57-75:75",
+                                    "locator" : "88:57-88:75",
                                     "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                     "type" : "Concatenate",
                                     "signature" : [ ],
                                     "operand" : [ {
                                        "localId" : "987",
-                                       "locator" : "75:57-75:68",
+                                       "locator" : "88:57-88:68",
                                        "resultTypeName" : "{urn:hl7-org:elm-types:r1}String",
                                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
                                        "value" : "Procedure/",
@@ -5676,7 +5676,7 @@
                                        } ],
                                        "operand" : [ {
                                           "localId" : "989",
-                                          "locator" : "75:72-75:75",
+                                          "locator" : "88:72-88:75",
                                           "resultTypeName" : "{http://hl7.org/fhir}id",
                                           "path" : "id",
                                           "scope" : "P",
@@ -5689,7 +5689,7 @@
                         }
                      }, {
                         "localId" : "1010",
-                        "locator" : "76:9-76:84",
+                        "locator" : "89:9-89:84",
                         "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                         "type" : "Not",
                         "signature" : [ {
@@ -5699,7 +5699,7 @@
                         } ],
                         "operand" : {
                            "localId" : "1058",
-                           "locator" : "76:13-76:84",
+                           "locator" : "89:13-89:84",
                            "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                            "type" : "Exists",
                            "signature" : [ {
@@ -5713,7 +5713,7 @@
                            } ],
                            "operand" : {
                               "localId" : "1051",
-                              "locator" : "76:21-76:82",
+                              "locator" : "89:21-89:82",
                               "type" : "Query",
                               "resultTypeSpecifier" : {
                                  "localId" : "1052",
@@ -5726,7 +5726,7 @@
                               },
                               "source" : [ {
                                  "localId" : "1011",
-                                 "locator" : "76:21-76:36",
+                                 "locator" : "89:21-89:36",
                                  "alias" : "oB",
                                  "resultTypeSpecifier" : {
                                     "localId" : "1020",
@@ -5739,7 +5739,7 @@
                                  },
                                  "expression" : {
                                     "localId" : "1013",
-                                    "locator" : "76:21-76:33",
+                                    "locator" : "89:21-89:33",
                                     "path" : "basedOn",
                                     "scope" : "Obs",
                                     "type" : "Property",
@@ -5758,7 +5758,7 @@
                               "relationship" : [ ],
                               "where" : {
                                  "localId" : "1048",
-                                 "locator" : "76:38-76:82",
+                                 "locator" : "89:38-89:82",
                                  "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                  "type" : "AnyTrue",
                                  "signature" : [ {
@@ -5772,7 +5772,7 @@
                                  } ],
                                  "source" : {
                                     "localId" : "1041",
-                                    "locator" : "76:52-76:80",
+                                    "locator" : "89:52-89:80",
                                     "type" : "Query",
                                     "resultTypeSpecifier" : {
                                        "localId" : "1042",
@@ -5785,7 +5785,7 @@
                                     },
                                     "source" : [ {
                                        "localId" : "1022",
-                                       "locator" : "76:52-76:65",
+                                       "locator" : "89:52-89:65",
                                        "alias" : "pB",
                                        "resultTypeSpecifier" : {
                                           "localId" : "1031",
@@ -5798,7 +5798,7 @@
                                        },
                                        "expression" : {
                                           "localId" : "1024",
-                                          "locator" : "76:52-76:62",
+                                          "locator" : "89:52-89:62",
                                           "path" : "basedOn",
                                           "scope" : "P",
                                           "type" : "Property",
@@ -5817,7 +5817,7 @@
                                     "relationship" : [ ],
                                     "return" : {
                                        "localId" : "1033",
-                                       "locator" : "76:67-76:80",
+                                       "locator" : "89:67-89:80",
                                        "resultTypeSpecifier" : {
                                           "localId" : "1039",
                                           "type" : "ListTypeSpecifier",
@@ -5829,7 +5829,7 @@
                                        },
                                        "expression" : {
                                           "localId" : "1034",
-                                          "locator" : "76:74-76:80",
+                                          "locator" : "89:74-89:80",
                                           "resultTypeName" : "{urn:hl7-org:elm-types:r1}Boolean",
                                           "type" : "Equal",
                                           "signature" : [ {
@@ -5843,13 +5843,13 @@
                                           } ],
                                           "operand" : [ {
                                              "localId" : "1035",
-                                             "locator" : "76:74-76:75",
+                                             "locator" : "89:74-89:75",
                                              "resultTypeName" : "{http://hl7.org/fhir}Reference",
                                              "name" : "pB",
                                              "type" : "AliasRef"
                                           }, {
                                              "localId" : "1036",
-                                             "locator" : "76:79-76:80",
+                                             "locator" : "89:79-89:80",
                                              "resultTypeName" : "{http://hl7.org/fhir}Reference",
                                              "name" : "oB",
                                              "type" : "AliasRef"
@@ -5864,7 +5864,7 @@
                   },
                   "return" : {
                      "localId" : "1064",
-                     "locator" : "77:5-77:12",
+                     "locator" : "90:5-90:12",
                      "resultTypeSpecifier" : {
                         "localId" : "1066",
                         "type" : "ListTypeSpecifier",
@@ -5876,7 +5876,7 @@
                      },
                      "expression" : {
                         "localId" : "1065",
-                        "locator" : "77:12",
+                        "locator" : "90:12",
                         "resultTypeName" : "{http://hl7.org/fhir}Procedure",
                         "name" : "P",
                         "type" : "AliasRef"
@@ -5886,7 +5886,7 @@
             }
          }, {
             "localId" : "648",
-            "locator" : "17:1-18:35",
+            "locator" : "30:1-31:35",
             "name" : "eve-pendingprocedures",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5915,7 +5915,7 @@
             },
             "expression" : {
                "localId" : "1075",
-               "locator" : "18:3-18:35",
+               "locator" : "31:3-31:35",
                "name" : "CompletedProceduresWithoutResults",
                "type" : "ExpressionRef",
                "resultTypeSpecifier" : {
@@ -5930,7 +5930,7 @@
             }
          }, {
             "localId" : "1083",
-            "locator" : "114:1-115:54",
+            "locator" : "127:1-128:54",
             "name" : "IncompleteBreastBiopsyDiagnosticReports",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -5969,7 +5969,7 @@
             },
             "expression" : {
                "localId" : "1085",
-               "locator" : "115:3-115:54",
+               "locator" : "128:3-128:54",
                "name" : "IncompleteBreastBiopsyDiagnosticReports",
                "libraryName" : "DataElements",
                "type" : "ExpressionRef",
@@ -5985,7 +5985,7 @@
             }
          }, {
             "localId" : "1081",
-            "locator" : "20:1-21:41",
+            "locator" : "33:1-34:41",
             "name" : "eve-pendingpathology",
             "context" : "Patient",
             "accessLevel" : "Public",
@@ -6014,7 +6014,7 @@
             },
             "expression" : {
                "localId" : "1092",
-               "locator" : "21:3-21:41",
+               "locator" : "34:3-34:41",
                "name" : "IncompleteBreastBiopsyDiagnosticReports",
                "type" : "ExpressionRef",
                "resultTypeSpecifier" : {

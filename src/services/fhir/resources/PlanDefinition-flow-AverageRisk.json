@@ -106,7 +106,7 @@
         }
       ],
       "id": "ACSMammoAvgRiskAgeUnder45",
-      "title": "Annual screeening mammogram starting age 40",
+      "title": "Annual screening mammogram starting age 40",
       "description": "Women between 40 and 44 have the option to start screening with a mammogram every year.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -174,8 +174,8 @@
         }
       ],
       "id": "ACSMammoAvgRiskAge45to54",
-      "title": "Annual screeening mammogram starting age 40",
-      "description": "Annual screeening mammogram is recommended for women 45 to 54.",
+      "title": "Annual screening mammogram starting age 40",
+      "description": "Annual screening mammogram is recommended for women 45 to 54.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
     {
@@ -242,8 +242,8 @@
         }
       ],
       "id": "ACSMammoAvgRiskAgeOver54",
-      "title": "Biennial screeening mammogram after age 54",
-      "description": "Biennial screeening mammogram is recommended after age 54.\n\nWomen 55 and older can switch to a mammogram every other year, or they can choose to continue yearly mammograms. Screening should continue as long as a woman is in good health and is expected to live at least 10 more years.",
+      "title": "Biennial screening mammogram after age 54",
+      "description": "Biennial screening mammogram is recommended after age 54.\n\nWomen 55 and older can switch to a mammogram every other year, or they can choose to continue yearly mammograms. Screening should continue as long as a woman is in good health and is expected to live at least 10 more years.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
     {
@@ -310,8 +310,8 @@
         }
       ],
       "id": "USPSTFAvgRisk",
-      "title": "Biennial screeening mammogram starting age 40",
-      "description": "Biennial screeening mammogram starting at age 40",
+      "title": "Biennial screening mammogram starting age 40",
+      "description": "Biennial screening mammogram starting at age 40",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     }
   ],

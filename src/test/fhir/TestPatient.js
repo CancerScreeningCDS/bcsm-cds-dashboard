@@ -20,12 +20,16 @@ export function TestPatient() {
 
   const [toggleStatus, setToggleStatus] = useState({
     isImmunosuppressed: false,
+    hasCurrentBreastCancer: false,
+    hasGeneticMarkers: false,
+    hasBreastDiseaseSymptoms: false,
+    hasBreastExamFindings: false,
     isPregnant: false,
     isPregnantConcerned: false,
     isSymptomatic: false,
     isToggleChanged: false
   });
-  const {output: dashboardInput, isLoadingCdsData } = useCds(patientData, toggleStatus);
+  const {output: dashboardInput, isLoadingCdsData } = useCds(patientData, toggleStatus, library);
   const isLoading = isLoadingCdsData;
   // Extract the data for the requested test patient
   if (params.testName in testData) {
@@ -36,7 +40,6 @@ export function TestPatient() {
       })
       setPatientData(newData);
     }
-
 
     // Return the Dashboard with a testing disclaimer at the top
     return (

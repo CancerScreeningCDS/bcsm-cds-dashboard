@@ -5,9 +5,6 @@ import { cdsResources } from 'services/fhir';
 import { valueSetJson } from 'services/valuesets';
 import { translateResponse, translateToggleChange } from './translate';
 import { stridesData } from './strides';
-import hardCodeData from '../../test/fhir/bundles/PrimaryScreeningDecision_v1.0.0/PrimaryScreeningDecision_JaniceMedford_fdr_breastca_age_45.json'
-// import hardCodeData from '../../test/fhir/bundles/GeneticRiskReferral_v1.0.0/PrimaryScreeningDecision_JaniceMedford_fdr_breastca_age_45';
-import patientDataJ from '../../test/fhir/bundles/patients/JaniceMedford_fdr_breastca_age_45.json'
 import cql, { Results } from 'cql-execution';
 import cqlfhir, { PatientSource } from 'cql-exec-fhir';
 import { initialzieCqlWorker } from 'cql-worker';
@@ -18,7 +15,7 @@ import { initialzieCqlWorker } from 'cql-worker';
  * @param {Object[]} patientData
  * @returns {Object}
  */
-export const useCds = (patientData, toggleStatus) => {
+export const useCds = (patientData, toggleStatus, pathway) => {
 
   const [output, setOutput] = useState({});
   const [isLoadingCdsData, setIsLoadingCdsData] = useState(false);
@@ -33,7 +30,6 @@ export const useCds = (patientData, toggleStatus) => {
 
     console.log('toggleStatus: ', toggleStatus);
     console.log('patientData before translation: ', patientData);
-    console.time('Translate FHIR Data');
 
     if (toggleStatus.isToggleChanged) {
       translateToggleChange(patientData, toggleStatus);
@@ -41,10 +37,9 @@ export const useCds = (patientData, toggleStatus) => {
       translateResponse(patientData, stridesData);
     }
 
-    console.timeEnd('Translate FHIR Data');
     console.log('patientData after translation: ', patientData);
 
-    applyCds(patientData, setOutput, setIsLoadingCdsData, toggleStatus.isToggleChanged, isPregnant, setIsPreganant);
+    applyCds(patientData, setOutput, setIsLoadingCdsData, toggleStatus.isToggleChanged, isPregnant, setIsPreganant, pathway);
   }, [patientData, toggleStatus, isPregnant]);
 
   return {output, isLoadingCdsData};
@@ -55,11 +50,12 @@ export const useCds = (patientData, toggleStatus) => {
  * @param {Object[]} patientData
  * @param {function} setOutput
  */
-const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isToggleChanged, isPregnant, setIsPreganant) {
-  console.log('Starting applyCds()');
+const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isToggleChanged, isPregnant, setIsPreganant, pathway) {
   console.time('Apply CDS');
   let resolver = simpleResolver([...cdsResources, ...patientData], false);
-  const planDefinition = resolver('PlanDefinition/PrimaryScreeningDecision')[0];
+  
+  const planDefinition = resolver('PlanDefinition/'+pathway)[0];
+//  const planDefinition = resolver('PlanDefinition/PrimaryScreeningDecision')[0];
   // TODO: Throw error if there is anything other than 1 patient resource
   const patientReference = 'Patient/' + patientData.filter(pd => pd.resourceType === 'Patient').map(pd => pd.id)[0];
   if (patientReference !== 'Patient/undefined') {
@@ -94,12 +90,7 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
       patientInfo = cqlResults.PertinentHistory.patientInfo;
       patientHistory = cqlResults.PertinentHistory.patientHistory;
     }
-    const resources = hardCodeData.entry.map((e) => {
-      return e.resource
-    });
-    console.log(resources);
     const [CarePlan, RequestGroup, ...otherResources] = await applyPlan(planDefinition, patientReference, resolver, aux);
-    // const [CarePlan, RequestGroup, ...otherResources] = resources;
 
 
     let ServiceRequests = otherResources.filter(otr => otr.resourceType === 'ServiceRequest');
@@ -128,7 +119,7 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
     decisionAids = recursiveActionParse(RequestGroup.action, decisionAids, resolver);
 
     let thereAreOutputs = false;
-
+    console.timeEnd('Apply CDS');
     if (thereAreOutputs) {
       if (patientHistory.observations?.length > 0) {
         patientHistory.observations = patientHistory.observations.filter(obs => !obs.reference.includes('new-observation-for-'))
@@ -161,6 +152,7 @@ const applyCds = async function(patientData, setOutput, setIsLoadingCdsData, isT
 function recursiveActionParse(actions, decisionAids, resolver) {
     actions.forEach((act)=> {
       const entry = {
+      id: '',
         recommendation:'',
         recommendationGroup:'',
         recommendationDetails:[],
@@ -172,14 +164,27 @@ function recursiveActionParse(actions, decisionAids, resolver) {
         riskTable:{},
       }
       entry.recommendation = act.title;
-      const serviceReq = resolver(act.resource.reference)?.[0];
-      entry.recommendationGroup = getReasonCodeDisplay(serviceReq);
-      entry.recommendationDetails.push(act.description);
-      entry.recommendationDate = getTimingDateFromAction(act);
-      if(act.documentation){
+      entry.id = act.id;
+      let serviceReq;
+      if (act.resource != undefined && act.resource != null) {
+        serviceReq = resolver(act.resource.reference)?.[0];
+
+        entry.recommendationGroup = getReasonCodeDisplay(serviceReq);
+        } else {
+        entry.recommendationGroup = ""
+        }
+        
+        entry.recommendationDetails.push(act.description);
+        entry.recommendationDate = getTimingDateFromAction(act);
+      if (act.documentation){
         entry.documentation = act.documentation;
       }
       decisionAids.push(entry);
+      if (act.action) {
+//        let subEntry = recursiveActionParse(act.action, decisionAids, resolver);
+        recursiveActionParse(act.action, decisionAids, resolver);
+        //decisionAids.push(subEntry)
+      }
     })
   return decisionAids;
   

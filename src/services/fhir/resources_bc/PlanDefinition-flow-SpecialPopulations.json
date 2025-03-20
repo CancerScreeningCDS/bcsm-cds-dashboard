@@ -105,7 +105,7 @@
         }
       ],
       "id": "ACSMammoHighRisk",
-      "title": "Annual screeening mammogram starting age 30",
+      "title": "Annual screening mammogram starting age 30",
       "description": "An annual screening mammogram starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on certain risk factors should get a mammogram every year, typically starting at age 30.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -173,7 +173,7 @@
         }
       ],
       "id": "ACSMriHighRisk",
-      "title": "Annual screeening MRI starting age 30",
+      "title": "Annual screening MRI starting age 30",
       "description": "An annual screening MRI starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on certain risk factors should get a breast MRI every year, typically starting at age 30.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -240,7 +240,7 @@
         }
       ],
       "id": "ACSFirstDegGeneticMammo",
-      "title": "Annual screeening mammo starting age 30",
+      "title": "Annual screening mammo starting age 30",
       "description": "An annual screening mammogram starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on certain risk factors should get a mammogram every year, typically starting at age 30.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -308,7 +308,7 @@
         }
       ],
       "id": "ACSFirstDegGeneticMri",
-      "title": "Annual screeening MRI starting age 30",
+      "title": "Annual screening MRI starting age 30",
       "description": "An annual screening MRI starting at age 30 is recommended.\n\nWomen who are at higher than average risk for breast cancer based on certain risk factors should get a breast MRI every year, typically starting at age 30.",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     },
@@ -454,8 +454,8 @@
         }
       ],
       "id": "USPSTFRecommendation",
-      "title": "Biennial screeening mammo starting age 40",
-      "description": "Biennial screeening mammogram starting at age 40",
+      "title": "Biennial screening mammo starting age 40",
+      "description": "Biennial screening mammogram starting at age 40",
       "definitionCanonical": "http://cancerscreeningcds.github.io/bcsm-cds/ActivityDefinition/BreastCancerScreeningServiceRequest|1.0.0"
     }
   ],

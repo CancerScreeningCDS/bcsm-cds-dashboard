@@ -155,7 +155,8 @@
             "coding": [
               {
                 "system": "http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system",
-                "code": "Malignant"
+                "code": "Malignant",
+                "display": "Malignant"
               }
             ]
           }

@@ -40,5 +40,13 @@
     "age": "55",
     "scenario": "Palpable breast mass",
     "updated": "02/13/2025"
+  },
+  {
+    "key": "PatriciaLambert_remission_lt_5_years",
+    "id" : "PatriciaLambert",
+    "name": "Patricia49 Lambert23",
+    "age": "65",
+    "scenario": "Remission < 5 yr",
+    "updated": "02/17/2025"
   }
 ]

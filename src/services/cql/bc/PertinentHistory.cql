@@ -1,3 +1,16 @@
+/*  
+  Author: CMS Alliance to Modernize Healthcare, operated by THE MITRE Corporation.
+
+  (C) 2024 The MITRE Corporation. All Rights Reserved. 
+  Approved for Public Release: 24-2711. 
+  Distribution Unlimited.
+
+  Unless otherwise noted, this work is available under an Apache 2.0 license. 
+  It was produced by the MITRE Corporation for the Division of Cancer Prevention 
+  and Control, Centers for Disease Control and Prevention in accordance with the 
+  Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.
+*/
+
 library PertinentHistory version '1.0.0'
 
 using FHIR version '4.0.1'
@@ -22,9 +35,6 @@ code "Category4B": '6131000179108' from "SNOMED-CT" display 'Mammography assessm
 code "Category4C": '6141000179100' from "SNOMED-CT" display 'Mammography assessment (Category 4C) - Suspicious abnormality, biopsy should be considered, high suspicion of malignancy (finding)'
 code "Category5": '397145000' from "SNOMED-CT" display 'Mammography assessment (Category 5) - Highly suggestive of malignancy (finding)'
 code "Category6": '6111000179101' from "SNOMED-CT" display 'Mammography assessment (Category 6) - known biopsy, proven malignancy (finding)'
-
-//TODO: this should be a value set
-concept BIRADS: {Category0, Category1, Category2, Category3, Category4, Category4A, Category4B, Category4C, Category5, Category6}
 
 context Patient
 
@@ -139,11 +149,11 @@ define PertinentConditions:
   DataElements.UnilateralMastectomyConditions union
   DataElements.BreastSymptomConditions union
   DataElements.PregnancyDiagnoses union
-  DataElements."BRCA-1 Mutation Conditions" union
-  DataElements."BRCA-2 Mutation Conditions" union
-  DataElements."Li-Fraumeni Syndrome Conditions" union
-  DataElements."Cowden Syndrome Conditions" union
-  DataElements."Bannayan-Riley-Ruvalcaba Syndrome Conditions" union
+  DataElements."BRCA-1MutationConditions" union
+  DataElements."BRCA-2MutationConditions" union
+  DataElements."Li-FraumeniSyndromeConditions" union
+  DataElements.CowdenSyndromeConditions union
+  DataElements."Bannayan-Riley-RuvalcabaSyndromeConditions" union
 	DataElements."de-chestxrt" union
 	DataElements.AtypicalBiopsyConditions
 
@@ -380,15 +390,15 @@ define function FormatReports(DrList List<DiagnosticReport>, ObsList List<Observ
 //return biopsy result annotation or BI-RADS result annotation if exists, otherwise return first coding
 define function HighestRankedResult(CollatedCodes List<FHIR.CodeableConcept>):
   Coalesce(
-    (CollatedCodes cC    
+    First(CollatedCodes cC    
     return First(cC.coding C 
       where C.system = 'http://cancerscreeningcds.github.io/bcsm-cds/CodeSystem/biopsy-result-observation-code-system'
     )),
-    (CollatedCodes cC    
-    return First(cC.coding C 
-      where FHIRHelpers.ToCode(C) ~ BIRADS
+    First(CollatedCodes cC    
+    return First(cC.coding coding
+      where FHIRHelpers.ToCode(coding) in {Category0, Category1, Category2, Category3, Category4, Category4A, Category4B, Category4C, Category5, Category6}
     )),
-    CollatedCodes cC return First(cC.coding C)
+    First(CollatedCodes cC return First(cC.coding C))
   )
   
 define function displayStartDate(startDate String):
