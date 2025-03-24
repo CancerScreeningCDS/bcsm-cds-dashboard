@@ -19,11 +19,11 @@ This project was initially developed using the Create React App tool.
 You can run the dashboard locally by following these steps:
 1. Clone this repo
 2. Run `npm install` in this directory
-3. Run `npm start` and going to any of the following URLs:
+3. Run `npm start` and going to the following URL:
     - http://localhost:3000/tests-fhir
 
 ### Configuring Dashboard Environment
-BCSM CDS Dashboard relies on environment variables for configuration. Configuration options are described in the [Environment Setting for Dashboard](https://github.com/ccsm-cds-tools/ccsm-cds-dashboard/wiki/Environment-Setting-for-Dashboard) section of the Wiki.
+BCSM CDS Dashboard relies on environment variables for configuration. Configuration options are described in the [Environment Setting for Dashboard](https://github.com/ccsm-cds-tools/ccsm-cds-dashboard/wiki/Environment-Setting-for-Dashboard) section of the ccsm-cds-dashboard Wiki.
 
 ### Download Value Sets
 If your CDS uses value sets from the [Value Set Authority Center (VSAC)](https://vsac.nlm.nih.gov/) you must download your value sets from VSAC using your [Unified Medical Language System (UMLS)](https://www.nlm.nih.gov/research/umls/index.html) API key. This will require creating a free Unified Medical Language System (UMLS) account from the National Library of Medicine (NLM).  If you do not yet have an account, [sign up here](https://uts.nlm.nih.gov//license.html).
@@ -48,7 +48,7 @@ npm run download-value-sets
 
 ## Licenses
 
-(C) 2022 The MITRE Corporation. All Rights Reserved. Approved for Public Release: 24-2711. Distribution Unlimited.
+(C) 2025 The MITRE Corporation. All Rights Reserved. Approved for Public Release: 24-2711. Distribution Unlimited.
 
 Unless otherwise noted, the BCSM CDS Dashboard is available under an [Apache 2.0 license](./LICENSE.txt). It was produced by the MITRE Corporation for the Division of Cancer Prevention and Control, Centers for Disease Control and Prevention in accordance with the Statement of Work, contract number 75FCMC18D0047, task order number 75D30123F17931.
 
