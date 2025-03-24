@@ -9,7 +9,7 @@ This dashboard and the underlying CDS definitions are both under *active develop
 ## Demo
 
 The dashboard is under active development, but demonstrations are available with various kinds of synthetic test data:
-1. Demo with [synthentic FHIR data](https://ccsm-cds-tools.github.io/ccsm-cds-dashboard/#/tests-fhir)
+1. Demo with [synthentic FHIR data](https://cancerscreeningcds.github.io/bcsm-cds-dashboard/#/tests-fhir)
 
 ## Development
 
@@ -45,16 +45,6 @@ Once you have set the `UMLS_API_KEY` environment variable, you can use the follo
 npm run download-value-sets
 ```
 
-### Convert CSV File to JSON
-You can run this following command to convert CSV data to JSON object. You need to run this if the CSV file is changed:
-```
-npm run convert-csv [filepath]
-```
-
-The `[filepath]` is the location/path to the CSV file. Example:
-```
-npm run convert-csv data/strides.csv
-```
 
 ## Licenses
 
