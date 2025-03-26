@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/bcsm-cds-dashboard/static/css/main.4d7451d5.css",
-    "main.js": "/bcsm-cds-dashboard/static/js/main.a02c5160.js",
-    "static/js/572.47777ace.chunk.js": "/bcsm-cds-dashboard/static/js/572.47777ace.chunk.js",
+    "main.js": "/bcsm-cds-dashboard/static/js/main.a01574d1.js",
+    "static/js/572.ed0477c3.chunk.js": "/bcsm-cds-dashboard/static/js/572.ed0477c3.chunk.js",
     "static/js/819.8226a43a.chunk.js": "/bcsm-cds-dashboard/static/js/819.8226a43a.chunk.js",
     "static/js/507.08f26962.chunk.js": "/bcsm-cds-dashboard/static/js/507.08f26962.chunk.js",
     "static/js/415.a2d13299.chunk.js": "/bcsm-cds-dashboard/static/js/415.a2d13299.chunk.js",
-    "static/js/932.1d1ee492.chunk.js": "/bcsm-cds-dashboard/static/js/932.1d1ee492.chunk.js",
+    "static/js/932.267e8e2f.chunk.js": "/bcsm-cds-dashboard/static/js/932.267e8e2f.chunk.js",
     "static/js/829.eb01c844.chunk.js": "/bcsm-cds-dashboard/static/js/829.eb01c844.chunk.js",
     "static/media/bootstrap-icons.woff?": "/bcsm-cds-dashboard/static/media/bootstrap-icons.7ff3ca6fa798de3f8ac2.woff",
     "static/media/bootstrap-icons.woff2?": "/bcsm-cds-dashboard/static/media/bootstrap-icons.f2539a501be3a673de05.woff2",
@@ -15,16 +15,16 @@
     "index.html": "/bcsm-cds-dashboard/index.html",
     "static/media/plus-square.svg": "/bcsm-cds-dashboard/static/media/plus-square.1254f9745b42217d16e8c047e1aea764.svg",
     "main.4d7451d5.css.map": "/bcsm-cds-dashboard/static/css/main.4d7451d5.css.map",
-    "main.a02c5160.js.map": "/bcsm-cds-dashboard/static/js/main.a02c5160.js.map",
-    "572.47777ace.chunk.js.map": "/bcsm-cds-dashboard/static/js/572.47777ace.chunk.js.map",
+    "main.a01574d1.js.map": "/bcsm-cds-dashboard/static/js/main.a01574d1.js.map",
+    "572.ed0477c3.chunk.js.map": "/bcsm-cds-dashboard/static/js/572.ed0477c3.chunk.js.map",
     "819.8226a43a.chunk.js.map": "/bcsm-cds-dashboard/static/js/819.8226a43a.chunk.js.map",
     "507.08f26962.chunk.js.map": "/bcsm-cds-dashboard/static/js/507.08f26962.chunk.js.map",
     "415.a2d13299.chunk.js.map": "/bcsm-cds-dashboard/static/js/415.a2d13299.chunk.js.map",
-    "932.1d1ee492.chunk.js.map": "/bcsm-cds-dashboard/static/js/932.1d1ee492.chunk.js.map",
+    "932.267e8e2f.chunk.js.map": "/bcsm-cds-dashboard/static/js/932.267e8e2f.chunk.js.map",
     "829.eb01c844.chunk.js.map": "/bcsm-cds-dashboard/static/js/829.eb01c844.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d7451d5.css",
-    "static/js/main.a02c5160.js"
+    "static/js/main.a01574d1.js"
   ]
 }
